@@ -30,7 +30,6 @@ namespace SourceSoftwareLibraryProject
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciKayit));
-            this.txtKartId = new System.Windows.Forms.TextBox();
             this.lblKartId = new System.Windows.Forms.Label();
             this.lblOgrNo = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
@@ -54,115 +53,108 @@ namespace SourceSoftwareLibraryProject
             this.comboBoxisletmefakultesi = new System.Windows.Forms.ComboBox();
             this.comboBoxmyo = new System.Windows.Forms.ComboBox();
             this.msktxtposta = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bolumres = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.txtKartId = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bolumres = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtKartId
-            // 
-            this.txtKartId.Location = new System.Drawing.Point(496, 98);
-            this.txtKartId.Margin = new System.Windows.Forms.Padding(4, 6, 5, 6);
-            this.txtKartId.Name = "txtKartId";
-            this.txtKartId.Size = new System.Drawing.Size(293, 30);
-            this.txtKartId.TabIndex = 0;
             // 
             // lblKartId
             // 
             this.lblKartId.AutoSize = true;
-            this.lblKartId.Location = new System.Drawing.Point(338, 105);
+            this.lblKartId.Location = new System.Drawing.Point(102, 38);
             this.lblKartId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKartId.Name = "lblKartId";
-            this.lblKartId.Size = new System.Drawing.Size(67, 23);
+            this.lblKartId.Size = new System.Drawing.Size(83, 29);
             this.lblKartId.TabIndex = 1;
             this.lblKartId.Text = "Kart Id:";
             // 
             // lblOgrNo
             // 
             this.lblOgrNo.AutoSize = true;
-            this.lblOgrNo.Location = new System.Drawing.Point(292, 157);
+            this.lblOgrNo.Location = new System.Drawing.Point(64, 89);
             this.lblOgrNo.Name = "lblOgrNo";
-            this.lblOgrNo.Size = new System.Drawing.Size(101, 23);
+            this.lblOgrNo.Size = new System.Drawing.Size(129, 29);
             this.lblOgrNo.TabIndex = 2;
             this.lblOgrNo.Text = "Öğrenci No:";
             // 
             // lblAd
             // 
             this.lblAd.AutoSize = true;
-            this.lblAd.Location = new System.Drawing.Point(373, 213);
+            this.lblAd.Location = new System.Drawing.Point(139, 132);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(36, 23);
+            this.lblAd.Size = new System.Drawing.Size(46, 29);
             this.lblAd.TabIndex = 3;
             this.lblAd.Text = "Ad:";
             // 
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
-            this.lblSoyad.Location = new System.Drawing.Point(343, 266);
+            this.lblSoyad.Location = new System.Drawing.Point(114, 179);
             this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(62, 23);
+            this.lblSoyad.Size = new System.Drawing.Size(79, 29);
             this.lblSoyad.TabIndex = 4;
             this.lblSoyad.Text = "Soyad:";
             // 
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(331, 364);
+            this.lblTelefon.Location = new System.Drawing.Point(108, 279);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(70, 23);
+            this.lblTelefon.Size = new System.Drawing.Size(91, 29);
             this.lblTelefon.TabIndex = 5;
             this.lblTelefon.Text = "Telefon:";
             // 
             // lblEposta
             // 
             this.lblEposta.AutoSize = true;
-            this.lblEposta.Location = new System.Drawing.Point(326, 413);
+            this.lblEposta.Location = new System.Drawing.Point(108, 331);
             this.lblEposta.Name = "lblEposta";
-            this.lblEposta.Size = new System.Drawing.Size(71, 23);
+            this.lblEposta.Size = new System.Drawing.Size(90, 29);
             this.lblEposta.TabIndex = 6;
             this.lblEposta.Text = "E Posta:";
             // 
             // lblfakulte
             // 
             this.lblfakulte.AutoSize = true;
-            this.lblfakulte.Location = new System.Drawing.Point(343, 462);
+            this.lblfakulte.Location = new System.Drawing.Point(107, 380);
             this.lblfakulte.Name = "lblfakulte";
-            this.lblfakulte.Size = new System.Drawing.Size(70, 23);
+            this.lblfakulte.Size = new System.Drawing.Size(91, 29);
             this.lblfakulte.TabIndex = 7;
             this.lblfakulte.Text = "Fakülte:";
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(496, 192);
+            this.txtAd.Location = new System.Drawing.Point(255, 129);
             this.txtAd.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(293, 30);
+            this.txtAd.Size = new System.Drawing.Size(293, 36);
             this.txtAd.TabIndex = 9;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(496, 239);
+            this.txtSoyad.Location = new System.Drawing.Point(255, 177);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(293, 30);
+            this.txtSoyad.Size = new System.Drawing.Size(293, 36);
             this.txtSoyad.TabIndex = 10;
             // 
             // cmbBolum
@@ -171,9 +163,9 @@ namespace SourceSoftwareLibraryProject
             this.cmbBolum.Items.AddRange(new object[] {
             "İnegöl İşletme Fakültesi",
             "İnegöl MYO"});
-            this.cmbBolum.Location = new System.Drawing.Point(496, 454);
+            this.cmbBolum.Location = new System.Drawing.Point(253, 376);
             this.cmbBolum.Name = "cmbBolum";
-            this.cmbBolum.Size = new System.Drawing.Size(293, 30);
+            this.cmbBolum.Size = new System.Drawing.Size(293, 36);
             this.cmbBolum.TabIndex = 13;
             this.cmbBolum.SelectedIndexChanged += new System.EventHandler(this.cmbBolum_SelectedIndexChanged);
             // 
@@ -181,27 +173,27 @@ namespace SourceSoftwareLibraryProject
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe Print", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(398, -9);
+            this.label8.Location = new System.Drawing.Point(625, 274);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(311, 47);
+            this.label8.Size = new System.Drawing.Size(380, 57);
             this.label8.TabIndex = 14;
             this.label8.Text = "Öğrenci Kayıt Ekranı";
             // 
             // mskTel
             // 
-            this.mskTel.Location = new System.Drawing.Point(496, 333);
+            this.mskTel.Location = new System.Drawing.Point(255, 276);
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
-            this.mskTel.Size = new System.Drawing.Size(293, 30);
+            this.mskTel.Size = new System.Drawing.Size(293, 36);
             this.mskTel.TabIndex = 15;
             this.mskTel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTel_MaskInputRejected);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(837, 239);
+            this.button1.Location = new System.Drawing.Point(296, 462);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 69);
+            this.button1.Size = new System.Drawing.Size(197, 45);
             this.button1.TabIndex = 16;
             this.button1.Text = "Kayıt Et";
             this.button1.UseVisualStyleBackColor = false;
@@ -209,10 +201,10 @@ namespace SourceSoftwareLibraryProject
             // 
             // mskOgrNo
             // 
-            this.mskOgrNo.Location = new System.Drawing.Point(496, 145);
+            this.mskOgrNo.Location = new System.Drawing.Point(255, 84);
             this.mskOgrNo.Mask = "000000000";
             this.mskOgrNo.Name = "mskOgrNo";
-            this.mskOgrNo.Size = new System.Drawing.Size(293, 30);
+            this.mskOgrNo.Size = new System.Drawing.Size(293, 36);
             this.mskOgrNo.TabIndex = 17;
             this.mskOgrNo.ValidatingType = typeof(int);
             // 
@@ -220,7 +212,7 @@ namespace SourceSoftwareLibraryProject
             // 
             this.panel1.Controls.Add(this.radioKadın);
             this.panel1.Controls.Add(this.radioErkek);
-            this.panel1.Location = new System.Drawing.Point(496, 286);
+            this.panel1.Location = new System.Drawing.Point(253, 227);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 36);
             this.panel1.TabIndex = 18;
@@ -228,33 +220,33 @@ namespace SourceSoftwareLibraryProject
             // radioKadın
             // 
             this.radioKadın.AutoSize = true;
+            this.radioKadın.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioKadın.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioKadın.Location = new System.Drawing.Point(77, 9);
             this.radioKadın.Name = "radioKadın";
-            this.radioKadın.Size = new System.Drawing.Size(60, 22);
+            this.radioKadın.Size = new System.Drawing.Size(74, 26);
             this.radioKadın.TabIndex = 1;
-            this.radioKadın.TabStop = true;
             this.radioKadın.Text = "Kadın";
             this.radioKadın.UseVisualStyleBackColor = true;
             // 
             // radioErkek
             // 
             this.radioErkek.AutoSize = true;
+            this.radioErkek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioErkek.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioErkek.Location = new System.Drawing.Point(6, 9);
             this.radioErkek.Name = "radioErkek";
-            this.radioErkek.Size = new System.Drawing.Size(59, 22);
+            this.radioErkek.Size = new System.Drawing.Size(71, 26);
             this.radioErkek.TabIndex = 0;
-            this.radioErkek.TabStop = true;
             this.radioErkek.Text = "Erkek";
             this.radioErkek.UseVisualStyleBackColor = true;
             // 
             // lblCinsiyet
             // 
             this.lblCinsiyet.AutoSize = true;
-            this.lblCinsiyet.Location = new System.Drawing.Point(326, 311);
+            this.lblCinsiyet.Location = new System.Drawing.Point(111, 234);
             this.lblCinsiyet.Name = "lblCinsiyet";
-            this.lblCinsiyet.Size = new System.Drawing.Size(75, 23);
+            this.lblCinsiyet.Size = new System.Drawing.Size(97, 29);
             this.lblCinsiyet.TabIndex = 19;
             this.lblCinsiyet.Text = "Cinsiyet:";
             // 
@@ -263,18 +255,18 @@ namespace SourceSoftwareLibraryProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(961, 565);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 20;
             this.label1.Visible = false;
             // 
             // lblbolum
             // 
             this.lblbolum.AutoSize = true;
-            this.lblbolum.Location = new System.Drawing.Point(343, 525);
+            this.lblbolum.Location = new System.Drawing.Point(108, 420);
             this.lblbolum.Name = "lblbolum";
-            this.lblbolum.Size = new System.Drawing.Size(59, 23);
+            this.lblbolum.Size = new System.Drawing.Size(77, 29);
             this.lblbolum.TabIndex = 21;
-            this.lblbolum.Text = "bölüm";
+            this.lblbolum.Text = "Bölüm";
             this.lblbolum.Visible = false;
             // 
             // comboBoxisletmefakultesi
@@ -282,14 +274,15 @@ namespace SourceSoftwareLibraryProject
             this.comboBoxisletmefakultesi.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxisletmefakultesi.FormattingEnabled = true;
             this.comboBoxisletmefakultesi.Items.AddRange(new object[] {
-            "yönetim bilisim sistemleri",
-            "işletme ",
-            "uluslararsı ticaret"});
-            this.comboBoxisletmefakultesi.Location = new System.Drawing.Point(496, 522);
+            "Yönetim Bilişim Sistemleri",
+            "İşletme ",
+            "Uluslarası Ticaret ve İşletmecilik"});
+            this.comboBoxisletmefakultesi.Location = new System.Drawing.Point(253, 421);
             this.comboBoxisletmefakultesi.Name = "comboBoxisletmefakultesi";
-            this.comboBoxisletmefakultesi.Size = new System.Drawing.Size(293, 30);
+            this.comboBoxisletmefakultesi.Size = new System.Drawing.Size(293, 36);
             this.comboBoxisletmefakultesi.TabIndex = 22;
             this.comboBoxisletmefakultesi.Visible = false;
+            this.comboBoxisletmefakultesi.SelectedIndexChanged += new System.EventHandler(this.comboBoxisletmefakultesi_SelectedIndexChanged);
             // 
             // comboBoxmyo
             // 
@@ -310,44 +303,101 @@ namespace SourceSoftwareLibraryProject
             "Sağlık Bakım Hizmetleri Bölümü",
             "Terapi ve Rehabilitasyon Bölümü",
             "Sosyal Hizmet ve Danışmanlık Bölümü"});
-            this.comboBoxmyo.Location = new System.Drawing.Point(496, 522);
+            this.comboBoxmyo.Location = new System.Drawing.Point(253, 421);
             this.comboBoxmyo.Name = "comboBoxmyo";
-            this.comboBoxmyo.Size = new System.Drawing.Size(293, 30);
+            this.comboBoxmyo.Size = new System.Drawing.Size(293, 36);
             this.comboBoxmyo.TabIndex = 24;
             this.comboBoxmyo.Visible = false;
             // 
             // msktxtposta
             // 
-            this.msktxtposta.Location = new System.Drawing.Point(496, 385);
+            this.msktxtposta.Location = new System.Drawing.Point(255, 328);
             this.msktxtposta.Mask = "000000000@ogr,uludag,edu,tr";
             this.msktxtposta.Name = "msktxtposta";
-            this.msktxtposta.Size = new System.Drawing.Size(293, 30);
+            this.msktxtposta.Size = new System.Drawing.Size(293, 36);
             this.msktxtposta.TabIndex = 25;
             // 
-            // pictureBox1
+            // txtKartId
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 167);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.txtKartId.Location = new System.Drawing.Point(257, 38);
+            this.txtKartId.Name = "txtKartId";
+            this.txtKartId.Size = new System.Drawing.Size(291, 36);
+            this.txtKartId.TabIndex = 40;
             // 
-            // pictureBox2
+            // pictureBox11
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(297, 98);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 27;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(68, 172);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 36;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(69, 225);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 34;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(97, 126);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 33;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(17, 79);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(41, 39);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(61, 269);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(61, 321);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(61, 370);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
             // 
             // bolumres
             // 
             this.bolumres.Image = ((System.Drawing.Image)(resources.GetObject("bolumres.Image")));
-            this.bolumres.Location = new System.Drawing.Point(297, 519);
+            this.bolumres.Location = new System.Drawing.Point(62, 414);
             this.bolumres.Name = "bolumres";
             this.bolumres.Size = new System.Drawing.Size(40, 39);
             this.bolumres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,82 +405,35 @@ namespace SourceSoftwareLibraryProject
             this.bolumres.TabStop = false;
             this.bolumres.Visible = false;
             // 
-            // pictureBox4
+            // pictureBox2
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(297, 452);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(61, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBox1
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(279, 403);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(284, 354);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 31;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(245, 147);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(331, 207);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 33;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(284, 302);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 34;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(297, 259);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(41, 38);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 36;
-            this.pictureBox11.TabStop = false;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(727, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // OgrenciKayit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1088, 647);
+            this.ClientSize = new System.Drawing.Size(996, 518);
+            this.Controls.Add(this.txtKartId);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -462,32 +465,32 @@ namespace SourceSoftwareLibraryProject
             this.Controls.Add(this.lblAd);
             this.Controls.Add(this.lblOgrNo);
             this.Controls.Add(this.lblKartId);
-            this.Controls.Add(this.txtKartId);
             this.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximizeBox = false;
             this.Name = "OgrenciKayit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgrenciKayit";
             this.Load += new System.EventHandler(this.OgrenciKayit_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtKartId;
         private System.Windows.Forms.Label lblKartId;
         private System.Windows.Forms.Label lblOgrNo;
         private System.Windows.Forms.Label lblAd;
@@ -521,5 +524,6 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TextBox txtKartId;
     }
 }

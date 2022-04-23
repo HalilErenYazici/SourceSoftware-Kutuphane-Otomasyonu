@@ -135,5 +135,10 @@ namespace SourceSoftwareLibraryProject
         {
 
         }
+
+        private void comboBoxisletmefakultesi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
