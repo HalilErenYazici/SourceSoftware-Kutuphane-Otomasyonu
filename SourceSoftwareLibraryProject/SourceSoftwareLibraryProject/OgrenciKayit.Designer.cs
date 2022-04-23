@@ -29,6 +29,7 @@ namespace SourceSoftwareLibraryProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciKayit));
             this.txtKartId = new System.Windows.Forms.TextBox();
             this.lblKartId = new System.Windows.Forms.Label();
             this.lblOgrNo = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace SourceSoftwareLibraryProject
             this.lblfakulte = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.txtEposta = new System.Windows.Forms.TextBox();
             this.cmbBolum = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.mskTel = new System.Windows.Forms.MaskedTextBox();
@@ -54,21 +54,41 @@ namespace SourceSoftwareLibraryProject
             this.comboBoxisletmefakultesi = new System.Windows.Forms.ComboBox();
             this.comboBoxmyo = new System.Windows.Forms.ComboBox();
             this.msktxtposta = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bolumres = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // txtKartId
             // 
-            this.txtKartId.Location = new System.Drawing.Point(159, 91);
-            this.txtKartId.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtKartId.Location = new System.Drawing.Point(496, 98);
+            this.txtKartId.Margin = new System.Windows.Forms.Padding(4, 6, 5, 6);
             this.txtKartId.Name = "txtKartId";
-            this.txtKartId.Size = new System.Drawing.Size(148, 36);
+            this.txtKartId.Size = new System.Drawing.Size(293, 36);
             this.txtKartId.TabIndex = 0;
             // 
             // lblKartId
             // 
             this.lblKartId.AutoSize = true;
-            this.lblKartId.Location = new System.Drawing.Point(67, 98);
+            this.lblKartId.Location = new System.Drawing.Point(338, 105);
             this.lblKartId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKartId.Name = "lblKartId";
             this.lblKartId.Size = new System.Drawing.Size(80, 28);
@@ -78,7 +98,7 @@ namespace SourceSoftwareLibraryProject
             // lblOgrNo
             // 
             this.lblOgrNo.AutoSize = true;
-            this.lblOgrNo.Location = new System.Drawing.Point(21, 150);
+            this.lblOgrNo.Location = new System.Drawing.Point(292, 157);
             this.lblOgrNo.Name = "lblOgrNo";
             this.lblOgrNo.Size = new System.Drawing.Size(122, 28);
             this.lblOgrNo.TabIndex = 2;
@@ -87,7 +107,7 @@ namespace SourceSoftwareLibraryProject
             // lblAd
             // 
             this.lblAd.AutoSize = true;
-            this.lblAd.Location = new System.Drawing.Point(102, 206);
+            this.lblAd.Location = new System.Drawing.Point(373, 213);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(43, 28);
             this.lblAd.TabIndex = 3;
@@ -96,7 +116,7 @@ namespace SourceSoftwareLibraryProject
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
-            this.lblSoyad.Location = new System.Drawing.Point(72, 259);
+            this.lblSoyad.Location = new System.Drawing.Point(343, 266);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(74, 28);
             this.lblSoyad.TabIndex = 4;
@@ -105,7 +125,7 @@ namespace SourceSoftwareLibraryProject
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(60, 357);
+            this.lblTelefon.Location = new System.Drawing.Point(331, 364);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(85, 28);
             this.lblTelefon.TabIndex = 5;
@@ -114,7 +134,7 @@ namespace SourceSoftwareLibraryProject
             // lblEposta
             // 
             this.lblEposta.AutoSize = true;
-            this.lblEposta.Location = new System.Drawing.Point(55, 406);
+            this.lblEposta.Location = new System.Drawing.Point(326, 413);
             this.lblEposta.Name = "lblEposta";
             this.lblEposta.Size = new System.Drawing.Size(86, 28);
             this.lblEposta.TabIndex = 6;
@@ -123,7 +143,7 @@ namespace SourceSoftwareLibraryProject
             // lblfakulte
             // 
             this.lblfakulte.AutoSize = true;
-            this.lblfakulte.Location = new System.Drawing.Point(72, 455);
+            this.lblfakulte.Location = new System.Drawing.Point(343, 462);
             this.lblfakulte.Name = "lblfakulte";
             this.lblfakulte.Size = new System.Drawing.Size(85, 28);
             this.lblfakulte.TabIndex = 7;
@@ -131,27 +151,19 @@ namespace SourceSoftwareLibraryProject
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(159, 200);
+            this.txtAd.Location = new System.Drawing.Point(496, 192);
             this.txtAd.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(148, 36);
+            this.txtAd.Size = new System.Drawing.Size(293, 36);
             this.txtAd.TabIndex = 9;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(159, 252);
+            this.txtSoyad.Location = new System.Drawing.Point(496, 239);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(148, 36);
+            this.txtSoyad.Size = new System.Drawing.Size(293, 36);
             this.txtSoyad.TabIndex = 10;
-            // 
-            // txtEposta
-            // 
-            this.txtEposta.Location = new System.Drawing.Point(702, 256);
-            this.txtEposta.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtEposta.Name = "txtEposta";
-            this.txtEposta.Size = new System.Drawing.Size(148, 36);
-            this.txtEposta.TabIndex = 12;
             // 
             // cmbBolum
             // 
@@ -159,9 +171,9 @@ namespace SourceSoftwareLibraryProject
             this.cmbBolum.Items.AddRange(new object[] {
             "İnegöl İşletme Fakültesi",
             "İnegöl MYO"});
-            this.cmbBolum.Location = new System.Drawing.Point(159, 452);
+            this.cmbBolum.Location = new System.Drawing.Point(496, 454);
             this.cmbBolum.Name = "cmbBolum";
-            this.cmbBolum.Size = new System.Drawing.Size(148, 36);
+            this.cmbBolum.Size = new System.Drawing.Size(293, 36);
             this.cmbBolum.TabIndex = 13;
             this.cmbBolum.SelectedIndexChanged += new System.EventHandler(this.cmbBolum_SelectedIndexChanged);
             // 
@@ -169,7 +181,7 @@ namespace SourceSoftwareLibraryProject
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe Print", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(285, 8);
+            this.label8.Location = new System.Drawing.Point(398, -9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(380, 57);
             this.label8.TabIndex = 14;
@@ -177,18 +189,18 @@ namespace SourceSoftwareLibraryProject
             // 
             // mskTel
             // 
-            this.mskTel.Location = new System.Drawing.Point(159, 351);
+            this.mskTel.Location = new System.Drawing.Point(496, 333);
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
-            this.mskTel.Size = new System.Drawing.Size(148, 36);
+            this.mskTel.Size = new System.Drawing.Size(293, 36);
             this.mskTel.TabIndex = 15;
             this.mskTel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTel_MaskInputRejected);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 493);
+            this.button1.Location = new System.Drawing.Point(837, 239);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 44);
+            this.button1.Size = new System.Drawing.Size(197, 69);
             this.button1.TabIndex = 16;
             this.button1.Text = "Kayıt Et";
             this.button1.UseVisualStyleBackColor = true;
@@ -196,10 +208,10 @@ namespace SourceSoftwareLibraryProject
             // 
             // mskOgrNo
             // 
-            this.mskOgrNo.Location = new System.Drawing.Point(159, 144);
+            this.mskOgrNo.Location = new System.Drawing.Point(496, 145);
             this.mskOgrNo.Mask = "000000000";
             this.mskOgrNo.Name = "mskOgrNo";
-            this.mskOgrNo.Size = new System.Drawing.Size(148, 36);
+            this.mskOgrNo.Size = new System.Drawing.Size(293, 36);
             this.mskOgrNo.TabIndex = 17;
             this.mskOgrNo.ValidatingType = typeof(int);
             // 
@@ -207,9 +219,9 @@ namespace SourceSoftwareLibraryProject
             // 
             this.panel1.Controls.Add(this.radioKadın);
             this.panel1.Controls.Add(this.radioErkek);
-            this.panel1.Location = new System.Drawing.Point(159, 295);
+            this.panel1.Location = new System.Drawing.Point(496, 286);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(148, 38);
+            this.panel1.Size = new System.Drawing.Size(293, 36);
             this.panel1.TabIndex = 18;
             // 
             // radioKadın
@@ -239,7 +251,7 @@ namespace SourceSoftwareLibraryProject
             // lblCinsiyet
             // 
             this.lblCinsiyet.AutoSize = true;
-            this.lblCinsiyet.Location = new System.Drawing.Point(55, 304);
+            this.lblCinsiyet.Location = new System.Drawing.Point(326, 311);
             this.lblCinsiyet.Name = "lblCinsiyet";
             this.lblCinsiyet.Size = new System.Drawing.Size(90, 28);
             this.lblCinsiyet.TabIndex = 19;
@@ -248,7 +260,7 @@ namespace SourceSoftwareLibraryProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 509);
+            this.label1.Location = new System.Drawing.Point(823, 493);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 28);
             this.label1.TabIndex = 20;
@@ -258,7 +270,7 @@ namespace SourceSoftwareLibraryProject
             // lblbolum
             // 
             this.lblbolum.AutoSize = true;
-            this.lblbolum.Location = new System.Drawing.Point(388, 76);
+            this.lblbolum.Location = new System.Drawing.Point(343, 525);
             this.lblbolum.Name = "lblbolum";
             this.lblbolum.Size = new System.Drawing.Size(71, 28);
             this.lblbolum.TabIndex = 21;
@@ -273,9 +285,9 @@ namespace SourceSoftwareLibraryProject
             "yönetim bilisim sistemleri",
             "işletme ",
             "uluslararsı ticaret"});
-            this.comboBoxisletmefakultesi.Location = new System.Drawing.Point(487, 76);
+            this.comboBoxisletmefakultesi.Location = new System.Drawing.Point(496, 522);
             this.comboBoxisletmefakultesi.Name = "comboBoxisletmefakultesi";
-            this.comboBoxisletmefakultesi.Size = new System.Drawing.Size(148, 36);
+            this.comboBoxisletmefakultesi.Size = new System.Drawing.Size(293, 36);
             this.comboBoxisletmefakultesi.TabIndex = 22;
             this.comboBoxisletmefakultesi.Visible = false;
             // 
@@ -298,25 +310,137 @@ namespace SourceSoftwareLibraryProject
             "Sağlık Bakım Hizmetleri Bölümü",
             "Terapi ve Rehabilitasyon Bölümü",
             "Sosyal Hizmet ve Danışmanlık Bölümü"});
-            this.comboBoxmyo.Location = new System.Drawing.Point(487, 76);
+            this.comboBoxmyo.Location = new System.Drawing.Point(496, 522);
             this.comboBoxmyo.Name = "comboBoxmyo";
-            this.comboBoxmyo.Size = new System.Drawing.Size(148, 36);
+            this.comboBoxmyo.Size = new System.Drawing.Size(293, 36);
             this.comboBoxmyo.TabIndex = 24;
             this.comboBoxmyo.Visible = false;
             // 
             // msktxtposta
             // 
-            this.msktxtposta.Location = new System.Drawing.Point(153, 403);
-            this.msktxtposta.Mask = "000000000@ogr,uludag,edu,tr";
+            this.msktxtposta.Location = new System.Drawing.Point(496, 385);
+            this.msktxtposta.Mask = "000000000@ogr,______,edu,tr";
             this.msktxtposta.Name = "msktxtposta";
             this.msktxtposta.Size = new System.Drawing.Size(293, 36);
             this.msktxtposta.TabIndex = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 167);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(297, 98);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
+            // bolumres
+            // 
+            this.bolumres.Image = ((System.Drawing.Image)(resources.GetObject("bolumres.Image")));
+            this.bolumres.Location = new System.Drawing.Point(297, 519);
+            this.bolumres.Name = "bolumres";
+            this.bolumres.Size = new System.Drawing.Size(40, 39);
+            this.bolumres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bolumres.TabIndex = 28;
+            this.bolumres.TabStop = false;
+            this.bolumres.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(297, 452);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(279, 403);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(284, 354);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(245, 147);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(331, 207);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 33;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(284, 302);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 34;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(297, 259);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(41, 38);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 36;
+            this.pictureBox11.TabStop = false;
             // 
             // OgrenciKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 544);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(1088, 647);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.bolumres);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.msktxtposta);
             this.Controls.Add(this.comboBoxmyo);
             this.Controls.Add(this.comboBoxisletmefakultesi);
@@ -329,7 +453,6 @@ namespace SourceSoftwareLibraryProject
             this.Controls.Add(this.mskTel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbBolum);
-            this.Controls.Add(this.txtEposta);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.lblfakulte);
@@ -347,6 +470,16 @@ namespace SourceSoftwareLibraryProject
             this.Load += new System.EventHandler(this.OgrenciKayit_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bolumres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +497,6 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.Label lblfakulte;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
-        private System.Windows.Forms.TextBox txtEposta;
         private System.Windows.Forms.ComboBox cmbBolum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox mskTel;
@@ -379,5 +511,15 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.ComboBox comboBoxisletmefakultesi;
         private System.Windows.Forms.ComboBox comboBoxmyo;
         private System.Windows.Forms.MaskedTextBox msktxtposta;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox bolumres;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }

@@ -33,71 +33,75 @@ namespace SourceSoftwareLibraryProject
         private void button1_Click(object sender, EventArgs e)
         {
 
+            if (mskOgrNo.Text==""||txtAd.Text=="" || txtSoyad.Text == "" || mskTel.Text == "")
+            {   if (mskOgrNo.Text.Length != 9)
+                {
+                    MessageBox.Show("Öğrenci Numarası 9 hanenin altında olamaz!");
+                }
+                if (txtAd.Text.Length < 2)
+                {
+                    MessageBox.Show("Adınızı Giriniz!");
+                }
+                   if (txtSoyad.Text.Length < 2)
+                {
+                    MessageBox.Show("Soyadınızı Giriniz!");
+                }
+ 
+                if (mskTel.Text.Length != 14)
+                {
+                    MessageBox.Show("Telefon numarası 11 hanenin altında olamaz!");
+                }
+                if (radioErkek.Checked)
+                {
+
+                    label1.Text = "Cinsiyet" + radioErkek.Text;
+                }
+                else if (radioKadın.Checked)
+                {
+
+                    label1.Text = "Cinsiyet" + radioKadın.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Lüften cinsiyet seçiniz!");
+
+                }
+
+                if (msktxtposta.Text == "" || msktxtposta.Text.Length < 16)
+                {
+                    MessageBox.Show("Lütfen Geçerli Bir E-Posta Giriniz");
+                }
+
+
+
+                if (cmbBolum.Text == "")
+                {
+                    MessageBox.Show("Bölüm seçiniz");
+                }
+            }
         
-            if (mskTel.Text.Length !=14)
-            {
-                MessageBox.Show("Telefon numarası 11 hanenin altında olamaz!");
-            }
-
-            if(mskOgrNo.Text.Length != 9)
-            {
-                MessageBox.Show("Öğrenci Numarası 9 hanenin altında olamaz!");
-            }
-             
-            if(txtAd.Text.Length < 2)
-            {
-                MessageBox.Show("Adınızı Giriniz!");
-            }
-
-            if(txtSoyad.Text.Length < 2)
-            {
-                MessageBox.Show("Soyadınızı Giriniz!");
-            }
-
-
-            if (radioErkek.Checked)
-            {
-
-                label1.Text = "Cinsiyet" + radioErkek.Text;
-            }
-            else if (radioKadın.Checked)
-            {
-                
-                label1.Text = "Cinsiyet" + radioKadın.Text;
-            }
+           
             else
             {
-                MessageBox.Show("Lüften cinsiyet seçiniz!");
-
-            }
-
-            if (msktxtposta.Text == "" || msktxtposta.Text.Length < 16)
-            {
-                MessageBox.Show("Lütfen Geçerli Bir E-Posta Giriniz");
-            }
-
-
-
-            if (cmbBolum.Text == "")
-            {
-                MessageBox.Show("Bölüm seçiniz");
-            }
-            else
-            {
-                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
                 txtAd.Enabled = false;
                 txtSoyad.Enabled = false;
                 txtKartId.Enabled = false;
+                msktxtposta.Enabled = false;
+                mskOgrNo.Enabled = false;
+                mskTel.Enabled = false;
                 txtSoyad.Enabled = false;
                 cmbBolum.Enabled = false;
                 comboBoxmyo.Enabled = false;
                 comboBoxisletmefakultesi.Enabled = false;
+                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
                 this.Hide();
-
             }
+               
+         
 
+          
 
         }
 
@@ -105,6 +109,7 @@ namespace SourceSoftwareLibraryProject
         {
             if (cmbBolum.Text == "İnegöl İşletme Fakültesi")
             {
+                bolumres.Visible = true;
                 lblbolum.Visible = true;
                 comboBoxisletmefakultesi.Visible = true;
                 comboBoxmyo.Visible = false;
@@ -114,6 +119,8 @@ namespace SourceSoftwareLibraryProject
 
             else if (cmbBolum.Text == "İnegöl MYO")
             {
+                bolumres.Visible = true;
+
                 lblbolum.Visible = true;
                 comboBoxmyo.Visible = true;
                 comboBoxisletmefakultesi.Visible = false;
