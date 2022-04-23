@@ -55,11 +55,14 @@ namespace SourceSoftwareLibraryProject
                 {
 
                     label1.Text = "Cinsiyet" + radioErkek.Text;
+                    label1.Visible = true;
+
                 }
                 else if (radioKadın.Checked)
                 {
 
                     label1.Text = "Cinsiyet" + radioKadın.Text;
+                    label1.Visible = true;
                 }
                 else
                 {
