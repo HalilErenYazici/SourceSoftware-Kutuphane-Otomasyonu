@@ -21,6 +21,7 @@ namespace SourceSoftwareLibraryProject
 
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
+      
 
         }
 
@@ -31,6 +32,8 @@ namespace SourceSoftwareLibraryProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        
             if (mskTel.Text.Length !=14)
             {
                 MessageBox.Show("Telefon numarası 11 hanenin altında olamaz!");
@@ -68,7 +71,7 @@ namespace SourceSoftwareLibraryProject
 
             }
 
-            if (txtEposta.Text == "" || txtEposta.Text.Length < 4)
+            if (msktxtposta.Text == "" || msktxtposta.Text.Length < 16)
             {
                 MessageBox.Show("Lütfen Geçerli Bir E-Posta Giriniz");
             }
@@ -77,9 +80,49 @@ namespace SourceSoftwareLibraryProject
 
             if (cmbBolum.Text == "")
             {
-                MessageBox.Show("Boş Geçilemez");
+                MessageBox.Show("Bölüm seçiniz");
+            }
+            else
+            {
+                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+                txtAd.Enabled = false;
+                txtSoyad.Enabled = false;
+                txtKartId.Enabled = false;
+                txtSoyad.Enabled = false;
+                cmbBolum.Enabled = false;
+                comboBoxmyo.Enabled = false;
+                comboBoxisletmefakultesi.Enabled = false;
+                AnaSayfa yeni = new AnaSayfa();
+                yeni.Show();
+                this.Hide();
+
             }
 
+
+        }
+
+        private void cmbBolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbBolum.Text == "İnegöl İşletme Fakültesi")
+            {
+                lblbolum.Visible = true;
+                comboBoxisletmefakultesi.Visible = true;
+                comboBoxmyo.Visible = false;
+
+
+            }
+
+            else if (cmbBolum.Text == "İnegöl MYO")
+            {
+                lblbolum.Visible = true;
+                comboBoxmyo.Visible = true;
+                comboBoxisletmefakultesi.Visible = false;
+
+            }
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
     }
