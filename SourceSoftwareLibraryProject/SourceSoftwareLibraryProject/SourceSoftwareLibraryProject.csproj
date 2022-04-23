@@ -46,11 +46,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmanetAlmaVermeSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmanetAlmaVermeSayfasi.Designer.cs">
+      <DependentUpon>EmanetAlmaVermeSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmanetGoruntulemeSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmanetGoruntulemeSayfasi.Designer.cs">
+      <DependentUpon>EmanetGoruntulemeSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmegiGecenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmegiGecenler.Designer.cs">
+      <DependentUpon>EmegiGecenler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisSayfasi.Designer.cs">
+      <DependentUpon>GirisSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapDuzenle.Designer.cs">
+      <DependentUpon>KitapDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapEkle.Designer.cs">
+      <DependentUpon>KitapEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitaplariGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitaplariGoruntule.Designer.cs">
+      <DependentUpon>KitaplariGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciDuzenleme.Designer.cs">
+      <DependentUpon>OgrenciDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciIsleriSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIsleriSayfasi.Designer.cs">
+      <DependentUpon>OgrenciIsleriSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciKayit.Designer.cs">
+      <DependentUpon>OgrenciKayit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
