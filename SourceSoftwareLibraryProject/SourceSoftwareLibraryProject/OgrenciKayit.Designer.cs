@@ -63,7 +63,8 @@ namespace SourceSoftwareLibraryProject
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bolumres = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureboxkadin = new System.Windows.Forms.PictureBox();
+            this.pictureboxerkek = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -74,7 +75,8 @@ namespace SourceSoftwareLibraryProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bolumres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxkadin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxerkek)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKartId
@@ -216,6 +218,7 @@ namespace SourceSoftwareLibraryProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 36);
             this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // radioKadın
             // 
@@ -228,6 +231,7 @@ namespace SourceSoftwareLibraryProject
             this.radioKadın.TabIndex = 1;
             this.radioKadın.Text = "Kadın";
             this.radioKadın.UseVisualStyleBackColor = true;
+            this.radioKadın.CheckedChanged += new System.EventHandler(this.radioKadın_CheckedChanged);
             // 
             // radioErkek
             // 
@@ -240,6 +244,7 @@ namespace SourceSoftwareLibraryProject
             this.radioErkek.TabIndex = 0;
             this.radioErkek.Text = "Erkek";
             this.radioErkek.UseVisualStyleBackColor = true;
+            this.radioErkek.CheckedChanged += new System.EventHandler(this.radioErkek_CheckedChanged);
             // 
             // lblCinsiyet
             // 
@@ -415,16 +420,28 @@ namespace SourceSoftwareLibraryProject
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // pictureboxkadin
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(727, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.pictureboxkadin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureboxkadin.Image = ((System.Drawing.Image)(resources.GetObject("pictureboxkadin.Image")));
+            this.pictureboxkadin.Location = new System.Drawing.Point(727, 126);
+            this.pictureboxkadin.Name = "pictureboxkadin";
+            this.pictureboxkadin.Size = new System.Drawing.Size(124, 130);
+            this.pictureboxkadin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxkadin.TabIndex = 26;
+            this.pictureboxkadin.TabStop = false;
+            this.pictureboxkadin.Visible = false;
+            // 
+            // pictureboxerkek
+            // 
+            this.pictureboxerkek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureboxerkek.Image = ((System.Drawing.Image)(resources.GetObject("pictureboxerkek.Image")));
+            this.pictureboxerkek.Location = new System.Drawing.Point(727, 126);
+            this.pictureboxerkek.Name = "pictureboxerkek";
+            this.pictureboxerkek.Size = new System.Drawing.Size(124, 130);
+            this.pictureboxerkek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxerkek.TabIndex = 41;
+            this.pictureboxerkek.TabStop = false;
             // 
             // OgrenciKayit
             // 
@@ -433,6 +450,7 @@ namespace SourceSoftwareLibraryProject
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(996, 518);
+            this.Controls.Add(this.pictureboxerkek);
             this.Controls.Add(this.txtKartId);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox9);
@@ -443,7 +461,7 @@ namespace SourceSoftwareLibraryProject
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.bolumres);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureboxkadin);
             this.Controls.Add(this.msktxtposta);
             this.Controls.Add(this.comboBoxmyo);
             this.Controls.Add(this.comboBoxisletmefakultesi);
@@ -484,7 +502,8 @@ namespace SourceSoftwareLibraryProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bolumres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxkadin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxerkek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,7 +533,7 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.ComboBox comboBoxisletmefakultesi;
         private System.Windows.Forms.ComboBox comboBoxmyo;
         private System.Windows.Forms.MaskedTextBox msktxtposta;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureboxkadin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox bolumres;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -525,5 +544,6 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.TextBox txtKartId;
+        private System.Windows.Forms.PictureBox pictureboxerkek;
     }
 }

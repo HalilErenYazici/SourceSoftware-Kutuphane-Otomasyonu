@@ -18,12 +18,12 @@ namespace SourceSoftwareLibraryProject
         {
             InitializeComponent();
         }
-        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+      /*  static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
-
+      */
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
-            connection.Open();
+           /* connection.Open();*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,10 +83,10 @@ namespace SourceSoftwareLibraryProject
             else
             {
                 string ekleme = "insert into Ogrenci (kartId,ogrId,ogrNo,ogrAd,ogrSoyad,ogrTel,ogrEposta,ogrBolum) values('" + txtKartId.Text + "','" + mskOgrNo.Text + "', '" + txtSoyad.Text + "','" + txtSoyad.Text + "','" + mskTel.Text + "','" + msktxtposta.Text + "','" + cmbBolum.Text + "');";
-                MySqlCommand command = new MySqlCommand(ekleme, connection);
+                /*MySqlCommand command = new MySqlCommand(ekleme, connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
-                connection.Close();
+                connection.Close();*/
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
                 this.Hide();
@@ -129,6 +129,31 @@ namespace SourceSoftwareLibraryProject
         private void comboBoxisletmefakultesi_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioErkek_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioErkek.Checked==true)
+            {
+                pictureboxerkek.Visible = true;
+                pictureboxkadin.Visible = false;
+
+            }
+        }
+
+        private void radioKadın_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioKadın.Checked == true)
+            {
+                pictureboxkadin.Visible = true;
+                pictureboxerkek.Visible = false;
+
+            }
         }
     }
 }
