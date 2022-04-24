@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 
 namespace SourceSoftwareLibraryProject
@@ -18,16 +18,12 @@ namespace SourceSoftwareLibraryProject
         {
             InitializeComponent();
         }
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
 
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
-      
-
-        }
-
-        private void mskTel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
+            connection.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,17 +82,11 @@ namespace SourceSoftwareLibraryProject
            
             else
             {
-                txtAd.Enabled = false;
-                txtSoyad.Enabled = false;
-                txtKartId.Enabled = false;
-                msktxtposta.Enabled = false;
-                mskOgrNo.Enabled = false;
-                mskTel.Enabled = false;
-                txtSoyad.Enabled = false;
-                cmbBolum.Enabled = false;
-                comboBoxmyo.Enabled = false;
-                comboBoxisletmefakultesi.Enabled = false;
+                string ekleme = "insert into Ogrenci (kartId,ogrId,ogrNo,ogrAd,ogrSoyad,ogrTel,ogrEposta,ogrBolum) values('" + txtKartId.Text + "','" + mskOgrNo.Text + "', '" + txtSoyad.Text + "','" + txtSoyad.Text + "','" + mskTel.Text + "','" + msktxtposta.Text + "','" + cmbBolum.Text + "');";
+                MySqlCommand command = new MySqlCommand(ekleme, connection);
+                command.ExecuteNonQuery();
                 MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+                connection.Close();
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
                 this.Hide();
