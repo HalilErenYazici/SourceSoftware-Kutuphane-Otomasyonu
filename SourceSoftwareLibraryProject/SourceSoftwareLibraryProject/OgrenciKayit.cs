@@ -14,6 +14,7 @@ namespace SourceSoftwareLibraryProject
 {
     public partial class OgrenciKayit : Form
     {
+        string cinsiyet;
         public OgrenciKayit()
         {
             InitializeComponent();
@@ -143,7 +144,8 @@ namespace SourceSoftwareLibraryProject
             {
                 pictureboxerkek.Visible = true;
                 pictureboxkadin.Visible = false;
-
+                this.BackColor = Color.LightSeaGreen;
+                cinsiyet = "erkek";
             }
         }
 
@@ -153,7 +155,8 @@ namespace SourceSoftwareLibraryProject
             {
                 pictureboxkadin.Visible = true;
                 pictureboxerkek.Visible = false;
-
+                this.BackColor = Color.LightPink;
+                cinsiyet = "kadın";
             }
         }
     }
