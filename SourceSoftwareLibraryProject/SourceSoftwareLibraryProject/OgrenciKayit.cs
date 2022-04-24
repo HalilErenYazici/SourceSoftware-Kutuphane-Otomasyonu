@@ -82,11 +82,12 @@ namespace SourceSoftwareLibraryProject
            
             else
             {
-                string ekleme = "insert into Ogrenci (kartId,ogrId,ogrNo,ogrAd,ogrSoyad,ogrTel,ogrEposta,ogrBolum) values('" + txtKartId.Text + "','" + mskOgrNo.Text + "', '" + txtSoyad.Text + "','" + txtSoyad.Text + "','" + mskTel.Text + "','" + msktxtposta.Text + "','" + cmbBolum.Text + "');";
+                //string ekleme = "insert into Ogrenci (kartId,ogrId,ogrNo,ogrAd,ogrSoyad,ogrTel,ogrEposta,ogrBolum) values('" + txtKartId.Text + "','" + mskOgrNo.Text + "', '" + txtSoyad.Text + "','" + txtSoyad.Text + "','" + mskTel.Text + "','" + msktxtposta.Text + "','" + cmbBolum.Text + "');";
                 /*MySqlCommand command = new MySqlCommand(ekleme, connection);
                 command.ExecuteNonQuery();
-                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
                 connection.Close();*/
+                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
                 this.Hide();
