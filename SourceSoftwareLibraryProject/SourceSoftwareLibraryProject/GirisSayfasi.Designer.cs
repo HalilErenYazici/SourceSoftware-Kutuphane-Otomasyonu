@@ -72,6 +72,7 @@ namespace SourceSoftwareLibraryProject
             this.SifreTxt.Name = "SifreTxt";
             this.SifreTxt.Size = new System.Drawing.Size(188, 27);
             this.SifreTxt.TabIndex = 12;
+            this.SifreTxt.Text = "Software16344158.";
             this.SifreTxt.UseSystemPasswordChar = true;
             // 
             // label3
@@ -93,6 +94,7 @@ namespace SourceSoftwareLibraryProject
             this.KAdTxt.Name = "KAdTxt";
             this.KAdTxt.Size = new System.Drawing.Size(188, 27);
             this.KAdTxt.TabIndex = 10;
+            this.KAdTxt.Text = "sourcesoftware";
             // 
             // label1
             // 

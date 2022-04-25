@@ -169,16 +169,16 @@ namespace SourceSoftwareLibraryProject
             this.label1.Font = new System.Drawing.Font("Segoe Print", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(46, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 43);
+            this.label1.Size = new System.Drawing.Size(172, 56);
             this.label1.TabIndex = 10;
             this.label1.Text = "Anasayfa";
             // 
             // AnaSayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1000, 560);
+            this.ClientSize = new System.Drawing.Size(948, 593);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOgrenciKayit);
             this.Controls.Add(this.btnOgrenciIsleri);
@@ -192,8 +192,11 @@ namespace SourceSoftwareLibraryProject
             this.Controls.Add(this.btnEmanetAlmaVerme);
             this.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "AnaSayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnaSayfa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
