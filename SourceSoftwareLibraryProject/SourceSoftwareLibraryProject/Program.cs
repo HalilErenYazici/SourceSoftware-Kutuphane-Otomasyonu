@@ -16,7 +16,7 @@ namespace SourceSoftwareLibraryProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OgrenciKayit());
+            Application.Run(new GirisSayfasi());
         }
     }
 }

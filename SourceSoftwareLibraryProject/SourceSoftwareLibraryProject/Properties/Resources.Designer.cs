@@ -73,6 +73,16 @@ namespace SourceSoftwareLibraryProject.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_Line_4PX_Large {
             get {
                 object obj = ResourceManager.GetObject("BTN_Line_4PX_Large", resourceCulture);
@@ -83,9 +93,29 @@ namespace SourceSoftwareLibraryProject.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Bursa_Uludağ_Üniversitesi_logo {
+            get {
+                object obj = ResourceManager.GetObject("Bursa_Uludağ_Üniversitesi_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonLargeRound {
             get {
                 object obj = ResourceManager.GetObject("ButtonLargeRound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Info {
+            get {
+                object obj = ResourceManager.GetObject("Info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

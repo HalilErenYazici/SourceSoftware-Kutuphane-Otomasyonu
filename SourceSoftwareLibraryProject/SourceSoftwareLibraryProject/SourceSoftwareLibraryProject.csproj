@@ -122,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GirisSayfasi.resx">
+      <DependentUpon>GirisSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OgrenciKayit.resx">
       <DependentUpon>OgrenciKayit.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +159,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\128 Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bursa_Uludağ_Üniversitesi_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
