@@ -29,8 +29,9 @@ namespace SourceSoftwareLibraryProject
 
             if(KAdTxt.Text == "sourcesoftware" && SifreTxt.Text == "Software16344158." && grvTipiCmb.Text == "Geliştirici Ekibi")
             {
-               OgrenciKayit form = new OgrenciKayit();
+               AnaSayfa form = new AnaSayfa();
                form.Show();
+                this.Hide();
                 
             }
         }
