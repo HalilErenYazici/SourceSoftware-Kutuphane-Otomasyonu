@@ -35,5 +35,19 @@ namespace SourceSoftwareLibraryProject
                 
             }
         }
+
+        private void GirisSayfasi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GirisYapBtn_Hover(object sender, EventArgs e)
+        {
+            GirisYapBtn.Width = 150;
+        }
+        private void GirisYapBtn_Leave(object sender, EventArgs e)
+        {
+            GirisYapBtn.Width = 100;
+        }
     }
 }

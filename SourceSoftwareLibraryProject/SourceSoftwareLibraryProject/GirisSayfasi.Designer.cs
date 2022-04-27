@@ -52,6 +52,8 @@ namespace SourceSoftwareLibraryProject
             this.GirisYapBtn.Text = "Giriş Yap";
             this.GirisYapBtn.UseVisualStyleBackColor = true;
             this.GirisYapBtn.Click += new System.EventHandler(this.GirisYapBtn_Click);
+            this.GirisYapBtn.MouseLeave += new System.EventHandler(this.GirisYapBtn_Leave);
+            this.GirisYapBtn.MouseHover += new System.EventHandler(this.GirisYapBtn_Hover);
             // 
             // label4
             // 
@@ -174,6 +176,7 @@ namespace SourceSoftwareLibraryProject
             this.Name = "GirisSayfasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Sayfası";
+            this.Load += new System.EventHandler(this.GirisSayfasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
