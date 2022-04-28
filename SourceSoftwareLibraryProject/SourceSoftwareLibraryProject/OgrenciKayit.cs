@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using MySql.Data.MySqlClient;
+
 
 
 namespace SourceSoftwareLibraryProject
@@ -19,9 +20,9 @@ namespace SourceSoftwareLibraryProject
         {
             InitializeComponent();
         }
-      /*  static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
-        MySqlConnection connection = new MySqlConnection(connection_strg);
-      */
+       // static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        //MySqlConnection connection = new MySqlConnection(connection_strg);
+      
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
            /* connection.Open();*/
@@ -158,6 +159,11 @@ namespace SourceSoftwareLibraryProject
                 this.BackColor = Color.LightPink;
                 cinsiyet = "kadın";
             }
+        }
+
+        private void msktxtposta_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            msktxtposta.Text = "___________@ogr.uludag.edu.tr";
         }
     }
 }
