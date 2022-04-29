@@ -63,6 +63,16 @@ namespace SourceSoftwareLibraryProject.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _1200px_Book3_svg {
+            get {
+                object obj = ResourceManager.GetObject("1200px-Book3.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _128_Light {
             get {
                 object obj = ResourceManager.GetObject("128 Light", resourceCulture);
@@ -106,6 +116,26 @@ namespace SourceSoftwareLibraryProject.Properties {
         internal static System.Drawing.Bitmap ButtonLargeRound {
             get {
                 object obj = ResourceManager.GetObject("ButtonLargeRound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap CLOSING_ {
+            get {
+                object obj = ResourceManager.GetObject("CLOSING-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap f61c37bfcd44cda9c38298205ea1df94 {
+            get {
+                object obj = ResourceManager.GetObject("f61c37bfcd44cda9c38298205ea1df94", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

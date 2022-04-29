@@ -28,7 +28,6 @@ namespace SourceSoftwareLibraryProject
         {
             EmanetGoruntulemeSayfasi yeni = new EmanetGoruntulemeSayfasi();
             yeni.Show();
-            this.Hide();
         }
 
         private void btnEmegiGecenler_Click(object sender, EventArgs e)
@@ -84,7 +83,7 @@ namespace SourceSoftwareLibraryProject
         {
             OgrenciKayit yeni = new OgrenciKayit();
             yeni.Show();
-            this.Hide();
         }
+
     }
 }

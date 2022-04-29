@@ -85,7 +85,7 @@ namespace SourceSoftwareLibraryProject
             this.lblKartId.Location = new System.Drawing.Point(102, 38);
             this.lblKartId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKartId.Name = "lblKartId";
-            this.lblKartId.Size = new System.Drawing.Size(80, 28);
+            this.lblKartId.Size = new System.Drawing.Size(83, 29);
             this.lblKartId.TabIndex = 1;
             this.lblKartId.Text = "Kart Id:";
             // 
@@ -94,7 +94,7 @@ namespace SourceSoftwareLibraryProject
             this.lblOgrNo.AutoSize = true;
             this.lblOgrNo.Location = new System.Drawing.Point(64, 85);
             this.lblOgrNo.Name = "lblOgrNo";
-            this.lblOgrNo.Size = new System.Drawing.Size(122, 28);
+            this.lblOgrNo.Size = new System.Drawing.Size(129, 29);
             this.lblOgrNo.TabIndex = 2;
             this.lblOgrNo.Text = "Öğrenci No:";
             // 
@@ -103,7 +103,7 @@ namespace SourceSoftwareLibraryProject
             this.lblAd.AutoSize = true;
             this.lblAd.Location = new System.Drawing.Point(139, 132);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(43, 28);
+            this.lblAd.Size = new System.Drawing.Size(46, 29);
             this.lblAd.TabIndex = 3;
             this.lblAd.Text = "Ad:";
             // 
@@ -112,7 +112,7 @@ namespace SourceSoftwareLibraryProject
             this.lblSoyad.AutoSize = true;
             this.lblSoyad.Location = new System.Drawing.Point(114, 179);
             this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(74, 28);
+            this.lblSoyad.Size = new System.Drawing.Size(79, 29);
             this.lblSoyad.TabIndex = 4;
             this.lblSoyad.Text = "Soyad:";
             // 
@@ -121,7 +121,7 @@ namespace SourceSoftwareLibraryProject
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.Location = new System.Drawing.Point(108, 273);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(85, 28);
+            this.lblTelefon.Size = new System.Drawing.Size(91, 29);
             this.lblTelefon.TabIndex = 5;
             this.lblTelefon.Text = "Telefon:";
             // 
@@ -130,7 +130,7 @@ namespace SourceSoftwareLibraryProject
             this.lblEposta.AutoSize = true;
             this.lblEposta.Location = new System.Drawing.Point(108, 320);
             this.lblEposta.Name = "lblEposta";
-            this.lblEposta.Size = new System.Drawing.Size(86, 28);
+            this.lblEposta.Size = new System.Drawing.Size(90, 29);
             this.lblEposta.TabIndex = 6;
             this.lblEposta.Text = "E Posta:";
             // 
@@ -139,7 +139,7 @@ namespace SourceSoftwareLibraryProject
             this.lblfakulte.AutoSize = true;
             this.lblfakulte.Location = new System.Drawing.Point(107, 367);
             this.lblfakulte.Name = "lblfakulte";
-            this.lblfakulte.Size = new System.Drawing.Size(85, 28);
+            this.lblfakulte.Size = new System.Drawing.Size(91, 29);
             this.lblfakulte.TabIndex = 7;
             this.lblfakulte.Text = "Fakülte:";
             // 
@@ -253,7 +253,7 @@ namespace SourceSoftwareLibraryProject
             this.lblCinsiyet.AutoSize = true;
             this.lblCinsiyet.Location = new System.Drawing.Point(111, 226);
             this.lblCinsiyet.Name = "lblCinsiyet";
-            this.lblCinsiyet.Size = new System.Drawing.Size(90, 28);
+            this.lblCinsiyet.Size = new System.Drawing.Size(97, 29);
             this.lblCinsiyet.TabIndex = 19;
             this.lblCinsiyet.Text = "Cinsiyet:";
             // 
@@ -262,7 +262,7 @@ namespace SourceSoftwareLibraryProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(961, 565);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 28);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 20;
             this.label1.Visible = false;
             // 
@@ -271,7 +271,7 @@ namespace SourceSoftwareLibraryProject
             this.lblbolum.AutoSize = true;
             this.lblbolum.Location = new System.Drawing.Point(108, 414);
             this.lblbolum.Name = "lblbolum";
-            this.lblbolum.Size = new System.Drawing.Size(72, 28);
+            this.lblbolum.Size = new System.Drawing.Size(77, 29);
             this.lblbolum.TabIndex = 21;
             this.lblbolum.Text = "Bölüm";
             this.lblbolum.Visible = false;

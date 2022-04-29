@@ -220,5 +220,14 @@
   <ItemGroup>
     <None Include="Resources\Bursa_Uludağ_Üniversitesi_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Book3.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLOSING-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f61c37bfcd44cda9c38298205ea1df94.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,7 +37,6 @@ namespace SourceSoftwareLibraryProject
             this.btnKitapEkleme = new System.Windows.Forms.Button();
             this.btnKitapGoruntuleme = new System.Windows.Forms.Button();
             this.btnOgrenciDuzenleme = new System.Windows.Forms.Button();
-            this.btnOgrenciIsleri = new System.Windows.Forms.Button();
             this.btnOgrenciKayit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,7 +44,7 @@ namespace SourceSoftwareLibraryProject
             // btnEmanetAlmaVerme
             // 
             this.btnEmanetAlmaVerme.ImageKey = "(none)";
-            this.btnEmanetAlmaVerme.Location = new System.Drawing.Point(3, 67);
+            this.btnEmanetAlmaVerme.Location = new System.Drawing.Point(3, 334);
             this.btnEmanetAlmaVerme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEmanetAlmaVerme.Name = "btnEmanetAlmaVerme";
             this.btnEmanetAlmaVerme.Size = new System.Drawing.Size(268, 48);
@@ -57,7 +56,7 @@ namespace SourceSoftwareLibraryProject
             // 
             // btnEmanetGoruntuleme
             // 
-            this.btnEmanetGoruntuleme.Location = new System.Drawing.Point(3, 116);
+            this.btnEmanetGoruntuleme.Location = new System.Drawing.Point(3, 383);
             this.btnEmanetGoruntuleme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEmanetGoruntuleme.Name = "btnEmanetGoruntuleme";
             this.btnEmanetGoruntuleme.Size = new System.Drawing.Size(268, 48);
@@ -69,31 +68,31 @@ namespace SourceSoftwareLibraryProject
             // 
             // btnEmegiGecenler
             // 
-            this.btnEmegiGecenler.Location = new System.Drawing.Point(3, 165);
+            this.btnEmegiGecenler.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnEmegiGecenler.Location = new System.Drawing.Point(3, 500);
             this.btnEmegiGecenler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEmegiGecenler.Name = "btnEmegiGecenler";
-            this.btnEmegiGecenler.Size = new System.Drawing.Size(268, 48);
+            this.btnEmegiGecenler.Size = new System.Drawing.Size(161, 48);
             this.btnEmegiGecenler.TabIndex = 2;
             this.btnEmegiGecenler.Text = "Emeği Geçenler";
-            this.btnEmegiGecenler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmegiGecenler.UseVisualStyleBackColor = true;
             this.btnEmegiGecenler.Click += new System.EventHandler(this.btnEmegiGecenler_Click);
             // 
             // btnGirisSayfasi
             // 
-            this.btnGirisSayfasi.Location = new System.Drawing.Point(3, 214);
+            this.btnGirisSayfasi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnGirisSayfasi.Location = new System.Drawing.Point(3, 451);
             this.btnGirisSayfasi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGirisSayfasi.Name = "btnGirisSayfasi";
-            this.btnGirisSayfasi.Size = new System.Drawing.Size(268, 48);
+            this.btnGirisSayfasi.Size = new System.Drawing.Size(134, 48);
             this.btnGirisSayfasi.TabIndex = 3;
             this.btnGirisSayfasi.Text = "Giriş Sayfası";
-            this.btnGirisSayfasi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGirisSayfasi.UseVisualStyleBackColor = true;
             this.btnGirisSayfasi.Click += new System.EventHandler(this.btnGirisSayfasi_Click);
             // 
             // btnKitapDuzenleme
             // 
-            this.btnKitapDuzenleme.Location = new System.Drawing.Point(3, 263);
+            this.btnKitapDuzenleme.Location = new System.Drawing.Point(3, 101);
             this.btnKitapDuzenleme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKitapDuzenleme.Name = "btnKitapDuzenleme";
             this.btnKitapDuzenleme.Size = new System.Drawing.Size(268, 48);
@@ -105,7 +104,7 @@ namespace SourceSoftwareLibraryProject
             // 
             // btnKitapEkleme
             // 
-            this.btnKitapEkleme.Location = new System.Drawing.Point(3, 312);
+            this.btnKitapEkleme.Location = new System.Drawing.Point(3, 52);
             this.btnKitapEkleme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKitapEkleme.Name = "btnKitapEkleme";
             this.btnKitapEkleme.Size = new System.Drawing.Size(268, 48);
@@ -117,7 +116,7 @@ namespace SourceSoftwareLibraryProject
             // 
             // btnKitapGoruntuleme
             // 
-            this.btnKitapGoruntuleme.Location = new System.Drawing.Point(3, 361);
+            this.btnKitapGoruntuleme.Location = new System.Drawing.Point(3, 150);
             this.btnKitapGoruntuleme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKitapGoruntuleme.Name = "btnKitapGoruntuleme";
             this.btnKitapGoruntuleme.Size = new System.Drawing.Size(268, 48);
@@ -129,7 +128,7 @@ namespace SourceSoftwareLibraryProject
             // 
             // btnOgrenciDuzenleme
             // 
-            this.btnOgrenciDuzenleme.Location = new System.Drawing.Point(3, 410);
+            this.btnOgrenciDuzenleme.Location = new System.Drawing.Point(3, 264);
             this.btnOgrenciDuzenleme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOgrenciDuzenleme.Name = "btnOgrenciDuzenleme";
             this.btnOgrenciDuzenleme.Size = new System.Drawing.Size(268, 48);
@@ -139,21 +138,9 @@ namespace SourceSoftwareLibraryProject
             this.btnOgrenciDuzenleme.UseVisualStyleBackColor = true;
             this.btnOgrenciDuzenleme.Click += new System.EventHandler(this.btnOgrenciDuzenleme_Click);
             // 
-            // btnOgrenciIsleri
-            // 
-            this.btnOgrenciIsleri.Location = new System.Drawing.Point(3, 459);
-            this.btnOgrenciIsleri.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnOgrenciIsleri.Name = "btnOgrenciIsleri";
-            this.btnOgrenciIsleri.Size = new System.Drawing.Size(268, 48);
-            this.btnOgrenciIsleri.TabIndex = 8;
-            this.btnOgrenciIsleri.Text = "Öğrenci İşleri";
-            this.btnOgrenciIsleri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOgrenciIsleri.UseVisualStyleBackColor = true;
-            this.btnOgrenciIsleri.Click += new System.EventHandler(this.btnOgrenciIsleri_Click);
-            // 
             // btnOgrenciKayit
             // 
-            this.btnOgrenciKayit.Location = new System.Drawing.Point(3, 508);
+            this.btnOgrenciKayit.Location = new System.Drawing.Point(3, 215);
             this.btnOgrenciKayit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOgrenciKayit.Name = "btnOgrenciKayit";
             this.btnOgrenciKayit.Size = new System.Drawing.Size(268, 48);
@@ -166,10 +153,10 @@ namespace SourceSoftwareLibraryProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(46, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(46, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 56);
+            this.label1.Size = new System.Drawing.Size(150, 49);
             this.label1.TabIndex = 10;
             this.label1.Text = "Anasayfa";
             // 
@@ -181,7 +168,6 @@ namespace SourceSoftwareLibraryProject
             this.ClientSize = new System.Drawing.Size(948, 593);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOgrenciKayit);
-            this.Controls.Add(this.btnOgrenciIsleri);
             this.Controls.Add(this.btnOgrenciDuzenleme);
             this.Controls.Add(this.btnKitapGoruntuleme);
             this.Controls.Add(this.btnKitapEkleme);
@@ -212,7 +198,6 @@ namespace SourceSoftwareLibraryProject
         private System.Windows.Forms.Button btnKitapEkleme;
         private System.Windows.Forms.Button btnKitapGoruntuleme;
         private System.Windows.Forms.Button btnOgrenciDuzenleme;
-        private System.Windows.Forms.Button btnOgrenciIsleri;
         private System.Windows.Forms.Button btnOgrenciKayit;
         private System.Windows.Forms.Label label1;
     }

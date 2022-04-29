@@ -20,12 +20,12 @@ namespace SourceSoftwareLibraryProject
         {
             InitializeComponent();
         }
-       // static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
-        //MySqlConnection connection = new MySqlConnection(connection_strg);
+       static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+       MySqlConnection connection = new MySqlConnection(connection_strg);
       
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
-           /* connection.Open();*/
+           //connection.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)
