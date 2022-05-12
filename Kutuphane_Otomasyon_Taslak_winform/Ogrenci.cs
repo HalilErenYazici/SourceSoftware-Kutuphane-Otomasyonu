@@ -26,5 +26,40 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Application.Exit();
         }
+
+        private void anasayfaBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new AnaSayfa();
+            form.Show();
+            this.Close();
+        }
+
+        private void emanetBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Emanet();
+            form.Show();
+            this.Close();
+        }
+
+        private void ogrenciBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Ogrenci();
+            form.Show();
+            this.Close();
+        }
+
+        private void kitapBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Kitap();
+            form.Show();
+            this.Close();
+        }
+
+        private void infoBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Info();
+            form.Show();
+            this.Close();
+        }
     }
 }

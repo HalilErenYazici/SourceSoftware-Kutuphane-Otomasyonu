@@ -85,5 +85,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void kitapBtn_Click_1(object sender, EventArgs e)
+        {
+            Form form = new Kitap();
+            form.Show();
+            this.Close();
+        }
+
+        private void infoBtn_Click_1(object sender, EventArgs e)
+        {
+            Form form = new Info();
+            form.Show();
+            this.Close();
+        }
     }
 }

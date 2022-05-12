@@ -30,14 +30,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cikisButon = new System.Windows.Forms.Button();
             this.infoBtn = new System.Windows.Forms.Button();
@@ -45,7 +38,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,69 +70,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 3;
             // 
-            // textBox14
+            // button1
             // 
-            this.textBox14.Location = new System.Drawing.Point(74, 197);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(188, 22);
-            this.textBox14.TabIndex = 10;
-            this.textBox14.Text = "Öğrenci Bölüm";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(382, 197);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(188, 22);
-            this.textBox7.TabIndex = 9;
-            this.textBox7.Text = "Öğrenci E-Posta";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(382, 169);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(188, 22);
-            this.textBox8.TabIndex = 8;
-            this.textBox8.Text = "Öğrenci Telefon";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(382, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 22);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.Text = "Öğrenci Soyad";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(382, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 22);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "Öğrenci Ad";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(74, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "Öğrenci No";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(74, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Öğrenci ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(74, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Kart ID";
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(627, 113);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 45);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Öğrenci Ekle";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -165,6 +112,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.Size = new System.Drawing.Size(24, 24);
             this.cikisButon.TabIndex = 10;
             this.cikisButon.UseVisualStyleBackColor = true;
+            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
             // infoBtn
             // 
@@ -183,6 +131,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -201,6 +150,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -219,6 +169,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
+            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
             // 
             // emanetBtn
             // 
@@ -237,6 +188,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -255,17 +207,71 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(627, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 45);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Öğrenci Ekle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(74, 113);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Kart ID";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(74, 141);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(188, 22);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "Öğrenci ID";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(74, 169);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(188, 22);
+            this.textBox3.TabIndex = 5;
+            this.textBox3.Text = "Öğrenci No";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(74, 197);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(188, 22);
+            this.textBox14.TabIndex = 10;
+            this.textBox14.Text = "Öğrenci Bölüm";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(382, 113);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(188, 22);
+            this.textBox4.TabIndex = 6;
+            this.textBox4.Text = "Öğrenci Ad";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(382, 197);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(188, 22);
+            this.textBox7.TabIndex = 9;
+            this.textBox7.Text = "Öğrenci E-Posta";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(382, 141);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(188, 22);
+            this.textBox5.TabIndex = 7;
+            this.textBox5.Text = "Öğrenci Soyad";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(382, 169);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(188, 22);
+            this.textBox8.TabIndex = 8;
+            this.textBox8.Text = "Öğrenci Telefon";
             // 
             // tabOgrenciEkle
             // 
