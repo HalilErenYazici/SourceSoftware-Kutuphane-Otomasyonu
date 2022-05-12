@@ -53,31 +53,35 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         //    a.ShowDialog();
         //}
 
-        Emanet b = new Emanet();
+        
         private void emanetBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Emanet b = new Emanet();
             b.ShowDialog();
         }
 
-        Ogrenci c = new Ogrenci();
+        
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Ogrenci c = new Ogrenci();
             c.ShowDialog();
         }
 
-        Kitap d = new Kitap();
+        
         private void kitapBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Kitap d = new Kitap();
             d.ShowDialog();
         }
 
-        Info f = new Info();
+        
         private void infoBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Info f = new Info();
             f.ShowDialog();
         }
 

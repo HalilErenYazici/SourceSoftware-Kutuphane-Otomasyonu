@@ -7,16 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabOgrenciEkle : Form
     {
+        string cinsiyet, bolum;
         public tabOgrenciEkle()
         {
             InitializeComponent();
         }
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
 
+
+        private void tabOgrenciEkle_Load(object sender, EventArgs e)
+        {
+            connection.Open();
+        }
         private void anasayfaBtn_Click(object sender, EventArgs e)
         {
             Form form = new AnaSayfa();
@@ -87,11 +96,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtOgrenciNo.Text == "" ||txtOgrenciAd.Text == "" || txtOgrenciSoyad.Text == "" || mskOgrenciTelefon.Text == "")
+            if (mskOgrNo.Text == "" ||txtOgrenciAd.Text == "" || txtOgrenciSoyad.Text == "" || mskOgrenciTelefon.Text == "")
             {
                 
                 
-                if (txtOgrenciNo.Text.Length != 9)
+                if (mskOgrNo.Text.Length != 9)
                 {
                     MessageBox.Show("Öğrenci numarası 9 hanenin altında olamaz!");
                 }
@@ -142,13 +151,36 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
                 else
             {
-               
-                MessageBox.Show("Kayıt başarıyla gerçekleştirildi, anasayfaya yönlendiriliyorsunuz");
+                if(cmbFakulte.Text == "İnegöl İşletme Fakültesi")
+                {
+                    bolum = cmbisletme.Text;
+                }
+                if (cmbFakulte.Text == "İnegöl MYO")
+                {
+                    bolum = cmbmyo.Text;
+                }
+                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cinsiyet +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + bolum + "');";
+                MySqlCommand command = new MySqlCommand(ekleme, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
 
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
                 this.Hide();
             }
+        }
+
+        
+
+        private void radioKadin_CheckedChanged(object sender, EventArgs e)
+        {
+            cinsiyet = "kadın";
+        }
+
+        private void radioErkek_CheckedChanged(object sender, EventArgs e)
+        {
+            cinsiyet = "erkek";
         }
     }
 }

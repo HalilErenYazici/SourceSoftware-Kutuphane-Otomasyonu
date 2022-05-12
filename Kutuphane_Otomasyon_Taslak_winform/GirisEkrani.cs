@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using MySql.Data;
-//using MySql.Data.MySqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -82,18 +82,72 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_y = e.Y;
         }
 
-        AnaSayfa a = new AnaSayfa();
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (txtUser.Text.Length < 3 || txtPass.Text.Length < 4 /*|| txtUser.Text != "sourcesoftware" && txtPass.Text != "Software16344158."*/)
-            //{
-            //    MessageBox.Show("Kullanıcı Adı ve Şifre boş veya hatalı.", "Giriş Hatası!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
+            MySqlCommand command;
+            MySqlDataReader dataRead;
+            string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+            MySqlConnection connection = new MySqlConnection(connection_strg);
+            command = new MySqlCommand();
+            connection.Open();
+            command.Connection = connection;
+            command.CommandText = "Select * From Personel where prsnKAd='" + txtUser.Text +
+                "' And prsnSifre='" + txtPass.Text + "' And grvTipi='" + cmbGorev.Text + "'";
+            dataRead = command.ExecuteReader();
+
+            if (dataRead.Read())
             {
-                this.Hide();
-                a.ShowDialog();
+                AnaSayfa a = new AnaSayfa();
+                AnaSayfa form = new AnaSayfa();
+                form.Show();
+                this.Visible = false;
             }
+            else
+            {
+                MessageBox.Show(" Hatalı Giriş Yaptınız \n Lütfen Bilgilerinizi \n Kontrol Ediniz");
+            }
+            connection.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userImg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
