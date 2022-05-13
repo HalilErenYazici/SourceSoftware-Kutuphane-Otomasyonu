@@ -98,6 +98,12 @@
     <Compile Include="tabKitapEkle.Designer.cs">
       <DependentUpon>tabKitapEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabOgrenciDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabOgrenciDuzenle.Designer.cs">
+      <DependentUpon>tabOgrenciDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="tabOgrenciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tabKitapEkle.resx">
       <DependentUpon>tabKitapEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabOgrenciDuzenle.resx">
+      <DependentUpon>tabOgrenciDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tabOgrenciEkle.resx">
       <DependentUpon>tabOgrenciEkle.cs</DependentUpon>
