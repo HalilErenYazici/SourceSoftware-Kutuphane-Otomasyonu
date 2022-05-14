@@ -56,11 +56,5 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
-
-        private void cikisButon_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }
     }
 }

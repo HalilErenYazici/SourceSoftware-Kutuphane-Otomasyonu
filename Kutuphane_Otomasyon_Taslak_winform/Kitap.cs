@@ -64,11 +64,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void cikisButon_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
        

@@ -73,7 +73,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabOgrenciDuzenle();
             form.Show();
-            this.Close();
         }
     }
 }

@@ -18,10 +18,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
         }
 
-        private void searchBox_Click(object sender, EventArgs e)
+        private void cikisButon_Click(object sender, EventArgs e)
         {
-            searchBox.Clear();
+            Application.Exit();
         }
+
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void tabOgrenciDuzenle_Load(object sender, EventArgs e)
@@ -97,16 +98,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
             DialogResult dialog;
-            dialog = MessageBox.Show("BU KAYDI SİLMEK İSTİYORMUSUNUZ","sil" ,MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?","SİL!" ,MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
              connection.Open();
             string sil = "delete from Ogrenci where ogrNo=@ogrNo";
             MySqlCommand command = new MySqlCommand(sil, connection);
             command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
             command.ExecuteNonQuery();
             connection.Close();
-            MessageBox.Show("silme işlemi gerçekleşti");
+            MessageBox.Show("Silme işlemi gerçekleşti.");
             daset.Tables["Ogrenci"].Clear();
             ogrenciListele();
             foreach (Control item in Controls)

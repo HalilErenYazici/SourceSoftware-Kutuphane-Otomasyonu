@@ -41,10 +41,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_y = e.Y;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void kaplaButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void simgeButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+
 
         //AnaSayfa a = new AnaSayfa();
         //private void anasayfaBtn_Click(object sender, EventArgs e)
@@ -53,7 +65,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         //    a.ShowDialog();
         //}
 
-        
+
         private void emanetBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -83,16 +95,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Hide();
             Info f = new Info();
             f.ShowDialog();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void kitapBtn_Click_1(object sender, EventArgs e)

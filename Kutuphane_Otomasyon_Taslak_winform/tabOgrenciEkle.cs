@@ -21,6 +21,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
 
+        private void cikisButon_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
 
         private void tabOgrenciEkle_Load(object sender, EventArgs e)
         {
@@ -59,12 +64,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new Info();
             form.Show();
             this.Close();
-        }
-
-        private void cikisButon_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-
         }
 
         private void txtOgrenciBolum_TextChanged(object sender, EventArgs e)
