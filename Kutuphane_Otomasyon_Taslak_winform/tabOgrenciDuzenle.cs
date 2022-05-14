@@ -26,12 +26,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void tabOgrenciDuzenle_Load(object sender, EventArgs e)
         {
-            ogrenciListele();
+           ogrenciListele();
+
+
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-          connection.Open();
+           connection.Open();
             string guncelle = "update Ogrenci set kartId=@kartId,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte where ogrNo=@ogrNo" + mskOgrNo.Text + "'";
              MySqlCommand command = new MySqlCommand(guncelle, connection);
             command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
@@ -45,13 +48,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             command.ExecuteNonQuery();
             connection.Close();
            
-
+            
         }
 
         private void mskOgrNo_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
-            string listele = "select * from Ogrenci where ogrNo like'"+mskOgrNo.Text+"'";
+            string listele = "select * from Ogrenci where ogrNo like %'"+mskOgrNo.Text+"%'";
             MySqlCommand command = new MySqlCommand(listele, connection);
             MySqlDataReader read = command.ExecuteReader();
             command.ExecuteNonQuery();
@@ -78,7 +81,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         DataSet daset = new DataSet();
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            daset.Tables["uye"].Clear();
+            daset.Tables["Ogrenci"].Clear();
             connection.Open();
             string ara = "select * from Ogrenci where ogrNo like'%" + searchBox.Text + "%'";
             MySqlDataAdapter adtr = new MySqlDataAdapter(ara, connection);
@@ -94,7 +97,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-          connection.Open();
+
+            DialogResult dialog;
+            dialog = MessageBox.Show("BU KAYDI SİLMEK İSTİYORMUSUNUZ","sil" ,MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+             connection.Open();
             string sil = "delete from Ogrenci where ogrNo=@ogrNo";
             MySqlCommand command = new MySqlCommand(sil, connection);
             command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
@@ -110,7 +116,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     item.Text = "";
                 }
             }
-
+         
           
            
         }
@@ -124,7 +130,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             dataGridView1.DataSource = daset.Tables["Ogrenci"];
             connection.Close();
             daset.Tables["Ogrenci"].Clear();
-            ogrenciListele();
             foreach (Control item in Controls)
             {
                 if (item is TextBox & item is MaskedTextBox & item is ComboBox)
@@ -133,11 +138,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
             }
 
-
+            
             
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+//mskOgrNo.Text = dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString();
 
-
+        }
     }
 }
