@@ -13,7 +13,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabOgrenciEkle : Form
     {
-        string cinsiyet, bolum;
+        string  bolum;
         public tabOgrenciEkle()
         {
             InitializeComponent();
@@ -75,19 +75,39 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (cmbFakulte.Text == "İnegöl İşletme Fakültesi")
             {
-              
+                cmbisletme.Items.Clear();
+                cmbisletme.Items.Add("Yönetim Bilişim Sistemleri");
+                cmbisletme.Items.Add("Uluslararası Ticaret ve İşletmecilik");
+                cmbisletme.Items.Add("İşletme");
+
+
+
                 cmbisletme.Visible = true;
-                cmbmyo.Visible = false;
                 label4.Visible = true;
 
 
             }
 
-            else if (cmbFakulte.Text == "İnegöl MYO")
+            else
             {
+                cmbisletme.Items.Clear();
+                cmbisletme.Items.Add("Çocuk Bakımı ve Gençlik Hizmetleri Bölümü");
+                cmbisletme.Items.Add("Dış Ticaret Bölümü");
+                cmbisletme.Items.Add("Elektrik ve Enerji Bölümü");
+                cmbisletme.Items.Add("İnşaat Bölümü");
+                cmbisletme.Items.Add("Makine ve Metal Teknolojileri Bölümü");
+                cmbisletme.Items.Add("Malzeme ve Malzeme İşleme Teknolojileri Bölümü");
+                cmbisletme.Items.Add("Pazarlama ve Reklamcılık Bölümü");
+                cmbisletme.Items.Add("Tasarım Bölümü");
+                cmbisletme.Items.Add("Tekstil, Giyim, Ayakkabı ve Deri Bölümü");
+                cmbisletme.Items.Add("Tıbbi Hizmetler ve Teknikler Bölümü");
+                cmbisletme.Items.Add("Yönetim ve Organizasyon Bölümü");
+                cmbisletme.Items.Add("Sağlık Bakım Hizmetleri Bölümü");
+                cmbisletme.Items.Add("Terapi ve Rehabilitasyon Bölümü");
+                cmbisletme.Items.Add("Sosyal Hizmet ve Danışmanlık Bölümü");
 
-                cmbmyo.Visible = true;
-                cmbisletme.Visible = false;
+
+                cmbisletme.Visible = true;
                 label4.Visible = true;
 
             }
@@ -127,7 +147,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     MessageBox.Show("Bölüm seçiniz");
                 }
-                if (radioErkek.Checked)
+                if (cmbcinsiyet.Text == "")
+                {
+                    MessageBox.Show("CİNSİYET SEÇİNİZ");
+                }
+              /*  if (radioErkek.Checked)
                 {
 
                     label1.Text = "Cinsiyet" + radioErkek.Text;
@@ -145,20 +169,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MessageBox.Show("Lüften cinsiyet seçiniz!");
 
                 }
-
+              */
              
             }
                 else
             {
-                if(cmbFakulte.Text == "İnegöl İşletme Fakültesi")
+                /*if(cmbFakulte.Text == "İnegöl İşletme Fakültesi")
                 {
                     bolum = cmbisletme.Text;
                 }
                 if (cmbFakulte.Text == "İnegöl MYO")
                 {
                     bolum = cmbmyo.Text;
-                }
-                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cinsiyet +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + bolum + "');";
+                }*/
+                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text + "');";
                 MySqlCommand command = new MySqlCommand(ekleme, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -172,7 +196,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         
 
-        private void radioKadin_CheckedChanged(object sender, EventArgs e)
+      /*  private void radioKadin_CheckedChanged(object sender, EventArgs e)
         {
             cinsiyet = "kadın";
         }
@@ -180,6 +204,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void radioErkek_CheckedChanged(object sender, EventArgs e)
         {
             cinsiyet = "erkek";
-        }
+        }*/
     }
 }

@@ -27,7 +27,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void tabOgrenciDuzenle_Load(object sender, EventArgs e)
         {
-           ogrenciListele();
+
+
+            listele();
+           // ogrenciListele();
 
 
            
@@ -36,16 +39,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button1_Click(object sender, EventArgs e)
         {
            connection.Open();
-            string guncelle = "update Ogrenci set kartId=@kartId,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte where ogrNo=@ogrNo" + mskOgrNo.Text + "'";
-             MySqlCommand command = new MySqlCommand(guncelle, connection);
-            command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
+            MySqlCommand command =new MySqlCommand ("update Ogrenci set kartId=@kartId,ogrId=@ogrId,ogrNo=@ogrNo,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,cinsiyet=@cinsiyet,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte,ogrBolum=@ogrBolum where ogrId=@ogrId" +"'",connection);
+
+
+            
             command.Parameters.AddWithValue("@kartId", mskKartId.Text);
 
-            command.Parameters.AddWithValue("@ogrAd", mskKartId.Text);
-            command.Parameters.AddWithValue("@ogrSoyad", mskKartId.Text);
-            command.Parameters.AddWithValue("@ogrTel", mskKartId.Text);
-            command.Parameters.AddWithValue("@ogrEposta", mskKartId.Text);
-            command.Parameters.AddWithValue("@ogrFakulte", mskKartId.Text);
+            command.Parameters.AddWithValue("@ogrId", txtogrenciId.Text);
+            command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
+
+            command.Parameters.AddWithValue("@ogrAd", txtOgrenciAd.Text);
+            command.Parameters.AddWithValue("@ogrSoyad", txtOgrenciSoyad.Text);
+            command.Parameters.AddWithValue("@cinsiyet", cmbcinsiyet.Text);
+
+            command.Parameters.AddWithValue("@ogrTel", mskOgrenciTelefon.Text);
+            command.Parameters.AddWithValue("@ogrEposta", mskOgrenciPosta.Text);
+            command.Parameters.AddWithValue("@ogrFakulte", cmbFakulte.Text);
+            command.Parameters.AddWithValue("@ogrBolum", cmbmyo.Text);
+
             command.ExecuteNonQuery();
             connection.Close();
            
@@ -54,7 +65,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void mskOgrNo_TextChanged(object sender, EventArgs e)
         {
-            connection.Open();
+          /*  connection.Open();
             string listele = "select * from Ogrenci where ogrNo like %'"+mskOgrNo.Text+"%'";
             MySqlCommand command = new MySqlCommand(listele, connection);
             MySqlDataReader read = command.ExecuteReader();
@@ -71,7 +82,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbFakulte.Text = read["ogrFakulte"].ToString();
 
             }
-            connection.Close();
+            connection.Close();*/
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -98,22 +109,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            connection.Open();
             DialogResult dialog;
             dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?","SİL!" ,MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-             connection.Open();
             string sil = "delete from Ogrenci where ogrNo=@ogrNo";
             MySqlCommand command = new MySqlCommand(sil, connection);
             command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
             command.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Silme işlemi gerçekleşti.");
-            daset.Tables["Ogrenci"].Clear();
-            ogrenciListele();
-            foreach (Control item in Controls)
+           //daset.Tables["Ogrenci"].Clear();
+           
+            listele();
+         foreach (Control item in Controls)
             {
                 if(item is TextBox& item is MaskedTextBox& item is ComboBox)
                 {
-                    item.Text = "";
+                    item.Text = null;
                 }
             }
          
@@ -121,6 +133,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
            
         }
 
+        public void listele()
+        {
+            connection.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connection.Close();
+        
+        }
 
         private void ogrenciListele()
         {
@@ -146,6 +169,66 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
 //mskOgrNo.Text = dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString();
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            mskKartId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtogrenciId.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            mskOgrNo.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtOgrenciAd.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtOgrenciSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmbcinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+            mskOgrenciTelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            mskOgrenciPosta.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            cmbmyo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+
+
+        }
+
+        private void cmbFakulte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbFakulte.Text == "İnegöl İşletme Fakültesi")
+            {
+                cmbmyo.Items.Clear();
+                cmbmyo.Items.Add("Yönetim Bilişim Sistemleri");
+                cmbmyo.Items.Add("Uluslararası Ticaret ve İşletmecilik");
+                cmbmyo.Items.Add("İşletme");
+
+
+
+                cmbmyo.Visible = true;
+                label4.Visible = true;
+
+
+            }
+
+            else
+            {
+                cmbmyo.Items.Clear();
+                cmbmyo.Items.Add("Çocuk Bakımı ve Gençlik Hizmetleri Bölümü");
+                cmbmyo.Items.Add("Dış Ticaret Bölümü");
+                cmbmyo.Items.Add("Elektrik ve Enerji Bölümü");
+                cmbmyo.Items.Add("İnşaat Bölümü");
+                cmbmyo.Items.Add("Makine ve Metal Teknolojileri Bölümü");
+                cmbmyo.Items.Add("Malzeme ve Malzeme İşleme Teknolojileri Bölümü");
+                cmbmyo.Items.Add("Pazarlama ve Reklamcılık Bölümü");
+                cmbmyo.Items.Add("Tasarım Bölümü");
+                cmbmyo.Items.Add("Tekstil, Giyim, Ayakkabı ve Deri Bölümü");
+                cmbmyo.Items.Add("Tıbbi Hizmetler ve Teknikler Bölümü");
+                cmbmyo.Items.Add("Yönetim ve Organizasyon Bölümü");
+                cmbmyo.Items.Add("Sağlık Bakım Hizmetleri Bölümü");
+                cmbmyo.Items.Add("Terapi ve Rehabilitasyon Bölümü");
+                cmbmyo.Items.Add("Sosyal Hizmet ve Danışmanlık Bölümü");
+
+
+                cmbmyo.Visible = true;
+                label4.Visible = true;
+
+            }
         }
     }
 }
