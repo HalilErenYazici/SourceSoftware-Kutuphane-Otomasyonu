@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             InitializeComponent();
         }
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
+
 
         private void searchBox_Click(object sender, EventArgs e)
         {
@@ -74,5 +78,37 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new tabOgrenciDuzenle();
             form.Show();
         }
+
+        public void listele()
+        {
+            connection.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connection.Close();
+
+        }
+
+        private void Ogrenci_Load(object sender, EventArgs e)
+        {
+            listele();
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'",connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dataGridView1.DataSource = dt;
+            connection.Close();
+        }
+
+      
+
+       
     }
 }
