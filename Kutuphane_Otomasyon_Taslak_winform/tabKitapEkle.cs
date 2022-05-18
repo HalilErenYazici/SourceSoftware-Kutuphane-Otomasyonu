@@ -71,22 +71,76 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||mskcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
-           {
-               MessageBox.Show("lütfen alanları boş geçmeyiniz");
-           }
-           else
-           {
-               string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
-               MySqlCommand komut = new MySqlCommand(ekle, connection);
-               komut.ExecuteNonQuery();                
-               connection.Close();
+            
+             if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||mskcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
+             {
+                 MessageBox.Show("lütfen alanları boş geçmeyiniz");
+             }
+            else
+             {
+                  /* if ()
+                   {
+                       string turEkle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                       MySqlCommand turKomut = new MySqlCommand(turEkle, connection);
+                       turKomut.ExecuteNonQuery();
+
+
+                   }*/
+
+            //string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
+            //  string turgoster = "Select * from Tur(turId,turAd) values('" + txttur.Text + "');";
+            // MySqlCommand komut = new MySqlCommand(ekle, connection);
+            //MySqlCommand turKomut = new MySqlCommand(turgoster, connection);
+
+           // string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + txttur.Text + "'";
+
+           string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                    MySqlCommand turkomut = new MySqlCommand(turekle, connection);
+            turkomut.ExecuteNonQuery();
+
+           string kategoriekle  = "insert into Kategori(ktgrAd) values('" + txtkategori.Text + "');";
+            MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
+            kategorikomut.ExecuteNonQuery();
+
+           string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('"+txtyazar.Text+ "','" + txtyazarsoyad.Text+ "','" + txtyazarsayisi.Text+"');";
+            MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
+            yazarkomut.ExecuteNonQuery();
+        
+           string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + txtyayinevi.Text+ "','" + msktel.Text + "');";
+            MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
+            yayinEviKomut.ExecuteNonQuery();
+
+           string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text+ "','"+ txtcevirmensoyad.Text+ "','" + txtcevirmensayisi.Text + "');";
+            MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
+            cevirmenKomut.ExecuteNonQuery();
+
+            string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
+                MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
+                eklekomut.ExecuteNonQuery();
+
+
+
+
+                connection.Close();
+                    MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+
+                    Ogrenci ogrenci = new Ogrenci();
+                    ogrenci.Show();
+                    this.Hide();
+
+                
+              //  string turEkle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+             // MySqlCommand komut = new MySqlCommand(ekle, connection);
+             //  MySqlCommand turKomut = new MySqlCommand(turEkle, connection);
+          //     komut.ExecuteNonQuery();                
+                //turKomut.ExecuteNonQuery();
+            /*    connection.Close();
                MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
 
                Ogrenci ogrenci = new Ogrenci();
                ogrenci.Show();
                this.Hide();
-
+            */
 
            }
        
