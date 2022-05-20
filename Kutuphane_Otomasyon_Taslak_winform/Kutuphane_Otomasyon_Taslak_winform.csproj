@@ -222,5 +222,17 @@
   <ItemGroup>
     <None Include="Resources\bookSyh.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bck-Pmb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bck-Pmb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bck-Pmb3-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bck-Mv.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

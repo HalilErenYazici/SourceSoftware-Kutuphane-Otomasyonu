@@ -207,12 +207,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (cmbcinsiyet.SelectedIndex == 0)
             {
-                this.panel1.BackgroundImage = Properties.Resources.Koyu_Otomasyon_BackgroundK2;
+                this.panel1.BackgroundImage = Properties.Resources.Bck_Mv;
             }
 
             if (cmbcinsiyet.SelectedIndex == 1)
             {
-                this.panel1.BackgroundImage = Properties.Resources.bckg;
+                this.panel1.BackgroundImage = Properties.Resources.Bck_Pmb3_5;
             }
         }
 

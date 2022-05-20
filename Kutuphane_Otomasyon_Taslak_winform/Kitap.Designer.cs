@@ -276,7 +276,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.kitaplarıListele.FormattingEnabled = true;
             this.kitaplarıListele.ItemHeight = 16;
-            this.kitaplarıListele.Location = new System.Drawing.Point(3, 129);
+            this.kitaplarıListele.Location = new System.Drawing.Point(12, 129);
             this.kitaplarıListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kitaplarıListele.Name = "kitaplarıListele";
             this.kitaplarıListele.Size = new System.Drawing.Size(1256, 580);

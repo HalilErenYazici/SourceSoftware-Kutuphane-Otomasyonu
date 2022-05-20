@@ -106,6 +106,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label3.Size = new System.Drawing.Size(95, 28);
             this.label3.TabIndex = 12;
             this.label3.Text = "ÖĞRENCİ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
