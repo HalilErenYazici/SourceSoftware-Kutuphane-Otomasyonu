@@ -80,8 +80,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-             if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||mskcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
+            string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
+            var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
+
+            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||mskcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
              {
                  MessageBox.Show("lütfen alanları boş geçmeyiniz");
              }
@@ -103,27 +105,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
            // string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + txttur.Text + "'";
 
-           string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-                    MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-            turkomut.ExecuteNonQuery();
+                string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                MySqlCommand turkomut = new MySqlCommand(turekle, connection);
+                turkomut.ExecuteNonQuery();
+                int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-           string kategoriekle  = "insert into Kategori(ktgrAd) values('" + txtkategori.Text + "');";
-            MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
-            kategorikomut.ExecuteNonQuery();
 
-           string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('"+txtyazar.Text+ "','" + txtyazarsoyad.Text+ "','" + txtyazarsayisi.Text+"');";
-            MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
-            yazarkomut.ExecuteNonQuery();
-        
-           string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + txtyayinevi.Text+ "','" + msktel.Text + "');";
-            MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
-            yayinEviKomut.ExecuteNonQuery();
+                string kategoriekle  = "insert into Kategori(ktgrAd) values('" + txtkategori.Text + "');";
+                MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
+                kategorikomut.ExecuteNonQuery();
+                int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-           string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text+ "','"+ txtcevirmensoyad.Text+ "','" + txtcevirmensayisi.Text + "');";
-            MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
-            cevirmenKomut.ExecuteNonQuery();
+                string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('"+txtyazar.Text+ "','" + txtyazarsoyad.Text+ "','" + txtyazarsayisi.Text+"');";
+                MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
+                yazarkomut.ExecuteNonQuery();
+                int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-            string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
+                string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + txtyayinevi.Text+ "','" + msktel.Text + "');";
+                MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
+                yayinEviKomut.ExecuteNonQuery();
+                int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+
+                string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text+ "','"+ txtcevirmensoyad.Text+ "','" + txtcevirmensayisi.Text + "');";
+                MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
+                cevirmenKomut.ExecuteNonQuery();
+                int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+
+                string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
                 MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
                 eklekomut.ExecuteNonQuery();
 
@@ -154,5 +162,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
            }
        
         }
+
+       
     }
 }
