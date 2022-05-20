@@ -21,6 +21,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Application.Exit();
         }
+        private void kaplaButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void simgeButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -62,11 +71,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new Info();
             form.Show();
             this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-       
         }
     }
 }

@@ -30,6 +30,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.kaplaButon = new System.Windows.Forms.Button();
             this.simgeButon = new System.Windows.Forms.Button();
             this.infoBtn = new System.Windows.Forms.Button();
             this.sonIslemler = new System.Windows.Forms.ListBox();
@@ -38,7 +44,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
-            this.kaplaButon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +51,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.kaplaButon);
             this.panel1.Controls.Add(this.simgeButon);
             this.panel1.Controls.Add(this.infoBtn);
@@ -60,6 +70,84 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(1097, 335);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 28);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "HAKKINDA";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(869, 335);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 28);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "KİTAP";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(593, 335);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 28);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "ÖĞRENCİ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(313, 335);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 28);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "EMANET İŞLERİ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(73, 335);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 28);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "ANASAYFA";
+            // 
+            // kaplaButon
+            // 
+            this.kaplaButon.BackColor = System.Drawing.Color.Transparent;
+            this.kaplaButon.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.maximizeSyhKntr30;
+            this.kaplaButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.kaplaButon.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kaplaButon.FlatAppearance.BorderSize = 0;
+            this.kaplaButon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
+            this.kaplaButon.Location = new System.Drawing.Point(1223, 3);
+            this.kaplaButon.Name = "kaplaButon";
+            this.kaplaButon.Size = new System.Drawing.Size(24, 24);
+            this.kaplaButon.TabIndex = 9;
+            this.kaplaButon.UseVisualStyleBackColor = true;
+            this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
             // 
             // simgeButon
             // 
@@ -130,7 +218,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // cikisButon
             // 
             this.cikisButon.BackColor = System.Drawing.Color.Transparent;
-            this.cikisButon.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.close;
+            this.cikisButon.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.remove;
             this.cikisButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cikisButon.Cursor = System.Windows.Forms.Cursors.Default;
             this.cikisButon.FlatAppearance.BorderSize = 0;
@@ -186,7 +274,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // kitapBtn
             // 
             this.kitapBtn.BackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.book;
+            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bookSyh;
             this.kitapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.kitapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kitapBtn.FlatAppearance.BorderSize = 0;
@@ -201,24 +289,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
             this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click_1);
-            // 
-            // kaplaButon
-            // 
-            this.kaplaButon.BackColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.maximize;
-            this.kaplaButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.kaplaButon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.kaplaButon.FlatAppearance.BorderSize = 0;
-            this.kaplaButon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1223, 3);
-            this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(24, 24);
-            this.kaplaButon.TabIndex = 9;
-            this.kaplaButon.UseVisualStyleBackColor = true;
-            this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
             // 
             // AnaSayfa
             // 
@@ -236,6 +306,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseUp);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +322,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button kaplaButon;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

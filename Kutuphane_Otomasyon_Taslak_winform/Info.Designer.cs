@@ -125,7 +125,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // kitapBtn
             // 
             this.kitapBtn.BackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.book;
+            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bookSyh;
             this.kitapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.kitapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kitapBtn.FlatAppearance.BorderSize = 0;

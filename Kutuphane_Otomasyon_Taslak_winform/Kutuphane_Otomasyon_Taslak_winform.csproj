@@ -213,5 +213,14 @@
   <ItemGroup>
     <None Include="Resources\minus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizeSyhKntr30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookSyh.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

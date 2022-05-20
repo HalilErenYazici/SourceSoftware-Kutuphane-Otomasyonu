@@ -26,6 +26,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Application.Exit();
 
         }
+        private void kaplaButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void simgeButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
         private void tabOgrenciEkle_Load(object sender, EventArgs e)
         {
@@ -194,16 +203,29 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
         }
 
-        
-
-      /*  private void radioKadin_CheckedChanged(object sender, EventArgs e)
+        private void cmbcinsiyet_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cinsiyet = "kadın";
+            if (cmbcinsiyet.SelectedIndex == 0)
+            {
+                this.panel1.BackgroundImage = Properties.Resources.Koyu_Otomasyon_BackgroundK2;
+            }
+
+            if (cmbcinsiyet.SelectedIndex == 1)
+            {
+                this.panel1.BackgroundImage = Properties.Resources.bckg;
+            }
         }
 
-        private void radioErkek_CheckedChanged(object sender, EventArgs e)
-        {
-            cinsiyet = "erkek";
-        }*/
+
+
+        /*  private void radioKadin_CheckedChanged(object sender, EventArgs e)
+          {
+              cinsiyet = "kadın";
+          }
+
+          private void radioErkek_CheckedChanged(object sender, EventArgs e)
+          {
+              cinsiyet = "erkek";
+          }*/
     }
 }
