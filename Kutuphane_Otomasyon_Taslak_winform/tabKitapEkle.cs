@@ -77,13 +77,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
 
-            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||mskcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
+            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
              {
                  MessageBox.Show("lütfen alanları boş geçmeyiniz");
              }
@@ -105,16 +105,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
            // string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + txttur.Text + "'";
 
-                string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-                MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-                turkomut.ExecuteNonQuery();
-                int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+              
 
 
                 string kategoriekle  = "insert into Kategori(ktgrAd) values('" + txtkategori.Text + "');";
                 MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
                 kategorikomut.ExecuteNonQuery();
                 int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+
+                string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                MySqlCommand turkomut = new MySqlCommand(turekle, connection);
+                turkomut.ExecuteNonQuery();
+                int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
                 string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('"+txtyazar.Text+ "','" + txtyazarsoyad.Text+ "','" + txtyazarsayisi.Text+"');";
                 MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
@@ -131,8 +133,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cevirmenKomut.ExecuteNonQuery();
                 int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
+                string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                 MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
+
+                eklekomut.Parameters.AddWithValue("@ktgrId",kategoriId);
+
+                eklekomut.Parameters.AddWithValue("@turId", turId);
+
+                eklekomut.Parameters.AddWithValue("@yzrId", yazarId);
+                eklekomut.Parameters.AddWithValue("@yynevId", yayinEviId);
+
+                eklekomut.Parameters.AddWithValue("@cvrId", cevirmenId);
+                eklekomut.Parameters.AddWithValue("@barkod", txtbarkod.Text);
+                eklekomut.Parameters.AddWithValue("@ISBN",txtisbn.Text);
+                eklekomut.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
+                eklekomut.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
+                eklekomut.Parameters.AddWithValue("@cilt", txtcilt.Text);
+                eklekomut.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
+                eklekomut.Parameters.AddWithValue("@ozet", txtozet.Text);
+                eklekomut.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
+                eklekomut.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
+                eklekomut.Parameters.AddWithValue("@dil", txtdil.Text);
+                eklekomut.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
+                eklekomut.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
+                eklekomut.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
+                eklekomut.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
+                eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
+                eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
                 eklekomut.ExecuteNonQuery();
 
 
@@ -141,8 +168,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Close();
                     MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
 
-                    Ogrenci ogrenci = new Ogrenci();
-                    ogrenci.Show();
+                    AnaSayfa AnaSayfa = new AnaSayfa();
+                   AnaSayfa.Show();
                     this.Hide();
 
                 
