@@ -43,14 +43,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitaplarıListele = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.searchBox);
@@ -76,6 +79,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button2.TabIndex = 13;
             this.button2.Text = "Kitap Düzenle";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -282,6 +286,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitaplarıListele.Size = new System.Drawing.Size(1256, 580);
             this.kitaplarıListele.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 129);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 580);
+            this.dataGridView1.TabIndex = 66;
+            // 
             // Kitap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,9 +314,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Name = "Kitap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kitap Sayfası";
+            this.Load += new System.EventHandler(this.Kitap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +339,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button kaplaButon;
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button cikisButon;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

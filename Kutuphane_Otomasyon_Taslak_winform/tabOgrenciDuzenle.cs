@@ -69,6 +69,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             command.ExecuteNonQuery();
             connection.Close();
 
+            Form form = new Ogrenci();
+            form.Show();
+            this.Close();
 
 
         }
@@ -151,7 +154,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Ogrenci", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -243,6 +246,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 label4.Visible = true;
 
             }
+        }
+
+        private void kitapBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Kitap();
+            form.Show();
+            this.Close();
         }
     }
 }
