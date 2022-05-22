@@ -163,7 +163,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 eklekomut.ExecuteNonQuery();
 
 
-
+                if(txtcevirmen.Text.Length==0)
+                {
+                    txtcevirmen.Text = "yok";
+                }
 
                 connection.Close();
                     MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");

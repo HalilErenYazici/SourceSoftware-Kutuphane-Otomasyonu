@@ -92,7 +92,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId;", connection);
+
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
