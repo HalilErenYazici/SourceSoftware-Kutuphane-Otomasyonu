@@ -31,14 +31,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtemanetakts = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtkitapId = new System.Windows.Forms.TextBox();
             this.dataGridViewkitap = new System.Windows.Forms.DataGridView();
             this.dataGridViewogrenci = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,7 +49,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnemanetver = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtOgrSoyad = new System.Windows.Forms.TextBox();
@@ -59,6 +57,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrNo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtogrID = new System.Windows.Forms.TextBox();
+            this.btnEmanet = new System.Windows.Forms.Button();
+            this.mskalistarihi = new System.Windows.Forms.MaskedTextBox();
+            this.mskveristarihi = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,12 +74,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnEmanet);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.dataGridViewkitap);
             this.panel1.Controls.Add(this.dataGridViewogrenci);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnemanetver);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -93,67 +95,53 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel4.BackColor = System.Drawing.Color.SlateGray;
             this.panel4.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK2;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.textBox9);
-            this.panel4.Controls.Add(this.textBox10);
-            this.panel4.Controls.Add(this.textBox11);
-            this.panel4.Controls.Add(this.textBox12);
-            this.panel4.Controls.Add(this.textBox13);
+            this.panel4.Controls.Add(this.mskveristarihi);
+            this.panel4.Controls.Add(this.mskalistarihi);
+            this.panel4.Controls.Add(this.txtemanetakts);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtKitapAd);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.textBox14);
+            this.panel4.Controls.Add(this.txtkitapId);
             this.panel4.Location = new System.Drawing.Point(443, 74);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(397, 226);
             this.panel4.TabIndex = 14;
             // 
-            // textBox6
+            // txtemanetakts
             // 
-            this.textBox6.Location = new System.Drawing.Point(198, 170);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(142, 20);
-            this.textBox6.TabIndex = 9;
+            this.txtemanetakts.Location = new System.Drawing.Point(238, 136);
+            this.txtemanetakts.Margin = new System.Windows.Forms.Padding(2);
+            this.txtemanetakts.Name = "txtemanetakts";
+            this.txtemanetakts.Size = new System.Drawing.Size(142, 20);
+            this.txtemanetakts.TabIndex = 16;
             // 
-            // textBox9
+            // label2
             // 
-            this.textBox9.Location = new System.Drawing.Point(198, 147);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(142, 20);
-            this.textBox9.TabIndex = 8;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(177, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Veriş Tarihi";
             // 
-            // textBox10
+            // label1
             // 
-            this.textBox10.Location = new System.Drawing.Point(198, 125);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(142, 20);
-            this.textBox10.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(177, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Alış Tarihi ";
             // 
-            // textBox11
+            // txtKitapAd
             // 
-            this.textBox11.Location = new System.Drawing.Point(198, 102);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(142, 20);
-            this.textBox11.TabIndex = 6;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(198, 79);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(142, 20);
-            this.textBox12.TabIndex = 5;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(198, 56);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(142, 20);
-            this.textBox13.TabIndex = 4;
+            this.txtKitapAd.Location = new System.Drawing.Point(238, 56);
+            this.txtKitapAd.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKitapAd.Name = "txtKitapAd";
+            this.txtKitapAd.Size = new System.Drawing.Size(142, 20);
+            this.txtKitapAd.TabIndex = 4;
             // 
             // pictureBox2
             // 
@@ -166,13 +154,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox14
+            // txtkitapId
             // 
-            this.textBox14.Location = new System.Drawing.Point(198, 34);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(142, 20);
-            this.textBox14.TabIndex = 1;
+            this.txtkitapId.Location = new System.Drawing.Point(238, 34);
+            this.txtkitapId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtkitapId.Name = "txtkitapId";
+            this.txtkitapId.Size = new System.Drawing.Size(142, 20);
+            this.txtkitapId.TabIndex = 1;
             // 
             // dataGridViewkitap
             // 
@@ -181,6 +169,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridViewkitap.Name = "dataGridViewkitap";
             this.dataGridViewkitap.Size = new System.Drawing.Size(397, 182);
             this.dataGridViewkitap.TabIndex = 13;
+            this.dataGridViewkitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewkitap_CellClick);
+            this.dataGridViewkitap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewkitap_CellContentClick);
             // 
             // dataGridViewogrenci
             // 
@@ -379,19 +369,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button3.Text = "Listeden Kitap Seç";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnemanetver
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(867, 226);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 37);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Emanet Ver";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnemanetver.BackColor = System.Drawing.Color.Green;
+            this.btnemanetver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnemanetver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnemanetver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnemanetver.Location = new System.Drawing.Point(867, 226);
+            this.btnemanetver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnemanetver.Name = "btnemanetver";
+            this.btnemanetver.Size = new System.Drawing.Size(68, 37);
+            this.btnemanetver.TabIndex = 8;
+            this.btnemanetver.Text = "Emanet Ver";
+            this.btnemanetver.UseVisualStyleBackColor = false;
+            this.btnemanetver.Click += new System.EventHandler(this.btnemanetver_Click);
             // 
             // button1
             // 
@@ -465,6 +456,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrID.Size = new System.Drawing.Size(142, 20);
             this.txtogrID.TabIndex = 1;
             // 
+            // btnEmanet
+            // 
+            this.btnEmanet.Location = new System.Drawing.Point(873, 413);
+            this.btnEmanet.Name = "btnEmanet";
+            this.btnEmanet.Size = new System.Drawing.Size(75, 23);
+            this.btnEmanet.TabIndex = 15;
+            this.btnEmanet.Text = "Emanet Sayfasi";
+            this.btnEmanet.UseVisualStyleBackColor = true;
+            this.btnEmanet.Click += new System.EventHandler(this.btnEmanet_Click);
+            // 
+            // mskalistarihi
+            // 
+            this.mskalistarihi.Location = new System.Drawing.Point(238, 85);
+            this.mskalistarihi.Mask = "0000/00/00";
+            this.mskalistarihi.Name = "mskalistarihi";
+            this.mskalistarihi.Size = new System.Drawing.Size(142, 20);
+            this.mskalistarihi.TabIndex = 49;
+            // 
+            // mskveristarihi
+            // 
+            this.mskveristarihi.Location = new System.Drawing.Point(238, 111);
+            this.mskveristarihi.Mask = "0000/00/00";
+            this.mskveristarihi.Name = "mskveristarihi";
+            this.mskveristarihi.Size = new System.Drawing.Size(142, 20);
+            this.mskveristarihi.TabIndex = 50;
+            // 
             // Emanet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,7 +512,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnemanetver;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtOgrSoyad;
@@ -514,15 +531,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button cikisButon;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtKitapAd;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtkitapId;
         private System.Windows.Forms.DataGridView dataGridViewkitap;
         private System.Windows.Forms.DataGridView dataGridViewogrenci;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtemanetakts;
+        private System.Windows.Forms.Button btnEmanet;
+        private System.Windows.Forms.MaskedTextBox mskveristarihi;
+        private System.Windows.Forms.MaskedTextBox mskalistarihi;
     }
 }

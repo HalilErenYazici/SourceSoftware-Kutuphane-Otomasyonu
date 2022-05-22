@@ -83,5 +83,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Application.Exit();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

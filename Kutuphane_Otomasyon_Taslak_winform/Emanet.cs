@@ -85,6 +85,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
 
         }
+        public void listeleKitap()
+        {
+            connection.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Kitap", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewkitap.DataSource = dt;
+            connection.Close();
+
+        }
 
         private void dataGridViewogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -101,6 +112,66 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void Emanet_Load(object sender, EventArgs e)
         {
             listeleOgrenci();
+            listeleKitap();
+        }
+
+        private void dataGridViewkitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtkitapId.Text = dataGridViewkitap.CurrentRow.Cells["kitapId"].Value.ToString();
+            txtKitapAd.Text = dataGridViewkitap.CurrentRow.Cells["kitapAd"].Value.ToString();
+           
+            txtkitapId.Enabled = false;
+            txtKitapAd.Enabled = false;
+          
+        }
+
+        private void btnemanetver_Click(object sender, EventArgs e)
+        {
+
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text, connection);
+          //  MySqlDataReader okuyucu = komut.ExecuteReader();
+            /*if (okuyucu.Read())
+            {
+                MessageBox.Show("ürün Emanette zaten mevcut");
+                AnaSayfa anasayfa = new AnaSayfa();
+                this.Close();
+                anasayfa.Show();
+
+
+            }
+            else
+            {*/
+                MySqlCommand komut2 = new MySqlCommand("insert into Emanet(ogrId,kitapId,aTarih,vTarih,emanetATKS) values(@ogrId,@kitapId,aTarih,vTarih,emanetATKS)", connection);
+                komut2.Parameters.AddWithValue("@ogrId", txtogrID.Text);
+
+                komut2.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
+                komut2.Parameters.AddWithValue("@aTarih", mskalistarihi.Text);
+                komut2.Parameters.AddWithValue("@vTarih", mskveristarihi.Text);
+                komut2.Parameters.AddWithValue("@emanetATKS", txtemanetakts.Text);
+
+            komut2.ExecuteNonQuery();
+                MessageBox.Show("Emanet sistemine eklenmistir");
+                EmanetGoruntule EmanetGoruntule = new EmanetGoruntule();
+                this.Close();
+                EmanetGoruntule.Show();
+            //}
+            connection.Close();
+
+
+        }
+
+        private void btnEmanet_Click(object sender, EventArgs e)
+        {
+            EmanetGoruntule EmanetGoruntule = new EmanetGoruntule();
+            this.Close();
+            EmanetGoruntule.Show();
         }
     }
 }
