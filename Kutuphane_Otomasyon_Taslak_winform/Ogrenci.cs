@@ -109,11 +109,117 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'",connection);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
 
-            dataGridView1.DataSource = dt;
+            if(cmbaramatip.Text== "Kart Id")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where kartId like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if(cmbaramatip.Text == "Ögrenci Id")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrId like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci No")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Ad")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrAd like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Soyad")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrSoyad like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Cinsiyet")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where cinsiyet like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Tel")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrTel like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Eposta")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrEposta like'" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Fakülte")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrFakulte like '" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+            else if (cmbaramatip.Text == "Ögrenci Bölüm")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrBolum like '" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
+
+
+
+
+
+            /*MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'",connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);*/
+
+            // dataGridView1.DataSource = dt;
             connection.Close();
         }
     }

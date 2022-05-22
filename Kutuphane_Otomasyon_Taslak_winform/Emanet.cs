@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             InitializeComponent();
         }
-
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -64,6 +66,41 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new Info();
             form.Show();
             this.Close();
+        }
+
+        private void dataGridViewogrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        public void listeleOgrenci()
+        {
+            connection.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Ogrenci", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewogrenci.DataSource = dt;
+            connection.Close();
+
+        }
+
+        private void dataGridViewogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtogrID.Text = dataGridViewogrenci.CurrentRow.Cells["ogrId"].Value.ToString();
+            txtogrNo.Text = dataGridViewogrenci.CurrentRow.Cells["ogrNo"].Value.ToString();
+            txtOgrAd.Text = dataGridViewogrenci.CurrentRow.Cells["ogrAd"].Value.ToString();
+            txtOgrSoyad.Text = dataGridViewogrenci.CurrentRow.Cells["ogrSoyad"].Value.ToString();
+            txtogrID.Enabled = false;
+            txtOgrAd.Enabled = false;
+            txtogrNo.Enabled = false;
+            txtOgrSoyad.Enabled = false;
+        }
+
+        private void Emanet_Load(object sender, EventArgs e)
+        {
+            listeleOgrenci();
         }
     }
 }
