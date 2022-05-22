@@ -90,6 +90,12 @@
     <Compile Include="Ogrenci.Designer.cs">
       <DependentUpon>Ogrenci.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelVeriGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelVeriGuncelleme.Designer.cs">
+      <DependentUpon>PersonelVeriGuncelleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tabKitapDuzenle.cs">
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ogrenci.resx">
       <DependentUpon>Ogrenci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelVeriGuncelleme.resx">
+      <DependentUpon>PersonelVeriGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
