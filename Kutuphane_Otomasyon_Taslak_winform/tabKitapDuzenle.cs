@@ -30,7 +30,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Kitap, Kategori, Tur, Yazar, YayinEvi, Cevirmen", connection);
+           // MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Kitap, Kategori, Tur, Yazar, YayinEvi, Cevirmen", connection);
+           // MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.*,Yazar.*, FROM Kitap RIGHT JOIN Yazar ON Yazar.yzrId=Kitap.yzrId AND RIGHT JOIN Kategori ON Kategori.ktgrId=Kitap.ktgrId AND RIGHT JOIN Tur ON Tur.turId=Kitap.turId AND RIGHT JOIN YayinEvi ON YayinEvi.yynevId=Kitap.yynevId AND RIGHT JOIN Cevirmen ON Cevirmen.cvrId=Kitap.cvrId", connection);
+           MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId;", connection);
+           // MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId;", connection);
+
+
+
+            /* SELECT kitaplar.kitap_isim, yazarlar.yazar_isim
+            FROM kitaplar
+            RIGHT JOIN yazarlar ON yazarlar.id = kitaplar.yazarid
+          /*  SELECT customers.ContactName, orders.OrderID
+            FROM orders
+            RIGHT JOIN customers
+            ON customers.CustomerID = orders.CustomerID;
+
+            */
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
