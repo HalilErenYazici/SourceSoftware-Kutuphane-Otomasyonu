@@ -109,10 +109,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtOgrSoyad.Enabled = false;
         }
 
+        DateTime Dtn = new DateTime();
+
         private void Emanet_Load(object sender, EventArgs e)
         {
             listeleOgrenci();
             listeleKitap();
+            Dtn = DateTime.Now;
+            mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");
         }
 
         private void dataGridViewkitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -135,7 +139,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
 
             connection.Open();
-            MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text, connection);
+            MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text+"and aTarih="+mskalis.Text + "and vTarih=" + mskveris.Text + "and emanetATKS=" + txtemanetakts.Text, connection);
           //  MySqlDataReader okuyucu = komut.ExecuteReader();
             /*if (okuyucu.Read())
             {
@@ -152,8 +156,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 komut2.Parameters.AddWithValue("@ogrId", txtogrID.Text);
 
                 komut2.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
-                komut2.Parameters.AddWithValue("@aTarih", mskalistarihi.Text);
-                komut2.Parameters.AddWithValue("@vTarih", mskveristarihi.Text);
+                komut2.Parameters.AddWithValue("@aTarih",  Convert.ToDateTime( mskalis.Text));
+                komut2.Parameters.AddWithValue("@vTarih", Convert.ToDateTime(mskveris.Text));
                 komut2.Parameters.AddWithValue("@emanetATKS", txtemanetakts.Text);
 
             komut2.ExecuteNonQuery();
@@ -169,9 +173,104 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnEmanet_Click(object sender, EventArgs e)
         {
-            EmanetGoruntule EmanetGoruntule = new EmanetGoruntule();
+            EmanetVer EmanetVer = new EmanetVer();
             this.Close();
-            EmanetGoruntule.Show();
+            EmanetVer.Show();
+        }
+
+        private void mskalis_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mskveris_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtemanetakts_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKitapAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtkitapId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtOgrSoyad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOgrAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtogrNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtogrID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -113,6 +113,12 @@
     <Compile Include="EmanetGoruntule.Designer.cs">
       <DependentUpon>EmanetGoruntule.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmanetVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmanetVer.Designer.cs">
+      <DependentUpon>EmanetVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmanetGoruntule.resx">
       <DependentUpon>EmanetGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmanetVer.resx">
+      <DependentUpon>EmanetVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>

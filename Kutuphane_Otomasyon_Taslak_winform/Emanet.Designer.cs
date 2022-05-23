@@ -30,7 +30,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEmanet = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.mskveris = new System.Windows.Forms.MaskedTextBox();
+            this.mskalis = new System.Windows.Forms.MaskedTextBox();
             this.txtemanetakts = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,9 +60,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrNo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtogrID = new System.Windows.Forms.TextBox();
-            this.btnEmanet = new System.Windows.Forms.Button();
-            this.mskalistarihi = new System.Windows.Forms.MaskedTextBox();
-            this.mskveristarihi = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,14 +89,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 585);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnEmanet
+            // 
+            this.btnEmanet.Location = new System.Drawing.Point(873, 413);
+            this.btnEmanet.Name = "btnEmanet";
+            this.btnEmanet.Size = new System.Drawing.Size(75, 23);
+            this.btnEmanet.TabIndex = 15;
+            this.btnEmanet.Text = "Emanet Sayfasi";
+            this.btnEmanet.UseVisualStyleBackColor = true;
+            this.btnEmanet.Click += new System.EventHandler(this.btnEmanet_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SlateGray;
             this.panel4.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK2;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.mskveristarihi);
-            this.panel4.Controls.Add(this.mskalistarihi);
+            this.panel4.Controls.Add(this.mskveris);
+            this.panel4.Controls.Add(this.mskalis);
             this.panel4.Controls.Add(this.txtemanetakts);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -108,6 +119,27 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(397, 226);
             this.panel4.TabIndex = 14;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // mskveris
+            // 
+            this.mskveris.Location = new System.Drawing.Point(239, 111);
+            this.mskveris.Mask = "00/00/0000 90:00:00";
+            this.mskveris.Name = "mskveris";
+            this.mskveris.Size = new System.Drawing.Size(141, 20);
+            this.mskveris.TabIndex = 18;
+            this.mskveris.ValidatingType = typeof(System.DateTime);
+            this.mskveris.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskveris_MaskInputRejected);
+            // 
+            // mskalis
+            // 
+            this.mskalis.Location = new System.Drawing.Point(238, 84);
+            this.mskalis.Mask = "00/00/0000 90:00:00";
+            this.mskalis.Name = "mskalis";
+            this.mskalis.Size = new System.Drawing.Size(141, 20);
+            this.mskalis.TabIndex = 17;
+            this.mskalis.ValidatingType = typeof(System.DateTime);
+            this.mskalis.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskalis_MaskInputRejected);
             // 
             // txtemanetakts
             // 
@@ -116,6 +148,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtemanetakts.Name = "txtemanetakts";
             this.txtemanetakts.Size = new System.Drawing.Size(142, 20);
             this.txtemanetakts.TabIndex = 16;
+            this.txtemanetakts.TextChanged += new System.EventHandler(this.txtemanetakts_TextChanged);
             // 
             // label2
             // 
@@ -125,6 +158,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Veriş Tarihi";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -134,6 +168,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Alış Tarihi ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtKitapAd
             // 
@@ -142,6 +177,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtKitapAd.Name = "txtKitapAd";
             this.txtKitapAd.Size = new System.Drawing.Size(142, 20);
             this.txtKitapAd.TabIndex = 4;
+            this.txtKitapAd.TextChanged += new System.EventHandler(this.txtKitapAd_TextChanged);
             // 
             // pictureBox2
             // 
@@ -153,6 +189,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // txtkitapId
             // 
@@ -161,6 +198,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtkitapId.Name = "txtkitapId";
             this.txtkitapId.Size = new System.Drawing.Size(142, 20);
             this.txtkitapId.TabIndex = 1;
+            this.txtkitapId.TextChanged += new System.EventHandler(this.txtkitapId_TextChanged);
             // 
             // dataGridViewkitap
             // 
@@ -199,6 +237,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 41);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // kaplaButon
             // 
@@ -368,6 +407,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button3.TabIndex = 9;
             this.button3.Text = "Listeden Kitap Seç";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnemanetver
             // 
@@ -396,6 +436,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button1.TabIndex = 7;
             this.button1.Text = "Seçileni Çıkar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -412,6 +453,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 226);
             this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // txtOgrSoyad
             // 
@@ -420,6 +462,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtOgrSoyad.Name = "txtOgrSoyad";
             this.txtOgrSoyad.Size = new System.Drawing.Size(142, 20);
             this.txtOgrSoyad.TabIndex = 6;
+            this.txtOgrSoyad.TextChanged += new System.EventHandler(this.txtOgrSoyad_TextChanged);
             // 
             // txtOgrAd
             // 
@@ -428,6 +471,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtOgrAd.Name = "txtOgrAd";
             this.txtOgrAd.Size = new System.Drawing.Size(142, 20);
             this.txtOgrAd.TabIndex = 5;
+            this.txtOgrAd.TextChanged += new System.EventHandler(this.txtOgrAd_TextChanged);
             // 
             // txtogrNo
             // 
@@ -436,6 +480,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrNo.Name = "txtogrNo";
             this.txtogrNo.Size = new System.Drawing.Size(142, 20);
             this.txtogrNo.TabIndex = 4;
+            this.txtogrNo.TextChanged += new System.EventHandler(this.txtogrNo_TextChanged);
             // 
             // pictureBox1
             // 
@@ -447,6 +492,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtogrID
             // 
@@ -455,32 +501,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrID.Name = "txtogrID";
             this.txtogrID.Size = new System.Drawing.Size(142, 20);
             this.txtogrID.TabIndex = 1;
-            // 
-            // btnEmanet
-            // 
-            this.btnEmanet.Location = new System.Drawing.Point(873, 413);
-            this.btnEmanet.Name = "btnEmanet";
-            this.btnEmanet.Size = new System.Drawing.Size(75, 23);
-            this.btnEmanet.TabIndex = 15;
-            this.btnEmanet.Text = "Emanet Sayfasi";
-            this.btnEmanet.UseVisualStyleBackColor = true;
-            this.btnEmanet.Click += new System.EventHandler(this.btnEmanet_Click);
-            // 
-            // mskalistarihi
-            // 
-            this.mskalistarihi.Location = new System.Drawing.Point(238, 85);
-            this.mskalistarihi.Mask = "0000/00/00";
-            this.mskalistarihi.Name = "mskalistarihi";
-            this.mskalistarihi.Size = new System.Drawing.Size(142, 20);
-            this.mskalistarihi.TabIndex = 49;
-            // 
-            // mskveristarihi
-            // 
-            this.mskveristarihi.Location = new System.Drawing.Point(238, 111);
-            this.mskveristarihi.Mask = "0000/00/00";
-            this.mskveristarihi.Name = "mskveristarihi";
-            this.mskveristarihi.Size = new System.Drawing.Size(142, 20);
-            this.mskveristarihi.TabIndex = 50;
+            this.txtogrID.TextChanged += new System.EventHandler(this.txtogrID_TextChanged);
             // 
             // Emanet
             // 
@@ -540,7 +561,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtemanetakts;
         private System.Windows.Forms.Button btnEmanet;
-        private System.Windows.Forms.MaskedTextBox mskveristarihi;
-        private System.Windows.Forms.MaskedTextBox mskalistarihi;
+        private System.Windows.Forms.MaskedTextBox mskveris;
+        private System.Windows.Forms.MaskedTextBox mskalis;
     }
 }
