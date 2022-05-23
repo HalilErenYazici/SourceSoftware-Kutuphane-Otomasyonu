@@ -109,5 +109,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             connection.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
