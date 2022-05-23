@@ -13,6 +13,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabOgrenciEkle : Form
     {
+        int okuduguKitapSayisi = 0;
         string  bolum;
         public tabOgrenciEkle()
         {
@@ -191,7 +192,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     bolum = cmbmyo.Text;
                 }*/
-                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text + "');";
+                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text +"','"+ okuduguKitapSayisi + "');";
                 MySqlCommand command = new MySqlCommand(ekleme, connection);
                 command.ExecuteNonQuery();
                 connection.Close();

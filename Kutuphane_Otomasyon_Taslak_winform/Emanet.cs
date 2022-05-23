@@ -76,47 +76,48 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         public void listeleOgrenci()
         {
-            connection.Open();
+           /* connection.Open();
 
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Ogrenci", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridViewogrenci.DataSource = dt;
-            connection.Close();
+            connection.Close();*/
 
         }
-        public void listeleKitap()
+        public void listelemanet()
         {
-            connection.Open();
+           connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Kitap", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridViewkitap.DataSource = dt;
+            dataGridViewemanet.DataSource = dt;
             connection.Close();
 
         }
 
         private void dataGridViewogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtogrID.Text = dataGridViewogrenci.CurrentRow.Cells["ogrId"].Value.ToString();
+          /*  txtogrID.Text = dataGridViewogrenci.CurrentRow.Cells["ogrId"].Value.ToString();
             txtogrNo.Text = dataGridViewogrenci.CurrentRow.Cells["ogrNo"].Value.ToString();
             txtOgrAd.Text = dataGridViewogrenci.CurrentRow.Cells["ogrAd"].Value.ToString();
             txtOgrSoyad.Text = dataGridViewogrenci.CurrentRow.Cells["ogrSoyad"].Value.ToString();
             txtogrID.Enabled = false;
             txtOgrAd.Enabled = false;
             txtogrNo.Enabled = false;
-            txtOgrSoyad.Enabled = false;
+            txtOgrSoyad.Enabled = false;*/
         }
 
         DateTime Dtn = new DateTime();
 
         private void Emanet_Load(object sender, EventArgs e)
         {
-            listeleOgrenci();
+            listelemanet();
+          /*  listeleOgrenci();
             listeleKitap();
             Dtn = DateTime.Now;
-            mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");
+            mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");*/
         }
 
         private void dataGridViewkitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -127,19 +128,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtkitapId.Text = dataGridViewkitap.CurrentRow.Cells["kitapId"].Value.ToString();
+        /*    txtkitapId.Text = dataGridViewkitap.CurrentRow.Cells["kitapId"].Value.ToString();
             txtKitapAd.Text = dataGridViewkitap.CurrentRow.Cells["kitapAd"].Value.ToString();
            
             txtkitapId.Enabled = false;
-            txtKitapAd.Enabled = false;
+            txtKitapAd.Enabled = false;*/
           
         }
 
         private void btnemanetver_Click(object sender, EventArgs e)
         {
 
-            connection.Open();
-            MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text+"and aTarih="+mskalis.Text + "and vTarih=" + mskveris.Text + "and emanetATKS=" + txtemanetakts.Text, connection);
+           // connection.Open();
+         //   MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text+"and aTarih="+mskalis.Text + "and vTarih=" + mskveris.Text + "and emanetATKS=" + txtemanetakts.Text, connection);
           //  MySqlDataReader okuyucu = komut.ExecuteReader();
             /*if (okuyucu.Read())
             {
@@ -152,7 +153,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {*/
-                MySqlCommand komut2 = new MySqlCommand("insert into Emanet(ogrId,kitapId,aTarih,vTarih,emanetATKS) values(@ogrId,@kitapId,aTarih,vTarih,emanetATKS)", connection);
+               /* MySqlCommand komut2 = new MySqlCommand("insert into Emanet(ogrId,kitapId,aTarih,vTarih,emanetATKS) values(@ogrId,@kitapId,aTarih,vTarih,emanetATKS)", connection);
                 komut2.Parameters.AddWithValue("@ogrId", txtogrID.Text);
 
                 komut2.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
@@ -166,7 +167,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 this.Close();
                 EmanetGoruntule.Show();
             //}
-            connection.Close();
+            connection.Close();*/
 
 
         }

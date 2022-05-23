@@ -17,6 +17,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             InitializeComponent();
         }
+        int cevirmensayi = 0;
+        int cvrid = 0;
+        string cevirmenad, cevirmensoyad = "yok";
          static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
        MySqlConnection connection = new MySqlConnection(connection_strg);
 
@@ -83,7 +86,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
 
-            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
+            if (txtanahtarkelime.Text == "" || txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txttur.Text==""||txtkitapkonusu.Text==""||mskkurumkayittarihi.Text==""||txtozet.Text==""||txtdolapkonum.Text==""||txtkitapsayfasayisi.Text==""||txtstok.Text==""||txtyayinevi.Text==""||mskkitapyayinyili.Text==""||txtyazar.Text=="")
              {
                  MessageBox.Show("lütfen alanları boş geçmeyiniz");
              }
@@ -128,39 +131,43 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 yayinEviKomut.ExecuteNonQuery();
                 int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text+ "','"+ txtcevirmensoyad.Text+ "','" + txtcevirmensayisi.Text + "');";
-                MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
-                cevirmenKomut.ExecuteNonQuery();
-                int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                    string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text + "','" + txtcevirmensoyad.Text + "','" + txtcevirmensayisi.Text + "');";
+                    MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
+                    cevirmenKomut.ExecuteNonQuery();
+                    int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
-                MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
+                    string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
+                    MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
-                eklekomut.Parameters.AddWithValue("@ktgrId",kategoriId);
+                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId);
 
-                eklekomut.Parameters.AddWithValue("@turId", turId);
+                    eklekomut.Parameters.AddWithValue("@turId", turId);
 
-                eklekomut.Parameters.AddWithValue("@yzrId", yazarId);
-                eklekomut.Parameters.AddWithValue("@yynevId", yayinEviId);
+                    eklekomut.Parameters.AddWithValue("@yzrId", yazarId);
+                    eklekomut.Parameters.AddWithValue("@yynevId", yayinEviId);
 
-                eklekomut.Parameters.AddWithValue("@cvrId", cevirmenId);
-                eklekomut.Parameters.AddWithValue("@barkod", txtbarkod.Text);
-                eklekomut.Parameters.AddWithValue("@ISBN",txtisbn.Text);
-                eklekomut.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
-                eklekomut.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
-                eklekomut.Parameters.AddWithValue("@cilt", txtcilt.Text);
-                eklekomut.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
-                eklekomut.Parameters.AddWithValue("@ozet", txtozet.Text);
-                eklekomut.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
-                eklekomut.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
-                eklekomut.Parameters.AddWithValue("@dil", txtdil.Text);
-                eklekomut.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
-                eklekomut.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
-                eklekomut.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
-                eklekomut.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
-                eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
-                eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
-                eklekomut.ExecuteNonQuery();
+                    eklekomut.Parameters.AddWithValue("@cvrId", cevirmenId);
+                    eklekomut.Parameters.AddWithValue("@barkod", txtbarkod.Text);
+                    eklekomut.Parameters.AddWithValue("@ISBN", txtisbn.Text);
+                    eklekomut.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
+                    eklekomut.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
+                    eklekomut.Parameters.AddWithValue("@cilt", txtcilt.Text);
+                    eklekomut.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
+                    eklekomut.Parameters.AddWithValue("@ozet", txtozet.Text);
+                    eklekomut.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
+                    eklekomut.Parameters.AddWithValue("@stok", txtstok.Text);
+
+                    eklekomut.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
+                    eklekomut.Parameters.AddWithValue("@dil", txtdil.Text);
+                    eklekomut.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
+                    eklekomut.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
+                    eklekomut.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
+                    eklekomut.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
+                    eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
+                    eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
+                    eklekomut.ExecuteNonQuery();
+                
+                
 
 
                 if(txtcevirmen.Text.Length==0)

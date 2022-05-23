@@ -46,7 +46,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnemanetver = new System.Windows.Forms.Button();
             this.btnsil = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -85,6 +84,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridViewogrenci = new System.Windows.Forms.DataGridView();
             this.lblkayitli = new System.Windows.Forms.Label();
             this.lblkitapsayisi = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,6 +101,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.lblkitapsayisi);
             this.panel1.Controls.Add(this.lblkayitli);
             this.panel1.Controls.Add(this.dataGridViewogrenci);
@@ -108,7 +111,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.SepeteEkle);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnemanetver);
             this.panel1.Controls.Add(this.btnsil);
             this.panel1.Controls.Add(this.panel3);
@@ -201,10 +203,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(917, 2);
+            this.kaplaButon.Location = new System.Drawing.Point(1451, 11);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(18, 20);
+            this.kaplaButon.Size = new System.Drawing.Size(22, 25);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
             // 
@@ -219,10 +221,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(895, 2);
+            this.simgeButon.Location = new System.Drawing.Point(1429, 11);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(18, 20);
+            this.simgeButon.Size = new System.Drawing.Size(23, 25);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
             // 
@@ -237,10 +239,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(940, 2);
+            this.cikisButon.Location = new System.Drawing.Point(1474, 11);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(18, 20);
+            this.cikisButon.Size = new System.Drawing.Size(23, 25);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
             // 
@@ -339,18 +341,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1451, 532);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 37);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Listeden Kitap Seç";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // btnemanetver
             // 
             this.btnemanetver.BackColor = System.Drawing.Color.Green;
@@ -362,8 +352,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnemanetver.Name = "btnemanetver";
             this.btnemanetver.Size = new System.Drawing.Size(68, 37);
             this.btnemanetver.TabIndex = 8;
-            this.btnemanetver.Text = "Emanet Ver";
+            this.btnemanetver.Text = "Teslim Et";
             this.btnemanetver.UseVisualStyleBackColor = false;
+            this.btnemanetver.Click += new System.EventHandler(this.btnemanetver_Click);
             // 
             // btnsil
             // 
@@ -716,20 +707,38 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // lblkayitli
             // 
             this.lblkayitli.AutoSize = true;
-            this.lblkayitli.Location = new System.Drawing.Point(875, 565);
+            this.lblkayitli.Location = new System.Drawing.Point(1061, 561);
             this.lblkayitli.Name = "lblkayitli";
-            this.lblkayitli.Size = new System.Drawing.Size(91, 13);
+            this.lblkayitli.Size = new System.Drawing.Size(13, 13);
             this.lblkayitli.TabIndex = 34;
-            this.lblkayitli.Text = "Kayıtlı Kitap Sayısı";
+            this.lblkayitli.Text = "0";
             // 
             // lblkitapsayisi
             // 
             this.lblkitapsayisi.AutoSize = true;
-            this.lblkitapsayisi.Location = new System.Drawing.Point(1057, 565);
+            this.lblkitapsayisi.Location = new System.Drawing.Point(1234, 561);
             this.lblkitapsayisi.Name = "lblkitapsayisi";
-            this.lblkitapsayisi.Size = new System.Drawing.Size(61, 13);
+            this.lblkitapsayisi.Size = new System.Drawing.Size(13, 13);
             this.lblkitapsayisi.TabIndex = 35;
-            this.lblkitapsayisi.Text = "Kitap Sayısı";
+            this.lblkitapsayisi.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(964, 561);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 13);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Kayıtlı Kitap Sayısı";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(1167, 561);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 13);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Kitap Sayısı";
             // 
             // EmanetVer
             // 
@@ -762,7 +771,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.TextBox txtOgrAd;
         private System.Windows.Forms.TextBox txtogrNo;
         private System.Windows.Forms.TextBox txtogrID;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnsil;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -813,5 +821,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.DataGridView dataGridViewogrenci;
         private System.Windows.Forms.Label lblkitapsayisi;
         private System.Windows.Forms.Label lblkayitli;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
     }
 }

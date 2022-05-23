@@ -101,6 +101,7 @@
     <Compile Include="AnaSayfa.Designer.cs">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="data.cs" />
     <Compile Include="Emanet.cs">
       <SubType>Form</SubType>
     </Compile>
