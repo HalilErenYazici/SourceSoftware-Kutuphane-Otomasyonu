@@ -31,13 +31,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabKitapEkle));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbkategori = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtcikisyili = new System.Windows.Forms.TextBox();
             this.msktel = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.txtyazarsayisi = new System.Windows.Forms.TextBox();
             this.lblcevirmensayisi = new System.Windows.Forms.Label();
             this.txtcevirmensayisi = new System.Windows.Forms.TextBox();
             this.lblcevirmensoyad = new System.Windows.Forms.Label();
@@ -97,7 +97,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtbarkod = new System.Windows.Forms.TextBox();
             this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.txtcilt = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbyazarad = new System.Windows.Forms.ComboBox();
+            this.cmbyazarsoyad = new System.Windows.Forms.ComboBox();
+            this.txtyazarsayisi = new System.Windows.Forms.TextBox();
+            this.cmbyazarsayisi = new System.Windows.Forms.ComboBox();
+            this.cmbtur = new System.Windows.Forms.ComboBox();
+            this.cmbyayinevi = new System.Windows.Forms.ComboBox();
+            this.cmbyayinevitel = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmenadi = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmensoyadi = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmensayisi = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +115,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmbcevirmensayisi);
+            this.panel1.Controls.Add(this.cmbcevirmensoyadi);
+            this.panel1.Controls.Add(this.cmbcevirmenadi);
+            this.panel1.Controls.Add(this.cmbyayinevitel);
+            this.panel1.Controls.Add(this.cmbyayinevi);
+            this.panel1.Controls.Add(this.cmbtur);
+            this.panel1.Controls.Add(this.cmbyazarsayisi);
+            this.panel1.Controls.Add(this.cmbyazarsoyad);
+            this.panel1.Controls.Add(this.cmbyazarad);
+            this.panel1.Controls.Add(this.cmbkategori);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.txtcikisyili);
@@ -172,6 +190,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(960, 585);
             this.panel1.TabIndex = 3;
             // 
+            // cmbkategori
+            // 
+            this.cmbkategori.FormattingEnabled = true;
+            this.cmbkategori.Location = new System.Drawing.Point(195, 512);
+            this.cmbkategori.Name = "cmbkategori";
+            this.cmbkategori.Size = new System.Drawing.Size(156, 21);
+            this.cmbkategori.TabIndex = 65;
+            this.cmbkategori.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -206,7 +233,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // msktel
             // 
-            this.msktel.Location = new System.Drawing.Point(195, 402);
+            this.msktel.Location = new System.Drawing.Point(405, 407);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
             this.msktel.Size = new System.Drawing.Size(156, 20);
@@ -236,14 +263,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label26.TabIndex = 58;
             this.label26.Text = "Kitabın Yazar Sayısı";
             // 
-            // txtyazarsayisi
-            // 
-            this.txtyazarsayisi.Location = new System.Drawing.Point(195, 203);
-            this.txtyazarsayisi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtyazarsayisi.Name = "txtyazarsayisi";
-            this.txtyazarsayisi.Size = new System.Drawing.Size(156, 20);
-            this.txtyazarsayisi.TabIndex = 57;
-            // 
             // lblcevirmensayisi
             // 
             this.lblcevirmensayisi.AutoSize = true;
@@ -259,7 +278,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmensayisi
             // 
-            this.txtcevirmensayisi.Location = new System.Drawing.Point(752, 201);
+            this.txtcevirmensayisi.Location = new System.Drawing.Point(752, 362);
             this.txtcevirmensayisi.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmensayisi.Name = "txtcevirmensayisi";
             this.txtcevirmensayisi.Size = new System.Drawing.Size(156, 20);
@@ -281,7 +300,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmensoyad
             // 
-            this.txtcevirmensoyad.Location = new System.Drawing.Point(752, 174);
+            this.txtcevirmensoyad.Location = new System.Drawing.Point(757, 338);
             this.txtcevirmensoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmensoyad.Name = "txtcevirmensoyad";
             this.txtcevirmensoyad.Size = new System.Drawing.Size(156, 20);
@@ -302,7 +321,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtyazarsoyad
             // 
-            this.txtyazarsoyad.Location = new System.Drawing.Point(195, 180);
+            this.txtyazarsoyad.Location = new System.Drawing.Point(389, 184);
             this.txtyazarsoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtyazarsoyad.Name = "txtyazarsoyad";
             this.txtyazarsoyad.Size = new System.Drawing.Size(156, 20);
@@ -620,7 +639,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmen
             // 
-            this.txtcevirmen.Location = new System.Drawing.Point(752, 147);
+            this.txtcevirmen.Location = new System.Drawing.Point(752, 309);
             this.txtcevirmen.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmen.Name = "txtcevirmen";
             this.txtcevirmen.Size = new System.Drawing.Size(156, 20);
@@ -637,7 +656,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtkategori
             // 
-            this.txtkategori.Location = new System.Drawing.Point(510, 492);
+            this.txtkategori.Location = new System.Drawing.Point(405, 512);
             this.txtkategori.Margin = new System.Windows.Forms.Padding(2);
             this.txtkategori.Name = "txtkategori";
             this.txtkategori.Size = new System.Drawing.Size(156, 20);
@@ -654,7 +673,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txttur
             // 
-            this.txttur.Location = new System.Drawing.Point(195, 380);
+            this.txttur.Location = new System.Drawing.Point(405, 382);
             this.txttur.Margin = new System.Windows.Forms.Padding(2);
             this.txttur.Name = "txttur";
             this.txttur.Size = new System.Drawing.Size(156, 20);
@@ -662,7 +681,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtyayinevi
             // 
-            this.txtyayinevi.Location = new System.Drawing.Point(195, 358);
+            this.txtyayinevi.Location = new System.Drawing.Point(405, 357);
             this.txtyayinevi.Margin = new System.Windows.Forms.Padding(2);
             this.txtyayinevi.Name = "txtyayinevi";
             this.txtyayinevi.Size = new System.Drawing.Size(156, 20);
@@ -893,7 +912,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtisbn
             // 
-            this.txtisbn.Location = new System.Drawing.Point(195, 158);
+            this.txtisbn.Location = new System.Drawing.Point(389, 160);
             this.txtisbn.Margin = new System.Windows.Forms.Padding(2);
             this.txtisbn.Name = "txtisbn";
             this.txtisbn.Size = new System.Drawing.Size(156, 20);
@@ -931,14 +950,94 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtcilt.Size = new System.Drawing.Size(156, 20);
             this.txtcilt.TabIndex = 2;
             // 
-            // comboBox2
+            // cmbyazarad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(195, 512);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(156, 21);
-            this.comboBox2.TabIndex = 65;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cmbyazarad.FormattingEnabled = true;
+            this.cmbyazarad.Location = new System.Drawing.Point(195, 157);
+            this.cmbyazarad.Name = "cmbyazarad";
+            this.cmbyazarad.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarad.TabIndex = 66;
+            // 
+            // cmbyazarsoyad
+            // 
+            this.cmbyazarsoyad.FormattingEnabled = true;
+            this.cmbyazarsoyad.Location = new System.Drawing.Point(195, 179);
+            this.cmbyazarsoyad.Name = "cmbyazarsoyad";
+            this.cmbyazarsoyad.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarsoyad.TabIndex = 67;
+            // 
+            // txtyazarsayisi
+            // 
+            this.txtyazarsayisi.Location = new System.Drawing.Point(389, 208);
+            this.txtyazarsayisi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtyazarsayisi.Name = "txtyazarsayisi";
+            this.txtyazarsayisi.Size = new System.Drawing.Size(156, 20);
+            this.txtyazarsayisi.TabIndex = 57;
+            // 
+            // cmbyazarsayisi
+            // 
+            this.cmbyazarsayisi.FormattingEnabled = true;
+            this.cmbyazarsayisi.Location = new System.Drawing.Point(195, 203);
+            this.cmbyazarsayisi.Name = "cmbyazarsayisi";
+            this.cmbyazarsayisi.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarsayisi.TabIndex = 68;
+            // 
+            // cmbtur
+            // 
+            this.cmbtur.FormattingEnabled = true;
+            this.cmbtur.Location = new System.Drawing.Point(195, 357);
+            this.cmbtur.Name = "cmbtur";
+            this.cmbtur.Size = new System.Drawing.Size(156, 21);
+            this.cmbtur.TabIndex = 69;
+            // 
+            // cmbyayinevi
+            // 
+            this.cmbyayinevi.FormattingEnabled = true;
+            this.cmbyayinevi.Location = new System.Drawing.Point(195, 379);
+            this.cmbyayinevi.Name = "cmbyayinevi";
+            this.cmbyayinevi.Size = new System.Drawing.Size(156, 21);
+            this.cmbyayinevi.TabIndex = 70;
+            // 
+            // cmbyayinevitel
+            // 
+            this.cmbyayinevitel.FormattingEnabled = true;
+            this.cmbyayinevitel.Location = new System.Drawing.Point(195, 402);
+            this.cmbyayinevitel.Name = "cmbyayinevitel";
+            this.cmbyayinevitel.Size = new System.Drawing.Size(156, 21);
+            this.cmbyayinevitel.TabIndex = 71;
+            // 
+            // cmbcevirmenadi
+            // 
+            this.cmbcevirmenadi.FormattingEnabled = true;
+            this.cmbcevirmenadi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmenadi.Location = new System.Drawing.Point(752, 148);
+            this.cmbcevirmenadi.Name = "cmbcevirmenadi";
+            this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmenadi.TabIndex = 72;
+            // 
+            // cmbcevirmensoyadi
+            // 
+            this.cmbcevirmensoyadi.FormattingEnabled = true;
+            this.cmbcevirmensoyadi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(752, 175);
+            this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
+            this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmensoyadi.TabIndex = 73;
+            // 
+            // cmbcevirmensayisi
+            // 
+            this.cmbcevirmensayisi.FormattingEnabled = true;
+            this.cmbcevirmensayisi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmensayisi.Location = new System.Drawing.Point(752, 203);
+            this.cmbcevirmensayisi.Name = "cmbcevirmensayisi";
+            this.cmbcevirmensayisi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmensayisi.TabIndex = 74;
             // 
             // tabKitapEkle
             // 
@@ -1024,12 +1123,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtyazarsoyad;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txtyazarsayisi;
         private System.Windows.Forms.MaskedTextBox msktel;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtcikisyili;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbkategori;
+        private System.Windows.Forms.ComboBox cmbcevirmensayisi;
+        private System.Windows.Forms.ComboBox cmbcevirmensoyadi;
+        private System.Windows.Forms.ComboBox cmbcevirmenadi;
+        private System.Windows.Forms.ComboBox cmbyayinevitel;
+        private System.Windows.Forms.ComboBox cmbyayinevi;
+        private System.Windows.Forms.ComboBox cmbtur;
+        private System.Windows.Forms.ComboBox cmbyazarsayisi;
+        private System.Windows.Forms.ComboBox cmbyazarsoyad;
+        private System.Windows.Forms.ComboBox cmbyazarad;
+        private System.Windows.Forms.TextBox txtyazarsayisi;
     }
 }

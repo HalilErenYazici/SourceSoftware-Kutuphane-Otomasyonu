@@ -27,12 +27,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void tabKitapEkle_Load(object sender, EventArgs e)
         {
             kategoriekle();
+            turekle();
+            yazarAd();
+            yazarSayisi();
+            yazarSoyad();
+            YayinEviekle();
+            YayinEvitel();
+            cevirmenadi();
+            cevirmensoyadi();
+            cevirmensayisi();
 
         }
 
         private void kategoriekle()
         {
-            comboBox2.Items.Clear();
+            cmbkategori.Items.Clear();
             MySqlDataReader oku;
             connection.Open();
             MySqlCommand komut = new MySqlCommand();
@@ -41,13 +50,156 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
-                comboBox2.Items.Add(oku[1].ToString());
+                cmbkategori.Items.Add(oku[1].ToString());
             }
             connection.Close();
 
         }
 
+        private void yazarAd()
+        {
+            cmbyazarad.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Yazar";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbyazarad.Items.Add(oku[1].ToString());
+            }
+            connection.Close();
 
+        }
+        private void yazarSoyad()
+        {
+            cmbyazarsoyad.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Yazar";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbyazarsoyad.Items.Add(oku[2].ToString());
+            }
+            connection.Close();
+
+        }
+        private void yazarSayisi()
+        {
+            cmbyazarsayisi.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Yazar";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbyazarsayisi.Items.Add(oku[3].ToString());
+            }
+            connection.Close();
+
+        }
+        private void turekle()
+        {
+            cmbtur.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Tur";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbtur.Items.Add(oku[1].ToString());
+            }
+            connection.Close();
+
+        }
+        private void YayinEviekle()
+        {
+            cmbyayinevi.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from YayinEvi";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbyayinevi.Items.Add(oku[1].ToString());
+            }
+            connection.Close();
+
+        }
+        private void YayinEvitel()
+        {
+            cmbyayinevitel.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from YayinEvi";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbyayinevitel.Items.Add(oku[2].ToString());
+            }
+            connection.Close();
+
+        }
+        private void cevirmenadi()
+        {
+            cmbcevirmenadi.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Cevirmen";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbcevirmenadi.Items.Add(oku[1].ToString());
+            }
+            connection.Close();
+
+        }
+        private void cevirmensoyadi()
+        {
+            cmbcevirmensoyadi.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Cevirmen";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbcevirmensoyadi.Items.Add(oku[2].ToString());
+            }
+            connection.Close();
+
+        }
+        private void cevirmensayisi()
+        {
+            cmbcevirmensayisi.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Cevirmen";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                cmbcevirmensayisi.Items.Add(oku[3].ToString());
+            }
+            connection.Close();
+
+        }
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();
