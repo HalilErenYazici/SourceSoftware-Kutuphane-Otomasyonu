@@ -254,5 +254,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
             EmanetVer.Show();
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
