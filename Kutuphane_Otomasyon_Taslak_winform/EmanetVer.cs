@@ -248,6 +248,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         lblkayitli.Text = "";
                         lblkitapsayisi.Text = "";
                         kitapsayisi();
+                        Emanet emanet = new Emanet();
+                        emanet.Show();
+                        this.Hide();
                     }
                     else
                     {
