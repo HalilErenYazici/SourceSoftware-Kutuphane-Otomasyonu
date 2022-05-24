@@ -86,6 +86,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblkitapsayisi = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.cmbaramakitap = new System.Windows.Forms.ComboBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.cmbaramatip = new System.Windows.Forms.ComboBox();
+            this.txtogrenciarama = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -101,6 +105,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.cmbaramatip);
+            this.panel1.Controls.Add(this.txtogrenciarama);
+            this.panel1.Controls.Add(this.cmbaramakitap);
+            this.panel1.Controls.Add(this.searchBox);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.lblkitapsayisi);
@@ -118,7 +126,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1531, 926);
+            this.panel1.Size = new System.Drawing.Size(1531, 958);
             this.panel1.TabIndex = 2;
             // 
             // txtEmanetAkts
@@ -209,6 +217,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.Size = new System.Drawing.Size(22, 25);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
+            this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
             // 
             // simgeButon
             // 
@@ -227,6 +236,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.Size = new System.Drawing.Size(23, 25);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
+            this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
             // 
             // cikisButon
             // 
@@ -245,6 +255,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.Size = new System.Drawing.Size(23, 25);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
+            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
             // infoBtn
             // 
@@ -264,6 +275,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -283,6 +295,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -302,6 +315,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
+            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
             // 
             // emanetBtn
             // 
@@ -321,6 +335,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -340,6 +355,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
             // btnemanetver
             // 
@@ -689,18 +705,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // dataGridViewkitap
             // 
             this.dataGridViewkitap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewkitap.Location = new System.Drawing.Point(18, 684);
+            this.dataGridViewkitap.Location = new System.Drawing.Point(18, 700);
             this.dataGridViewkitap.Name = "dataGridViewkitap";
-            this.dataGridViewkitap.Size = new System.Drawing.Size(448, 230);
+            this.dataGridViewkitap.Size = new System.Drawing.Size(770, 230);
             this.dataGridViewkitap.TabIndex = 32;
             this.dataGridViewkitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewkitap_CellClick);
             // 
             // dataGridViewogrenci
             // 
             this.dataGridViewogrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewogrenci.Location = new System.Drawing.Point(522, 684);
+            this.dataGridViewogrenci.Location = new System.Drawing.Point(889, 700);
             this.dataGridViewogrenci.Name = "dataGridViewogrenci";
-            this.dataGridViewogrenci.Size = new System.Drawing.Size(448, 230);
+            this.dataGridViewogrenci.Size = new System.Drawing.Size(630, 230);
             this.dataGridViewogrenci.TabIndex = 33;
             this.dataGridViewogrenci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewogrenci_CellClick);
             // 
@@ -740,11 +756,86 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label18.TabIndex = 37;
             this.label18.Text = "Kitap Sayısı";
             // 
+            // cmbaramakitap
+            // 
+            this.cmbaramakitap.FormattingEnabled = true;
+            this.cmbaramakitap.Items.AddRange(new object[] {
+            "kitapId",
+            "barkod",
+            "ISBN",
+            "demirbasNo",
+            "KitapAd",
+            "cilt",
+            "konu",
+            "ozet",
+            "sayfa",
+            "anhtrK",
+            "dil",
+            "ynSenesi",
+            "kkTarih",
+            "basimNo",
+            "cikisYili",
+            "dolapNo",
+            "rafNo",
+            "KtgrAd",
+            "turAd",
+            "yzrAd",
+            "yzrSoyad",
+            "yzrSayisi",
+            "yynevAd",
+            "yynevTel",
+            "cvrAd",
+            "cvrSoyad",
+            "cvrSayisi"});
+            this.cmbaramakitap.Location = new System.Drawing.Point(131, 664);
+            this.cmbaramakitap.Name = "cmbaramakitap";
+            this.cmbaramakitap.Size = new System.Drawing.Size(121, 21);
+            this.cmbaramakitap.TabIndex = 71;
+            // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(287, 664);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(172, 20);
+            this.searchBox.TabIndex = 70;
+            this.searchBox.Text = "Kitap Ara";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            // 
+            // cmbaramatip
+            // 
+            this.cmbaramatip.FormattingEnabled = true;
+            this.cmbaramatip.Items.AddRange(new object[] {
+            "Kart Id",
+            "Ögrenci Id",
+            "Ögrenci No",
+            "Ögrenci Ad",
+            "Ögrenci Soyad",
+            "Cinsiyet",
+            "Ögrenci Tel",
+            "Ögrenci Eposta",
+            "Ögrenci Fakülte ",
+            "Ögrenci Bölüm"});
+            this.cmbaramatip.Location = new System.Drawing.Point(924, 664);
+            this.cmbaramatip.Name = "cmbaramatip";
+            this.cmbaramatip.Size = new System.Drawing.Size(121, 21);
+            this.cmbaramatip.TabIndex = 73;
+            // 
+            // txtogrenciarama
+            // 
+            this.txtogrenciarama.Location = new System.Drawing.Point(1081, 665);
+            this.txtogrenciarama.Margin = new System.Windows.Forms.Padding(2);
+            this.txtogrenciarama.Name = "txtogrenciarama";
+            this.txtogrenciarama.Size = new System.Drawing.Size(166, 20);
+            this.txtogrenciarama.TabIndex = 72;
+            this.txtogrenciarama.Text = "Öğrenci Ara...";
+            this.txtogrenciarama.TextChanged += new System.EventHandler(this.txtogrenciarama_TextChanged);
+            // 
             // EmanetVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1531, 926);
+            this.ClientSize = new System.Drawing.Size(1531, 958);
             this.Controls.Add(this.panel1);
             this.Name = "EmanetVer";
             this.Text = "EmanetVer";
@@ -823,5 +914,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Label lblkayitli;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmbaramakitap;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.ComboBox cmbaramatip;
+        private System.Windows.Forms.TextBox txtogrenciarama;
     }
 }

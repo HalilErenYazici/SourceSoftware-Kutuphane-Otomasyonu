@@ -222,5 +222,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // dataGridView1.DataSource = dt;
             connection.Close();
         }
+
+        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

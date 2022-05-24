@@ -641,5 +641,10 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
             connection.Close();
         }
+
+        private void cmbaramakitap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
