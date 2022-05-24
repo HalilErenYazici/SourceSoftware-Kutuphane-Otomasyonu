@@ -136,47 +136,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
           
         }
 
-        private void btnemanetver_Click(object sender, EventArgs e)
-        {
-
-           // connection.Open();
-         //   MySqlCommand komut = new MySqlCommand("select * from Emanet where ogrId=" + txtogrID.Text + "and kitapId=" + txtkitapId.Text+"and aTarih="+mskalis.Text + "and vTarih=" + mskveris.Text + "and emanetATKS=" + txtemanetakts.Text, connection);
-          //  MySqlDataReader okuyucu = komut.ExecuteReader();
-            /*if (okuyucu.Read())
-            {
-                MessageBox.Show("ürün Emanette zaten mevcut");
-                AnaSayfa anasayfa = new AnaSayfa();
-                this.Close();
-                anasayfa.Show();
-
-
-            }
-            else
-            {*/
-               /* MySqlCommand komut2 = new MySqlCommand("insert into Emanet(ogrId,kitapId,aTarih,vTarih,emanetATKS) values(@ogrId,@kitapId,aTarih,vTarih,emanetATKS)", connection);
-                komut2.Parameters.AddWithValue("@ogrId", txtogrID.Text);
-
-                komut2.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
-                komut2.Parameters.AddWithValue("@aTarih",  Convert.ToDateTime( mskalis.Text));
-                komut2.Parameters.AddWithValue("@vTarih", Convert.ToDateTime(mskveris.Text));
-                komut2.Parameters.AddWithValue("@emanetATKS", txtemanetakts.Text);
-
-            komut2.ExecuteNonQuery();
-                MessageBox.Show("Emanet sistemine eklenmistir");
-                EmanetGoruntule EmanetGoruntule = new EmanetGoruntule();
-                this.Close();
-                EmanetGoruntule.Show();
-            //}
-            connection.Close();*/
-
-
-        }
+      
 
         private void btnEmanet_Click(object sender, EventArgs e)
         {
-            EmanetVer EmanetVer = new EmanetVer();
-            this.Close();
-            EmanetVer.Show();
+           
         }
 
         private void mskalis_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -244,12 +208,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             DialogResult dialog;
             dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            string sil = "delete from Ogrenci where emanetId=@emanetId";
+            string sil = "delete from Emanet where emanetId=@emanetId";
             MySqlCommand command = new MySqlCommand(sil, connection);
             command.Parameters.AddWithValue("@emanetId", dataGridViewemanet.CurrentRow.Cells["emanetId"].Value.ToString());
             command.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Silme işlemi gerçekleşti.");
+            listelemanet();
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -280,6 +246,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void txtogrID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnemanet_Click_1(object sender, EventArgs e)
+        {
+            EmanetVer EmanetVer = new EmanetVer();
+            this.Close();
+            EmanetVer.Show();
         }
     }
 }

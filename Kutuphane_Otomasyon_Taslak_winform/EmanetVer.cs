@@ -178,6 +178,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void btnsil_Click(object sender, EventArgs e)
         {
             connection.Open();
+            DialogResult dialog;
+            dialog = MessageBox.Show("Bu Sepeti Boşaltmak İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             string sil = "delete from sepet where kitapId='"+dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString()+"'";
             MySqlCommand command = new MySqlCommand(sil, connection);
           

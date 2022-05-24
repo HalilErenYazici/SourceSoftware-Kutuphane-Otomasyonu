@@ -80,7 +80,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
-       
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text== "Çevirmen Var")
+            {
+                lblcevirmenad.Visible = true;
+                lblcevirmensayisi.Visible = true;
+                lblcevirmensoyad.Visible = true;
+                txtcevirmen.Visible = true;
+                txtcevirmensoyad.Visible = true;
+                txtcevirmensayisi.Visible = true;
+
+            }
+            else
+            {
+                lblcevirmenad.Visible = false;
+                lblcevirmensayisi.Visible = false;
+                lblcevirmensoyad.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                txtcevirmensayisi.Visible = false;
+                txtcevirmen.Text = "yok";
+                txtcevirmensoyad.Text = "yok";
+                txtcevirmensayisi.Text = "0";
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";

@@ -61,32 +61,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             connection.Open();
+           
+
+
+           
+           
+            MySqlCommand command = new MySqlCommand("update Kitap set kitapId=@kitapId,barkod=@barkod,ISBN=@ISBN,demirbasNo=@demirbasNo,kitapAd=@kitapAd,cilt=@cilt,konu=@konu,ozet=@ozet,sayfa=@sayfa,stok=@stok,anhtrK=@anhtrK,dil=@dil,ynSenesi=@ynSenesi,kkTarih=@kkTarih,basimNo=@basimNo,cikisYili=@cikisYili,dolapNo=@dolapNo,rafNo=@rafNo where kitapId=@kitapId", connection);
             MySqlCommand commandYayinEvi = new MySqlCommand("update YayinEvi set yynevAd=@yynevAd, yynevTel=@yynevTel", connection);
-            commandYayinEvi.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
-            commandYayinEvi.Parameters.AddWithValue("@yynevTel", msktel.Text);
-            commandYayinEvi.ExecuteNonQuery();
-
             MySqlCommand commandKategori = new MySqlCommand("update Kategori set ktgrAd=@ktgrAd", connection);
-            commandKategori.Parameters.AddWithValue("@ktgrAd", txtkategori.Text);
-            commandKategori.ExecuteNonQuery();
-
             MySqlCommand commandTur = new MySqlCommand("update Tur set turAd=@turAd", connection);
-            commandTur.Parameters.AddWithValue("@turAd", txttur.Text);
-            commandTur.ExecuteNonQuery();
-
-
             MySqlCommand commandYazar = new MySqlCommand("update Yazar set yzrAd=@yzrAd, yzrSoyad=@yzrSoyad, yzrSayisi=@yzrSayisi", connection);
-            commandYazar.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
-            commandYazar.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
-            commandYazar.Parameters.AddWithValue("@yzrSayisi", txtyazarsayisi.Text);
-            commandYazar.ExecuteNonQuery();
             MySqlCommand commandCevirmen = new MySqlCommand("update Cevirmen set cvrAd=@cvrAd, cvrSoyad=@cvrSoyad, cvrSayisi=@cvrSayisi", connection);
-            commandCevirmen.Parameters.AddWithValue("@cvrAd", txtcevirmen.Text);
-            commandCevirmen.Parameters.AddWithValue("@cvrSoyad", txtcevirmensoyad.Text);
-            commandCevirmen.Parameters.AddWithValue("@cvrSayisi", txtcevirmensayisi.Text);
-            commandCevirmen.ExecuteNonQuery();
-            MySqlCommand command = new MySqlCommand("update Kitap set barkod=@barkod,ISBN=@ISBN,demirbasNo=@demirbasNo,kitapAd=@kitapAd,cilt=@cilt,konu=@konu,ozet=@ozet,sayfa=@sayfa,stok=@stok,anhtrK=@anhtrK,dil=@dil,ynSenesi=@ynSenesi,kkTarih=@kkTarih,basimNo=@basimNo,cikisYili=@cikisYili,dolapNo=@dolapNo,rafNo=@rafNo", connection);
 
+            command.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
 
             command.Parameters.AddWithValue("@barkod", txtbarkod.Text);
             command.Parameters.AddWithValue("@ISBN", txtisbn.Text);
@@ -108,17 +95,34 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             command.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
             command.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
 
+            commandYayinEvi.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
+            commandYayinEvi.Parameters.AddWithValue("@yynevTel", msktel.Text);
+
+            commandKategori.Parameters.AddWithValue("@ktgrAd", txtkategori.Text);
+
+
+            commandTur.Parameters.AddWithValue("@turAd", txttur.Text);
         
+            commandYazar.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
+            commandYazar.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
+            commandYazar.Parameters.AddWithValue("@yzrSayisi", txtyazarsayisi.Text);
+
+            commandCevirmen.Parameters.AddWithValue("@cvrAd", txtcevirmen.Text);
+            commandCevirmen.Parameters.AddWithValue("@cvrSoyad", txtcevirmensoyad.Text);
+            commandCevirmen.Parameters.AddWithValue("@cvrSayisi", txtcevirmensayisi.Text);
 
 
 
-         
 
-        
 
 
             command.ExecuteNonQuery();
-         ;
+            commandYayinEvi.ExecuteNonQuery();
+            commandKategori.ExecuteNonQuery();
+            commandTur.ExecuteNonQuery();
+            commandCevirmen.ExecuteNonQuery();
+
+            ;
 
             connection.Close();
 
@@ -176,6 +180,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtkitapId.Text = dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString();
+
             txtcilt.Text = dataGridView1.CurrentRow.Cells["cilt"].Value.ToString();
             txtKitapAd.Text = dataGridView1.CurrentRow.Cells["kitapAd"].Value.ToString();
             txtbarkod.Text = dataGridView1.CurrentRow.Cells["barkod"].Value.ToString();

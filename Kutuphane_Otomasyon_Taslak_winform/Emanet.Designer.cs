@@ -30,7 +30,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEmanet = new System.Windows.Forms.Button();
             this.dataGridViewemanet = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.kaplaButon = new System.Windows.Forms.Button();
@@ -41,9 +40,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnemanet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnemanetver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,11 +51,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btnEmanet);
             this.panel1.Controls.Add(this.dataGridViewemanet);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.btnemanetver);
+            this.panel1.Controls.Add(this.btnemanet);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -66,16 +62,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(960, 585);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnEmanet
-            // 
-            this.btnEmanet.Location = new System.Drawing.Point(873, 413);
-            this.btnEmanet.Name = "btnEmanet";
-            this.btnEmanet.Size = new System.Drawing.Size(75, 23);
-            this.btnEmanet.TabIndex = 15;
-            this.btnEmanet.Text = "Emanet Sayfasi";
-            this.btnEmanet.UseVisualStyleBackColor = true;
-            this.btnEmanet.Click += new System.EventHandler(this.btnEmanet_Click);
             // 
             // dataGridViewemanet
             // 
@@ -261,25 +247,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
-            // button3
+            // btnemanet
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(685, 488);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 37);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Listeden Kitap Seç";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnemanet.BackColor = System.Drawing.Color.Green;
+            this.btnemanet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnemanet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnemanet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnemanet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnemanet.Location = new System.Drawing.Point(877, 522);
+            this.btnemanet.Margin = new System.Windows.Forms.Padding(2);
+            this.btnemanet.Name = "btnemanet";
+            this.btnemanet.Size = new System.Drawing.Size(68, 52);
+            this.btnemanet.TabIndex = 8;
+            this.btnemanet.Text = "Emanet Sayfasına Git";
+            this.btnemanet.UseVisualStyleBackColor = false;
+            this.btnemanet.Click += new System.EventHandler(this.btnemanet_Click_1);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(757, 488);
+            this.button1.Location = new System.Drawing.Point(877, 374);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 37);
@@ -287,20 +276,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button1.Text = "Seçileni Çıkar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnemanetver
-            // 
-            this.btnemanetver.BackColor = System.Drawing.Color.Green;
-            this.btnemanetver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnemanetver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnemanetver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnemanetver.Location = new System.Drawing.Point(845, 488);
-            this.btnemanetver.Margin = new System.Windows.Forms.Padding(2);
-            this.btnemanetver.Name = "btnemanetver";
-            this.btnemanetver.Size = new System.Drawing.Size(68, 37);
-            this.btnemanetver.TabIndex = 8;
-            this.btnemanetver.Text = "Emanet Ver";
-            this.btnemanetver.UseVisualStyleBackColor = false;
             // 
             // Emanet
             // 
@@ -335,9 +310,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button cikisButon;
         private System.Windows.Forms.DataGridView dataGridViewemanet;
-        private System.Windows.Forms.Button btnEmanet;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnemanetver;
+        private System.Windows.Forms.Button btnemanet;
         private System.Windows.Forms.Button button1;
     }
 }
