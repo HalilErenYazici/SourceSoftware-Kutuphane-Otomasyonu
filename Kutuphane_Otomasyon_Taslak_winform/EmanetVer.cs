@@ -104,7 +104,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 sepetlistele();
                 lblkitapsayisi.Text = "";
                 kitapsayisi();
-                /* foreach (Control item in kitapgroup.Controls)
+                /* foreach (Control item in kitapPanel.Controls)
                  {
                      if(item is TextBox)
                      {
@@ -160,7 +160,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             if (txtogrNo.Text == "")
             {
-                foreach (Control item in kitapgroup.Controls)
+                foreach (Control item in kitapPanel.Controls)
                 {
                     if (item is TextBox)
                     {
@@ -775,6 +775,5 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             info.Show();
             this.Hide();
         }
-
     }
 }

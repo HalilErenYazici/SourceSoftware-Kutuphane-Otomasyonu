@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabOgrenciEkle));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbcinsiyet = new System.Windows.Forms.ComboBox();
             this.mskKartId = new System.Windows.Forms.MaskedTextBox();
@@ -524,6 +525,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tabOgrenciEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
