@@ -241,7 +241,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            connection.Open();
+            DialogResult dialog;
+            dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string sil = "delete from Ogrenci where emanetId=@emanetId";
+            MySqlCommand command = new MySqlCommand(sil, connection);
+            command.Parameters.AddWithValue("@emanetId", dataGridViewemanet.CurrentRow.Cells["emanetId"].Value.ToString());
+            command.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Silme işlemi gerçekleşti.");
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
