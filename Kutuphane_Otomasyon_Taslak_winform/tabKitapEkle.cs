@@ -26,9 +26,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void tabKitapEkle_Load(object sender, EventArgs e)
         {
-             connection.Open();
+            kategoriekle();
+
         }
 
+        private void kategoriekle()
+        {
+            comboBox2.Items.Clear();
+            MySqlDataReader oku;
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand();
+            komut.Connection = connection;
+            komut.CommandText = "Select * from Kategori";
+            oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                comboBox2.Items.Add(oku[1].ToString());
+            }
+            connection.Close();
+
+        }
 
 
         private void cikisButon_Click(object sender, EventArgs e)
@@ -105,6 +122,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 txtcevirmensoyad.Text = "yok";
                 txtcevirmensayisi.Text = "0";
             }
+        }
+
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+   
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

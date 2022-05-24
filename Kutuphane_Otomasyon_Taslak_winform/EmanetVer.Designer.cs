@@ -717,7 +717,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnsil.BackColor = System.Drawing.Color.DarkRed;
             this.btnsil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(1451, 577);
+            this.btnsil.Location = new System.Drawing.Point(1362, 706);
             this.btnsil.Margin = new System.Windows.Forms.Padding(2);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(68, 37);
