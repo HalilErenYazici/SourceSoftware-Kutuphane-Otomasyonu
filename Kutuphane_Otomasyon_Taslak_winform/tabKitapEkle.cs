@@ -38,7 +38,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             cevirmensayisi();
 
         }
-
         private void kategoriEkle()
         {
             cmbkategori.Items.Clear();
@@ -55,6 +54,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
 
         }
+      
+       
 
         private void yazarAd()
         {
@@ -63,7 +64,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             MySqlCommand komut = new MySqlCommand();
             komut.Connection = connection;
-            komut.CommandText = "Select * from Yazar";
+            komut.CommandText = "Select * from Yazar where yzrId";
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
@@ -79,7 +80,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             MySqlCommand komut = new MySqlCommand();
             komut.Connection = connection;
-            komut.CommandText = "Select * from Yazar";
+            komut.CommandText = "Select * from Yazar where yzrId";
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
@@ -252,7 +253,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text== "Çevirmen Var")
+           /* if (comboBox1.Text== "Çevirmen Var")
             {
                 lblcevirmenad.Visible = true;
                 lblcevirmensayisi.Visible = true;
@@ -273,7 +274,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbcevirmenadi.Text = "yok";
                 cmbcevirmensoyadi.Text = "yok";
                 cmbcevirmensayisi.Text = "0";
-            }
+            }*/
         }
 
 
@@ -470,11 +471,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {
-                lbldemirbasno.Text = "Yazılabilir";
-                lbldemirbasno.Visible = true;
+                lblisbn.Text = "Yazılabilir";
+                lblisbn.Visible = true;
 
             }
             connection.Close();
+        }
+
+        private void cmbcevirmensayisi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -507,11 +513,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Open();
 
                 if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
-                    string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
+                   string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
                     MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
                     kategorikomut.ExecuteNonQuery();
                     int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
 
                     string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
                     MySqlCommand turkomut = new MySqlCommand(turekle, connection);
@@ -532,7 +537,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
                     cevirmenKomut.ExecuteNonQuery();
                     int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
+                   
                     string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
@@ -567,10 +572,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
 
-                    if (txtcevirmen.Text.Length == 0)
-                    {
-                        txtcevirmen.Text = "yok";
-                    }
+                 
 
                     connection.Close();
                     MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");

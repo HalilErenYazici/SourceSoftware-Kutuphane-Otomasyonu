@@ -490,7 +490,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensayisi.Name = "cmbcevirmensayisi";
             this.cmbcevirmensayisi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmensayisi.TabIndex = 74;
-            this.cmbcevirmensayisi.Visible = false;
+            this.cmbcevirmensayisi.SelectedIndexChanged += new System.EventHandler(this.cmbcevirmensayisi_SelectedIndexChanged);
             // 
             // cmbcevirmensoyadi
             // 
@@ -502,7 +502,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
             this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmensoyadi.TabIndex = 73;
-            this.cmbcevirmensoyadi.Visible = false;
             // 
             // cmbcevirmenadi
             // 
@@ -514,7 +513,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
             this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmenadi.TabIndex = 72;
-            this.cmbcevirmenadi.Visible = false;
             // 
             // cmbyayinevitel
             // 
@@ -649,7 +647,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensayisi.Size = new System.Drawing.Size(116, 13);
             this.lblcevirmensayisi.TabIndex = 56;
             this.lblcevirmensayisi.Text = "Kitabın Çevirmen Sayısı";
-            this.lblcevirmensayisi.Visible = false;
             // 
             // lblcevirmensoyad
             // 
@@ -662,7 +659,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.Size = new System.Drawing.Size(121, 13);
             this.lblcevirmensoyad.TabIndex = 54;
             this.lblcevirmensoyad.Text = "Kitabın Çevirmen Soyadı";
-            this.lblcevirmensoyad.Visible = false;
             // 
             // label23
             // 
@@ -784,7 +780,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.Size = new System.Drawing.Size(104, 13);
             this.lblcevirmenad.TabIndex = 40;
             this.lblcevirmenad.Text = "Kitabın Çevirmen Adı";
-            this.lblcevirmenad.Visible = false;
             // 
             // label21
             // 
