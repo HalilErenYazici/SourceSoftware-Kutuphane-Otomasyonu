@@ -225,25 +225,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.Text== "Çevirmen Var")
-            {
-                lblcevirmenad.Visible = true;
-                lblcevirmensoyad.Visible = true;
-                cmbcevirmenadi.Visible = true;
-                cmbcevirmensoyadi.Visible = true;
-
-            }
-            else
-            {
-                lblcevirmenad.Visible = false;
-                lblcevirmensoyad.Visible = false;
-                cmbcevirmenadi.Visible = false;
-                cmbcevirmensoyadi.Visible = false;
-                
-            }
-        }
+     
 
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -718,6 +700,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 lblidcevirmensoyad.Text = dt.Rows[0]["cvrId"].ToString();
             }
+          
 
             //while (oku.Read())
             //{
