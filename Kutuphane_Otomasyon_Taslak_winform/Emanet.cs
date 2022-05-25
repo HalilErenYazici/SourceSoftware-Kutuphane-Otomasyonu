@@ -257,10 +257,223 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
+            connection.Open();
+
+            if (cmbaramatip.Text == "Ogrenci Id")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrId like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Ogrenci No")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrNo like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Ogrenci Ad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrAd like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Ogrenci Soyad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrSoyad like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Ogrenci Eposta")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrEposta like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Ogrenci Telefon")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrTel like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Kitap Id")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapId like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Barkod")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where barkod like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "ISBN")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ISBN like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Kitap Ad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapAd like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Yazar Ad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yzrAd like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Yazar Soyad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yzrSoyad like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Yayınevi Ad")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yynevAd like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Veriş Tarihi")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where veristarihi like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else if (cmbaramatip.Text == "Alış Tarihi")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yynevAd like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
+            else
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where EmanetalinanKitapSayisi like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+    
+
+    private void button2_Click(object sender, EventArgs e)
         {
             Emanetiade emanetiade = new Emanetiade();
             emanetiade.Show();

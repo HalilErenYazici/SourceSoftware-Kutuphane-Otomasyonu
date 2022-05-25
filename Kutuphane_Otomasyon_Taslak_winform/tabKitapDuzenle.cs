@@ -60,7 +60,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            connection.Open();
+                connection.Open();
            
 
 
@@ -220,6 +220,34 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void anasayfaBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new AnaSayfa();
+            form.Show();
+            this.Close();
+        }
+
+        private void emanetBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Emanet();
+            form.Show();
+            this.Close();
+        }
+
+        private void ogrenciBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Ogrenci();
+            form.Show();
+            this.Close();
+        }
+
+        private void infoBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Info();
+            form.Show();
+            this.Close();
         }
     }
 }

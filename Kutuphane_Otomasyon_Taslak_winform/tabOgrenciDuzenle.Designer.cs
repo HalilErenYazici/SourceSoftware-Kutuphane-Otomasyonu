@@ -117,7 +117,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Erkek",
             "Kadın"});
             this.cmbcinsiyet.Location = new System.Drawing.Point(168, 514);
-            this.cmbcinsiyet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbcinsiyet.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcinsiyet.Name = "cmbcinsiyet";
             this.cmbcinsiyet.Size = new System.Drawing.Size(272, 28);
             this.cmbcinsiyet.TabIndex = 37;
@@ -238,7 +238,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Terapi ve Rehabilitasyon Bölümü",
             "Sosyal Hizmet ve Danışmanlık Bölümü"});
             this.cmbmyo.Location = new System.Drawing.Point(683, 458);
-            this.cmbmyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbmyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbmyo.Name = "cmbmyo";
             this.cmbmyo.Size = new System.Drawing.Size(272, 28);
             this.cmbmyo.TabIndex = 28;
@@ -250,7 +250,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "İnegöl İşletme Fakültesi",
             "İnegöl MYO"});
             this.cmbFakulte.Location = new System.Drawing.Point(683, 421);
-            this.cmbFakulte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFakulte.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFakulte.Name = "cmbFakulte";
             this.cmbFakulte.Size = new System.Drawing.Size(272, 28);
             this.cmbFakulte.TabIndex = 25;
@@ -259,7 +259,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // mskOgrenciPosta
             // 
             this.mskOgrenciPosta.Location = new System.Drawing.Point(683, 386);
-            this.mskOgrenciPosta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskOgrenciPosta.Margin = new System.Windows.Forms.Padding(4);
             this.mskOgrenciPosta.Mask = "000000000@ogr,uludag,edu,tr";
             this.mskOgrenciPosta.Name = "mskOgrenciPosta";
             this.mskOgrenciPosta.Size = new System.Drawing.Size(272, 26);
@@ -268,7 +268,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // mskOgrenciTelefon
             // 
             this.mskOgrenciTelefon.Location = new System.Drawing.Point(683, 354);
-            this.mskOgrenciTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskOgrenciTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.mskOgrenciTelefon.Mask = "(999) 000-0000";
             this.mskOgrenciTelefon.Name = "mskOgrenciTelefon";
             this.mskOgrenciTelefon.Size = new System.Drawing.Size(272, 26);
@@ -496,6 +496,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -515,6 +516,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -554,6 +556,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -573,6 +576,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
             // txtOgrenciAd
             // 

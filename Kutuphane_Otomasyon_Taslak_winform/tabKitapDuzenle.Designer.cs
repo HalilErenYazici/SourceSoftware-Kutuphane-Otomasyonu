@@ -251,7 +251,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // msktel
             // 
             this.msktel.Location = new System.Drawing.Point(1061, 469);
-            this.msktel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.msktel.Margin = new System.Windows.Forms.Padding(4);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
             this.msktel.Size = new System.Drawing.Size(207, 22);
@@ -347,7 +347,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // mskkurumkayittarihi
             // 
             this.mskkurumkayittarihi.Location = new System.Drawing.Point(664, 518);
-            this.mskkurumkayittarihi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskkurumkayittarihi.Margin = new System.Windows.Forms.Padding(4);
             this.mskkurumkayittarihi.Mask = "00/00/0000";
             this.mskkurumkayittarihi.Name = "mskkurumkayittarihi";
             this.mskkurumkayittarihi.Size = new System.Drawing.Size(207, 22);
@@ -356,7 +356,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // mskkitapyayinyili
             // 
             this.mskkitapyayinyili.Location = new System.Drawing.Point(664, 434);
-            this.mskkitapyayinyili.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskkitapyayinyili.Margin = new System.Windows.Forms.Padding(4);
             this.mskkitapyayinyili.Mask = "00/00/0000";
             this.mskkitapyayinyili.Name = "mskkitapyayinyili";
             this.mskkitapyayinyili.Size = new System.Drawing.Size(207, 22);
@@ -799,6 +799,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -818,6 +819,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -857,6 +859,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -876,6 +879,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
             // txtyazar
             // 

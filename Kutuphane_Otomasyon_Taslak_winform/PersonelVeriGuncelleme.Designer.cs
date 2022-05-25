@@ -213,6 +213,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1280, 50);
             this.panel3.TabIndex = 8;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // kaplaButon
             // 
@@ -287,6 +288,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -326,6 +328,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
+            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
             // 
             // emanetBtn
             // 
@@ -345,6 +348,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -364,6 +368,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
             // PersonelVeriGuncelleme
             // 
@@ -374,7 +379,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersonelVeriGuncelleme";
             this.Text = "PersonelEkle";
             this.Load += new System.EventHandler(this.PersonelVeriGuncelleme_Load);
