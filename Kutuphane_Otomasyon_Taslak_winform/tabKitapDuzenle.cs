@@ -60,75 +60,78 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||txtcevirmensayisi.Text==""||txtcevirmensoyad.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txtkitapId.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||txttur.Text==""||txtyayinevi.Text==""||txtyazar.Text==""||txtyazarsayisi.Text==""||txtyazarsoyad.Text==""||mskkitapyayinyili.Text==""||mskkurumkayittarihi.Text==""||msktel.Text=="")
+            {
+                MessageBox.Show("Kitap seçiniz");
+            }
+            else
+            {
                 connection.Open();
-           
+                MySqlCommand command = new MySqlCommand("update Kitap set kitapId=@kitapId,barkod=@barkod,ISBN=@ISBN,demirbasNo=@demirbasNo,kitapAd=@kitapAd,cilt=@cilt,konu=@konu,ozet=@ozet,sayfa=@sayfa,stok=@stok,anhtrK=@anhtrK,dil=@dil,ynSenesi=@ynSenesi,kkTarih=@kkTarih,basimNo=@basimNo,cikisYili=@cikisYili,dolapNo=@dolapNo,rafNo=@rafNo where kitapId=@kitapId", connection);
+                MySqlCommand commandYayinEvi = new MySqlCommand("update YayinEvi set yynevAd=@yynevAd, yynevTel=@yynevTel", connection);
+                MySqlCommand commandKategori = new MySqlCommand("update Kategori set ktgrAd=@ktgrAd", connection);
+                MySqlCommand commandTur = new MySqlCommand("update Tur set turAd=@turAd", connection);
+                MySqlCommand commandYazar = new MySqlCommand("update Yazar set yzrAd=@yzrAd, yzrSoyad=@yzrSoyad, yzrSayisi=@yzrSayisi", connection);
+                MySqlCommand commandCevirmen = new MySqlCommand("update Cevirmen set cvrAd=@cvrAd, cvrSoyad=@cvrSoyad, cvrSayisi=@cvrSayisi", connection);
+
+                command.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
+
+                command.Parameters.AddWithValue("@barkod", txtbarkod.Text);
+                command.Parameters.AddWithValue("@ISBN", txtisbn.Text);
+                command.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
+                command.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
+
+                command.Parameters.AddWithValue("@cilt", txtcilt.Text);
+                command.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
+                command.Parameters.AddWithValue("@ozet", txtozet.Text);
+                command.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
+                command.Parameters.AddWithValue("@stok", txtstok.Text);
+
+                command.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
+                command.Parameters.AddWithValue("@dil", txtdil.Text);
+                command.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
+                command.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
+                command.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
+                command.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
+                command.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
+                command.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
+
+                commandYayinEvi.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
+                commandYayinEvi.Parameters.AddWithValue("@yynevTel", msktel.Text);
+
+                commandKategori.Parameters.AddWithValue("@ktgrAd", txtkategori.Text);
 
 
-           
-           
-            MySqlCommand command = new MySqlCommand("update Kitap set kitapId=@kitapId,barkod=@barkod,ISBN=@ISBN,demirbasNo=@demirbasNo,kitapAd=@kitapAd,cilt=@cilt,konu=@konu,ozet=@ozet,sayfa=@sayfa,stok=@stok,anhtrK=@anhtrK,dil=@dil,ynSenesi=@ynSenesi,kkTarih=@kkTarih,basimNo=@basimNo,cikisYili=@cikisYili,dolapNo=@dolapNo,rafNo=@rafNo where kitapId=@kitapId", connection);
-            MySqlCommand commandYayinEvi = new MySqlCommand("update YayinEvi set yynevAd=@yynevAd, yynevTel=@yynevTel", connection);
-            MySqlCommand commandKategori = new MySqlCommand("update Kategori set ktgrAd=@ktgrAd", connection);
-            MySqlCommand commandTur = new MySqlCommand("update Tur set turAd=@turAd", connection);
-            MySqlCommand commandYazar = new MySqlCommand("update Yazar set yzrAd=@yzrAd, yzrSoyad=@yzrSoyad, yzrSayisi=@yzrSayisi", connection);
-            MySqlCommand commandCevirmen = new MySqlCommand("update Cevirmen set cvrAd=@cvrAd, cvrSoyad=@cvrSoyad, cvrSayisi=@cvrSayisi", connection);
+                commandTur.Parameters.AddWithValue("@turAd", txttur.Text);
 
-            command.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
+                commandYazar.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
+                commandYazar.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
+                commandYazar.Parameters.AddWithValue("@yzrSayisi", txtyazarsayisi.Text);
 
-            command.Parameters.AddWithValue("@barkod", txtbarkod.Text);
-            command.Parameters.AddWithValue("@ISBN", txtisbn.Text);
-            command.Parameters.AddWithValue("@demirbasNo",txtdemirbas.Text);
-            command.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
-
-            command.Parameters.AddWithValue("@cilt", txtcilt.Text);
-            command.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
-            command.Parameters.AddWithValue("@ozet", txtozet.Text);
-            command.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
-            command.Parameters.AddWithValue("@stok", txtstok.Text);
-
-            command.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
-            command.Parameters.AddWithValue("@dil", txtdil.Text);
-            command.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
-            command.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
-            command.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
-            command.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
-            command.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
-            command.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
-
-            commandYayinEvi.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
-            commandYayinEvi.Parameters.AddWithValue("@yynevTel", msktel.Text);
-
-            commandKategori.Parameters.AddWithValue("@ktgrAd", txtkategori.Text);
-
-
-            commandTur.Parameters.AddWithValue("@turAd", txttur.Text);
-        
-            commandYazar.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
-            commandYazar.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
-            commandYazar.Parameters.AddWithValue("@yzrSayisi", txtyazarsayisi.Text);
-
-            commandCevirmen.Parameters.AddWithValue("@cvrAd", txtcevirmen.Text);
-            commandCevirmen.Parameters.AddWithValue("@cvrSoyad", txtcevirmensoyad.Text);
-            commandCevirmen.Parameters.AddWithValue("@cvrSayisi", txtcevirmensayisi.Text);
+                commandCevirmen.Parameters.AddWithValue("@cvrAd", txtcevirmen.Text);
+                commandCevirmen.Parameters.AddWithValue("@cvrSoyad", txtcevirmensoyad.Text);
+                commandCevirmen.Parameters.AddWithValue("@cvrSayisi", txtcevirmensayisi.Text);
 
 
 
 
 
 
-            command.ExecuteNonQuery();
-            commandYayinEvi.ExecuteNonQuery();
-            commandKategori.ExecuteNonQuery();
-            commandTur.ExecuteNonQuery();
-            commandCevirmen.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                commandYayinEvi.ExecuteNonQuery();
+                commandKategori.ExecuteNonQuery();
+                commandTur.ExecuteNonQuery();
+                commandCevirmen.ExecuteNonQuery();
 
-            ;
+                ;
 
-            connection.Close();
+                connection.Close();
 
-            Form form = new Kitap();
-            form.Show();
-            this.Close();
+                Form form = new Kitap();
+                form.Show();
+                this.Close();
+            }
+              
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -138,44 +141,52 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            DialogResult dialog;
-            dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            string sil = "delete from Kitap where kitapId=@kitapId";
-            string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
-            string silKategori = "delete from Kategori where ktgrId=@ktgrId";
-            string silTur = "delete from Tur where turId=@turId";
-            string silYazar = "delete from Yazar where yzrId=@yzrId";
-            string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
+            if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || txtcevirmen.Text == "" || txtcevirmensayisi.Text == "" || txtcevirmensoyad.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || txtkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || txttur.Text == "" || txtyayinevi.Text == "" || txtyazar.Text == "" || txtyazarsayisi.Text == "" || txtyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || msktel.Text == "")
+            {
+                MessageBox.Show("Silmek için önce kitap seçiniz");
+            }
+            else
+            {
+                connection.Open();
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string sil = "delete from Kitap where kitapId=@kitapId";
+                string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
+                string silKategori = "delete from Kategori where ktgrId=@ktgrId";
+                string silTur = "delete from Tur where turId=@turId";
+                string silYazar = "delete from Yazar where yzrId=@yzrId";
+                string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
 
-            MySqlCommand command = new MySqlCommand(sil, connection);
-            MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
-            MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
-            MySqlCommand commandTur = new MySqlCommand(silTur, connection);
-            MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
-            MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);
+                MySqlCommand command = new MySqlCommand(sil, connection);
+                MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
+                MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
+                MySqlCommand commandTur = new MySqlCommand(silTur, connection);
+                MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
+                MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);
 
-            command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
-            commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
-            commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
-            commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
-            commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
-            commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
+                command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
+                commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
+                commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
+                commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
+                commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
+                commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
 
-            command.ExecuteNonQuery();
-            commandYayinEvi.ExecuteNonQuery();
-            commandKategori.ExecuteNonQuery();
-            commandTur.ExecuteNonQuery();
-            commandYazar.ExecuteNonQuery();
-            commandCevirmen.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                commandYayinEvi.ExecuteNonQuery();
+                commandKategori.ExecuteNonQuery();
+                commandTur.ExecuteNonQuery();
+                commandYazar.ExecuteNonQuery();
+                commandCevirmen.ExecuteNonQuery();
 
-            connection.Close();
-            MessageBox.Show("Silme işlemi gerçekleşti.");
+                connection.Close();
+                MessageBox.Show("Silme işlemi gerçekleşti.");
 
 
-            Form form = new Kitap();
-            form.Show();
-            this.Close();
+                Form form = new Kitap();
+                form.Show();
+                this.Close();
+            }
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

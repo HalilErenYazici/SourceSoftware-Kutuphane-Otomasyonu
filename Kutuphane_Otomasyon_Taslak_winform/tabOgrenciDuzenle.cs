@@ -47,31 +47,39 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-           connection.Open();
-            MySqlCommand command =new MySqlCommand ("update Ogrenci set kartId=@kartId,ogrId=@ogrId,ogrNo=@ogrNo,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,cinsiyet=@cinsiyet,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte,ogrBolum=@ogrBolum where ogrId=@ogrId",connection);
+            if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
+            {
+                MessageBox.Show("Öğrenci seçmediniz öğrenci seçin!");
+            }
+            else
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("update Ogrenci set kartId=@kartId,ogrId=@ogrId,ogrNo=@ogrNo,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,cinsiyet=@cinsiyet,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte,ogrBolum=@ogrBolum where ogrId=@ogrId", connection);
 
 
-            
-            command.Parameters.AddWithValue("@kartId", mskKartId.Text);
 
-            command.Parameters.AddWithValue("@ogrId", txtogrenciId.Text);
-            command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
+                command.Parameters.AddWithValue("@kartId", mskKartId.Text);
 
-            command.Parameters.AddWithValue("@ogrAd", txtOgrenciAd.Text);
-            command.Parameters.AddWithValue("@ogrSoyad", txtOgrenciSoyad.Text);
-            command.Parameters.AddWithValue("@cinsiyet", cmbcinsiyet.Text);
+                command.Parameters.AddWithValue("@ogrId", txtogrenciId.Text);
+                command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
 
-            command.Parameters.AddWithValue("@ogrTel", mskOgrenciTelefon.Text);
-            command.Parameters.AddWithValue("@ogrEposta", mskOgrenciPosta.Text);
-            command.Parameters.AddWithValue("@ogrFakulte", cmbFakulte.Text);
-            command.Parameters.AddWithValue("@ogrBolum", cmbmyo.Text);
+                command.Parameters.AddWithValue("@ogrAd", txtOgrenciAd.Text);
+                command.Parameters.AddWithValue("@ogrSoyad", txtOgrenciSoyad.Text);
+                command.Parameters.AddWithValue("@cinsiyet", cmbcinsiyet.Text);
 
-            command.ExecuteNonQuery();
-            connection.Close();
+                command.Parameters.AddWithValue("@ogrTel", mskOgrenciTelefon.Text);
+                command.Parameters.AddWithValue("@ogrEposta", mskOgrenciPosta.Text);
+                command.Parameters.AddWithValue("@ogrFakulte", cmbFakulte.Text);
+                command.Parameters.AddWithValue("@ogrBolum", cmbmyo.Text);
 
-            Form form = new Ogrenci();
-            form.Show();
-            this.Close();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                Form form = new Ogrenci();
+                form.Show();
+                this.Close();
+
+            }
 
 
         }
@@ -126,28 +134,37 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            DialogResult dialog;
-            dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?","SİL!" ,MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            string sil = "delete from Ogrenci where ogrNo=@ogrNo";
-            MySqlCommand command = new MySqlCommand(sil, connection);
-            command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Silme işlemi gerçekleşti.");
-           //daset.Tables["Ogrenci"].Clear();
-           
-            listele();
-         foreach (Control item in Controls)
+            if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
             {
-                if(item is TextBox& item is MaskedTextBox& item is ComboBox)
-                {
-                    item.Text = null;
-                }
+                MessageBox.Show("Silinecek öğrenciyi seçmediniz öğrenci seçin!");
             }
-         
-          
-           
+            else
+            {
+                connection.Open();
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string sil = "delete from Ogrenci where ogrNo=@ogrNo";
+                MySqlCommand command = new MySqlCommand(sil, connection);
+                command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Silme işlemi gerçekleşti.");
+                //daset.Tables["Ogrenci"].Clear();
+
+                listele();
+                foreach (Control item in Controls)
+                {
+                    if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                    {
+                        item.Text = null;
+                    }
+                }
+
+            }
+
+
+
+
         }
 
         public void listele()

@@ -269,25 +269,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void btnemanetkaldir_Click(object sender, EventArgs e)
         {
             connection.Open();
-            
+            if (dataGridViewemanet.CurrentRow == null)
+            {
+                MessageBox.Show("lütfen emanette silincek veriyi seçiniz");
+                connection.Close();
+            }
+            else
+            {
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string sil = "delete from Emanet where ogrNo=@ogrNo and kitapAd=@kitapAd";
+                MySqlCommand command = new MySqlCommand(sil, connection);
+                command.Parameters.AddWithValue("@ogrNo", dataGridViewemanet.CurrentRow.Cells["ogrNo"].Value.ToString());
+                command.Parameters.AddWithValue("@kitapAd", dataGridViewemanet.CurrentRow.Cells["kitapAd"].Value.ToString());
 
-            DialogResult dialog;
-            dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            string sil = "delete from Emanet where ogrNo=@ogrNo and kitapAd=@kitapAd";
-            MySqlCommand command = new MySqlCommand(sil, connection);
-            command.Parameters.AddWithValue("@ogrNo", dataGridViewemanet.CurrentRow.Cells["ogrNo"].Value.ToString());
-            command.Parameters.AddWithValue("@kitapAd", dataGridViewemanet.CurrentRow.Cells["kitapAd"].Value.ToString());
+                command.ExecuteNonQuery();
+                MessageBox.Show("Silme işlemi gerçekleşti.");
+                MySqlCommand komut2 = new MySqlCommand("update Kitap set stok=stok+'" + dataGridViewemanet.CurrentRow.Cells["EmanetalinanKitapSayisi"].Value.ToString() + "' where kitapId=@kitapId", connection);
+                komut2.Parameters.AddWithValue("@kitapId", dataGridViewemanet.CurrentRow.Cells["kitapId"].Value.ToString());
+                komut2.ExecuteNonQuery();
+                connection.Close();
 
-            command.ExecuteNonQuery();
-            MessageBox.Show("Silme işlemi gerçekleşti.");
-            MySqlCommand komut2 = new MySqlCommand("update Kitap set stok=stok+'" + dataGridViewemanet.CurrentRow.Cells["EmanetalinanKitapSayisi"].Value.ToString() + "' where kitapId=@kitapId", connection);
-            komut2.Parameters.AddWithValue("@kitapId", dataGridViewemanet.CurrentRow.Cells["kitapId"].Value.ToString());
-            komut2.ExecuteNonQuery();
-            connection.Close();
+                MessageBox.Show("Kitap(lar) iade edildi!");
 
-            MessageBox.Show("Kitap(lar) iade edildi!");
-
-            emanetlistele();
+                emanetlistele();
+            }
+          
 
         }
 
