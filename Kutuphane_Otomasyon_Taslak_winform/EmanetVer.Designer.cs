@@ -90,6 +90,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrNo = new System.Windows.Forms.TextBox();
             this.txtOgrAd = new System.Windows.Forms.TextBox();
             this.txtOgrSoyad = new System.Windows.Forms.TextBox();
+            this.txtstokadet = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.kitapPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -131,6 +133,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // kitapPanel
             // 
+            this.kitapPanel.Controls.Add(this.txtstokadet);
+            this.kitapPanel.Controls.Add(this.label19);
             this.kitapPanel.Controls.Add(this.dateTimePickerveris);
             this.kitapPanel.Controls.Add(this.pictureBox2);
             this.kitapPanel.Controls.Add(this.label15);
@@ -155,7 +159,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapPanel.Location = new System.Drawing.Point(36, 334);
             this.kitapPanel.Margin = new System.Windows.Forms.Padding(2);
             this.kitapPanel.Name = "kitapPanel";
-            this.kitapPanel.Size = new System.Drawing.Size(448, 244);
+            this.kitapPanel.Size = new System.Drawing.Size(448, 270);
             this.kitapPanel.TabIndex = 74;
             // 
             // dateTimePickerveris
@@ -516,7 +520,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 596);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 609);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1270, 245);
@@ -888,6 +892,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtOgrSoyad.Size = new System.Drawing.Size(163, 20);
             this.txtOgrSoyad.TabIndex = 6;
             // 
+            // txtstokadet
+            // 
+            this.txtstokadet.Location = new System.Drawing.Point(302, 235);
+            this.txtstokadet.Margin = new System.Windows.Forms.Padding(2);
+            this.txtstokadet.Name = "txtstokadet";
+            this.txtstokadet.Size = new System.Drawing.Size(142, 20);
+            this.txtstokadet.TabIndex = 33;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(173, 235);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(62, 15);
+            this.label19.TabIndex = 34;
+            this.label19.Text = "Stok Adet:";
+            // 
             // EmanetVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,5 +1003,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.ComboBox cmbaramatip;
         private System.Windows.Forms.TextBox txtogrenciarama;
         private System.Windows.Forms.Panel kitapPanel;
+        private System.Windows.Forms.TextBox txtstokadet;
+        private System.Windows.Forms.Label label19;
     }
 }

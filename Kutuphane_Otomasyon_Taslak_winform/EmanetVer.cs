@@ -86,24 +86,41 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {
-                connection.Open();
-                MySqlCommand komut = new MySqlCommand("insert into sepet(kitapId,barkod,ISBN,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@kitapId,@barkod,@ISBN,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
-                komut.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
-                komut.Parameters.AddWithValue("@barkod", txtKitapBarkod.Text);
-                komut.Parameters.AddWithValue("@ISBN", txtkitapIsbn.Text);
-                komut.Parameters.AddWithValue("@kitapAd", txtkitapAd.Text);
-                komut.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
-                komut.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
-                komut.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
-                komut.Parameters.AddWithValue("@veristarihi", dateTimePickerveris.Text);
-                komut.Parameters.AddWithValue("@alistarihi", dateTimePickeralis.Text);
-                komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(txtEmanetAkts.Text));
-                komut.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Kitap(lar) sepete eklendi", "Ekleme İşlemi");
-                sepetlistele();
-                lblkitapsayisi.Text = "";
-                kitapsayisi();
+                if (int.Parse(txtstokadet.Text) <= 0)
+                {
+                    MessageBox.Show("Kitap stok da kalmamıştır. Emanet verilemez!!!!");
+                }
+                else if (int.Parse(txtstokadet.Text)==2&&int.Parse(txtEmanetAkts.Text)>=3)
+                {
+                    MessageBox.Show("2 adet stok kaldığı için en fazla 2 adet alınabilir.");
+                }
+                else if (int.Parse(txtstokadet.Text) == 1 && int.Parse(txtEmanetAkts.Text) >= 2)
+                {
+                    MessageBox.Show("1 adet stok kaldığı için en fazla 1 adet alınabilir.");
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand komut = new MySqlCommand("insert into sepet(kitapId,barkod,ISBN,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@kitapId,@barkod,@ISBN,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
+                    komut.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
+                    komut.Parameters.AddWithValue("@barkod", txtKitapBarkod.Text);
+                    komut.Parameters.AddWithValue("@ISBN", txtkitapIsbn.Text);
+                    komut.Parameters.AddWithValue("@kitapAd", txtkitapAd.Text);
+                    komut.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
+                    komut.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
+                    komut.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
+                    komut.Parameters.AddWithValue("@veristarihi", dateTimePickerveris.Text);
+                    komut.Parameters.AddWithValue("@alistarihi", dateTimePickeralis.Text);
+                    komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(txtEmanetAkts.Text));
+                    komut.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Kitap(lar) sepete eklendi", "Ekleme İşlemi");
+                    sepetlistele();
+                    lblkitapsayisi.Text = "";
+                    kitapsayisi();
+                }
+
+               
                 /* foreach (Control item in kitapPanel.Controls)
                  {
                      if(item is TextBox)
@@ -121,6 +138,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+     
             txtkitapId.Text = dataGridViewkitap.CurrentRow.Cells["kitapId"].Value.ToString();
             txtKitapBarkod.Text = dataGridViewkitap.CurrentRow.Cells["barkod"].Value.ToString();
             txtkitapIsbn.Text = dataGridViewkitap.CurrentRow.Cells["ISBN"].Value.ToString();
@@ -128,6 +147,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtyazar.Text = dataGridViewkitap.CurrentRow.Cells["yzrAd"].Value.ToString();
             txtyazarsoyad.Text = dataGridViewkitap.CurrentRow.Cells["yzrSoyad"].Value.ToString();
             txtyayinevi.Text = dataGridViewkitap.CurrentRow.Cells["yynevAd"].Value.ToString();
+            txtstokadet.Text = dataGridViewkitap.CurrentRow.Cells["stok"].Value.ToString();
+            
+            txtkitapId.Enabled = false;
+            txtKitapBarkod.Enabled = false;
+            txtkitapIsbn.Enabled = false;
+            txtkitapAd.Enabled = false;
+            txtyazarsoyad.Enabled = false;
+            txtyayinevi.Enabled = false;
+            txtstokadet.Enabled = false;
+
 
 
 
@@ -147,6 +176,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtOgrAd.Enabled = false;
             txtogrNo.Enabled = false;
             txtOgrSoyad.Enabled = false;
+            mskOgrenciPosta.Enabled = false;
+            mskOgrenciTelefon.Enabled = false;
         }
 
         private void txtogrNo_TextChanged(object sender, EventArgs e)
@@ -205,6 +236,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     {
                         for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
                         {
+                            
                             connection.Open();
                             MySqlCommand komut = new MySqlCommand("insert into Emanet(ogrId,ogrNo,ogrAd,ogrSoyad,ogrEposta,ogrTel,kitapId,barkod,ISBN,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@ogrId,@ogrNo,@ogrAd,@ogrSoyad,@ogrEposta,@ogrTel,@kitapId,@barkod,@ISBN,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
                             komut.Parameters.AddWithValue("@ogrId", txtogrID.Text);

@@ -443,7 +443,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 connection.Open();
          
-                    string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
+                    
+                   string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
                     MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
                     kategorikomut.ExecuteNonQuery();
                     int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
@@ -468,11 +469,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
                     cevirmenKomut.ExecuteNonQuery();
                     int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
+                   
                     string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
-                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId);
+                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId) ;
 
                     eklekomut.Parameters.AddWithValue("@turId", turId);
 
