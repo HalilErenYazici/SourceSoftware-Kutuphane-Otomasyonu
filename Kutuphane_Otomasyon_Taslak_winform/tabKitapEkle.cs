@@ -412,6 +412,71 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         }
 
+        private void txtcilt_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtbarkod_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select barkod from Kitap where barkod='" + txtbarkod.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lblbarkod.Text = "Veri tabanında bu barkod var";
+                lblbarkod.Visible = true;
+            }
+            else
+            {
+                lblbarkod.Text = "Yazılabilir";
+                lblbarkod.Visible = true;
+
+            }
+            connection.Close();
+        }
+
+        private void txtdemirbas_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select demirbasNo from Kitap where demirbasNo='" + txtdemirbas.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lbldemirbasno.Text = "Veri tabanında bu demirbaş numarası var";
+                lbldemirbasno.Visible = true;
+            }
+            else
+            {
+                lbldemirbasno.Text = "Yazılabilir";
+                lbldemirbasno.Visible = true;
+
+            }
+            connection.Close();
+        }
+
+        private void txtisbn_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select ISBN from Kitap where ISBN='" + txtisbn.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lblisbn.Text = "Veri tabanında bu isbn numarası var";
+                lblisbn.Visible = true;
+            }
+            else
+            {
+                lbldemirbasno.Text = "Yazılabilir";
+                lbldemirbasno.Visible = true;
+
+            }
+            connection.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
@@ -439,41 +504,39 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 // string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + txttur.Text + "'";
 
-
-
                 connection.Open();
-         
-                    
-                   string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
+
+                if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
+                    string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
                     MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
                     kategorikomut.ExecuteNonQuery();
                     int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                
 
-                string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-                MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-                turkomut.ExecuteNonQuery();
-                int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('"+cmbyazarad.Text+ "','" + cmbyazarsoyad.Text+ "','" + cmbyazarsayisi.Text+"');";
-                MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
-                yazarkomut.ExecuteNonQuery();
-                int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                    string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                    MySqlCommand turkomut = new MySqlCommand(turekle, connection);
+                    turkomut.ExecuteNonQuery();
+                    int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + cmbyayinevi.Text+ "','" + cmbyayinevitel.Text + "');";
-                MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
-                yayinEviKomut.ExecuteNonQuery();
-                int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                    string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('" + cmbyazarad.Text + "','" + cmbyazarsoyad.Text + "','" + cmbyazarsayisi.Text + "');";
+                    MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
+                    yazarkomut.ExecuteNonQuery();
+                    int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+
+                    string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + cmbyayinevi.Text + "','" + cmbyayinevitel.Text + "');";
+                    MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
+                    yayinEviKomut.ExecuteNonQuery();
+                    int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
                     string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + cmbcevirmenadi.Text + "','" + cmbcevirmensoyadi.Text + "','" + cmbcevirmensayisi.Text + "');";
                     MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
                     cevirmenKomut.ExecuteNonQuery();
                     int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                   
+
                     string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
-                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId) ;
+                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId);
 
                     eklekomut.Parameters.AddWithValue("@turId", turId);
 
@@ -500,21 +563,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
                     eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
                     eklekomut.ExecuteNonQuery();
-                
-                
 
 
-                if(txtcevirmen.Text.Length==0)
-                {
-                    txtcevirmen.Text = "yok";
-                }
 
-                connection.Close();
+
+                    if (txtcevirmen.Text.Length == 0)
+                    {
+                        txtcevirmen.Text = "yok";
+                    }
+
+                    connection.Close();
                     MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
 
                     AnaSayfa AnaSayfa = new AnaSayfa();
-                   AnaSayfa.Show();
+                    AnaSayfa.Show();
                     this.Hide();
+
+                }
+                else
+                {
+
+                    MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
+                    connection.Close();
+                }
+         
+                    
+                   
 
                 
               //  string turEkle = "insert into Tur(turAd) values('" + txttur.Text + "');";

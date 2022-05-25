@@ -39,7 +39,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void tabOgrenciEkle_Load(object sender, EventArgs e)
         {
-            connection.Open();
         }
         private void anasayfaBtn_Click(object sender, EventArgs e)
         {
@@ -125,6 +124,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connection.Open();
             if (mskOgrNo.Text == "" ||txtOgrenciAd.Text == "" || txtOgrenciSoyad.Text == "" || mskOgrenciTelefon.Text == "")
             {
                 
@@ -192,7 +192,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     bolum = cmbmyo.Text;
                 }*/
-                string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text +"','"+ okuduguKitapSayisi + "');";
+                if (lblkartid.Text== "Yazılabilir"&&lblogrencino.Text== "Yazılabilir"&& lbleposta.Text== "Yazılabilir") {
+                    string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text + "','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text + "','" + okuduguKitapSayisi + "');";
+                    MySqlCommand command = new MySqlCommand(ekleme, connection);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+
+                    AnaSayfa yeni = new AnaSayfa();
+                    yeni.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Öğrencino ve kartId veritabanında başkasına ait");
+                    connection.Close();
+                }
+                /*string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text +"','"+ okuduguKitapSayisi + "');";
                 MySqlCommand command = new MySqlCommand(ekleme, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -200,7 +216,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 AnaSayfa yeni = new AnaSayfa();
                 yeni.Show();
-                this.Hide();
+                this.Hide();*/
             }
         }
 
@@ -215,6 +231,71 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 this.panel1.BackgroundImage = Properties.Resources.Bck_Pmb3_5;
             }
+        }
+
+        private void mskKartId_TextChanged(object sender, EventArgs e)
+        {
+            /*DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dataGridView1.DataSource = dt;
+            connection.Close();*/
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select kartId from Ogrenci where kartId='" + mskKartId.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lblkartid.Text = "Veri tabanında bu kartId var";
+                lblkartid.Visible = true;
+            }
+            else
+            {
+                lblkartid.Text = "Yazılabilir";
+                lblkartid.Visible = true;
+
+            }
+            connection.Close();
+        }
+
+        private void mskOgrNo_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select ogrNo from Ogrenci where ogrNo='" + mskOgrenciPosta.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lblogrencino.Text = "Veri tabanında bu mail var";
+                lblogrencino.Visible = true;
+            }
+            else
+            {
+                lblogrencino.Text = "Yazılabilir";
+                lblogrencino.Visible = true;
+
+            }
+            connection.Close();
+        }
+
+        private void mskOgrenciPosta_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlDataAdapter adp = new MySqlDataAdapter("select ogrEposta from Ogrenci where ogrEposta='" + mskOgrenciPosta.Text + "'", connection);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "Ogrenci");
+            if (ds.Tables["Ogrenci"].Rows.Count > 0)
+            {
+                lbleposta.Text = "Veri tabanında bu ogrposta var";
+                lbleposta.Visible = true;
+            }
+            else
+            {
+                lbleposta.Text = "Yazılabilir";
+                lbleposta.Visible = true;
+
+            }
+            connection.Close();
         }
 
 
