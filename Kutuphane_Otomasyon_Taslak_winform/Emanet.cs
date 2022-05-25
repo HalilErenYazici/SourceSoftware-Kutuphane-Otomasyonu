@@ -259,5 +259,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Emanetiade emanetiade = new Emanetiade();
+            emanetiade.Show();
+            this.Hide();
+        }
     }
 }

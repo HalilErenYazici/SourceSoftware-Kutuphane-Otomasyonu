@@ -31,6 +31,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabKitapEkle));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbcevirmensayisi = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmensoyadi = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmenadi = new System.Windows.Forms.ComboBox();
+            this.cmbyayinevitel = new System.Windows.Forms.ComboBox();
+            this.cmbyayinevi = new System.Windows.Forms.ComboBox();
+            this.cmbtur = new System.Windows.Forms.ComboBox();
+            this.cmbyazarsayisi = new System.Windows.Forms.ComboBox();
+            this.cmbyazarsoyad = new System.Windows.Forms.ComboBox();
+            this.cmbyazarad = new System.Windows.Forms.ComboBox();
             this.cmbkategori = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,6 +47,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.msktel = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.txtyazarsayisi = new System.Windows.Forms.TextBox();
             this.lblcevirmensayisi = new System.Windows.Forms.Label();
             this.txtcevirmensayisi = new System.Windows.Forms.TextBox();
             this.lblcevirmensoyad = new System.Windows.Forms.Label();
@@ -97,24 +107,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtbarkod = new System.Windows.Forms.TextBox();
             this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.txtcilt = new System.Windows.Forms.TextBox();
-            this.cmbyazarad = new System.Windows.Forms.ComboBox();
-            this.cmbyazarsoyad = new System.Windows.Forms.ComboBox();
-            this.txtyazarsayisi = new System.Windows.Forms.TextBox();
-            this.cmbyazarsayisi = new System.Windows.Forms.ComboBox();
-            this.cmbtur = new System.Windows.Forms.ComboBox();
-            this.cmbyayinevi = new System.Windows.Forms.ComboBox();
-            this.cmbyayinevitel = new System.Windows.Forms.ComboBox();
-            this.cmbcevirmenadi = new System.Windows.Forms.ComboBox();
-            this.cmbcevirmensoyadi = new System.Windows.Forms.ComboBox();
-            this.cmbcevirmensayisi = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tureklebtn = new System.Windows.Forms.Button();
+            this.yayinevibtn = new System.Windows.Forms.Button();
+            this.btnkategori = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnyazar = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.cmbcevirmensayisi);
             this.panel1.Controls.Add(this.cmbcevirmensoyadi);
             this.panel1.Controls.Add(this.cmbcevirmenadi);
@@ -127,17 +146,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.cmbkategori);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txtisbn);
             this.panel1.Controls.Add(this.txtcikisyili);
-            this.panel1.Controls.Add(this.msktel);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.txtyazarsayisi);
             this.panel1.Controls.Add(this.lblcevirmensayisi);
-            this.panel1.Controls.Add(this.txtcevirmensayisi);
             this.panel1.Controls.Add(this.lblcevirmensoyad);
-            this.panel1.Controls.Add(this.txtcevirmensoyad);
             this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.txtyazarsoyad);
             this.panel1.Controls.Add(this.mskkurumkayittarihi);
             this.panel1.Controls.Add(this.mskkitapyayinyili);
             this.panel1.Controls.Add(this.label22);
@@ -165,20 +180,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtdolapkonum);
-            this.panel1.Controls.Add(this.txtcevirmen);
             this.panel1.Controls.Add(this.txtozet);
-            this.panel1.Controls.Add(this.txtkategori);
             this.panel1.Controls.Add(this.txtdil);
-            this.panel1.Controls.Add(this.txttur);
-            this.panel1.Controls.Add(this.txtyayinevi);
             this.panel1.Controls.Add(this.txtbasimnumara);
             this.panel1.Controls.Add(this.txtanahtarkelime);
             this.panel1.Controls.Add(this.txtstok);
             this.panel1.Controls.Add(this.txtkitapkonusu);
             this.panel1.Controls.Add(this.txtkitapsayfasayisi);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtyazar);
-            this.panel1.Controls.Add(this.txtisbn);
             this.panel1.Controls.Add(this.txtdemirbas);
             this.panel1.Controls.Add(this.txtbarkod);
             this.panel1.Controls.Add(this.txtKitapAd);
@@ -187,8 +196,92 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 585);
+            this.panel1.Size = new System.Drawing.Size(1146, 735);
             this.panel1.TabIndex = 3;
+            // 
+            // cmbcevirmensayisi
+            // 
+            this.cmbcevirmensayisi.FormattingEnabled = true;
+            this.cmbcevirmensayisi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmensayisi.Location = new System.Drawing.Point(752, 203);
+            this.cmbcevirmensayisi.Name = "cmbcevirmensayisi";
+            this.cmbcevirmensayisi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmensayisi.TabIndex = 74;
+            this.cmbcevirmensayisi.Visible = false;
+            // 
+            // cmbcevirmensoyadi
+            // 
+            this.cmbcevirmensoyadi.FormattingEnabled = true;
+            this.cmbcevirmensoyadi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(752, 175);
+            this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
+            this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmensoyadi.TabIndex = 73;
+            this.cmbcevirmensoyadi.Visible = false;
+            // 
+            // cmbcevirmenadi
+            // 
+            this.cmbcevirmenadi.FormattingEnabled = true;
+            this.cmbcevirmenadi.Items.AddRange(new object[] {
+            "Çevirmen Var",
+            "Çevirmen Yok"});
+            this.cmbcevirmenadi.Location = new System.Drawing.Point(752, 148);
+            this.cmbcevirmenadi.Name = "cmbcevirmenadi";
+            this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
+            this.cmbcevirmenadi.TabIndex = 72;
+            this.cmbcevirmenadi.Visible = false;
+            // 
+            // cmbyayinevitel
+            // 
+            this.cmbyayinevitel.FormattingEnabled = true;
+            this.cmbyayinevitel.Location = new System.Drawing.Point(195, 402);
+            this.cmbyayinevitel.Name = "cmbyayinevitel";
+            this.cmbyayinevitel.Size = new System.Drawing.Size(156, 21);
+            this.cmbyayinevitel.TabIndex = 71;
+            // 
+            // cmbyayinevi
+            // 
+            this.cmbyayinevi.FormattingEnabled = true;
+            this.cmbyayinevi.Location = new System.Drawing.Point(195, 379);
+            this.cmbyayinevi.Name = "cmbyayinevi";
+            this.cmbyayinevi.Size = new System.Drawing.Size(156, 21);
+            this.cmbyayinevi.TabIndex = 70;
+            // 
+            // cmbtur
+            // 
+            this.cmbtur.FormattingEnabled = true;
+            this.cmbtur.Location = new System.Drawing.Point(195, 357);
+            this.cmbtur.Name = "cmbtur";
+            this.cmbtur.Size = new System.Drawing.Size(156, 21);
+            this.cmbtur.TabIndex = 69;
+            // 
+            // cmbyazarsayisi
+            // 
+            this.cmbyazarsayisi.FormattingEnabled = true;
+            this.cmbyazarsayisi.Location = new System.Drawing.Point(195, 203);
+            this.cmbyazarsayisi.Name = "cmbyazarsayisi";
+            this.cmbyazarsayisi.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarsayisi.TabIndex = 68;
+            // 
+            // cmbyazarsoyad
+            // 
+            this.cmbyazarsoyad.FormattingEnabled = true;
+            this.cmbyazarsoyad.Location = new System.Drawing.Point(195, 179);
+            this.cmbyazarsoyad.Name = "cmbyazarsoyad";
+            this.cmbyazarsoyad.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarsoyad.TabIndex = 67;
+            // 
+            // cmbyazarad
+            // 
+            this.cmbyazarad.FormattingEnabled = true;
+            this.cmbyazarad.Location = new System.Drawing.Point(195, 157);
+            this.cmbyazarad.Name = "cmbyazarad";
+            this.cmbyazarad.Size = new System.Drawing.Size(156, 21);
+            this.cmbyazarad.TabIndex = 66;
             // 
             // cmbkategori
             // 
@@ -233,7 +326,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // msktel
             // 
-            this.msktel.Location = new System.Drawing.Point(405, 407);
+            this.msktel.Location = new System.Drawing.Point(89, 86);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
             this.msktel.Size = new System.Drawing.Size(156, 20);
@@ -263,6 +356,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label26.TabIndex = 58;
             this.label26.Text = "Kitabın Yazar Sayısı";
             // 
+            // txtyazarsayisi
+            // 
+            this.txtyazarsayisi.Location = new System.Drawing.Point(89, 309);
+            this.txtyazarsayisi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtyazarsayisi.Name = "txtyazarsayisi";
+            this.txtyazarsayisi.Size = new System.Drawing.Size(156, 20);
+            this.txtyazarsayisi.TabIndex = 57;
+            // 
             // lblcevirmensayisi
             // 
             this.lblcevirmensayisi.AutoSize = true;
@@ -278,12 +379,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmensayisi
             // 
-            this.txtcevirmensayisi.Location = new System.Drawing.Point(752, 362);
+            this.txtcevirmensayisi.Location = new System.Drawing.Point(89, 214);
             this.txtcevirmensayisi.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmensayisi.Name = "txtcevirmensayisi";
             this.txtcevirmensayisi.Size = new System.Drawing.Size(156, 20);
             this.txtcevirmensayisi.TabIndex = 55;
-            this.txtcevirmensayisi.Visible = false;
             // 
             // lblcevirmensoyad
             // 
@@ -300,12 +400,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmensoyad
             // 
-            this.txtcevirmensoyad.Location = new System.Drawing.Point(757, 338);
+            this.txtcevirmensoyad.Location = new System.Drawing.Point(89, 184);
             this.txtcevirmensoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmensoyad.Name = "txtcevirmensoyad";
             this.txtcevirmensoyad.Size = new System.Drawing.Size(156, 20);
             this.txtcevirmensoyad.TabIndex = 53;
-            this.txtcevirmensoyad.Visible = false;
             // 
             // label23
             // 
@@ -321,7 +420,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtyazarsoyad
             // 
-            this.txtyazarsoyad.Location = new System.Drawing.Point(389, 184);
+            this.txtyazarsoyad.Location = new System.Drawing.Point(89, 285);
             this.txtyazarsoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtyazarsoyad.Name = "txtyazarsoyad";
             this.txtyazarsoyad.Size = new System.Drawing.Size(156, 20);
@@ -367,7 +466,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(776, 489);
+            this.button1.Location = new System.Drawing.Point(437, 563);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 37);
@@ -639,12 +738,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtcevirmen
             // 
-            this.txtcevirmen.Location = new System.Drawing.Point(752, 309);
+            this.txtcevirmen.Location = new System.Drawing.Point(89, 160);
             this.txtcevirmen.Margin = new System.Windows.Forms.Padding(2);
             this.txtcevirmen.Name = "txtcevirmen";
             this.txtcevirmen.Size = new System.Drawing.Size(156, 20);
             this.txtcevirmen.TabIndex = 22;
-            this.txtcevirmen.Visible = false;
             // 
             // txtozet
             // 
@@ -656,7 +754,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtkategori
             // 
-            this.txtkategori.Location = new System.Drawing.Point(405, 512);
+            this.txtkategori.Location = new System.Drawing.Point(89, 126);
             this.txtkategori.Margin = new System.Windows.Forms.Padding(2);
             this.txtkategori.Name = "txtkategori";
             this.txtkategori.Size = new System.Drawing.Size(156, 20);
@@ -673,7 +771,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txttur
             // 
-            this.txttur.Location = new System.Drawing.Point(405, 382);
+            this.txttur.Location = new System.Drawing.Point(89, 30);
             this.txttur.Margin = new System.Windows.Forms.Padding(2);
             this.txttur.Name = "txttur";
             this.txttur.Size = new System.Drawing.Size(156, 20);
@@ -681,7 +779,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtyayinevi
             // 
-            this.txtyayinevi.Location = new System.Drawing.Point(405, 357);
+            this.txtyayinevi.Location = new System.Drawing.Point(89, 61);
             this.txtyayinevi.Margin = new System.Windows.Forms.Padding(2);
             this.txtyayinevi.Name = "txtyayinevi";
             this.txtyayinevi.Size = new System.Drawing.Size(156, 20);
@@ -742,7 +840,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 41);
+            this.panel2.Size = new System.Drawing.Size(1146, 41);
             this.panel2.TabIndex = 8;
             // 
             // kaplaButon
@@ -756,7 +854,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(917, 2);
+            this.kaplaButon.Location = new System.Drawing.Point(1081, 3);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(2);
             this.kaplaButon.Name = "kaplaButon";
             this.kaplaButon.Size = new System.Drawing.Size(18, 20);
@@ -775,7 +873,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(895, 2);
+            this.simgeButon.Location = new System.Drawing.Point(1059, 3);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(2);
             this.simgeButon.Name = "simgeButon";
             this.simgeButon.Size = new System.Drawing.Size(18, 20);
@@ -794,7 +892,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(940, 2);
+            this.cikisButon.Location = new System.Drawing.Point(1104, 3);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(2);
             this.cikisButon.Name = "cikisButon";
             this.cikisButon.Size = new System.Drawing.Size(18, 20);
@@ -904,7 +1002,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtyazar
             // 
-            this.txtyazar.Location = new System.Drawing.Point(195, 226);
+            this.txtyazar.Location = new System.Drawing.Point(91, 261);
             this.txtyazar.Margin = new System.Windows.Forms.Padding(2);
             this.txtyazar.Name = "txtyazar";
             this.txtyazar.Size = new System.Drawing.Size(156, 20);
@@ -912,7 +1010,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // txtisbn
             // 
-            this.txtisbn.Location = new System.Drawing.Point(389, 160);
+            this.txtisbn.Location = new System.Drawing.Point(195, 226);
             this.txtisbn.Margin = new System.Windows.Forms.Padding(2);
             this.txtisbn.Name = "txtisbn";
             this.txtisbn.Size = new System.Drawing.Size(156, 20);
@@ -950,101 +1048,206 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtcilt.Size = new System.Drawing.Size(156, 20);
             this.txtcilt.TabIndex = 2;
             // 
-            // cmbyazarad
+            // panel3
             // 
-            this.cmbyazarad.FormattingEnabled = true;
-            this.cmbyazarad.Location = new System.Drawing.Point(195, 157);
-            this.cmbyazarad.Name = "cmbyazarad";
-            this.cmbyazarad.Size = new System.Drawing.Size(156, 21);
-            this.cmbyazarad.TabIndex = 66;
+            this.panel3.Controls.Add(this.label34);
+            this.panel3.Controls.Add(this.label33);
+            this.panel3.Controls.Add(this.label35);
+            this.panel3.Controls.Add(this.label32);
+            this.panel3.Controls.Add(this.label36);
+            this.panel3.Controls.Add(this.label31);
+            this.panel3.Controls.Add(this.label30);
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.btnyazar);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.txttur);
+            this.panel3.Controls.Add(this.tureklebtn);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.txtyayinevi);
+            this.panel3.Controls.Add(this.btnkategori);
+            this.panel3.Controls.Add(this.yayinevibtn);
+            this.panel3.Controls.Add(this.msktel);
+            this.panel3.Controls.Add(this.txtkategori);
+            this.panel3.Controls.Add(this.txtcevirmen);
+            this.panel3.Controls.Add(this.txtcevirmensoyad);
+            this.panel3.Controls.Add(this.txtcevirmensayisi);
+            this.panel3.Controls.Add(this.txtyazarsoyad);
+            this.panel3.Controls.Add(this.txtyazarsayisi);
+            this.panel3.Controls.Add(this.txtyazar);
+            this.panel3.Location = new System.Drawing.Point(710, 336);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(389, 360);
+            this.panel3.TabIndex = 75;
             // 
-            // cmbyazarsoyad
+            // tureklebtn
             // 
-            this.cmbyazarsoyad.FormattingEnabled = true;
-            this.cmbyazarsoyad.Location = new System.Drawing.Point(195, 179);
-            this.cmbyazarsoyad.Name = "cmbyazarsoyad";
-            this.cmbyazarsoyad.Size = new System.Drawing.Size(156, 21);
-            this.cmbyazarsoyad.TabIndex = 67;
+            this.tureklebtn.Location = new System.Drawing.Point(292, 30);
+            this.tureklebtn.Name = "tureklebtn";
+            this.tureklebtn.Size = new System.Drawing.Size(75, 23);
+            this.tureklebtn.TabIndex = 76;
+            this.tureklebtn.Text = "tur ekle";
+            this.tureklebtn.UseVisualStyleBackColor = true;
+            this.tureklebtn.Click += new System.EventHandler(this.tureklebtn_Click);
             // 
-            // txtyazarsayisi
+            // yayinevibtn
             // 
-            this.txtyazarsayisi.Location = new System.Drawing.Point(389, 208);
-            this.txtyazarsayisi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtyazarsayisi.Name = "txtyazarsayisi";
-            this.txtyazarsayisi.Size = new System.Drawing.Size(156, 20);
-            this.txtyazarsayisi.TabIndex = 57;
+            this.yayinevibtn.Location = new System.Drawing.Point(289, 77);
+            this.yayinevibtn.Name = "yayinevibtn";
+            this.yayinevibtn.Size = new System.Drawing.Size(75, 23);
+            this.yayinevibtn.TabIndex = 77;
+            this.yayinevibtn.Text = "Yayin Evi ekle";
+            this.yayinevibtn.UseVisualStyleBackColor = true;
+            this.yayinevibtn.Click += new System.EventHandler(this.yayinevibtn_Click);
             // 
-            // cmbyazarsayisi
+            // btnkategori
             // 
-            this.cmbyazarsayisi.FormattingEnabled = true;
-            this.cmbyazarsayisi.Location = new System.Drawing.Point(195, 203);
-            this.cmbyazarsayisi.Name = "cmbyazarsayisi";
-            this.cmbyazarsayisi.Size = new System.Drawing.Size(156, 21);
-            this.cmbyazarsayisi.TabIndex = 68;
+            this.btnkategori.Location = new System.Drawing.Point(263, 126);
+            this.btnkategori.Name = "btnkategori";
+            this.btnkategori.Size = new System.Drawing.Size(102, 23);
+            this.btnkategori.TabIndex = 79;
+            this.btnkategori.Text = "kategori ekle";
+            this.btnkategori.UseVisualStyleBackColor = true;
+            this.btnkategori.Click += new System.EventHandler(this.btnkategori_Click);
             // 
-            // cmbtur
+            // button6
             // 
-            this.cmbtur.FormattingEnabled = true;
-            this.cmbtur.Location = new System.Drawing.Point(195, 357);
-            this.cmbtur.Name = "cmbtur";
-            this.cmbtur.Size = new System.Drawing.Size(156, 21);
-            this.cmbtur.TabIndex = 69;
+            this.button6.Location = new System.Drawing.Point(259, 180);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 41);
+            this.button6.TabIndex = 81;
+            this.button6.Text = "Çevirmen Verilerini ekle";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // cmbyayinevi
+            // label20
             // 
-            this.cmbyayinevi.FormattingEnabled = true;
-            this.cmbyayinevi.Location = new System.Drawing.Point(195, 379);
-            this.cmbyayinevi.Name = "cmbyayinevi";
-            this.cmbyayinevi.Size = new System.Drawing.Size(156, 21);
-            this.cmbyayinevi.TabIndex = 70;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(42, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(209, 16);
+            this.label20.TabIndex = 84;
+            this.label20.Text = "Olmayan Verileri Burdan Ekleyiniz";
             // 
-            // cmbyayinevitel
+            // btnyazar
             // 
-            this.cmbyayinevitel.FormattingEnabled = true;
-            this.cmbyayinevitel.Location = new System.Drawing.Point(195, 402);
-            this.cmbyayinevitel.Name = "cmbyayinevitel";
-            this.cmbyayinevitel.Size = new System.Drawing.Size(156, 21);
-            this.cmbyayinevitel.TabIndex = 71;
+            this.btnyazar.Location = new System.Drawing.Point(259, 273);
+            this.btnyazar.Name = "btnyazar";
+            this.btnyazar.Size = new System.Drawing.Size(123, 41);
+            this.btnyazar.TabIndex = 82;
+            this.btnyazar.Text = "Yazar Verilerini ekle";
+            this.btnyazar.UseVisualStyleBackColor = true;
+            this.btnyazar.Click += new System.EventHandler(this.btnyazar_Click);
             // 
-            // cmbcevirmenadi
+            // label24
             // 
-            this.cmbcevirmenadi.FormattingEnabled = true;
-            this.cmbcevirmenadi.Items.AddRange(new object[] {
-            "Çevirmen Var",
-            "Çevirmen Yok"});
-            this.cmbcevirmenadi.Location = new System.Drawing.Point(752, 148);
-            this.cmbcevirmenadi.Name = "cmbcevirmenadi";
-            this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
-            this.cmbcevirmenadi.TabIndex = 72;
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Location = new System.Drawing.Point(24, 33);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(44, 13);
+            this.label24.TabIndex = 85;
+            this.label24.Text = "Tür Adı:";
             // 
-            // cmbcevirmensoyadi
+            // label25
             // 
-            this.cmbcevirmensoyadi.FormattingEnabled = true;
-            this.cmbcevirmensoyadi.Items.AddRange(new object[] {
-            "Çevirmen Var",
-            "Çevirmen Yok"});
-            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(752, 175);
-            this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
-            this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
-            this.cmbcevirmensoyadi.TabIndex = 73;
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label25.Location = new System.Drawing.Point(14, 64);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(70, 13);
+            this.label25.TabIndex = 86;
+            this.label25.Text = "Yayınevi Adıı:";
             // 
-            // cmbcevirmensayisi
+            // label29
             // 
-            this.cmbcevirmensayisi.FormattingEnabled = true;
-            this.cmbcevirmensayisi.Items.AddRange(new object[] {
-            "Çevirmen Var",
-            "Çevirmen Yok"});
-            this.cmbcevirmensayisi.Location = new System.Drawing.Point(752, 203);
-            this.cmbcevirmensayisi.Name = "cmbcevirmensayisi";
-            this.cmbcevirmensayisi.Size = new System.Drawing.Size(156, 21);
-            this.cmbcevirmensayisi.TabIndex = 74;
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label29.Location = new System.Drawing.Point(1, 91);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 13);
+            this.label29.TabIndex = 86;
+            this.label29.Text = "Yayınevi tel Adı:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label30.Location = new System.Drawing.Point(14, 126);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(67, 13);
+            this.label30.TabIndex = 86;
+            this.label30.Text = "Kategori Adı:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label31.Location = new System.Drawing.Point(14, 163);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(72, 13);
+            this.label31.TabIndex = 86;
+            this.label31.Text = "Çevirmen Adı:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label32.Location = new System.Drawing.Point(1, 191);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(89, 13);
+            this.label32.TabIndex = 86;
+            this.label32.Text = "Çevirmen Soyadı:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label33.Location = new System.Drawing.Point(3, 217);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(84, 13);
+            this.label33.TabIndex = 86;
+            this.label33.Text = "Çevirmen Sayısı:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label34.Location = new System.Drawing.Point(0, 315);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(67, 13);
+            this.label34.TabIndex = 87;
+            this.label34.Text = "Yazar Sayısı:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label35.Location = new System.Drawing.Point(-2, 289);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(72, 13);
+            this.label35.TabIndex = 88;
+            this.label35.Text = "Yazar Soyadı:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label36.Location = new System.Drawing.Point(11, 261);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(55, 13);
+            this.label36.TabIndex = 89;
+            this.label36.Text = "Yazar Adı:";
             // 
             // tabKitapEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1146, 735);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1056,6 +1259,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1139,5 +1344,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.ComboBox cmbyazarsoyad;
         private System.Windows.Forms.ComboBox cmbyazarad;
         private System.Windows.Forms.TextBox txtyazarsayisi;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnkategori;
+        private System.Windows.Forms.Button yayinevibtn;
+        private System.Windows.Forms.Button tureklebtn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnyazar;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
     }
 }

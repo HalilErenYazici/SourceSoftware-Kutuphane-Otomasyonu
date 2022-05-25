@@ -82,6 +82,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button2.TabIndex = 15;
             this.button2.Text = "Emanet İade Sayfası";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cmbaramatip
             // 
