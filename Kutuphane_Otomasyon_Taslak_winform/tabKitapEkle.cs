@@ -29,13 +29,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             kategoriEkle();
             turEkle();
             yazarAd();
-            yazarSayisi();
             yazarSoyad();
-            YayinEviekle();
-            YayinEvitel();
+            yayinevekle();
+            YayinEvtel();
             cevirmenadi();
             cevirmensoyadi();
-            cevirmensayisi();
 
         }
         private void kategoriEkle()
@@ -52,6 +50,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbkategori.Items.Add(oku[1].ToString());
             }
             connection.Close();
+            
 
         }
       
@@ -64,13 +63,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             MySqlCommand komut = new MySqlCommand();
             komut.Connection = connection;
-            komut.CommandText = "Select * from Yazar where yzrId";
+            komut.CommandText = "Select * from Yazar ";
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
                 cmbyazarad.Items.Add(oku[1].ToString());
             }
-            connection.Close();
+            connection.Close(); 
+           
 
         }
         private void yazarSoyad()
@@ -80,31 +80,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             MySqlCommand komut = new MySqlCommand();
             komut.Connection = connection;
-            komut.CommandText = "Select * from Yazar where yzrId";
+            komut.CommandText = "Select * from Yazar ";
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
                 cmbyazarsoyad.Items.Add(oku[2].ToString());
             }
-            connection.Close();
-
+            connection.Close(); 
+            
         }
-        private void yazarSayisi()
-        {
-            cmbyazarsayisi.Items.Clear();
-            MySqlDataReader oku;
-            connection.Open();
-            MySqlCommand komut = new MySqlCommand();
-            komut.Connection = connection;
-            komut.CommandText = "Select * from Yazar";
-            oku = komut.ExecuteReader();
-            while (oku.Read())
-            {
-                cmbyazarsayisi.Items.Add(oku[3].ToString());
-            }
-            connection.Close();
-
-        }
+        
         private void turEkle()
         {
             cmbtur.Items.Clear();
@@ -119,9 +104,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbtur.Items.Add(oku[1].ToString());
             }
             connection.Close();
-
+            
         }
-        private void YayinEviekle()
+        private void yayinevekle()
         {
             cmbyayinevi.Items.Clear();
             MySqlDataReader oku;
@@ -135,9 +120,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbyayinevi.Items.Add(oku[1].ToString());
             }
             connection.Close();
-
+            
         }
-        private void YayinEvitel()
+        private void YayinEvtel()
         {
             cmbyayinevitel.Items.Clear();
             MySqlDataReader oku;
@@ -150,8 +135,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 cmbyayinevitel.Items.Add(oku[2].ToString());
             }
-            connection.Close();
-
+            connection.Close(); 
+            cmbyayinevi.DisplayMember = "yynevTel";
+            cmbyayinevi.ValueMember = "yynevId";
         }
         private void cevirmenadi()
         {
@@ -164,10 +150,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             oku = komut.ExecuteReader();
             while (oku.Read())
             {
+               
                 cmbcevirmenadi.Items.Add(oku[1].ToString());
             }
             connection.Close();
-
+            cmbyayinevi.DisplayMember = "cvrAd";
+            cmbyayinevi.ValueMember = "cvrId";
         }
         private void cevirmensoyadi()
         {
@@ -182,25 +170,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 cmbcevirmensoyadi.Items.Add(oku[2].ToString());
             }
-            connection.Close();
-
+            connection.Close(); 
+            cmbyayinevi.DisplayMember = "cvrSoyad";
+            cmbyayinevi.ValueMember = "cvrId";
         }
-        private void cevirmensayisi()
-        {
-            cmbcevirmensayisi.Items.Clear();
-            MySqlDataReader oku;
-            connection.Open();
-            MySqlCommand komut = new MySqlCommand();
-            komut.Connection = connection;
-            komut.CommandText = "Select * from Cevirmen";
-            oku = komut.ExecuteReader();
-            while (oku.Read())
-            {
-                cmbcevirmensayisi.Items.Add(oku[3].ToString());
-            }
-            connection.Close();
-
-        }
+       
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -256,24 +230,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             if (comboBox1.Text== "Çevirmen Var")
             {
                 lblcevirmenad.Visible = true;
-                lblcevirmensayisi.Visible = true;
                 lblcevirmensoyad.Visible = true;
                 cmbcevirmenadi.Visible = true;
                 cmbcevirmensoyadi.Visible = true;
-                cmbcevirmensayisi.Visible = true;
 
             }
             else
             {
                 lblcevirmenad.Visible = false;
-                lblcevirmensayisi.Visible = false;
                 lblcevirmensoyad.Visible = false;
-                txtcevirmen.Visible = false;
-                txtcevirmensoyad.Visible = false;
-                txtcevirmensayisi.Visible = false;
-                cmbcevirmenadi.Text = "yok";
-                cmbcevirmensoyadi.Text = "yok";
-                cmbcevirmensayisi.Text = "0";
+                cmbcevirmenadi.Visible = false;
+                cmbcevirmensoyadi.Visible = false;
+                
             }
         }
 
@@ -326,8 +294,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
                 MessageBox.Show("Yayın evi adı ve telefonu eklendi");
                 connection.Close();
-                YayinEviekle();
-                YayinEvitel();
+                yayinevekle();
+                YayinEvtel();
                 
 
 
@@ -362,7 +330,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (txtcevirmen.Text == ""||txtcevirmensayisi.Text==""||txtcevirmensoyad.Text=="")
+            if (txtcevirmen.Text == ""||txtcevirmensoyad.Text=="")
             {
                 MessageBox.Show("Çevirmen bilgileri boş");
             }
@@ -371,14 +339,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Open();
                 string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
                 var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
-                string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + txtcevirmen.Text + "','" + txtcevirmensoyad.Text + "','" + txtcevirmensayisi.Text + "');";
+                string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad) values('" + txtcevirmen.Text + "','" + txtcevirmensoyad.Text +  "');";
                 MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
                 cevirmenKomut.ExecuteNonQuery();
                 int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
                 MessageBox.Show("Çevirmen bilgileri eklendi");
                 connection.Close();
                 cevirmenadi();
-                cevirmensayisi();
                 cevirmensoyadi();
 
 
@@ -388,7 +355,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnyazar_Click(object sender, EventArgs e)
         {
-            if (txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyazarsayisi.Text == "")
+            if (txtyazar.Text == "" || txtyazarsoyad.Text == "")
             {
                 MessageBox.Show("Yazar bilgileri boş");
             }
@@ -397,7 +364,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Open();
                 string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
                 var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
-                string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('" + txtyazar.Text + "','" + txtyazarsoyad.Text + "','" + txtyazarsayisi.Text + "');";
+                string yazarekle = "insert into Yazar(yzrAd,yzrSoyad) values('" + txtyazar.Text + "','" + txtyazarsoyad.Text +  "');";
                 MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
                 yazarkomut.ExecuteNonQuery();
                 int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
@@ -405,7 +372,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Close();
                 yazarAd();
                 yazarSoyad();
-                yazarSayisi();
 
 
 
@@ -483,12 +449,322 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbyazarad_TextChanged(object sender, EventArgs e)
+        {
+            //
+            //   int id;
+            string cekilenAd = cmbyazarad.Text;
+
+            //select id YAZAR WHERE yazarAdi=cekilenAd
+           /*  MySqlDataAdapter adapter = new MySqlDataAdapter("select yzrId from Yazar where yzrId='" + cekilenAd + "'", connection);
+            lblYazar.Text = cekilenAd;
+            lblYazar.Visible = true;
+            //lbl.yazar=
+            connection.Close();
+           */
+           
+
+            //MySqlDataReader oku;
+            connection.Open();
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query ="select * from Yazar where yzrAd='" + cekilenAd + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count>=0)
+            {
+
+                lblYazar.Text = dt.Rows[0]["yzrId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+        }
+
+        private void lblYazar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbyazarsoyad_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+             string cekilensoyad = cmbyazarsoyad.Text;
+            /* //select id YAZAR WHERE yazarAdi=cekilenAd
+             MySqlDataAdapter adapter = new MySqlDataAdapter("select yzrId from Yazar where yzrId='" + cekilensoyad + "'", connection);
+             lblyazarsoyadi.Text = cekilensoyad;
+             lblyazarsoyadi.Visible = true;
+
+             //lbl.yazar=
+             connection.Close();*/
+          
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query = "select yzrId from Yazar where yzrSoyad='" + cekilensoyad + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblyazarsoyadi.Text = dt.Rows[0]["yzrId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+
+
+
+        }
+
+        private void cmbtur_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+
+            //
+             string cekilentur = cmbtur.Text;
+            /* //select id YAZAR WHERE yazarAdi=cekilenAd
+             MySqlDataAdapter adapter = new MySqlDataAdapter("select turId from Tur where turId='" + cekilentur + "'", connection);
+             lbltur.Text = cekilentur;
+             lbltur.Visible = true;
+
+             //lbl.yazar=
+             connection.Close();*/
+        
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query = "select turId from Tur where turAd='" + cekilentur + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lbltur.Text = dt.Rows[0]["turId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+
+
+
+        }
+
+        private void cmbyayinevi_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+            string cekilenyayinevi = cmbyayinevi.Text;
+            /*//select id YAZAR WHERE yazarAdi=cekilenAd
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select yynevId from YayinEvi where yynevAd='" + cekilenyayinevi + "'", connection);
+            
+            lblyayinevi.Text = cekilenyayinevi;
+            //lbl.yazar=
+            lblyayinevi.Visible = true;
+
+            connection.Close();
+            */
+            
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query = "select yynevId from YayinEvi where yynevAd='" + cekilenyayinevi + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblyayinevi.Text = dt.Rows[0]["yynevId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+
+        }
+
+        private void cmbyayinevitel_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+            string cekilenyayinevitel = cmbyayinevitel.Text;
+            /* //select id YAZAR WHERE yazarAdi=cekilenAd
+             MySqlDataAdapter adapter = new MySqlDataAdapter("select yynevId from YayinEvi where yynevId='" + cekilenyayinevitel + "'", connection);
+             lblyayinevitel.Text = cekilenyayinevitel;
+             //lbl.yazar=
+             lblyayinevitel.Visible = true;*/
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query = "select yynevId from YayinEvi where yynevTel='" + cekilenyayinevitel + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblyayinevitel.Text = dt.Rows[0]["yynevId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+        }
+
+        private void cmbkategori_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+            string cekilenkategori = cmbkategori.Text;
+            /* //select id YAZAR WHERE yazarAdi=cekilenAd
+             MySqlDataAdapter adapter = new MySqlDataAdapter("select ktgrId from Kategori where ktgrId='" + cekilenkategori + "'", connection);
+             lblkategori.Text = cekilenkategori;
+             //lbl.yazar=
+             lblkategori.Visible = true;*/
+            //MySqlCommand komut = new MySqlCommand();
+            //komut.Connection = connection;
+            //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
+            //oku = komut.ExecuteReader();
+            string query = "select ktgrId from Kategori where ktgrAd='" + cekilenkategori + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblkategori.Text = dt.Rows[0]["ktgrId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+
+           
+        }
+
+        private void cmbcevirmenadi_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+            string cekilencevirmenad = cmbcevirmenadi.Text;
+            /* //select id YAZAR WHERE yazarAdi=cekilenAd
+             MySqlDataAdapter adapter = new MySqlDataAdapter("select cvrId from Cevirmen where cekilencevirmenad='" + cekilencevirmenad + "'", connection);
+             lblcevirmenad.Text = cekilencevirmenad;
+
+             lblidcevirmenad.Text = cekilencevirmenad;
+             //lbl.yazar=
+             lblidcevirmenad.Visible = true;*/
+            string query = "select cvrId from Cevirmen where cvrAd='" + cekilencevirmenad + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblidcevirmensoyad.Text = dt.Rows[0]["cvrId"].ToString();
+            }
+
+            //while (oku.Read())
+            //{
+            //    //label1.Text = dr["stokyeri_id"].ToString();
+
+            //   // lblkategori.Text = oku[0].ToString();
+            //}
+            connection.Close();
+            
+
+        }
+
+        private void cmbcevirmensoyadi_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //
+            string cekilencevirmensoyad = cmbcevirmensoyadi.Text;
+            /*//select id YAZAR WHERE yazarAdi=cekilenAd
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select cvrId from Cevirmen where cvrId='" + cekilencevirmensoyad + "'", connection);
+            lblidcevirmensoyad.Text = "cvrId";
+            //lbl.yazar=
+            lblidcevirmensoyad.Visible = true;*/
+            string query = "select cvrId from Cevirmen where cvrSoyad='" + cekilencevirmensoyad + "'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            if (dt.Rows.Count >= 0)
+            {
+
+                lblidcevirmensoyad.Text = dt.Rows[0]["cvrId"].ToString();
+            }
+
+            connection.Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
 
-            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsayisi.Text==""||cmbyazarsoyad.Text=="")
+            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
              {
                  MessageBox.Show("lütfen alanları boş geçmeyiniz");
              }
@@ -513,43 +789,43 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Open();
 
                 if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
-                   string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
-                    MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
-                    kategorikomut.ExecuteNonQuery();
-                    int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   //string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
+                   // MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
+                   // kategorikomut.ExecuteNonQuery();
+                   // int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                    string turekle = "insert into Tur(turAd) values('" + cmbtur.Text + "');";
-                    MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-                    turkomut.ExecuteNonQuery();
-                    int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   // string turekle = "insert into Tur(turAd) values('" + cmbtur.Text + "');";
+                   // MySqlCommand turkomut = new MySqlCommand(turekle, connection);
+                   // turkomut.ExecuteNonQuery();
+                   // int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                    string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('" + cmbyazarad.Text + "','" + cmbyazarsoyad.Text + "','" + cmbyazarsayisi.Text + "');";
-                    MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
-                    yazarkomut.ExecuteNonQuery();
-                    int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   // string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('" + cmbyazarad.Text + "','" + cmbyazarsoyad.Text + "','" + cmbyazarsayisi.Text + "');";
+                   // MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
+                   // yazarkomut.ExecuteNonQuery();
+                   // int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                    string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + cmbyayinevi.Text + "','" + cmbyayinevitel.Text + "');";
-                    MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
-                    yayinEviKomut.ExecuteNonQuery();
-                    int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   // string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + cmbyayinevi.Text + "','" + cmbyayinevitel.Text + "');";
+                   // MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
+                   // yayinEviKomut.ExecuteNonQuery();
+                   // int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                    string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + cmbcevirmenadi.Text + "','" + cmbcevirmensoyadi.Text + "','" + cmbcevirmensayisi.Text + "');";
-                    MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
-                    cevirmenKomut.ExecuteNonQuery();
-                    int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   // string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + cmbcevirmenadi.Text + "','" + cmbcevirmensoyadi.Text + "','" + cmbcevirmensayisi.Text + "');";
+                   // MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
+                   // cevirmenKomut.ExecuteNonQuery();
+                   // int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
                    
                     string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
-                    eklekomut.Parameters.AddWithValue("@ktgrId", kategoriId);
+                    eklekomut.Parameters.AddWithValue("@ktgrId", lblkategori.Text);
 
-                    eklekomut.Parameters.AddWithValue("@turId", turId);
+                    eklekomut.Parameters.AddWithValue("@turId", lbltur.Text);
 
-                    eklekomut.Parameters.AddWithValue("@yzrId", yazarId);
-                    eklekomut.Parameters.AddWithValue("@yynevId", yayinEviId);
+                    eklekomut.Parameters.AddWithValue("@yzrId", lblYazar.Text);
+                    eklekomut.Parameters.AddWithValue("@yynevId", lblyayinevi.Text);
 
-                    eklekomut.Parameters.AddWithValue("@cvrId", cevirmenId);
-                    eklekomut.Parameters.AddWithValue("@barkod", txtbarkod.Text);
+                    eklekomut.Parameters.AddWithValue("@cvrId", lblidcevirmensoyad.Text);
+                    eklekomut.Parameters.AddWithValue("@barkod",txtbarkod.Text);
                     eklekomut.Parameters.AddWithValue("@ISBN", txtisbn.Text);
                     eklekomut.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
                     eklekomut.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);

@@ -60,7 +60,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||txtcevirmensayisi.Text==""||txtcevirmensoyad.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txtkitapId.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||txttur.Text==""||txtyayinevi.Text==""||txtyazar.Text==""||txtyazarsayisi.Text==""||txtyazarsoyad.Text==""||mskkitapyayinyili.Text==""||mskkurumkayittarihi.Text==""||msktel.Text=="")
+            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcevirmen.Text==""||txtcevirmensoyad.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtkategori.Text==""||txtKitapAd.Text==""||txtkitapId.Text==""||txtkitapkonusu.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||txttur.Text==""||txtyayinevi.Text==""||txtyazar.Text==""||txtyazarsoyad.Text==""||mskkitapyayinyili.Text==""||mskkurumkayittarihi.Text==""||msktel.Text=="")
             {
                 MessageBox.Show("Kitap seçiniz");
             }
@@ -71,8 +71,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand commandYayinEvi = new MySqlCommand("update YayinEvi set yynevAd=@yynevAd, yynevTel=@yynevTel", connection);
                 MySqlCommand commandKategori = new MySqlCommand("update Kategori set ktgrAd=@ktgrAd", connection);
                 MySqlCommand commandTur = new MySqlCommand("update Tur set turAd=@turAd", connection);
-                MySqlCommand commandYazar = new MySqlCommand("update Yazar set yzrAd=@yzrAd, yzrSoyad=@yzrSoyad, yzrSayisi=@yzrSayisi", connection);
-                MySqlCommand commandCevirmen = new MySqlCommand("update Cevirmen set cvrAd=@cvrAd, cvrSoyad=@cvrSoyad, cvrSayisi=@cvrSayisi", connection);
+                MySqlCommand commandYazar = new MySqlCommand("update Yazar set yzrAd=@yzrAd, yzrSoyad=@yzrSoyad", connection);
+                MySqlCommand commandCevirmen = new MySqlCommand("update Cevirmen set cvrAd=@cvrAd, cvrSoyad=@cvrSoyad", connection);
 
                 command.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
 
@@ -106,11 +106,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 commandYazar.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
                 commandYazar.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
-                commandYazar.Parameters.AddWithValue("@yzrSayisi", txtyazarsayisi.Text);
 
                 commandCevirmen.Parameters.AddWithValue("@cvrAd", txtcevirmen.Text);
                 commandCevirmen.Parameters.AddWithValue("@cvrSoyad", txtcevirmensoyad.Text);
-                commandCevirmen.Parameters.AddWithValue("@cvrSayisi", txtcevirmensayisi.Text);
 
 
 
@@ -141,7 +139,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || txtcevirmen.Text == "" || txtcevirmensayisi.Text == "" || txtcevirmensoyad.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || txtkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || txttur.Text == "" || txtyayinevi.Text == "" || txtyazar.Text == "" || txtyazarsayisi.Text == "" || txtyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || msktel.Text == "")
+            if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || txtcevirmen.Text == "" || txtcevirmensoyad.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || txtkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || txttur.Text == "" || txtyayinevi.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || msktel.Text == "")
             {
                 MessageBox.Show("Silmek için önce kitap seçiniz");
             }
@@ -221,11 +219,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             txtyazar.Text = dataGridView1.CurrentRow.Cells["yzrAd"].Value.ToString();
             txtyazarsoyad.Text = dataGridView1.CurrentRow.Cells["yzrSoyad"].Value.ToString();
-            txtyazarsayisi.Text = dataGridView1.CurrentRow.Cells["yzrSayisi"].Value.ToString();
 
             txtcevirmen.Text = dataGridView1.CurrentRow.Cells["cvrAd"].Value.ToString();
             txtcevirmensoyad.Text = dataGridView1.CurrentRow.Cells["cvrSoyad"].Value.ToString();
-            txtcevirmensayisi.Text = dataGridView1.CurrentRow.Cells["cvrSayisi"].Value.ToString();
         }
 
         private void cikisButon_Click(object sender, EventArgs e)

@@ -194,78 +194,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
 
             }
-            /*else if (cmbaramakitap.Text == "turId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where turId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
-            /*else if (cmbaramakitap.Text == "yzrId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yzrId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
-     /*       else if (cmbaramakitap.Text == "turId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where turId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
-          /*  else if (cmbaramakitap.Text == "yzrId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yzrId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
-           /* else if (cmbaramakitap.Text == "yynevId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yynevId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
-           /* else if (cmbaramakitap.Text == "cvrId")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where cvrId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+            
             else if (cmbaramakitap.Text == "barkod")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -458,18 +387,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-           /* else if (cmbaramakitap.Text == "ktgrId1")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where ktgrId1 like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+         
             else if (cmbaramakitap.Text == "KtgrAd")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -482,18 +400,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-          /*  else if (cmbaramakitap.Text == "turId1")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where turId like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+         
             else if (cmbaramakitap.Text == "turAd")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -506,18 +413,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-            /*else if (cmbaramakitap.Text == "yzrId1")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yzrId1 like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+           
             else if (cmbaramakitap.Text == "yzrAd")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -542,30 +438,8 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-            else if (cmbaramakitap.Text == "yzrSayisi")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yzrSayisi like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }
-           /*else if (cmbaramakitap.Text == "yynevId1")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where yynevId1 like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+           
+           
             else if (cmbaramakitap.Text == "yynevAd")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -590,18 +464,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-          /*  else if (cmbaramakitap.Text == "cvrId1")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where cvrId1 like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }*/
+        
             else if (cmbaramakitap.Text == "cvrAd")
             {
                 //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
@@ -626,19 +489,7 @@ private void panel1_Paint(object sender, PaintEventArgs e)
 
                 dataGridView1.DataSource = dt;
             }
-            else if (cmbaramakitap.Text == "cvrSayisi")
-            {
-                //    MySqlDataAdapter da = new MySqlDataAdapter("select * from Kitap where kitapId like'" + searchBox.Text + "%'", connection);
-
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where cvrSayisi like '" + searchBox.Text + "%'", connection);
-
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }
-
+            
             connection.Close();
         }
 
