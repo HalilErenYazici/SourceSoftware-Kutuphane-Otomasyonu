@@ -253,7 +253,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /* if (comboBox1.Text== "Çevirmen Var")
+            if (comboBox1.Text== "Çevirmen Var")
             {
                 lblcevirmenad.Visible = true;
                 lblcevirmensayisi.Visible = true;
@@ -274,7 +274,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbcevirmenadi.Text = "yok";
                 cmbcevirmensoyadi.Text = "yok";
                 cmbcevirmensayisi.Text = "0";
-            }*/
+            }
         }
 
 
@@ -518,7 +518,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     kategorikomut.ExecuteNonQuery();
                     int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
 
-                    string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
+                    string turekle = "insert into Tur(turAd) values('" + cmbtur.Text + "');";
                     MySqlCommand turkomut = new MySqlCommand(turekle, connection);
                     turkomut.ExecuteNonQuery();
                     int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());

@@ -490,6 +490,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensayisi.Name = "cmbcevirmensayisi";
             this.cmbcevirmensayisi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmensayisi.TabIndex = 74;
+            this.cmbcevirmensayisi.Visible = false;
             this.cmbcevirmensayisi.SelectedIndexChanged += new System.EventHandler(this.cmbcevirmensayisi_SelectedIndexChanged);
             // 
             // cmbcevirmensoyadi
@@ -502,6 +503,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
             this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmensoyadi.TabIndex = 73;
+            this.cmbcevirmensoyadi.Visible = false;
             // 
             // cmbcevirmenadi
             // 
@@ -513,6 +515,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
             this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmenadi.TabIndex = 72;
+            this.cmbcevirmenadi.Visible = false;
             // 
             // cmbyayinevitel
             // 
@@ -611,6 +614,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtcikisyili.Name = "txtcikisyili";
             this.txtcikisyili.Size = new System.Drawing.Size(156, 20);
             this.txtcikisyili.TabIndex = 62;
+            this.txtcikisyili.Text = "1111";
             // 
             // label27
             // 
@@ -647,6 +651,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensayisi.Size = new System.Drawing.Size(116, 13);
             this.lblcevirmensayisi.TabIndex = 56;
             this.lblcevirmensayisi.Text = "Kitabın Çevirmen Sayısı";
+            this.lblcevirmensayisi.Visible = false;
             // 
             // lblcevirmensoyad
             // 
@@ -659,6 +664,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.Size = new System.Drawing.Size(121, 13);
             this.lblcevirmensoyad.TabIndex = 54;
             this.lblcevirmensoyad.Text = "Kitabın Çevirmen Soyadı";
+            this.lblcevirmensoyad.Visible = false;
             // 
             // label23
             // 
@@ -679,6 +685,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.mskkurumkayittarihi.Name = "mskkurumkayittarihi";
             this.mskkurumkayittarihi.Size = new System.Drawing.Size(156, 20);
             this.mskkurumkayittarihi.TabIndex = 50;
+            this.mskkurumkayittarihi.Text = "11111111";
             this.mskkurumkayittarihi.ValidatingType = typeof(System.DateTime);
             // 
             // mskkitapyayinyili
@@ -688,6 +695,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.mskkitapyayinyili.Name = "mskkitapyayinyili";
             this.mskkitapyayinyili.Size = new System.Drawing.Size(156, 20);
             this.mskkitapyayinyili.TabIndex = 48;
+            this.mskkitapyayinyili.Text = "11111111";
             this.mskkitapyayinyili.ValidatingType = typeof(System.DateTime);
             // 
             // label22
@@ -709,15 +717,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtrafkonum.Name = "txtrafkonum";
             this.txtrafkonum.Size = new System.Drawing.Size(156, 20);
             this.txtrafkonum.TabIndex = 46;
+            this.txtrafkonum.Text = "1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 563);
+            this.button1.Location = new System.Drawing.Point(501, 562);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 37);
             this.button1.TabIndex = 45;
-            this.button1.Text = " ";
+            this.button1.Text = " Kaydet";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -780,6 +789,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.Size = new System.Drawing.Size(104, 13);
             this.lblcevirmenad.TabIndex = 40;
             this.lblcevirmenad.Text = "Kitabın Çevirmen Adı";
+            this.lblcevirmenad.Visible = false;
             // 
             // label21
             // 
@@ -980,6 +990,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtdolapkonum.Name = "txtdolapkonum";
             this.txtdolapkonum.Size = new System.Drawing.Size(156, 20);
             this.txtdolapkonum.TabIndex = 23;
+            this.txtdolapkonum.Text = "1";
             // 
             // txtozet
             // 
@@ -988,6 +999,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtozet.Name = "txtozet";
             this.txtozet.Size = new System.Drawing.Size(156, 20);
             this.txtozet.TabIndex = 21;
+            this.txtozet.Text = "asstradas";
             // 
             // txtdil
             // 
@@ -996,6 +1008,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtdil.Name = "txtdil";
             this.txtdil.Size = new System.Drawing.Size(156, 20);
             this.txtdil.TabIndex = 18;
+            this.txtdil.Text = "türkce";
             // 
             // txtbasimnumara
             // 
@@ -1004,6 +1017,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtbasimnumara.Name = "txtbasimnumara";
             this.txtbasimnumara.Size = new System.Drawing.Size(156, 20);
             this.txtbasimnumara.TabIndex = 13;
+            this.txtbasimnumara.Text = "11";
             // 
             // txtanahtarkelime
             // 
@@ -1012,6 +1026,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtanahtarkelime.Name = "txtanahtarkelime";
             this.txtanahtarkelime.Size = new System.Drawing.Size(156, 20);
             this.txtanahtarkelime.TabIndex = 12;
+            this.txtanahtarkelime.Text = "asdasd";
             // 
             // txtstok
             // 
@@ -1020,6 +1035,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtstok.Name = "txtstok";
             this.txtstok.Size = new System.Drawing.Size(156, 20);
             this.txtstok.TabIndex = 11;
+            this.txtstok.Text = "11";
             // 
             // txtkitapkonusu
             // 
@@ -1028,6 +1044,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtkitapkonusu.Name = "txtkitapkonusu";
             this.txtkitapkonusu.Size = new System.Drawing.Size(156, 20);
             this.txtkitapkonusu.TabIndex = 10;
+            this.txtkitapkonusu.Text = "adsda";
             // 
             // txtkitapsayfasayisi
             // 
@@ -1036,6 +1053,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtkitapsayfasayisi.Name = "txtkitapsayfasayisi";
             this.txtkitapsayfasayisi.Size = new System.Drawing.Size(156, 20);
             this.txtkitapsayfasayisi.TabIndex = 9;
+            this.txtkitapsayfasayisi.Text = "111";
             // 
             // panel2
             // 
@@ -1245,6 +1263,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtcilt.Name = "txtcilt";
             this.txtcilt.Size = new System.Drawing.Size(156, 20);
             this.txtcilt.TabIndex = 2;
+            this.txtcilt.Text = "1111";
             this.txtcilt.TextChanged += new System.EventHandler(this.txtcilt_TextChanged);
             // 
             // lblbarkod
