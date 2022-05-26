@@ -17,9 +17,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             InitializeComponent();
         }
-        int cevirmensayi = 0;
-        int cvrid = 0;
-        string cevirmenad, cevirmensoyad = "yok";
+        
          static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
        MySqlConnection connection = new MySqlConnection(connection_strg);
 
@@ -783,8 +781,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
-            var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
+          /*  string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
+            var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);*/
 
             if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
              {
@@ -792,49 +790,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
              }
             else
              {
-                /* if ()
-                 {
-                     string turEkle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-                     MySqlCommand turKomut = new MySqlCommand(turEkle, connection);
-                     turKomut.ExecuteNonQuery();
-
-
-                 }*/
-
-                //string ekle = "insert into Kitap (barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values('" + txtbarkod.Text + "','" + txtisbn.Text + "', '" + txtdemirbas.Text + "','" + txtKitapAd.Text + "','" +txtcilt.Text  + "','" + txtkitapkonusu.Text + "','" + txtozet.Text + "','" + txtkitapsayfasayisi.Text + "','" +txtanahtarkelime.Text  + "','"+txtdil.Text + "','" + mskkitapyayinyili.Text + "','" + mskkurumkayittarihi.Text + "','" + txtbasimnumara.Text + "','"+mskcikisyili.Text + "','" + txtdolapkonum.Text + "','" + txtrafkonum.Text + "','"+ "');";
-                //  string turgoster = "Select * from Tur(turId,turAd) values('" + txttur.Text + "');";
-                // MySqlCommand komut = new MySqlCommand(ekle, connection);
-                //MySqlCommand turKomut = new MySqlCommand(turgoster, connection);
-
-                // string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + txttur.Text + "'";
+                
 
                 connection.Open();
 
                 if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
-                   //string kategoriekle = "insert into Kategori(ktgrAd) values('" + cmbkategori.Text + "');";
-                   // MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
-                   // kategorikomut.ExecuteNonQuery();
-                   // int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
-                   // string turekle = "insert into Tur(turAd) values('" + cmbtur.Text + "');";
-                   // MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-                   // turkomut.ExecuteNonQuery();
-                   // int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
-                   // string yazarekle = "insert into Yazar(yzrAd,yzrSoyad,yzrSayisi) values('" + cmbyazarad.Text + "','" + cmbyazarsoyad.Text + "','" + cmbyazarsayisi.Text + "');";
-                   // MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
-                   // yazarkomut.ExecuteNonQuery();
-                   // int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
-                   // string yayinEviEkle = "insert into YayinEvi(yynevAd,yynevTel) values('" + cmbyayinevi.Text + "','" + cmbyayinevitel.Text + "');";
-                   // MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
-                   // yayinEviKomut.ExecuteNonQuery();
-                   // int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-
-                   // string cevirmenEkle = "insert into Cevirmen(cvrAd,cvrSoyad,cvrSayisi) values('" + cmbcevirmenadi.Text + "','" + cmbcevirmensoyadi.Text + "','" + cmbcevirmensayisi.Text + "');";
-                   // MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
-                   // cevirmenKomut.ExecuteNonQuery();
-                   // int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
+                   
                    
                     string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
@@ -891,18 +852,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                    
 
                 
-              //  string turEkle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-             // MySqlCommand komut = new MySqlCommand(ekle, connection);
-             //  MySqlCommand turKomut = new MySqlCommand(turEkle, connection);
-          //     komut.ExecuteNonQuery();                
-                //turKomut.ExecuteNonQuery();
-            /*    connection.Close();
-               MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
-
-               Ogrenci ogrenci = new Ogrenci();
-               ogrenci.Show();
-               this.Hide();
-            */
+             
 
            }
        

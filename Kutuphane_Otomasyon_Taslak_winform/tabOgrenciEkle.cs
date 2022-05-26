@@ -185,37 +185,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     MessageBox.Show("CİNSİYET SEÇİNİZ");
                 }
-              /*  if (radioErkek.Checked)
-                {
-
-                    label1.Text = "Cinsiyet" + radioErkek.Text;
-                    label1.Visible = true;
-
-                }
-                else if (radioKadin.Checked)
-                {
-
-                    label1.Text = "Cinsiyet" + radioKadin.Text;
-                    label1.Visible = true;
-                }
-                else
-                {
-                    MessageBox.Show("Lüften cinsiyet seçiniz!");
-
-                }
-              */
+            
              
             }
                 else
             {
-                /*if(cmbFakulte.Text == "İnegöl İşletme Fakültesi")
-                {
-                    bolum = cmbisletme.Text;
-                }
-                if (cmbFakulte.Text == "İnegöl MYO")
-                {
-                    bolum = cmbmyo.Text;
-                }*/
+     
                 if (lblkartid.Text== "Yazılabilir"&&lblogrencino.Text== "Yazılabilir"&& lbleposta.Text== "Yazılabilir") {
                     string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text + "','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text + "','" + okuduguKitapSayisi + "');";
                     MySqlCommand command = new MySqlCommand(ekleme, connection);
@@ -259,11 +234,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void mskKartId_TextChanged(object sender, EventArgs e)
         {
-            /*DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            dataGridView1.DataSource = dt;
-            connection.Close();*/
+           
             connection.Open();
             MySqlDataAdapter adp = new MySqlDataAdapter("select kartId from Ogrenci where kartId='" + mskKartId.Text + "'", connection);
             DataSet ds = new DataSet();
@@ -324,14 +295,5 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
 
-        /*  private void radioKadin_CheckedChanged(object sender, EventArgs e)
-          {
-              cinsiyet = "kadın";
-          }
-
-          private void radioErkek_CheckedChanged(object sender, EventArgs e)
-          {
-              cinsiyet = "erkek";
-          }*/
     }
 }
