@@ -642,7 +642,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label28.Size = new System.Drawing.Size(49, 13);
             this.label28.TabIndex = 67;
             this.label28.Text = "Kitap Id: ";
-            this.label28.Visible = false;
             // 
             // txtkitapId
             // 
