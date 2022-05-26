@@ -31,6 +31,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabKitapEkle));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             this.lblidcevirmensoyad = new System.Windows.Forms.Label();
             this.lblidcevirmenad = new System.Windows.Forms.Label();
             this.lbltur = new System.Windows.Forms.Label();
@@ -125,7 +126,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtbarkod = new System.Windows.Forms.TextBox();
             this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.txtcilt = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -207,6 +207,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(1146, 735);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(748, 192);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(257, 24);
+            this.label26.TabIndex = 90;
+            this.label26.Text = "Çevirmen yoksa yok u seçiniz";
             // 
             // lblidcevirmensoyad
             // 
@@ -302,7 +313,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // lblisbn
             // 
             this.lblisbn.AutoSize = true;
-            this.lblisbn.Location = new System.Drawing.Point(370, 229);
+            this.lblisbn.Location = new System.Drawing.Point(370, 211);
             this.lblisbn.Name = "lblisbn";
             this.lblisbn.Size = new System.Drawing.Size(49, 13);
             this.lblisbn.TabIndex = 78;
@@ -343,7 +354,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Controls.Add(this.txtcevirmensoyad);
             this.panel3.Controls.Add(this.txtyazarsoyad);
             this.panel3.Controls.Add(this.txtyazar);
-            this.panel3.Location = new System.Drawing.Point(710, 336);
+            this.panel3.Location = new System.Drawing.Point(721, 341);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(389, 360);
             this.panel3.TabIndex = 75;
@@ -564,7 +575,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
             this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmensoyadi.TabIndex = 73;
-            this.cmbcevirmensoyadi.Visible = false;
             this.cmbcevirmensoyadi.TextChanged += new System.EventHandler(this.cmbcevirmensoyadi_TextChanged);
             // 
             // cmbcevirmenadi
@@ -577,7 +587,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
             this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 21);
             this.cmbcevirmenadi.TabIndex = 72;
-            this.cmbcevirmenadi.Visible = false;
             this.cmbcevirmenadi.TextChanged += new System.EventHandler(this.cmbcevirmenadi_TextChanged);
             // 
             // cmbyayinevitel
@@ -675,7 +684,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.Size = new System.Drawing.Size(121, 13);
             this.lblcevirmensoyad.TabIndex = 54;
             this.lblcevirmensoyad.Text = "Kitabın Çevirmen Soyadı";
-            this.lblcevirmensoyad.Visible = false;
             // 
             // label23
             // 
@@ -800,7 +808,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.Size = new System.Drawing.Size(104, 13);
             this.lblcevirmenad.TabIndex = 40;
             this.lblcevirmenad.Text = "Kitabın Çevirmen Adı";
-            this.lblcevirmenad.Visible = false;
             // 
             // label21
             // 
@@ -1277,17 +1284,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtcilt.TabIndex = 2;
             this.txtcilt.Text = "1111";
             this.txtcilt.TextChanged += new System.EventHandler(this.txtcilt_TextChanged);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(748, 192);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(257, 24);
-            this.label26.TabIndex = 90;
-            this.label26.Text = "Çevirmen yoksa yok u seçiniz";
             // 
             // tabKitapEkle
             // 
