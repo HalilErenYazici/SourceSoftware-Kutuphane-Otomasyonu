@@ -186,7 +186,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(12, 101);
@@ -420,6 +420,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 50);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 
@@ -432,10 +435,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1223, 2);
+            this.kaplaButon.Location = new System.Drawing.Point(1227, 2);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(24, 25);
+            this.kaplaButon.Size = new System.Drawing.Size(20, 20);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
             this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
@@ -451,10 +454,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(1193, 2);
+            this.simgeButon.Location = new System.Drawing.Point(1197, 2);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(24, 25);
+            this.simgeButon.Size = new System.Drawing.Size(20, 20);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
@@ -470,10 +473,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(1253, 2);
+            this.cikisButon.Location = new System.Drawing.Point(1257, 2);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(24, 25);
+            this.cikisButon.Size = new System.Drawing.Size(20, 20);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);

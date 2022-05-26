@@ -114,11 +114,11 @@
     <Compile Include="Emanetiade.Designer.cs">
       <DependentUpon>Emanetiade.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmanetVer.cs">
+    <Compile Include="EmanetTeslim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmanetVer.Designer.cs">
-      <DependentUpon>EmanetVer.cs</DependentUpon>
+    <Compile Include="EmanetTeslim.Designer.cs">
+      <DependentUpon>EmanetTeslim.cs</DependentUpon>
     </Compile>
     <Compile Include="GirisEkrani.cs">
       <SubType>Form</SubType>
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="Emanetiade.resx">
       <DependentUpon>Emanetiade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmanetVer.resx">
-      <DependentUpon>EmanetVer.cs</DependentUpon>
+    <EmbeddedResource Include="EmanetTeslim.resx">
+      <DependentUpon>EmanetTeslim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
@@ -312,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bck-Mv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

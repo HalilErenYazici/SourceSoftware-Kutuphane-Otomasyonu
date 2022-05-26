@@ -21,6 +21,29 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
 
 
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
         private void searchBox_Click(object sender, EventArgs e)
         {
             searchBox.Clear();

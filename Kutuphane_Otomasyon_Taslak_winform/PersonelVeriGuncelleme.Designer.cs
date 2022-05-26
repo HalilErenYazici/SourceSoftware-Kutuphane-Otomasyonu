@@ -213,7 +213,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1280, 50);
             this.panel3.TabIndex = 8;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 

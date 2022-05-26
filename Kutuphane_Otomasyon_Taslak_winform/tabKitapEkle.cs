@@ -23,6 +23,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
          static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
        MySqlConnection connection = new MySqlConnection(connection_strg);
 
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
 
         private void tabKitapEkle_Load(object sender, EventArgs e)
         {
@@ -738,6 +757,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcevirmen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcevirmensoyad_TextChanged(object sender, EventArgs e)
         {
 
         }

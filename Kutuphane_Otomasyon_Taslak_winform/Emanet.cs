@@ -23,6 +23,30 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Application.Exit();
         }
+
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
         private void kaplaButon_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -136,73 +160,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
           
         }
 
-      
-
-        private void btnEmanet_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void mskalis_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void mskveris_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txtemanetakts_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtKitapAd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtkitapId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -250,7 +207,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnemanet_Click_1(object sender, EventArgs e)
         {
-            EmanetVer EmanetVer = new EmanetVer();
+            EmanetTeslim EmanetVer = new EmanetTeslim();
             this.Close();
             EmanetVer.Show();
         }
@@ -478,6 +435,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Emanetiade emanetiade = new Emanetiade();
             emanetiade.Show();
             this.Hide();
+        }
+
+        private void searchBox_Click(object sender, EventArgs e)
+        {
+            searchBox.Clear();
         }
     }
 }

@@ -117,5 +117,46 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EmanetTeslim EmanetVer = new EmanetTeslim();
+            this.Close();
+            EmanetVer.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EmanetTeslim EmanetVer = new EmanetTeslim();
+            this.Close();
+            EmanetVer.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form form = new tabOgrenciEkle();
+            form.Show();
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form form = new tabOgrenciDuzenle();
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form form = new tabKitapEkle();
+            form.Show();
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form form = new tabKitapDuzenle();
+            form.Show();
+            this.Close();
+        }
     }
 }

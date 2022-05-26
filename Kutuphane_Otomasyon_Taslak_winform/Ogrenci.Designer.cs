@@ -94,6 +94,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 410);
@@ -180,6 +181,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 50);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 
@@ -195,7 +199,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.Location = new System.Drawing.Point(1223, 2);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(24, 25);
+            this.kaplaButon.Size = new System.Drawing.Size(20, 20);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
             this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
@@ -214,7 +218,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.Location = new System.Drawing.Point(1193, 2);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(24, 25);
+            this.simgeButon.Size = new System.Drawing.Size(20, 20);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
@@ -233,7 +237,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.Location = new System.Drawing.Point(1253, 2);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(24, 25);
+            this.cikisButon.Size = new System.Drawing.Size(20, 20);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);

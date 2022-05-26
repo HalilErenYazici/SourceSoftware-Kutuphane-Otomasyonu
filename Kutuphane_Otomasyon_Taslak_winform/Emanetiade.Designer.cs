@@ -90,6 +90,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchboxkitap.Size = new System.Drawing.Size(220, 22);
             this.searchboxkitap.TabIndex = 15;
             this.searchboxkitap.Text = "Kitap Ara...";
+            this.searchboxkitap.Click += new System.EventHandler(this.searchboxkitap_Click);
             this.searchboxkitap.TextChanged += new System.EventHandler(this.searchboxkitap_TextChanged);
             // 
             // cmbaramatip
@@ -113,7 +114,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Alış Tarihi",
             "Emanet Alinan Kitap Sayisi"});
             this.cmbaramatip.Location = new System.Drawing.Point(19, 68);
-            this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
             this.cmbaramatip.Name = "cmbaramatip";
             this.cmbaramatip.Size = new System.Drawing.Size(169, 24);
             this.cmbaramatip.TabIndex = 14;
@@ -127,16 +128,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox.Size = new System.Drawing.Size(220, 22);
             this.searchBox.TabIndex = 13;
             this.searchBox.Text = "Öğrenci Ara...";
+            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // dataGridViewemanet
             // 
             this.dataGridViewemanet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewemanet.Location = new System.Drawing.Point(12, 116);
-            this.dataGridViewemanet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewemanet.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewemanet.Name = "dataGridViewemanet";
             this.dataGridViewemanet.RowHeadersWidth = 51;
-            this.dataGridViewemanet.Size = new System.Drawing.Size(1255, 338);
+            this.dataGridViewemanet.Size = new System.Drawing.Size(1238, 338);
             this.dataGridViewemanet.TabIndex = 12;
             // 
             // panel2
@@ -156,6 +158,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1263, 50);
             this.panel2.TabIndex = 10;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 
@@ -168,10 +173,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1201, 4);
+            this.kaplaButon.Location = new System.Drawing.Point(1209, 3);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(24, 25);
+            this.kaplaButon.Size = new System.Drawing.Size(20, 20);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
             this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
@@ -187,10 +192,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(1172, 4);
+            this.simgeButon.Location = new System.Drawing.Point(1180, 3);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(24, 25);
+            this.simgeButon.Size = new System.Drawing.Size(20, 20);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
@@ -206,10 +211,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(1232, 4);
+            this.cikisButon.Location = new System.Drawing.Point(1240, 3);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(24, 25);
+            this.cikisButon.Size = new System.Drawing.Size(20, 20);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
@@ -334,7 +339,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ClientSize = new System.Drawing.Size(1263, 748);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Emanetiade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emanetiade";

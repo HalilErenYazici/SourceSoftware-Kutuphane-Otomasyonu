@@ -18,6 +18,30 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
         }
 
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
+
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
 
