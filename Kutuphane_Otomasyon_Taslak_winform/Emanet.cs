@@ -208,7 +208,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void btnemanet_Click_1(object sender, EventArgs e)
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
-            this.Close();
             EmanetVer.Show();
         }
 
@@ -434,7 +433,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Emanetiade emanetiade = new Emanetiade();
             emanetiade.Show();
-            this.Hide();
         }
 
         private void searchBox_Click(object sender, EventArgs e)

@@ -99,7 +99,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

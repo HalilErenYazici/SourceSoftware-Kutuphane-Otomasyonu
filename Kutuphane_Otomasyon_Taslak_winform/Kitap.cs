@@ -63,7 +63,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabKitapEkle();
             form.Show();
-            this.Close();
         }
 
         private void anasayfaBtn_Click(object sender, EventArgs e)
@@ -105,7 +104,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabKitapDuzenle();
             form.Show();
-            this.Close();
         }
 
         private void Kitap_Load(object sender, EventArgs e)

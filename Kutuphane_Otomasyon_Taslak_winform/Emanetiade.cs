@@ -370,8 +370,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+            this.Close();
         }
 
         private void searchBox_Click(object sender, EventArgs e)
@@ -382,6 +381,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void searchboxkitap_Click(object sender, EventArgs e)
         {
             searchboxkitap.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

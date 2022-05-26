@@ -103,7 +103,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabOgrenciEkle();
             form.Show();
-            this.Close();
         }
 
         private void duzenleButon_Click(object sender, EventArgs e)

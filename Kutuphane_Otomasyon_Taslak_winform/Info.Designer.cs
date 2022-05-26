@@ -65,7 +65,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1280, 50);
+            this.panel2.Size = new System.Drawing.Size(1280, 42);
             this.panel2.TabIndex = 1;
             // 
             // cikisButon
@@ -89,7 +89,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // infoBtn
             // 
             this.infoBtn.BackColor = System.Drawing.Color.DarkGray;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.info;
+            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
             this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoBtn.FlatAppearance.BorderSize = 0;
@@ -97,7 +97,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(260, 4);
+            this.infoBtn.Location = new System.Drawing.Point(260, 0);
             this.infoBtn.Name = "infoBtn";
             this.infoBtn.Size = new System.Drawing.Size(42, 42);
             this.infoBtn.TabIndex = 9;
@@ -115,7 +115,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.anasayfaBtn.Location = new System.Drawing.Point(12, 4);
+            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
             this.anasayfaBtn.Name = "anasayfaBtn";
             this.anasayfaBtn.Size = new System.Drawing.Size(42, 42);
             this.anasayfaBtn.TabIndex = 2;
@@ -134,7 +134,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kitapBtn.Location = new System.Drawing.Point(198, 4);
+            this.kitapBtn.Location = new System.Drawing.Point(198, 0);
             this.kitapBtn.Name = "kitapBtn";
             this.kitapBtn.Size = new System.Drawing.Size(42, 42);
             this.kitapBtn.TabIndex = 8;
@@ -153,7 +153,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emanetBtn.Location = new System.Drawing.Point(74, 4);
+            this.emanetBtn.Location = new System.Drawing.Point(74, 0);
             this.emanetBtn.Name = "emanetBtn";
             this.emanetBtn.Size = new System.Drawing.Size(42, 42);
             this.emanetBtn.TabIndex = 6;
@@ -172,7 +172,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ogrenciBtn.Location = new System.Drawing.Point(136, 4);
+            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
             this.ogrenciBtn.Name = "ogrenciBtn";
             this.ogrenciBtn.Size = new System.Drawing.Size(42, 42);
             this.ogrenciBtn.TabIndex = 7;

@@ -795,7 +795,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
 
         }
 

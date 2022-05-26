@@ -146,6 +146,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button8.TabIndex = 32;
             this.button8.Text = "Kitap Görüntüle";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -187,6 +188,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button5.TabIndex = 29;
             this.button5.Text = "Öğrenci Görüntüle";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -228,6 +230,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button2.TabIndex = 26;
             this.button2.Text = "Emanet Görüntüle";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -255,11 +258,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(1097, 335);
+            this.label5.Location = new System.Drawing.Point(1107, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 28);
+            this.label5.Size = new System.Drawing.Size(93, 28);
             this.label5.TabIndex = 14;
-            this.label5.Text = "HAKKINDA";
+            this.label5.Text = "AYARLAR";
             // 
             // label4
             // 
@@ -358,7 +361,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.infoBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.info;
+            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
             this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoBtn.FlatAppearance.BorderSize = 0;

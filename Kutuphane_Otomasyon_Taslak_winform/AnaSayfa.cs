@@ -121,14 +121,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button3_Click(object sender, EventArgs e)
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
-            this.Close();
             EmanetVer.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
-            this.Close();
             EmanetVer.Show();
         }
 
@@ -136,7 +134,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabOgrenciEkle();
             form.Show();
-            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -149,12 +146,31 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabKitapEkle();
             form.Show();
-            this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapDuzenle();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Emanet b = new Emanet();
+            b.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ogrenci c = new Ogrenci();
+            c.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form form = new Kitap();
             form.Show();
             this.Close();
         }
