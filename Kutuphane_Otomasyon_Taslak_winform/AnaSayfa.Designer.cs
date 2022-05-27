@@ -55,6 +55,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button8);
@@ -369,7 +371,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ayrBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ayrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ayrBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ayrBtn.Location = new System.Drawing.Point(1101, 210);
+            this.ayrBtn.Location = new System.Drawing.Point(1103, 210);
             this.ayrBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ayrBtn.Name = "ayrBtn";
             this.ayrBtn.Size = new System.Drawing.Size(100, 100);
@@ -481,6 +483,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.UseVisualStyleBackColor = false;
             this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click_1);
             // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button11.BackColor = System.Drawing.Color.OrangeRed;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button11.Location = new System.Drawing.Point(1106, 28);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(85, 81);
+            this.button11.TabIndex = 35;
+            this.button11.Text = "İstatistik";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -531,5 +548,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button11;
     }
 }

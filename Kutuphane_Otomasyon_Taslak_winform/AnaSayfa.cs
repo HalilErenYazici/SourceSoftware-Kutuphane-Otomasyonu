@@ -174,5 +174,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form form = new Istatistik();
+            form.Show();
+            this.Close();
+        }
     }
 }

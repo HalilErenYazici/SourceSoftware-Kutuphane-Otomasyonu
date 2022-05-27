@@ -132,6 +132,12 @@
     <Compile Include="GirisEkrani.Designer.cs">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Istatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Istatistik.Designer.cs">
+      <DependentUpon>Istatistik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kitap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Istatistik.resx">
+      <DependentUpon>Istatistik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kitap.resx">
       <DependentUpon>Kitap.cs</DependentUpon>
