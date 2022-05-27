@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -17,6 +18,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
             this.IsMdiContainer = true;
         }
+
+
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
 
         bool move;
         int mouse_x;
@@ -180,6 +185,44 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new Istatistik();
             form.Show();
             this.Close();
+        }
+
+        private void AnaSayfa_Load(object sender, EventArgs e)
+        {
+            listelemanet();
+
+        }
+
+        public void listelemanet()
+        {
+            connection.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet", connection);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewemanet.DataSource = dt;
+
+            for (int i = 1; i < dataGridViewemanet.Rows.Count; i++)
+            {
+            label6.Text = dataGridViewemanet.CurrentRow.Cells["alistarihi"].Value.ToString();
+                
+                DateTime date = new DateTime();
+                date = DateTime.Now;
+
+                label6.Text = (date.ToString("dd.MM.yyyy"));
+
+                if (label6.Text == (date.ToString("dd.MM.yyyy")))
+                {
+                    MessageBox.Show("Teslim Tarihi Gelen Kitap/lar Var");
+                }
+
+            }
+
+
+
+            connection.Close();
+
         }
     }
 }

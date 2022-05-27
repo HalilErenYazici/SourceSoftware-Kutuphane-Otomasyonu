@@ -48,6 +48,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void PersonelVeriGuncelleme_Load(object sender, EventArgs e)
         {
             listele();
+
         }
 
 

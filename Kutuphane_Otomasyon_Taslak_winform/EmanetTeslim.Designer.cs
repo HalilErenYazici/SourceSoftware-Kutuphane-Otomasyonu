@@ -92,6 +92,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtogrNo = new System.Windows.Forms.TextBox();
             this.txtOgrAd = new System.Windows.Forms.TextBox();
             this.txtOgrSoyad = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.kitapPanel.SuspendLayout();
@@ -107,6 +108,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.kitapPanel);
             this.panel1.Controls.Add(this.cmbaramatip);
@@ -329,8 +331,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapPanel.Controls.Add(this.txtyayinevi);
             this.kitapPanel.Controls.Add(this.label12);
             this.kitapPanel.Controls.Add(this.label8);
-            this.kitapPanel.Controls.Add(this.label2);
             this.kitapPanel.Controls.Add(this.label9);
+            this.kitapPanel.Controls.Add(this.label2);
             this.kitapPanel.Controls.Add(this.txtyazarsoyad);
             this.kitapPanel.Controls.Add(this.txtKitapBarkod);
             this.kitapPanel.Controls.Add(this.label11);
@@ -366,11 +368,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // dateTimePickerveris
             // 
-            this.dateTimePickerveris.Location = new System.Drawing.Point(403, 233);
+            this.dateTimePickerveris.Location = new System.Drawing.Point(403, 204);
             this.dateTimePickerveris.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerveris.Name = "dateTimePickerveris";
             this.dateTimePickerveris.Size = new System.Drawing.Size(188, 22);
             this.dateTimePickerveris.TabIndex = 32;
+            this.dateTimePickerveris.ValueChanged += new System.EventHandler(this.dateTimePickerveris_ValueChanged);
             // 
             // pictureBox2
             // 
@@ -414,7 +417,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // dateTimePickeralis
             // 
-            this.dateTimePickeralis.Location = new System.Drawing.Point(403, 206);
+            this.dateTimePickeralis.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePickeralis.Location = new System.Drawing.Point(403, 231);
             this.dateTimePickeralis.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickeralis.Name = "dateTimePickeralis";
             this.dateTimePickeralis.Size = new System.Drawing.Size(188, 22);
@@ -455,7 +459,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(231, 208);
+            this.label1.Location = new System.Drawing.Point(231, 233);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
@@ -502,12 +506,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(231, 235);
+            this.label2.Location = new System.Drawing.Point(231, 206);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Veriş Tarihi:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label9
             // 
@@ -951,6 +956,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtOgrSoyad.Size = new System.Drawing.Size(216, 22);
             this.txtOgrSoyad.TabIndex = 6;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(690, 530);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 17);
+            this.label20.TabIndex = 75;
+            this.label20.Text = "label20";
+            this.label20.Visible = false;
+            // 
             // EmanetTeslim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1045,5 +1060,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Panel kitapPanel;
         private System.Windows.Forms.TextBox txtstokadet;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -132,8 +133,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     komut.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
                     komut.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
                     komut.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
-                    komut.Parameters.AddWithValue("@veristarihi", dateTimePickerveris.Text);
-                    komut.Parameters.AddWithValue("@alistarihi", dateTimePickeralis.Text);
+                    komut.Parameters.AddWithValue("@veristarihi", dateTimePickerveris.Value.ToString());
+                    komut.Parameters.AddWithValue("@alistarihi", dateTimePickeralis.Value.ToString());
                     komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(txtEmanetAkts.Text));
                     komut.ExecuteNonQuery();
                     connection.Close();
@@ -262,6 +263,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnemanetver_Click(object sender, EventArgs e)
         {
+
             if (lblkitapsayisi.Text != "")
             {
 
@@ -290,13 +292,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                             komut.Parameters.AddWithValue("@veristarihi", dataGridView1.Rows[i].Cells["veristarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@alistarihi", dataGridView1.Rows[i].Cells["alistarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString()));
+
                             komut.ExecuteNonQuery();
                             MySqlCommand komut2 = new MySqlCommand("update Ogrenci set okuduguKitapSayisi=okuduguKitapSayisi+'"+int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString())+ "' where ogrId='" + txtogrID.Text+"'", connection);
                             komut2.ExecuteNonQuery();
                             MySqlCommand komut3 = new MySqlCommand("update Kitap set stok=stok-'" + int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString()) + "' where kitapId='" + dataGridView1.Rows[i].Cells["kitapId"].Value.ToString() + "'", connection);
                             komut3.ExecuteNonQuery();
                             connection.Close();
-                
+
+                            
+
+                            
                           
 
 
@@ -854,6 +860,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void searchBoxKtp_Click(object sender, EventArgs e)
         {
             searchBoxKtp.Clear();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerveris_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
