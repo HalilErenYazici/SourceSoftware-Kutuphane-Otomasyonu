@@ -24,6 +24,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         bool move;
         int mouse_x;
         int mouse_y;
+        int KacKezEmanetAlindi = 0;
+
         private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
 
@@ -797,7 +799,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
                    
                    
-                    string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo)";
+                    string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo,KacKezAlindi) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo,@KacKezAlindi)";
                     MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
                     eklekomut.Parameters.AddWithValue("@ktgrId", lblkategori.Text);
@@ -826,6 +828,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     eklekomut.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
                     eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
                     eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
+                    eklekomut.Parameters.AddWithValue("@KacKezAlindi", KacKezEmanetAlindi);
+
                     eklekomut.ExecuteNonQuery();
 
 

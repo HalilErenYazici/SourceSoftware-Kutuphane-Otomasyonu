@@ -104,7 +104,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void SepeteEkle_Click(object sender, EventArgs e)
         {
-            if (txtkitapIsbn.Text==""||txtkitapAd.Text==""|| txtKitapBarkod.Text=="" || txtkitapId.Text == "" || txtEmanetAkts.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyayinevi.Text == "" || dateTimePickerveris.Text == "" || dateTimePickeralis.Text == "")
+            if (txtkitapIsbn.Text==""||txtkitapAd.Text==""|| txtKitapBarkod.Text=="" || txtkitapId.Text == "" || txtEmanetAkts.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyayinevi.Text == "" || mskalistarihi.Text == "" || mskveristarihi.Text == "")
             {
                 MessageBox.Show("Kitap seçiniz");
             }
@@ -133,8 +133,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     komut.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
                     komut.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
                     komut.Parameters.AddWithValue("@yynevAd", txtyayinevi.Text);
-                    komut.Parameters.AddWithValue("@veristarihi", dateTimePickerveris.Value.ToString());
-                    komut.Parameters.AddWithValue("@alistarihi", dateTimePickeralis.Value.ToString());
+                    komut.Parameters.AddWithValue("@veristarihi", mskveristarihi.Text);
+                    komut.Parameters.AddWithValue("@alistarihi", mskalistarihi.Text);
                     komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(txtEmanetAkts.Text));
                     komut.ExecuteNonQuery();
                     connection.Close();
@@ -298,6 +298,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                             komut2.ExecuteNonQuery();
                             MySqlCommand komut3 = new MySqlCommand("update Kitap set stok=stok-'" + int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString()) + "' where kitapId='" + dataGridView1.Rows[i].Cells["kitapId"].Value.ToString() + "'", connection);
                             komut3.ExecuteNonQuery();
+                            MySqlCommand komut5 = new MySqlCommand("update Kitap set KacKezAlindi=KacKezAlindi+'" + int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString()) + "' where kitapId='" + dataGridView1.Rows[i].Cells["kitapId"].Value.ToString() + "'", connection);
+                            komut5.ExecuteNonQuery();
                             connection.Close();
 
                             

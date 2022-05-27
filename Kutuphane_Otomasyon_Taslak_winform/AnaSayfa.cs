@@ -203,7 +203,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             da.Fill(dt);
             dataGridViewemanet.DataSource = dt;
 
-            for (int i = 1; i < dataGridViewemanet.Rows.Count; i++)
+           /* for (int i = 1; i < dataGridViewemanet.Rows.Count; i++)
             {
             label6.Text = dataGridViewemanet.CurrentRow.Cells["alistarihi"].Value.ToString();
                 
@@ -218,11 +218,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
 
             }
-
+           */
 
 
             connection.Close();
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Grafikler grafik = new Grafikler();
+            grafik.Show();
+            this.Close();
         }
     }
 }
