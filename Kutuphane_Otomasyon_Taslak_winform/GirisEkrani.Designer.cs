@@ -207,7 +207,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GirisEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GirisEkrani";
+            this.Text = "Giriş Ekranı";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImg)).EndInit();

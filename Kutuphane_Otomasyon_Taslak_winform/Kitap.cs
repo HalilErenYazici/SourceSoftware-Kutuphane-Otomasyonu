@@ -95,7 +95,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void infoBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Info();
+            Form form = new Ayarlar();
             form.Show();
             this.Close();
         }

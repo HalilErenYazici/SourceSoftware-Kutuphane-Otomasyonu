@@ -357,7 +357,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(646, 528);
+            this.button1.Location = new System.Drawing.Point(644, 528);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 46);

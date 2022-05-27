@@ -128,7 +128,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 1081);
+            this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -337,7 +337,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapPanel.Controls.Add(this.label7);
             this.kitapPanel.Controls.Add(this.label10);
             this.kitapPanel.Controls.Add(this.txtkitapId);
-            this.kitapPanel.Location = new System.Drawing.Point(48, 411);
+            this.kitapPanel.Location = new System.Drawing.Point(12, 412);
             this.kitapPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kitapPanel.Name = "kitapPanel";
             this.kitapPanel.Size = new System.Drawing.Size(597, 332);
@@ -669,7 +669,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1749, 766);
+            this.label18.Location = new System.Drawing.Point(1713, 783);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 17);
@@ -679,7 +679,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1749, 734);
+            this.label17.Location = new System.Drawing.Point(1713, 751);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(122, 17);
@@ -689,7 +689,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // lblkitapsayisi
             // 
             this.lblkitapsayisi.AutoSize = true;
-            this.lblkitapsayisi.Location = new System.Drawing.Point(1837, 766);
+            this.lblkitapsayisi.Location = new System.Drawing.Point(1801, 783);
             this.lblkitapsayisi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblkitapsayisi.Name = "lblkitapsayisi";
             this.lblkitapsayisi.Size = new System.Drawing.Size(16, 17);
@@ -699,7 +699,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // lblkayitli
             // 
             this.lblkayitli.AutoSize = true;
-            this.lblkayitli.Location = new System.Drawing.Point(1879, 734);
+            this.lblkayitli.Location = new System.Drawing.Point(1843, 751);
             this.lblkayitli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblkayitli.Name = "lblkayitli";
             this.lblkayitli.Size = new System.Drawing.Size(16, 17);
@@ -732,7 +732,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.SepeteEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SepeteEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SepeteEkle.Location = new System.Drawing.Point(651, 697);
+            this.SepeteEkle.Location = new System.Drawing.Point(615, 698);
             this.SepeteEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SepeteEkle.Name = "SepeteEkle";
             this.SepeteEkle.Size = new System.Drawing.Size(91, 46);
@@ -743,8 +743,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 750);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 751);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -757,7 +758,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnemanetver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnemanetver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnemanetver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnemanetver.Location = new System.Drawing.Point(1816, 807);
+            this.btnemanetver.Location = new System.Drawing.Point(1712, 945);
             this.btnemanetver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnemanetver.Name = "btnemanetver";
             this.btnemanetver.Size = new System.Drawing.Size(91, 46);
@@ -771,7 +772,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnsil.BackColor = System.Drawing.Color.DarkRed;
             this.btnsil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(1816, 869);
+            this.btnsil.Location = new System.Drawing.Point(1712, 1007);
             this.btnsil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(91, 46);
@@ -798,7 +799,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciPanel.Controls.Add(this.txtogrNo);
             this.ogrenciPanel.Controls.Add(this.txtOgrAd);
             this.ogrenciPanel.Controls.Add(this.txtOgrSoyad);
-            this.ogrenciPanel.Location = new System.Drawing.Point(48, 91);
+            this.ogrenciPanel.Location = new System.Drawing.Point(12, 92);
             this.ogrenciPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ogrenciPanel.Name = "ogrenciPanel";
             this.ogrenciPanel.Size = new System.Drawing.Size(597, 278);
@@ -955,14 +956,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmanetTeslim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EmanetVer";
+            this.Text = "Emanet Teslim Sayfası";
             this.Load += new System.EventHandler(this.EmanetVer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

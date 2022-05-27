@@ -351,7 +351,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void infoBtn_Click(object sender, EventArgs e)
         {
-            Info info = new Info();
+            Ayarlar info = new Ayarlar();
             info.Show();
             this.Hide();
         }

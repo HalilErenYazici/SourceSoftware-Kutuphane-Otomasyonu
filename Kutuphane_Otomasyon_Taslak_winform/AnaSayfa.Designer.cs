@@ -49,7 +49,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1 = new System.Windows.Forms.Label();
             this.kaplaButon = new System.Windows.Forms.Button();
             this.simgeButon = new System.Windows.Forms.Button();
-            this.infoBtn = new System.Windows.Forms.Button();
+            this.ayrBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.kaplaButon);
             this.panel1.Controls.Add(this.simgeButon);
-            this.panel1.Controls.Add(this.infoBtn);
+            this.panel1.Controls.Add(this.ayrBtn);
             this.panel1.Controls.Add(this.anasayfaBtn);
             this.panel1.Controls.Add(this.cikisButon);
             this.panel1.Controls.Add(this.emanetBtn);
@@ -357,26 +357,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
             // 
-            // infoBtn
+            // ayrBtn
             // 
-            this.infoBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
-            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infoBtn.FlatAppearance.BorderSize = 0;
-            this.infoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(1101, 210);
-            this.infoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(100, 100);
-            this.infoBtn.TabIndex = 5;
-            this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.infoBtn.UseVisualStyleBackColor = false;
-            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click_1);
+            this.ayrBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ayrBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ayrBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
+            this.ayrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ayrBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ayrBtn.FlatAppearance.BorderSize = 0;
+            this.ayrBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ayrBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ayrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ayrBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ayrBtn.Location = new System.Drawing.Point(1101, 210);
+            this.ayrBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ayrBtn.Name = "ayrBtn";
+            this.ayrBtn.Size = new System.Drawing.Size(100, 100);
+            this.ayrBtn.TabIndex = 5;
+            this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ayrBtn.UseVisualStyleBackColor = false;
+            this.ayrBtn.Click += new System.EventHandler(this.infoBtn_Click_1);
             // 
             // anasayfaBtn
             // 
@@ -511,7 +511,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button ogrenciBtn;
         private System.Windows.Forms.Button kitapBtn;
-        private System.Windows.Forms.Button infoBtn;
+        private System.Windows.Forms.Button ayrBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button kaplaButon;

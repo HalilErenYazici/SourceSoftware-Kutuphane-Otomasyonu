@@ -93,7 +93,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void infoBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Info f = new Info();
+            Ayarlar f = new Ayarlar();
             f.ShowDialog();
         }
 
@@ -106,7 +106,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void infoBtn_Click_1(object sender, EventArgs e)
         {
-            Form form = new Info();
+            Form form = new Ayarlar();
             form.Show();
             this.Close();
         }

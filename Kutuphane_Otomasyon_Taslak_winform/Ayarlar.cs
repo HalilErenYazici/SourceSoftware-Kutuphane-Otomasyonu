@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
-    public partial class Info : Form
+    public partial class Ayarlar : Form
     {
-        public Info()
+        public Ayarlar()
         {
             InitializeComponent();
         }
