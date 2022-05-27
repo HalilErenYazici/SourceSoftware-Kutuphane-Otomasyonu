@@ -31,17 +31,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Istatistik));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblencokOkunanKitapDili = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbltoplamOgrenciSayisi = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbltoplamAlinanKitapSayisi = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblencokokunankategori = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.LblEnAzOkunanYazar = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblEnCokOkunanYazar = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblEnAzOkunanKitap = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblenAzOkuyanOgrenci = new System.Windows.Forms.Label();
+            this.lblencokOkuyanOgrenci = new System.Windows.Forms.Label();
+            this.lblencokOkunanKitap = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +60,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.lblenazokunankitapdili = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblencokkayitolanbolum = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbltoplamkitapsayisi = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblenAzKayitOlanBolum = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,17 +76,31 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lblenAzKayitOlanBolum);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lbltoplamkitapsayisi);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.lblencokkayitolanbolum);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblenazokunankitapdili);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblencokOkunanKitapDili);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.lbltoplamOgrenciSayisi);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lbltoplamAlinanKitapSayisi);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblencokokunankategori);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.LblEnAzOkunanYazar);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lblEnCokOkunanYazar);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lblEnAzOkunanKitap);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblenAzOkuyanOgrenci);
+            this.panel1.Controls.Add(this.lblencokOkuyanOgrenci);
+            this.panel1.Controls.Add(this.lblencokOkunanKitap);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -84,32 +112,86 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(960, 585);
             this.panel1.TabIndex = 3;
             // 
-            // label13
+            // lblencokOkunanKitapDili
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(394, 382);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "label13";
+            this.lblencokOkunanKitapDili.AutoSize = true;
+            this.lblencokOkunanKitapDili.Location = new System.Drawing.Point(425, 414);
+            this.lblencokOkunanKitapDili.Name = "lblencokOkunanKitapDili";
+            this.lblencokOkunanKitapDili.Size = new System.Drawing.Size(35, 13);
+            this.lblencokOkunanKitapDili.TabIndex = 20;
+            this.lblencokOkunanKitapDili.Text = "label9";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(257, 414);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "En Çok Okunan Kitap Dili";
+            // 
+            // lbltoplamOgrenciSayisi
+            // 
+            this.lbltoplamOgrenciSayisi.AutoSize = true;
+            this.lbltoplamOgrenciSayisi.Location = new System.Drawing.Point(720, 493);
+            this.lbltoplamOgrenciSayisi.Name = "lbltoplamOgrenciSayisi";
+            this.lbltoplamOgrenciSayisi.Size = new System.Drawing.Size(35, 13);
+            this.lbltoplamOgrenciSayisi.TabIndex = 18;
+            this.lbltoplamOgrenciSayisi.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(560, 493);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Toplam Öğrenci Sayısı";
+            // 
+            // lbltoplamAlinanKitapSayisi
+            // 
+            this.lbltoplamAlinanKitapSayisi.AutoSize = true;
+            this.lbltoplamAlinanKitapSayisi.Location = new System.Drawing.Point(423, 482);
+            this.lbltoplamAlinanKitapSayisi.Name = "lbltoplamAlinanKitapSayisi";
+            this.lbltoplamAlinanKitapSayisi.Size = new System.Drawing.Size(35, 13);
+            this.lbltoplamAlinanKitapSayisi.TabIndex = 16;
+            this.lbltoplamAlinanKitapSayisi.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(255, 482);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Toplam Alınan Kitap Sayısı";
+            // 
+            // lblencokokunankategori
+            // 
+            this.lblencokokunankategori.AutoSize = true;
+            this.lblencokokunankategori.Location = new System.Drawing.Point(423, 382);
+            this.lblencokokunankategori.Name = "lblencokokunankategori";
+            this.lblencokokunankategori.Size = new System.Drawing.Size(41, 13);
+            this.lblencokokunankategori.TabIndex = 14;
+            this.lblencokokunankategori.Text = "label13";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(255, 382);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 13);
+            this.label14.Size = new System.Drawing.Size(125, 13);
             this.label14.TabIndex = 13;
-            this.label14.Text = "En Az Okunan Yazar";
+            this.label14.Text = "En Çok Okunan Kategori";
             // 
-            // label11
+            // LblEnAzOkunanYazar
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(396, 353);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "label11";
+            this.LblEnAzOkunanYazar.AutoSize = true;
+            this.LblEnAzOkunanYazar.Location = new System.Drawing.Point(425, 353);
+            this.LblEnAzOkunanYazar.Name = "LblEnAzOkunanYazar";
+            this.LblEnAzOkunanYazar.Size = new System.Drawing.Size(41, 13);
+            this.LblEnAzOkunanYazar.TabIndex = 12;
+            this.LblEnAzOkunanYazar.Text = "label11";
             // 
             // label12
             // 
@@ -120,14 +202,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label12.TabIndex = 11;
             this.label12.Text = "En Az Okunan Yazar";
             // 
-            // label9
+            // lblEnCokOkunanYazar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(394, 325);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "label9";
+            this.lblEnCokOkunanYazar.AutoSize = true;
+            this.lblEnCokOkunanYazar.Location = new System.Drawing.Point(423, 325);
+            this.lblEnCokOkunanYazar.Name = "lblEnCokOkunanYazar";
+            this.lblEnCokOkunanYazar.Size = new System.Drawing.Size(35, 13);
+            this.lblEnCokOkunanYazar.TabIndex = 10;
+            this.lblEnCokOkunanYazar.Text = "label9";
             // 
             // label10
             // 
@@ -138,14 +220,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label10.TabIndex = 9;
             this.label10.Text = "En Çok Okunan Yazar";
             // 
-            // label7
+            // lblEnAzOkunanKitap
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(426, 225);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "label7";
+            this.lblEnAzOkunanKitap.AutoSize = true;
+            this.lblEnAzOkunanKitap.Location = new System.Drawing.Point(426, 225);
+            this.lblEnAzOkunanKitap.Name = "lblEnAzOkunanKitap";
+            this.lblEnAzOkunanKitap.Size = new System.Drawing.Size(35, 13);
+            this.lblEnAzOkunanKitap.TabIndex = 8;
+            this.lblEnAzOkunanKitap.Text = "label7";
             // 
             // label8
             // 
@@ -156,32 +238,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label8.TabIndex = 7;
             this.label8.Text = "En Az Okunan Kitap";
             // 
-            // label6
+            // lblenAzOkuyanOgrenci
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 298);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.lblenAzOkuyanOgrenci.AutoSize = true;
+            this.lblenAzOkuyanOgrenci.Location = new System.Drawing.Point(423, 298);
+            this.lblenAzOkuyanOgrenci.Name = "lblenAzOkuyanOgrenci";
+            this.lblenAzOkuyanOgrenci.Size = new System.Drawing.Size(35, 13);
+            this.lblenAzOkuyanOgrenci.TabIndex = 6;
+            this.lblenAzOkuyanOgrenci.Text = "label6";
             // 
-            // label5
+            // lblencokOkuyanOgrenci
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(426, 264);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            this.lblencokOkuyanOgrenci.AutoSize = true;
+            this.lblencokOkuyanOgrenci.Location = new System.Drawing.Point(426, 264);
+            this.lblencokOkuyanOgrenci.Name = "lblencokOkuyanOgrenci";
+            this.lblencokOkuyanOgrenci.Size = new System.Drawing.Size(35, 13);
+            this.lblencokOkuyanOgrenci.TabIndex = 5;
+            this.lblencokOkuyanOgrenci.Text = "label5";
             // 
-            // label4
+            // lblencokOkunanKitap
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(426, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblencokOkunanKitap.AutoSize = true;
+            this.lblencokOkunanKitap.Location = new System.Drawing.Point(426, 197);
+            this.lblencokOkunanKitap.Name = "lblencokOkunanKitap";
+            this.lblencokOkunanKitap.Size = new System.Drawing.Size(35, 13);
+            this.lblencokOkunanKitap.TabIndex = 4;
+            this.lblencokOkunanKitap.Text = "label4";
             // 
             // label3
             // 
@@ -325,6 +407,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -383,6 +466,78 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             // 
+            // lblenazokunankitapdili
+            // 
+            this.lblenazokunankitapdili.AutoSize = true;
+            this.lblenazokunankitapdili.Location = new System.Drawing.Point(423, 444);
+            this.lblenazokunankitapdili.Name = "lblenazokunankitapdili";
+            this.lblenazokunankitapdili.Size = new System.Drawing.Size(35, 13);
+            this.lblenazokunankitapdili.TabIndex = 22;
+            this.lblenazokunankitapdili.Text = "label9";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(255, 444);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "En Az Okunan Kitap Dili";
+            // 
+            // lblencokkayitolanbolum
+            // 
+            this.lblencokkayitolanbolum.AutoSize = true;
+            this.lblencokkayitolanbolum.Location = new System.Drawing.Point(754, 209);
+            this.lblencokkayitolanbolum.Name = "lblencokkayitolanbolum";
+            this.lblencokkayitolanbolum.Size = new System.Drawing.Size(35, 13);
+            this.lblencokkayitolanbolum.TabIndex = 24;
+            this.lblencokkayitolanbolum.Text = "label4";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(560, 209);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 13);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "En çok kayıt olan bölüm";
+            // 
+            // lbltoplamkitapsayisi
+            // 
+            this.lbltoplamkitapsayisi.AutoSize = true;
+            this.lbltoplamkitapsayisi.Location = new System.Drawing.Point(421, 515);
+            this.lbltoplamkitapsayisi.Name = "lbltoplamkitapsayisi";
+            this.lbltoplamkitapsayisi.Size = new System.Drawing.Size(35, 13);
+            this.lbltoplamkitapsayisi.TabIndex = 26;
+            this.lbltoplamkitapsayisi.Text = "label4";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(253, 515);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 13);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Toplam Kitap Sayısı";
+            // 
+            // lblenAzKayitOlanBolum
+            // 
+            this.lblenAzKayitOlanBolum.AutoSize = true;
+            this.lblenAzKayitOlanBolum.Location = new System.Drawing.Point(754, 236);
+            this.lblenAzKayitOlanBolum.Name = "lblenAzKayitOlanBolum";
+            this.lblenAzKayitOlanBolum.Size = new System.Drawing.Size(35, 13);
+            this.lblenAzKayitOlanBolum.TabIndex = 28;
+            this.lblenAzKayitOlanBolum.Text = "label4";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(560, 236);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 13);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "En az kayıt olan bölüm";
+            // 
             // Istatistik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +551,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Name = "Istatistik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İstatistik";
+            this.Load += new System.EventHandler(this.Istatistik_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -415,19 +571,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button kitapBtn;
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button ogrenciBtn;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblenAzOkuyanOgrenci;
+        private System.Windows.Forms.Label lblencokOkuyanOgrenci;
+        private System.Windows.Forms.Label lblencokOkunanKitap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LblEnAzOkunanYazar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEnCokOkunanYazar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblEnAzOkunanKitap;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblencokokunankategori;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbltoplamOgrenciSayisi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbltoplamAlinanKitapSayisi;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblencokOkunanKitapDili;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblenazokunankitapdili;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblencokkayitolanbolum;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbltoplamkitapsayisi;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblenAzKayitOlanBolum;
+        private System.Windows.Forms.Label label13;
     }
 }

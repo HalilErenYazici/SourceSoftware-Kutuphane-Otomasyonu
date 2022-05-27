@@ -851,12 +851,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
                     connection.Close();
                 }
-         
-                    
-                   
-
-                
-             
 
            }
        
