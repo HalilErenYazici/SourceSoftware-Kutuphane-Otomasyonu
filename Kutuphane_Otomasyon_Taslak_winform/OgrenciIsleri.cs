@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -54,6 +55,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void simgeButon_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

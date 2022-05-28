@@ -45,6 +45,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.btnemanet = new System.Windows.Forms.Button();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -323,6 +324,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnemanet.UseVisualStyleBackColor = false;
             this.btnemanet.Click += new System.EventHandler(this.btnemanet_Click_1);
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // Emanet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,5 +369,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.ComboBox cmbaramatip;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button button2;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }

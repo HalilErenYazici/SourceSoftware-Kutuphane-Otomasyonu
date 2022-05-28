@@ -60,6 +60,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
+            this.btnogrenciisleri = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -120,7 +121,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(301, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "label6";
             // 
@@ -128,6 +129,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btnogrenciisleri);
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
@@ -546,6 +548,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
             // 
+            // btnogrenciisleri
+            // 
+            this.btnogrenciisleri.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnogrenciisleri.Location = new System.Drawing.Point(81, 28);
+            this.btnogrenciisleri.Name = "btnogrenciisleri";
+            this.btnogrenciisleri.Size = new System.Drawing.Size(158, 34);
+            this.btnogrenciisleri.TabIndex = 37;
+            this.btnogrenciisleri.Text = "Öğrenci İşleri";
+            this.btnogrenciisleri.UseVisualStyleBackColor = false;
+            this.btnogrenciisleri.Click += new System.EventHandler(this.btnogrenciisleri_Click);
+            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -603,5 +616,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button emanetBtn;
+        private System.Windows.Forms.Button btnogrenciisleri;
     }
 }

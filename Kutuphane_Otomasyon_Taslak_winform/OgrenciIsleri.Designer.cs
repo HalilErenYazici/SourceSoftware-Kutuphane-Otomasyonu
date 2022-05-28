@@ -30,6 +30,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.kaplaButon = new System.Windows.Forms.Button();
             this.simgeButon = new System.Windows.Forms.Button();
@@ -39,7 +41,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +52,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -54,6 +63,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(-19, -19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 130);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 262);
+            this.dataGridView1.TabIndex = 2;
             // 
             // panel2
             // 
@@ -72,6 +98,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 42);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 
@@ -90,6 +119,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.Size = new System.Drawing.Size(20, 20);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
+            this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
             // 
             // simgeButon
             // 
@@ -108,6 +138,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.Size = new System.Drawing.Size(20, 20);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
+            this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
             // 
             // cikisButon
             // 
@@ -126,6 +157,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.Size = new System.Drawing.Size(20, 20);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
+            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
             // infoBtn
             // 
@@ -222,6 +254,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Öğrenci No",
+            "Öğrenci Ad ",
+            "Öğrenci Soyad"});
+            this.comboBox1.Location = new System.Drawing.Point(37, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 24);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "Arama Fİltresi Seçiniz...";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(272, 68);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(179, 22);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "Öğrenci Ara...";
+            // 
             // OgrenciIsleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,6 +288,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgrenciIsleri";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -251,5 +307,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button kitapBtn;
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button ogrenciBtn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

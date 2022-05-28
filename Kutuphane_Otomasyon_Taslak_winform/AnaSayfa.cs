@@ -193,5 +193,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             grafik.Show();
             this.Close();
         }
+
+        private void btnogrenciisleri_Click(object sender, EventArgs e)
+        {
+            OgrenciIsleri ogris = new OgrenciIsleri();
+            ogris.Show();
+            this.Hide();
+        }
     }
 }
