@@ -98,14 +98,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             if (dataRead.Read())
             {
-                AnaSayfa form = new AnaSayfa();
-                form.Show();
-                this.Visible = false;
+
+                if (cmbGorev.SelectedIndex == 1)
+                {
+                    OgrenciIsleri formOgr = new OgrenciIsleri();
+                    formOgr.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+
+                    AnaSayfa form = new AnaSayfa();
+                    form.Show();
+                    this.Visible = false;
+                }
             }
+
             if (cmbGorev.SelectedIndex == 1)
             {
-                OgrenciIsleri form = new OgrenciIsleri();
-                form.Show();
+                OgrenciIsleri formOgr = new OgrenciIsleri();
+                formOgr.Show();
                 this.Visible = false;
             }
             else

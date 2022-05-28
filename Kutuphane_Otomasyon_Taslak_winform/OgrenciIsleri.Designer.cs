@@ -39,6 +39,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
             this.ayrBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,6 +49,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.searchBox);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -67,13 +69,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox.TabIndex = 5;
             this.searchBox.Text = "Öğrenci Ara...";
             this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Öğrenci No",
-            "Öğrenci Ad ",
+            "Öğrenci Ad",
             "Öğrenci Soyad"});
             this.comboBox1.Location = new System.Drawing.Point(12, 100);
             this.comboBox1.Name = "comboBox1";
@@ -127,6 +130,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.logOutBtn.TabIndex = 14;
             this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // kaplaButon
             // 
@@ -204,6 +208,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ayrBtn.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(12, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 37);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Belge Ver";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // OgrenciIsleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,6 +231,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Name = "OgrenciIsleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgrenciIsleri";
+            this.Load += new System.EventHandler(this.OgrenciIsleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -235,5 +252,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button logOutBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
