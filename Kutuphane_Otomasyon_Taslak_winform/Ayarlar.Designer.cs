@@ -38,6 +38,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.logOutBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.logOutBtn);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -183,6 +185,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logOutBtn.Location = new System.Drawing.Point(12, 59);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(43, 42);
+            this.logOutBtn.TabIndex = 15;
+            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // Ayarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,5 +233,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button kitapBtn;
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button ogrenciBtn;
+        private System.Windows.Forms.Button logOutBtn;
     }
 }

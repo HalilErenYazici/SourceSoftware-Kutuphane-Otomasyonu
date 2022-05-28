@@ -90,5 +90,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Application.Exit();
         }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new GirisEkrani();
+            form.Show();
+            this.Close();
+        }
     }
 }

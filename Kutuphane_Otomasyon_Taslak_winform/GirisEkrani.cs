@@ -19,6 +19,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
         }
 
+        public static string ad, soyad;
+
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (txtUser.Text == "Kullanıcı Adı")
@@ -98,7 +100,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             if (dataRead.Read())
             {
-
+                ad = dataRead[3].ToString();
+                soyad = dataRead[4].ToString();
                 if (cmbGorev.SelectedIndex == 1)
                 {
                     OgrenciIsleri formOgr = new OgrenciIsleri();

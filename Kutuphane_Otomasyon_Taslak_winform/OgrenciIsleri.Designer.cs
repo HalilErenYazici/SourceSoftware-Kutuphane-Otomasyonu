@@ -30,6 +30,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -39,7 +40,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
             this.ayrBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,6 +60,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(12, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 37);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Belge Ver";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // searchBox
             // 
@@ -207,18 +219,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ayrBtn.TabIndex = 9;
             this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ayrBtn.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(12, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Belge Ver";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // OgrenciIsleri
             // 

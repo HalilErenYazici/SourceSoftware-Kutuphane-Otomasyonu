@@ -103,13 +103,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             f.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form form = new PersonelVeriGuncelleme();
-            form.Show();
-            this.Close();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
@@ -155,6 +148,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
+            adTxt.Text = GirisEkrani.ad + " " + GirisEkrani.soyad;
         }
 
    
@@ -171,6 +165,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             OgrenciIsleri ogris = new OgrenciIsleri();
             ogris.Show();
             this.Hide();
+        }
+
+        private void kitapBtn_Click_1(object sender, EventArgs e)
+        {
+            Form form = new Kitap();
+            form.Show();
+            this.Close();
+        }
+
+        private void ayrBtn_Click_1(object sender, EventArgs e)
+        {
+
+            Form form = new Ayarlar();
+            form.Show();
+            this.Close();
         }
     }
 }

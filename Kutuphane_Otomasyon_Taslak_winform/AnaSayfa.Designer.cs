@@ -32,7 +32,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnogrenciisleri = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
+            this.adTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.adTxt);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label5);
@@ -95,7 +96,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btnogrenciisleri);
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
@@ -113,17 +113,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Size = new System.Drawing.Size(1256, 224);
             this.panel2.TabIndex = 16;
             // 
-            // btnogrenciisleri
-            // 
-            this.btnogrenciisleri.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnogrenciisleri.Location = new System.Drawing.Point(81, 28);
-            this.btnogrenciisleri.Name = "btnogrenciisleri";
-            this.btnogrenciisleri.Size = new System.Drawing.Size(158, 34);
-            this.btnogrenciisleri.TabIndex = 37;
-            this.btnogrenciisleri.Text = "Öğrenci İşleri";
-            this.btnogrenciisleri.UseVisualStyleBackColor = false;
-            this.btnogrenciisleri.Click += new System.EventHandler(this.btnogrenciisleri_Click);
-            // 
             // button12
             // 
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -131,7 +120,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(1105, 139);
+            this.button12.Location = new System.Drawing.Point(1005, 73);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(85, 81);
@@ -146,7 +135,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button11.BackColor = System.Drawing.Color.OrangeRed;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button11.Location = new System.Drawing.Point(1107, 28);
+            this.button11.Location = new System.Drawing.Point(169, 73);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 81);
@@ -295,7 +284,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button1.Size = new System.Drawing.Size(24, 25);
             this.button1.TabIndex = 15;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -422,6 +410,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ayrBtn.TabIndex = 5;
             this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ayrBtn.UseVisualStyleBackColor = false;
+            this.ayrBtn.Click += new System.EventHandler(this.ayrBtn_Click_1);
             // 
             // anasayfaBtn
             // 
@@ -524,6 +513,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 4;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
+            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click_1);
+            // 
+            // adTxt
+            // 
+            this.adTxt.AutoSize = true;
+            this.adTxt.BackColor = System.Drawing.Color.Transparent;
+            this.adTxt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adTxt.ForeColor = System.Drawing.Color.Gainsboro;
+            this.adTxt.Location = new System.Drawing.Point(33, 2);
+            this.adTxt.Name = "adTxt";
+            this.adTxt.Size = new System.Drawing.Size(82, 23);
+            this.adTxt.TabIndex = 17;
+            this.adTxt.Text = "adSOYAD";
+            this.adTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AnaSayfa
             // 
@@ -578,6 +581,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button emanetBtn;
-        private System.Windows.Forms.Button btnogrenciisleri;
+        private System.Windows.Forms.Label adTxt;
     }
 }
