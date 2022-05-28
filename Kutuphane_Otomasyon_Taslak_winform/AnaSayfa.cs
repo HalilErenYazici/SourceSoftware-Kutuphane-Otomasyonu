@@ -155,37 +155,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            listelemanet();
         }
 
-        public void listelemanet()
-        {
-            connection.Open();
-
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet", connection);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridViewemanet.DataSource = dt;
-
-           /* for (int i = 1; i < dataGridViewemanet.Rows.Count; i++)
-            {
-            label6.Text = dataGridViewemanet.CurrentRow.Cells["alistarihi"].Value.ToString();
-                
-                DateTime date = new DateTime();
-                date = DateTime.Now;
-
-                label6.Text = (date.ToString("dd.MM.yyyy"));
-
-                if (label6.Text == (date.ToString("dd.MM.yyyy")))
-                {
-                    MessageBox.Show("Teslim Tarihi Gelen Kitap/lar Var");
-                }
-
-            }
-           */
-            connection.Close();
-        }
+   
 
         private void button12_Click(object sender, EventArgs e)
         {

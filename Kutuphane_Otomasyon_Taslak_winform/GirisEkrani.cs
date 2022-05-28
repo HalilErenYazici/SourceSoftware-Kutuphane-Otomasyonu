@@ -113,13 +113,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     this.Visible = false;
                 }
             }
-
-            if (cmbGorev.SelectedIndex == 1)
-            {
-                OgrenciIsleri formOgr = new OgrenciIsleri();
-                formOgr.Show();
-                this.Visible = false;
-            }
             else
             {
                 MessageBox.Show(" Hatalı Giriş Yaptınız \n Lütfen Bilgilerinizi \n Kontrol Ediniz");

@@ -31,10 +31,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewemanet = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnogrenciisleri = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -60,9 +58,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
-            this.btnogrenciisleri = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,9 +66,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.dataGridViewemanet);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label5);
@@ -98,33 +91,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseUp);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(504, 32);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 20;
-            // 
-            // dataGridViewemanet
-            // 
-            this.dataGridViewemanet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewemanet.Location = new System.Drawing.Point(93, 92);
-            this.dataGridViewemanet.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewemanet.Name = "dataGridViewemanet";
-            this.dataGridViewemanet.RowHeadersWidth = 51;
-            this.dataGridViewemanet.Size = new System.Drawing.Size(975, 76);
-            this.dataGridViewemanet.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(301, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "label6";
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -146,6 +112,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1256, 224);
             this.panel2.TabIndex = 16;
+            // 
+            // btnogrenciisleri
+            // 
+            this.btnogrenciisleri.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnogrenciisleri.Location = new System.Drawing.Point(81, 28);
+            this.btnogrenciisleri.Name = "btnogrenciisleri";
+            this.btnogrenciisleri.Size = new System.Drawing.Size(158, 34);
+            this.btnogrenciisleri.TabIndex = 37;
+            this.btnogrenciisleri.Text = "Öğrenci İşleri";
+            this.btnogrenciisleri.UseVisualStyleBackColor = false;
+            this.btnogrenciisleri.Click += new System.EventHandler(this.btnogrenciisleri_Click);
             // 
             // button12
             // 
@@ -548,17 +525,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
             // 
-            // btnogrenciisleri
-            // 
-            this.btnogrenciisleri.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnogrenciisleri.Location = new System.Drawing.Point(81, 28);
-            this.btnogrenciisleri.Name = "btnogrenciisleri";
-            this.btnogrenciisleri.Size = new System.Drawing.Size(158, 34);
-            this.btnogrenciisleri.TabIndex = 37;
-            this.btnogrenciisleri.Text = "Öğrenci İşleri";
-            this.btnogrenciisleri.UseVisualStyleBackColor = false;
-            this.btnogrenciisleri.Click += new System.EventHandler(this.btnogrenciisleri_Click);
-            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -579,7 +545,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -611,9 +576,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.DataGridView dataGridViewemanet;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button btnogrenciisleri;
