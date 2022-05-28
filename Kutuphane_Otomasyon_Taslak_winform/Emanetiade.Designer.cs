@@ -85,7 +85,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // searchboxkitap
             // 
-            this.searchboxkitap.Location = new System.Drawing.Point(828, 69);
+            this.searchboxkitap.Location = new System.Drawing.Point(505, 70);
             this.searchboxkitap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchboxkitap.Name = "searchboxkitap";
             this.searchboxkitap.Size = new System.Drawing.Size(220, 22);
@@ -117,13 +117,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbaramatip.Location = new System.Drawing.Point(19, 68);
             this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
             this.cmbaramatip.Name = "cmbaramatip";
-            this.cmbaramatip.Size = new System.Drawing.Size(169, 24);
+            this.cmbaramatip.Size = new System.Drawing.Size(220, 24);
             this.cmbaramatip.TabIndex = 14;
             this.cmbaramatip.Text = "Arama Filtresi Seçiniz...";
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(231, 68);
+            this.searchBox.Location = new System.Drawing.Point(279, 70);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(220, 22);

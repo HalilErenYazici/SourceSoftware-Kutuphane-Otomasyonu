@@ -98,8 +98,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             if (dataRead.Read())
             {
-                AnaSayfa a = new AnaSayfa();
                 AnaSayfa form = new AnaSayfa();
+                form.Show();
+                this.Visible = false;
+            }
+            if (cmbGorev.SelectedIndex == 1)
+            {
+                OgrenciIsleri form = new OgrenciIsleri();
                 form.Show();
                 this.Visible = false;
             }
@@ -108,11 +113,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MessageBox.Show(" Hatalı Giriş Yaptınız \n Lütfen Bilgilerinizi \n Kontrol Ediniz");
             }
             connection.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -57,10 +57,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void searchBox_Click(object sender, EventArgs e)
         {
-           
-
+            searchBox.Clear();
         }
     }
 }

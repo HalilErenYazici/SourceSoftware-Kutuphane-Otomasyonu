@@ -30,19 +30,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.logOutBtn = new System.Windows.Forms.Button();
             this.kaplaButon = new System.Windows.Forms.Button();
             this.simgeButon = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
-            this.infoBtn = new System.Windows.Forms.Button();
-            this.anasayfaBtn = new System.Windows.Forms.Button();
-            this.kitapBtn = new System.Windows.Forms.Button();
-            this.emanetBtn = new System.Windows.Forms.Button();
-            this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ayrBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,9 +48,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.searchBox);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -64,12 +59,27 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 4;
             // 
-            // textBox1
+            // searchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(-19, -19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.searchBox.Location = new System.Drawing.Point(270, 100);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(179, 22);
+            this.searchBox.TabIndex = 5;
+            this.searchBox.Text = "Öğrenci Ara...";
+            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Öğrenci No",
+            "Öğrenci Ad ",
+            "Öğrenci Soyad"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 100);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 24);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "Arama Fİltresi Seçiniz...";
             // 
             // dataGridView1
             // 
@@ -84,14 +94,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.logOutBtn);
             this.panel2.Controls.Add(this.kaplaButon);
             this.panel2.Controls.Add(this.simgeButon);
             this.panel2.Controls.Add(this.cikisButon);
-            this.panel2.Controls.Add(this.infoBtn);
-            this.panel2.Controls.Add(this.anasayfaBtn);
-            this.panel2.Controls.Add(this.kitapBtn);
-            this.panel2.Controls.Add(this.emanetBtn);
-            this.panel2.Controls.Add(this.ogrenciBtn);
+            this.panel2.Controls.Add(this.ayrBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -101,6 +108,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logOutBtn.Location = new System.Drawing.Point(75, 0);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(43, 42);
+            this.logOutBtn.TabIndex = 14;
+            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.logOutBtn.UseVisualStyleBackColor = false;
             // 
             // kaplaButon
             // 
@@ -159,122 +185,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
-            // infoBtn
+            // ayrBtn
             // 
-            this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
-            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infoBtn.FlatAppearance.BorderSize = 0;
-            this.infoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(260, 0);
-            this.infoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(43, 42);
-            this.infoBtn.TabIndex = 9;
-            this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.infoBtn.UseVisualStyleBackColor = false;
-            // 
-            // anasayfaBtn
-            // 
-            this.anasayfaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.anasayfaBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.home1;
-            this.anasayfaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.anasayfaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.anasayfaBtn.FlatAppearance.BorderSize = 0;
-            this.anasayfaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
-            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.anasayfaBtn.Name = "anasayfaBtn";
-            this.anasayfaBtn.Size = new System.Drawing.Size(43, 42);
-            this.anasayfaBtn.TabIndex = 2;
-            this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.anasayfaBtn.UseVisualStyleBackColor = false;
-            // 
-            // kitapBtn
-            // 
-            this.kitapBtn.BackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bookSyh;
-            this.kitapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.kitapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kitapBtn.FlatAppearance.BorderSize = 0;
-            this.kitapBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kitapBtn.Location = new System.Drawing.Point(197, 0);
-            this.kitapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kitapBtn.Name = "kitapBtn";
-            this.kitapBtn.Size = new System.Drawing.Size(43, 42);
-            this.kitapBtn.TabIndex = 8;
-            this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.kitapBtn.UseVisualStyleBackColor = false;
-            // 
-            // emanetBtn
-            // 
-            this.emanetBtn.BackColor = System.Drawing.Color.Transparent;
-            this.emanetBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.exchange;
-            this.emanetBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.emanetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.emanetBtn.FlatAppearance.BorderSize = 0;
-            this.emanetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emanetBtn.Location = new System.Drawing.Point(75, 0);
-            this.emanetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.emanetBtn.Name = "emanetBtn";
-            this.emanetBtn.Size = new System.Drawing.Size(43, 42);
-            this.emanetBtn.TabIndex = 6;
-            this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.emanetBtn.UseVisualStyleBackColor = false;
-            // 
-            // ogrenciBtn
-            // 
-            this.ogrenciBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ogrenciBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.male_student;
-            this.ogrenciBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ogrenciBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ogrenciBtn.FlatAppearance.BorderSize = 0;
-            this.ogrenciBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
-            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ogrenciBtn.Name = "ogrenciBtn";
-            this.ogrenciBtn.Size = new System.Drawing.Size(43, 42);
-            this.ogrenciBtn.TabIndex = 7;
-            this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ogrenciBtn.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Öğrenci No",
-            "Öğrenci Ad ",
-            "Öğrenci Soyad"});
-            this.comboBox1.Location = new System.Drawing.Point(37, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 24);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "Arama Fİltresi Seçiniz...";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(272, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Öğrenci Ara...";
+            this.ayrBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ayrBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
+            this.ayrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ayrBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ayrBtn.FlatAppearance.BorderSize = 0;
+            this.ayrBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ayrBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ayrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ayrBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ayrBtn.Location = new System.Drawing.Point(12, 0);
+            this.ayrBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ayrBtn.Name = "ayrBtn";
+            this.ayrBtn.Size = new System.Drawing.Size(43, 42);
+            this.ayrBtn.TabIndex = 9;
+            this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ayrBtn.UseVisualStyleBackColor = false;
             // 
             // OgrenciIsleri
             // 
@@ -302,14 +230,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button kaplaButon;
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button cikisButon;
-        private System.Windows.Forms.Button infoBtn;
-        private System.Windows.Forms.Button anasayfaBtn;
-        private System.Windows.Forms.Button kitapBtn;
-        private System.Windows.Forms.Button emanetBtn;
-        private System.Windows.Forms.Button ogrenciBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button ayrBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button logOutBtn;
     }
 }
