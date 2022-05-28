@@ -216,7 +216,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button8.TabIndex = 32;
             this.button8.Text = "Kitap Görüntüle";
             this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -258,7 +257,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button5.TabIndex = 29;
             this.button5.Text = "Öğrenci Görüntüle";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -300,7 +298,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button2.TabIndex = 26;
             this.button2.Text = "Emanet Görüntüle";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -446,7 +443,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ayrBtn.TabIndex = 5;
             this.ayrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ayrBtn.UseVisualStyleBackColor = false;
-            this.ayrBtn.Click += new System.EventHandler(this.infoBtn_Click_1);
             // 
             // anasayfaBtn
             // 
@@ -549,7 +545,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 4;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
-            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click_1);
             // 
             // AnaSayfa
             // 

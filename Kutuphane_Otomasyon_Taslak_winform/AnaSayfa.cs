@@ -64,17 +64,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
 
-        //AnaSayfa a = new AnaSayfa();
-        //private void anasayfaBtn_Click(object sender, EventArgs e)
-        //{
-        //    this.Hide();
-        //    a.ShowDialog();
-        //}
+        private void anasayfaBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AnaSayfa a = new AnaSayfa();
+            a.ShowDialog();
+        }
 
 
         private void emanetBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Emanet b = new Emanet();
             b.ShowDialog();
         }
@@ -82,7 +82,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Ogrenci c = new Ogrenci();
             c.ShowDialog();
         }
@@ -90,31 +90,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         
         private void kitapBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Kitap d = new Kitap();
             d.ShowDialog();
         }
 
         
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void ayrBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Ayarlar f = new Ayarlar();
             f.ShowDialog();
-        }
-
-        private void kitapBtn_Click_1(object sender, EventArgs e)
-        {
-            Form form = new Kitap();
-            form.Show();
-            this.Close();
-        }
-
-        private void infoBtn_Click_1(object sender, EventArgs e)
-        {
-            Form form = new Ayarlar();
-            form.Show();
-            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -158,27 +144,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             Form form = new tabKitapDuzenle();
             form.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Emanet form = new Emanet();
-            form.ShowDialog();
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Ogrenci form = new Ogrenci();
-            form.Show();
-            this.Close();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Form form = new Kitap();
-            form.Show();
-            this.Close();
         }
 
         private void button11_Click(object sender, EventArgs e)

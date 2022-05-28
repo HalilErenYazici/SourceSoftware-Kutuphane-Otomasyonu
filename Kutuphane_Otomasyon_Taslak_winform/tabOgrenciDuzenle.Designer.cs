@@ -116,7 +116,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cmbcinsiyet.Location = new System.Drawing.Point(168, 514);
+            this.cmbcinsiyet.Location = new System.Drawing.Point(162, 485);
             this.cmbcinsiyet.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcinsiyet.Name = "cmbcinsiyet";
             this.cmbcinsiyet.Size = new System.Drawing.Size(272, 28);
@@ -128,22 +128,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(57, 357);
+            this.label9.Location = new System.Drawing.Point(549, 518);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 20);
             this.label9.TabIndex = 36;
             this.label9.Text = "Öğrenci ID:";
+            this.label9.Visible = false;
             // 
             // txtogrenciId
             // 
             this.txtogrenciId.Enabled = false;
             this.txtogrenciId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtogrenciId.Location = new System.Drawing.Point(169, 354);
+            this.txtogrenciId.Location = new System.Drawing.Point(651, 515);
             this.txtogrenciId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtogrenciId.Name = "txtogrenciId";
             this.txtogrenciId.Size = new System.Drawing.Size(272, 26);
             this.txtogrenciId.TabIndex = 35;
+            this.txtogrenciId.Visible = false;
             // 
             // button3
             // 
@@ -164,7 +166,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnSil.BackColor = System.Drawing.Color.DarkRed;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSil.Location = new System.Drawing.Point(1139, 350);
+            this.btnSil.Location = new System.Drawing.Point(1116, 350);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(131, 46);
@@ -202,7 +204,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // mskKartId
             // 
-            this.mskKartId.Location = new System.Drawing.Point(169, 386);
+            this.mskKartId.Location = new System.Drawing.Point(162, 357);
             this.mskKartId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskKartId.Mask = "00000000000";
             this.mskKartId.Name = "mskKartId";
@@ -211,7 +213,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // mskOgrNo
             // 
-            this.mskOgrNo.Location = new System.Drawing.Point(169, 417);
+            this.mskOgrNo.Location = new System.Drawing.Point(162, 389);
             this.mskOgrNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskOgrNo.Mask = "000000000";
             this.mskOgrNo.Name = "mskOgrNo";
@@ -237,11 +239,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Sağlık Bakım Hizmetleri Bölümü",
             "Terapi ve Rehabilitasyon Bölümü",
             "Sosyal Hizmet ve Danışmanlık Bölümü"});
-            this.cmbmyo.Location = new System.Drawing.Point(683, 458);
+            this.cmbmyo.Location = new System.Drawing.Point(651, 456);
             this.cmbmyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbmyo.Name = "cmbmyo";
             this.cmbmyo.Size = new System.Drawing.Size(272, 28);
             this.cmbmyo.TabIndex = 28;
+            this.cmbmyo.SelectedIndexChanged += new System.EventHandler(this.cmbmyo_SelectedIndexChanged);
             // 
             // cmbFakulte
             // 
@@ -249,7 +252,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbFakulte.Items.AddRange(new object[] {
             "İnegöl İşletme Fakültesi",
             "İnegöl MYO"});
-            this.cmbFakulte.Location = new System.Drawing.Point(683, 421);
+            this.cmbFakulte.Location = new System.Drawing.Point(651, 424);
             this.cmbFakulte.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFakulte.Name = "cmbFakulte";
             this.cmbFakulte.Size = new System.Drawing.Size(272, 28);
@@ -258,26 +261,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // mskOgrenciPosta
             // 
-            this.mskOgrenciPosta.Location = new System.Drawing.Point(683, 386);
+            this.mskOgrenciPosta.Location = new System.Drawing.Point(651, 392);
             this.mskOgrenciPosta.Margin = new System.Windows.Forms.Padding(4);
             this.mskOgrenciPosta.Mask = "000000000@ogr,uludag,edu,tr";
             this.mskOgrenciPosta.Name = "mskOgrenciPosta";
             this.mskOgrenciPosta.Size = new System.Drawing.Size(272, 26);
             this.mskOgrenciPosta.TabIndex = 24;
+            this.mskOgrenciPosta.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskOgrenciPosta_MaskInputRejected);
             // 
             // mskOgrenciTelefon
             // 
-            this.mskOgrenciTelefon.Location = new System.Drawing.Point(683, 354);
+            this.mskOgrenciTelefon.Location = new System.Drawing.Point(651, 360);
             this.mskOgrenciTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.mskOgrenciTelefon.Mask = "(999) 000-0000";
             this.mskOgrenciTelefon.Name = "mskOgrenciTelefon";
             this.mskOgrenciTelefon.Size = new System.Drawing.Size(272, 26);
             this.mskOgrenciTelefon.TabIndex = 23;
+            this.mskOgrenciTelefon.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskOgrenciTelefon_MaskInputRejected);
             // 
             // lblCinsiyet
             // 
             this.lblCinsiyet.AutoSize = true;
-            this.lblCinsiyet.Location = new System.Drawing.Point(81, 519);
+            this.lblCinsiyet.Location = new System.Drawing.Point(76, 492);
             this.lblCinsiyet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCinsiyet.Name = "lblCinsiyet";
             this.lblCinsiyet.Size = new System.Drawing.Size(79, 20);
@@ -290,12 +295,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(527, 391);
+            this.label8.Location = new System.Drawing.Point(500, 395);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Öğrenci E-Posta :";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -303,12 +309,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(529, 358);
+            this.label7.Location = new System.Drawing.Point(505, 363);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 20);
             this.label7.TabIndex = 18;
             this.label7.Text = "Öğrenci Telefon :";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -316,7 +323,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(31, 485);
+            this.label6.Location = new System.Drawing.Point(26, 459);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 20);
@@ -329,7 +336,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(57, 452);
+            this.label5.Location = new System.Drawing.Point(52, 426);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 20);
@@ -342,12 +349,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(539, 459);
+            this.label4.Location = new System.Drawing.Point(512, 459);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Öğrenci Bölüm :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -355,7 +363,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(56, 420);
+            this.label3.Location = new System.Drawing.Point(51, 393);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 20);
@@ -369,12 +377,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(531, 426);
+            this.label2.Location = new System.Drawing.Point(506, 427);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Öğrenci Fakülte :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -382,7 +391,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(88, 386);
+            this.label1.Location = new System.Drawing.Point(83, 360);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
@@ -394,7 +403,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.Green;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuncelle.Location = new System.Drawing.Point(1139, 642);
+            this.btnGuncelle.Location = new System.Drawing.Point(1116, 642);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(131, 46);
@@ -584,7 +593,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // txtOgrenciAd
             // 
             this.txtOgrenciAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrenciAd.Location = new System.Drawing.Point(169, 449);
+            this.txtOgrenciAd.Location = new System.Drawing.Point(162, 421);
             this.txtOgrenciAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOgrenciAd.Name = "txtOgrenciAd";
             this.txtOgrenciAd.Size = new System.Drawing.Size(272, 26);
@@ -593,7 +602,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // txtOgrenciSoyad
             // 
             this.txtOgrenciSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrenciSoyad.Location = new System.Drawing.Point(169, 482);
+            this.txtOgrenciSoyad.Location = new System.Drawing.Point(162, 453);
             this.txtOgrenciSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOgrenciSoyad.Name = "txtOgrenciSoyad";
             this.txtOgrenciSoyad.Size = new System.Drawing.Size(272, 26);

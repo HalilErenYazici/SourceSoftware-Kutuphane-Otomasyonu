@@ -28,7 +28,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (move == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
         }
 
         private void Panel_MouseUp(object sender, MouseEventArgs e)
