@@ -161,6 +161,12 @@
     <Compile Include="Ogrenci.Designer.cs">
       <DependentUpon>Ogrenci.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIsleri.Designer.cs">
+      <DependentUpon>OgrenciIsleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelVeriGuncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ogrenci.resx">
       <DependentUpon>Ogrenci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIsleri.resx">
+      <DependentUpon>OgrenciIsleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelVeriGuncelleme.resx">
       <DependentUpon>PersonelVeriGuncelleme.cs</DependentUpon>

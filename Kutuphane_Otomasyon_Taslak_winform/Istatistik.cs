@@ -18,11 +18,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
         }
 
+        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
+        MySqlConnection connection = new MySqlConnection(connection_strg);
+
         bool move;
         int mouse_x;
         int mouse_y;
-        static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
-        MySqlConnection connection = new MySqlConnection(connection_strg);
         private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
             if (move == true)
@@ -50,7 +51,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void kaplaButon_Click(object sender, EventArgs e)
         {
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void simgeButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         /*  #en çok hangi ülkeden müşteri var sorgusu
@@ -60,11 +67,6 @@ GROUP BY country
 ORDER BY COUNT(CustomerID) DESC
 LIMIT 1; */
 
-
-        private void simgeButon_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void Istatistik_Load(object sender, EventArgs e)
         {
@@ -231,11 +233,6 @@ LIMIT 1;*/
                 lblenAzKayitOlanBolum.Text = dr2["ogrBolum"].ToString();
             }
             connection.Close();*/
-
-        }
-
-        private void anasayfaBtn_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -53,6 +53,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void kaplaButon_Click(object sender, EventArgs e)
         {
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -161,16 +162,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Emanet b = new Emanet();
-            b.ShowDialog();
+            Emanet form = new Emanet();
+            form.ShowDialog();
+            this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Ogrenci c = new Ogrenci();
-            c.ShowDialog();
+            Ogrenci form = new Ogrenci();
+            form.Show();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -190,7 +191,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
             listelemanet();
-
         }
 
         public void listelemanet()
@@ -219,10 +219,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             }
            */
-
-
             connection.Close();
-
         }
 
         private void button12_Click(object sender, EventArgs e)
