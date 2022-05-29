@@ -227,7 +227,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblidcevirmensoyad.Location = new System.Drawing.Point(1095, 186);
             this.lblidcevirmensoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblidcevirmensoyad.Name = "lblidcevirmensoyad";
-            this.lblidcevirmensoyad.Size = new System.Drawing.Size(114, 16);
+            this.lblidcevirmensoyad.Size = new System.Drawing.Size(117, 17);
             this.lblidcevirmensoyad.TabIndex = 89;
             this.lblidcevirmensoyad.Text = "lblcevirmensoyad";
             this.lblidcevirmensoyad.Visible = false;
@@ -238,7 +238,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblidcevirmenad.Location = new System.Drawing.Point(1095, 154);
             this.lblidcevirmenad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblidcevirmenad.Name = "lblidcevirmenad";
-            this.lblidcevirmenad.Size = new System.Drawing.Size(92, 16);
+            this.lblidcevirmenad.Size = new System.Drawing.Size(95, 17);
             this.lblidcevirmenad.TabIndex = 88;
             this.lblidcevirmenad.Text = "lblcevirmenad";
             this.lblidcevirmenad.Visible = false;
@@ -252,7 +252,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lbltur.Location = new System.Drawing.Point(493, 417);
             this.lbltur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltur.Name = "lbltur";
-            this.lbltur.Size = new System.Drawing.Size(36, 15);
+            this.lbltur.Size = new System.Drawing.Size(39, 17);
             this.lbltur.TabIndex = 87;
             this.lbltur.Text = "lbltur";
             this.lbltur.Visible = false;
@@ -266,7 +266,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblkategori.Location = new System.Drawing.Point(493, 610);
             this.lblkategori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblkategori.Name = "lblkategori";
-            this.lblkategori.Size = new System.Drawing.Size(64, 15);
+            this.lblkategori.Size = new System.Drawing.Size(70, 17);
             this.lblkategori.TabIndex = 86;
             this.lblkategori.Text = "lblkategori";
             this.lblkategori.Visible = false;
@@ -280,7 +280,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblyayinevitel.Location = new System.Drawing.Point(493, 473);
             this.lblyayinevitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblyayinevitel.Name = "lblyayinevitel";
-            this.lblyayinevitel.Size = new System.Drawing.Size(77, 15);
+            this.lblyayinevitel.Size = new System.Drawing.Size(84, 17);
             this.lblyayinevitel.TabIndex = 84;
             this.lblyayinevitel.Text = "lblyayinevitel";
             this.lblyayinevitel.Visible = false;
@@ -294,7 +294,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblyayinevi.Location = new System.Drawing.Point(493, 446);
             this.lblyayinevi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblyayinevi.Name = "lblyayinevi";
-            this.lblyayinevi.Size = new System.Drawing.Size(63, 15);
+            this.lblyayinevi.Size = new System.Drawing.Size(69, 17);
             this.lblyayinevi.TabIndex = 83;
             this.lblyayinevi.Text = "lblyayinevi";
             this.lblyayinevi.Visible = false;
@@ -308,7 +308,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblyazarsoyadi.Location = new System.Drawing.Point(493, 226);
             this.lblyazarsoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblyazarsoyadi.Name = "lblyazarsoyadi";
-            this.lblyazarsoyadi.Size = new System.Drawing.Size(82, 15);
+            this.lblyazarsoyadi.Size = new System.Drawing.Size(92, 17);
             this.lblyazarsoyadi.TabIndex = 81;
             this.lblyazarsoyadi.Text = "lblyazarsoyadi";
             this.lblyazarsoyadi.Visible = false;
@@ -322,7 +322,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblYazar.Location = new System.Drawing.Point(493, 198);
             this.lblYazar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYazar.Name = "lblYazar";
-            this.lblYazar.Size = new System.Drawing.Size(48, 15);
+            this.lblYazar.Size = new System.Drawing.Size(54, 17);
             this.lblYazar.TabIndex = 80;
             this.lblYazar.Text = "lblyazar";
             this.lblYazar.Visible = false;
@@ -337,7 +337,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lbldemirbasno.Location = new System.Drawing.Point(493, 171);
             this.lbldemirbasno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldemirbasno.Name = "lbldemirbasno";
-            this.lbldemirbasno.Size = new System.Drawing.Size(53, 15);
+            this.lbldemirbasno.Size = new System.Drawing.Size(59, 17);
             this.lbldemirbasno.TabIndex = 79;
             this.lbldemirbasno.Text = "avalaible";
             this.lbldemirbasno.Visible = false;
@@ -351,7 +351,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblisbn.Location = new System.Drawing.Point(493, 254);
             this.lblisbn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblisbn.Name = "lblisbn";
-            this.lblisbn.Size = new System.Drawing.Size(53, 15);
+            this.lblisbn.Size = new System.Drawing.Size(59, 17);
             this.lblisbn.TabIndex = 78;
             this.lblisbn.Text = "avalaible";
             this.lblisbn.Visible = false;
@@ -365,7 +365,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblbarkod.Location = new System.Drawing.Point(493, 144);
             this.lblbarkod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblbarkod.Name = "lblbarkod";
-            this.lblbarkod.Size = new System.Drawing.Size(53, 15);
+            this.lblbarkod.Size = new System.Drawing.Size(59, 17);
             this.lblbarkod.TabIndex = 77;
             this.lblbarkod.Text = "avalaible";
             this.lblbarkod.Visible = false;
@@ -395,7 +395,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Controls.Add(this.txtyazarsoyad);
             this.panel3.Controls.Add(this.txtyazar);
             this.panel3.Location = new System.Drawing.Point(648, 278);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(435, 400);
             this.panel3.TabIndex = 75;
@@ -407,7 +407,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label35.Location = new System.Drawing.Point(19, 372);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(91, 16);
+            this.label35.Size = new System.Drawing.Size(96, 17);
             this.label35.TabIndex = 88;
             this.label35.Text = "Yazar Soyadı:";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -419,7 +419,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label32.Location = new System.Drawing.Point(19, 283);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(113, 16);
+            this.label32.Size = new System.Drawing.Size(118, 17);
             this.label32.TabIndex = 86;
             this.label32.Text = "Çevirmen Soyadı:";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -432,7 +432,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label36.Location = new System.Drawing.Point(19, 342);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(68, 16);
+            this.label36.Size = new System.Drawing.Size(73, 17);
             this.label36.TabIndex = 89;
             this.label36.Text = "Yazar Adı:";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -444,7 +444,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label31.Location = new System.Drawing.Point(19, 249);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(90, 16);
+            this.label31.Size = new System.Drawing.Size(95, 17);
             this.label31.TabIndex = 86;
             this.label31.Text = "Çevirmen Adı:";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -457,7 +457,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label30.Location = new System.Drawing.Point(19, 187);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(83, 16);
+            this.label30.Size = new System.Drawing.Size(89, 17);
             this.label30.TabIndex = 86;
             this.label30.Text = "Kategori Adı:";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -469,7 +469,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label29.Location = new System.Drawing.Point(19, 121);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(85, 16);
+            this.label29.Size = new System.Drawing.Size(89, 17);
             this.label29.TabIndex = 86;
             this.label29.Text = "Yayınevi Tel:";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -481,7 +481,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label25.Location = new System.Drawing.Point(19, 91);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(85, 16);
+            this.label25.Size = new System.Drawing.Size(89, 17);
             this.label25.TabIndex = 86;
             this.label25.Text = "Yayınevi Adı:";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -493,7 +493,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label24.Location = new System.Drawing.Point(19, 43);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(53, 16);
+            this.label24.Size = new System.Drawing.Size(58, 17);
             this.label24.TabIndex = 85;
             this.label24.Text = "Tür Adı:";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -501,7 +501,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnyazar
             // 
             this.btnyazar.Location = new System.Drawing.Point(347, 338);
-            this.btnyazar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnyazar.Margin = new System.Windows.Forms.Padding(4);
             this.btnyazar.Name = "btnyazar";
             this.btnyazar.Size = new System.Drawing.Size(77, 52);
             this.btnyazar.TabIndex = 82;
@@ -532,7 +532,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // tureklebtn
             // 
             this.tureklebtn.Location = new System.Drawing.Point(347, 34);
-            this.tureklebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tureklebtn.Margin = new System.Windows.Forms.Padding(4);
             this.tureklebtn.Name = "tureklebtn";
             this.tureklebtn.Size = new System.Drawing.Size(77, 30);
             this.tureklebtn.TabIndex = 76;
@@ -543,7 +543,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(347, 247);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(77, 55);
             this.button6.TabIndex = 81;
@@ -562,7 +562,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnkategori
             // 
             this.btnkategori.Location = new System.Drawing.Point(347, 165);
-            this.btnkategori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnkategori.Margin = new System.Windows.Forms.Padding(4);
             this.btnkategori.Name = "btnkategori";
             this.btnkategori.Size = new System.Drawing.Size(77, 50);
             this.btnkategori.TabIndex = 79;
@@ -573,7 +573,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // yayinevibtn
             // 
             this.yayinevibtn.Location = new System.Drawing.Point(347, 89);
-            this.yayinevibtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yayinevibtn.Margin = new System.Windows.Forms.Padding(4);
             this.yayinevibtn.Name = "yayinevibtn";
             this.yayinevibtn.Size = new System.Drawing.Size(77, 53);
             this.yayinevibtn.TabIndex = 77;
@@ -584,7 +584,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // msktel
             // 
             this.msktel.Location = new System.Drawing.Point(133, 119);
-            this.msktel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.msktel.Margin = new System.Windows.Forms.Padding(4);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
             this.msktel.Size = new System.Drawing.Size(207, 22);
@@ -639,7 +639,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Çevirmen Var",
             "Çevirmen Yok"});
             this.cmbcevirmensoyadi.Location = new System.Drawing.Point(861, 183);
-            this.cmbcevirmensoyadi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbcevirmensoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
             this.cmbcevirmensoyadi.Size = new System.Drawing.Size(207, 24);
             this.cmbcevirmensoyadi.TabIndex = 73;
@@ -652,7 +652,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Çevirmen Var",
             "Çevirmen Yok"});
             this.cmbcevirmenadi.Location = new System.Drawing.Point(861, 150);
-            this.cmbcevirmenadi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbcevirmenadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
             this.cmbcevirmenadi.Size = new System.Drawing.Size(207, 24);
             this.cmbcevirmenadi.TabIndex = 72;
@@ -662,7 +662,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbyayinevitel.FormattingEnabled = true;
             this.cmbyayinevitel.Location = new System.Drawing.Point(260, 470);
-            this.cmbyayinevitel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbyayinevitel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevitel.Name = "cmbyayinevitel";
             this.cmbyayinevitel.Size = new System.Drawing.Size(207, 24);
             this.cmbyayinevitel.TabIndex = 71;
@@ -672,7 +672,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbyayinevi.FormattingEnabled = true;
             this.cmbyayinevi.Location = new System.Drawing.Point(260, 442);
-            this.cmbyayinevi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbyayinevi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevi.Name = "cmbyayinevi";
             this.cmbyayinevi.Size = new System.Drawing.Size(207, 24);
             this.cmbyayinevi.TabIndex = 70;
@@ -682,7 +682,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbtur.FormattingEnabled = true;
             this.cmbtur.Location = new System.Drawing.Point(260, 414);
-            this.cmbtur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbtur.Margin = new System.Windows.Forms.Padding(4);
             this.cmbtur.Name = "cmbtur";
             this.cmbtur.Size = new System.Drawing.Size(207, 24);
             this.cmbtur.TabIndex = 69;
@@ -692,7 +692,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbyazarsoyad.FormattingEnabled = true;
             this.cmbyazarsoyad.Location = new System.Drawing.Point(260, 223);
-            this.cmbyazarsoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbyazarsoyad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarsoyad.Name = "cmbyazarsoyad";
             this.cmbyazarsoyad.Size = new System.Drawing.Size(207, 24);
             this.cmbyazarsoyad.TabIndex = 67;
@@ -702,7 +702,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbyazarad.FormattingEnabled = true;
             this.cmbyazarad.Location = new System.Drawing.Point(260, 194);
-            this.cmbyazarad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbyazarad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarad.Name = "cmbyazarad";
             this.cmbyazarad.Size = new System.Drawing.Size(207, 24);
             this.cmbyazarad.TabIndex = 66;
@@ -713,7 +713,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.cmbkategori.FormattingEnabled = true;
             this.cmbkategori.Location = new System.Drawing.Point(260, 607);
-            this.cmbkategori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbkategori.Margin = new System.Windows.Forms.Padding(4);
             this.cmbkategori.Name = "cmbkategori";
             this.cmbkategori.Size = new System.Drawing.Size(207, 24);
             this.cmbkategori.TabIndex = 65;
@@ -743,7 +743,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(41, 476);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(152, 16);
+            this.label27.Size = new System.Drawing.Size(163, 17);
             this.label27.TabIndex = 60;
             this.label27.Text = "Kitabın Yayınevi telefonu";
             // 
@@ -754,7 +754,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.ForeColor = System.Drawing.Color.White;
             this.lblcevirmensoyad.Location = new System.Drawing.Point(643, 187);
             this.lblcevirmensoyad.Name = "lblcevirmensoyad";
-            this.lblcevirmensoyad.Size = new System.Drawing.Size(153, 16);
+            this.lblcevirmensoyad.Size = new System.Drawing.Size(161, 17);
             this.lblcevirmensoyad.TabIndex = 54;
             this.lblcevirmensoyad.Text = "Kitabın Çevirmen Soyadı";
             // 
@@ -765,14 +765,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(41, 250);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(71, 16);
+            this.label23.Size = new System.Drawing.Size(75, 17);
             this.label23.TabIndex = 52;
             this.label23.Text = "Kitab ISBN";
             // 
             // mskkurumkayittarihi
             // 
             this.mskkurumkayittarihi.Location = new System.Drawing.Point(260, 580);
-            this.mskkurumkayittarihi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskkurumkayittarihi.Margin = new System.Windows.Forms.Padding(4);
             this.mskkurumkayittarihi.Mask = "00/00/0000";
             this.mskkurumkayittarihi.Name = "mskkurumkayittarihi";
             this.mskkurumkayittarihi.Size = new System.Drawing.Size(207, 22);
@@ -782,7 +782,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // mskkitapyayinyili
             // 
             this.mskkitapyayinyili.Location = new System.Drawing.Point(260, 498);
-            this.mskkitapyayinyili.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskkitapyayinyili.Margin = new System.Windows.Forms.Padding(4);
             this.mskkitapyayinyili.Mask = "00/00/0000";
             this.mskkitapyayinyili.Name = "mskkitapyayinyili";
             this.mskkitapyayinyili.Size = new System.Drawing.Size(207, 22);
@@ -796,7 +796,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(643, 119);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(122, 16);
+            this.label22.Size = new System.Drawing.Size(133, 17);
             this.label22.TabIndex = 47;
             this.label22.Text = "Kitabın Raf Konumu";
             // 
@@ -826,7 +826,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(41, 561);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 16);
+            this.label16.Size = new System.Drawing.Size(74, 17);
             this.label16.TabIndex = 44;
             this.label16.Text = "Kitabın Dili";
             // 
@@ -837,7 +837,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(41, 590);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(156, 16);
+            this.label17.Size = new System.Drawing.Size(171, 17);
             this.label17.TabIndex = 43;
             this.label17.Text = "Kitabın Kurum Kayıt Tarihi";
             // 
@@ -848,7 +848,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(41, 618);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(110, 16);
+            this.label18.Size = new System.Drawing.Size(118, 17);
             this.label18.TabIndex = 42;
             this.label18.Text = "Kitabın Kategorisi";
             // 
@@ -859,7 +859,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(41, 646);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 16);
+            this.label19.Size = new System.Drawing.Size(88, 17);
             this.label19.TabIndex = 41;
             this.label19.Text = "Kitabın Özeti";
             // 
@@ -870,7 +870,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.ForeColor = System.Drawing.Color.White;
             this.lblcevirmenad.Location = new System.Drawing.Point(643, 154);
             this.lblcevirmenad.Name = "lblcevirmenad";
-            this.lblcevirmenad.Size = new System.Drawing.Size(130, 16);
+            this.lblcevirmenad.Size = new System.Drawing.Size(138, 17);
             this.lblcevirmenad.TabIndex = 40;
             this.lblcevirmenad.Text = "Kitabın Çevirmen Adı";
             // 
@@ -881,7 +881,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(643, 86);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(138, 16);
+            this.label21.Size = new System.Drawing.Size(148, 17);
             this.label21.TabIndex = 39;
             this.label21.Text = "Kitabın Dolap Konumu";
             // 
@@ -892,7 +892,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(41, 391);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(149, 16);
+            this.label11.Size = new System.Drawing.Size(157, 17);
             this.label11.TabIndex = 38;
             this.label11.Text = "Kitabın Basım Numarası";
             // 
@@ -903,7 +903,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(41, 448);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 16);
+            this.label12.Size = new System.Drawing.Size(108, 17);
             this.label12.TabIndex = 37;
             this.label12.Text = "Kitabın Yayınevi";
             // 
@@ -914,7 +914,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(41, 420);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 16);
+            this.label13.Size = new System.Drawing.Size(85, 17);
             this.label13.TabIndex = 36;
             this.label13.Text = "Kitabın Türü";
             // 
@@ -925,7 +925,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(41, 505);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 16);
+            this.label14.Size = new System.Drawing.Size(101, 17);
             this.label14.TabIndex = 35;
             this.label14.Text = "Kitap Yayın Yılı";
             // 
@@ -936,7 +936,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(41, 533);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 16);
+            this.label15.Size = new System.Drawing.Size(95, 17);
             this.label15.TabIndex = 34;
             this.label15.Text = "Kitap Çıkış Yılı";
             // 
@@ -947,7 +947,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(41, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 33;
             this.label6.Text = "Kitabın Yazarı";
             // 
@@ -958,7 +958,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(41, 278);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 16);
+            this.label7.Size = new System.Drawing.Size(132, 17);
             this.label7.TabIndex = 32;
             this.label7.Text = "Kitabın Sayfa Sayısı";
             // 
@@ -969,7 +969,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(41, 306);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.Size = new System.Drawing.Size(92, 17);
             this.label8.TabIndex = 31;
             this.label8.Text = "Kitap Konusu";
             // 
@@ -980,7 +980,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(41, 335);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 16);
+            this.label9.Size = new System.Drawing.Size(112, 17);
             this.label9.TabIndex = 30;
             this.label9.Text = "Kitap Stok Bilgisi";
             // 
@@ -991,7 +991,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(41, 363);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 16);
+            this.label10.Size = new System.Drawing.Size(170, 17);
             this.label10.TabIndex = 29;
             this.label10.Text = "Kitabın Anahtar Kelimeleri";
             // 
@@ -1002,7 +1002,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(41, 222);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 16);
+            this.label5.Size = new System.Drawing.Size(139, 17);
             this.label5.TabIndex = 28;
             this.label5.Text = "Kitabın Yazar Soyadı";
             // 
@@ -1013,7 +1013,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(41, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 16);
+            this.label4.Size = new System.Drawing.Size(168, 17);
             this.label4.TabIndex = 27;
             this.label4.Text = "Kitap Demirbaş Numarası";
             // 
@@ -1024,7 +1024,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(41, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(108, 17);
             this.label3.TabIndex = 26;
             this.label3.Text = "Kitabın Barkodu";
             // 
@@ -1035,7 +1035,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(41, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 25;
             this.label2.Text = "Kitabın Adı";
             // 
@@ -1046,7 +1046,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(41, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 16);
+            this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 24;
             this.label1.Text = "Kitabın Cilt Numarası";
             // 
@@ -1196,7 +1196,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // infoBtn
             // 
             this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
+            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
             this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoBtn.FlatAppearance.BorderSize = 0;

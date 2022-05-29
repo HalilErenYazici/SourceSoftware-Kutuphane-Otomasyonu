@@ -134,6 +134,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // dataGridViewemanet
             // 
+            this.dataGridViewemanet.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewemanet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewemanet.Location = new System.Drawing.Point(9, 94);
             this.dataGridViewemanet.Name = "dataGridViewemanet";
@@ -224,7 +225,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // infoBtn
             // 
             this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
+            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
             this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoBtn.FlatAppearance.BorderSize = 0;
