@@ -494,7 +494,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             //while (oku.Read())
             //{
             //    //label1.Text = dr["stokyeri_id"].ToString();
-
+            
             //   // lblkategori.Text = oku[0].ToString();
             //}
             connection.Close();
@@ -790,8 +790,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
           /*  string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);*/
 
-            if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""/*||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text==""*/)
+            if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" /*txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""/*||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text==""*/)
              {
+
                  MessageBox.Show("lütfen alanları boş geçmeyiniz");
              }
             else
@@ -800,7 +801,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 connection.Open();
 
-                if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" && lblbarkod.Text == "Yazılabilir") {
+                if (/*lblisbn.Text == "Yazılabilir" &&*/ lbldemirbasno.Text == "Yazılabilir" /* lblbarkod.Text == "Yazılabilir"*/) {
 
                     if (cmbyazarad.Text=="")
                     {
@@ -815,24 +816,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         eklekomut2.Parameters.AddWithValue("@yynevId", null);
 
                         eklekomut2.Parameters.AddWithValue("@cvrId", null);
-                        eklekomut2.Parameters.AddWithValue("@barkod", txtbarkod.Text);
-                        eklekomut2.Parameters.AddWithValue("@ISBN", txtisbn.Text);
+                        eklekomut2.Parameters.AddWithValue("@barkod", null);
+                        eklekomut2.Parameters.AddWithValue("@ISBN", null);
                         eklekomut2.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
                         eklekomut2.Parameters.AddWithValue("@kitapAd", txtKitapAd.Text);
-                        eklekomut2.Parameters.AddWithValue("@cilt", txtcilt.Text);
-                        eklekomut2.Parameters.AddWithValue("@konu", txtkitapkonusu.Text);
-                        eklekomut2.Parameters.AddWithValue("@ozet", txtozet.Text);
-                        eklekomut2.Parameters.AddWithValue("@sayfa", txtkitapsayfasayisi.Text);
-                        eklekomut2.Parameters.AddWithValue("@stok", txtstok.Text);
+                        eklekomut2.Parameters.AddWithValue("@cilt", null);
+                        eklekomut2.Parameters.AddWithValue("@konu", null);
+                        eklekomut2.Parameters.AddWithValue("@ozet", null);
+                        eklekomut2.Parameters.AddWithValue("@sayfa", null);
+                        eklekomut2.Parameters.AddWithValue("@stok", null);
 
-                        eklekomut2.Parameters.AddWithValue("@anhtrK", txtanahtarkelime.Text);
-                        eklekomut2.Parameters.AddWithValue("@dil", txtdil.Text);
-                        eklekomut2.Parameters.AddWithValue("@ynSenesi", mskkitapyayinyili.Text);
-                        eklekomut2.Parameters.AddWithValue("@kkTarih", mskkurumkayittarihi.Text);
-                        eklekomut2.Parameters.AddWithValue("@basimNo", txtbasimnumara.Text);
-                        eklekomut2.Parameters.AddWithValue("@cikisYili", txtcikisyili.Text);
-                        eklekomut2.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
-                        eklekomut2.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
+                        eklekomut2.Parameters.AddWithValue("@anhtrK", null);
+                        eklekomut2.Parameters.AddWithValue("@dil", null);
+                        eklekomut2.Parameters.AddWithValue("@ynSenesi", null);
+                        eklekomut2.Parameters.AddWithValue("@kkTarih", null);
+                        eklekomut2.Parameters.AddWithValue("@basimNo", null);
+                        eklekomut2.Parameters.AddWithValue("@cikisYili", null);
+                        eklekomut2.Parameters.AddWithValue("@dolapNo", null);
+                        eklekomut2.Parameters.AddWithValue("@rafNo", null);
                         eklekomut2.Parameters.AddWithValue("@KacKezAlindi", KacKezEmanetAlindi);
 
 
@@ -845,12 +846,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
                         connection.Close();
-                        MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
-
-                        AnaSayfa AnaSayfa = new AnaSayfa();
-                        AnaSayfa.Show();
-                        this.Hide();
-
+                        MessageBox.Show("kayıt başarıyla gerçekleştirildi");
+                        Kitap kitap = new Kitap();
+                        kitap.Show();
+                        this.Close();
                     }
                     else
                     {
