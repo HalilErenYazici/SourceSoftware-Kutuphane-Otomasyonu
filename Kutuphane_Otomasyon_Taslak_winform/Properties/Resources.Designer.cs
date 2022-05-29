@@ -73,6 +73,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_chart2Rgb {
+            get {
+                object obj = ResourceManager.GetObject("bar-chart2Rgb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bar_chartRgb {
+            get {
+                object obj = ResourceManager.GetObject("bar-chartRgb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Bck_Mv {
             get {
                 object obj = ResourceManager.GetObject("Bck-Mv", resourceCulture);
@@ -356,6 +376,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap userAltrntf {
+            get {
+                object obj = ResourceManager.GetObject("userAltrntf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -167,12 +167,6 @@
     <Compile Include="OgrenciIsleri.Designer.cs">
       <DependentUpon>OgrenciIsleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonelVeriGuncelleme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PersonelVeriGuncelleme.Designer.cs">
-      <DependentUpon>PersonelVeriGuncelleme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tabKitapDuzenle.cs">
@@ -231,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIsleri.resx">
       <DependentUpon>OgrenciIsleri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PersonelVeriGuncelleme.resx">
-      <DependentUpon>PersonelVeriGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -365,6 +356,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chartRgb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart2Rgb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userAltrntf.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

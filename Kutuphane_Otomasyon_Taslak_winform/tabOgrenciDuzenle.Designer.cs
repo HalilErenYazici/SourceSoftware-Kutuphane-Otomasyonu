@@ -37,6 +37,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button3 = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mskKartId = new System.Windows.Forms.MaskedTextBox();
             this.mskOgrNo = new System.Windows.Forms.MaskedTextBox();
             this.cmbmyo = new System.Windows.Forms.ComboBox();
@@ -64,10 +65,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.txtOgrenciAd = new System.Windows.Forms.TextBox();
             this.txtOgrenciSoyad = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -183,6 +183,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox.Size = new System.Drawing.Size(220, 26);
             this.searchBox.TabIndex = 32;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 101);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 230);
+            this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // mskKartId
             // 
@@ -475,7 +493,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // infoBtn
             // 
             this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
+            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
             this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoBtn.FlatAppearance.BorderSize = 0;
@@ -590,24 +608,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtOgrenciSoyad.Size = new System.Drawing.Size(272, 26);
             this.txtOgrenciSoyad.TabIndex = 7;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 101);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1256, 230);
-            this.dataGridView1.TabIndex = 31;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
             // tabOgrenciDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -624,8 +624,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Load += new System.EventHandler(this.tabOgrenciDuzenle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

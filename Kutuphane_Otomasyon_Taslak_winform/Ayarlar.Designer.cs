@@ -31,14 +31,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ayarlar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logOutBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cikisButon = new System.Windows.Forms.Button();
-            this.infoBtn = new System.Windows.Forms.Button();
+            this.istBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.logOutBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,11 +55,31 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 3;
             // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logOutBtn.Location = new System.Drawing.Point(12, 59);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(43, 42);
+            this.logOutBtn.TabIndex = 15;
+            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.cikisButon);
-            this.panel2.Controls.Add(this.infoBtn);
+            this.panel2.Controls.Add(this.istBtn);
             this.panel2.Controls.Add(this.anasayfaBtn);
             this.panel2.Controls.Add(this.kitapBtn);
             this.panel2.Controls.Add(this.emanetBtn);
@@ -91,23 +111,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click_1);
             // 
-            // infoBtn
+            // istBtn
             // 
-            this.infoBtn.BackColor = System.Drawing.Color.DarkGray;
-            this.infoBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.settings;
-            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infoBtn.FlatAppearance.BorderSize = 0;
-            this.infoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(260, 0);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(42, 42);
-            this.infoBtn.TabIndex = 9;
-            this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.infoBtn.UseVisualStyleBackColor = false;
+            this.istBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.istBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
+            this.istBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.istBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.istBtn.FlatAppearance.BorderSize = 0;
+            this.istBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.istBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.istBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.istBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.istBtn.Location = new System.Drawing.Point(260, 0);
+            this.istBtn.Name = "istBtn";
+            this.istBtn.Size = new System.Drawing.Size(42, 42);
+            this.istBtn.TabIndex = 9;
+            this.istBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.istBtn.UseVisualStyleBackColor = false;
             // 
             // anasayfaBtn
             // 
@@ -185,26 +205,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
-            // logOutBtn
-            // 
-            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
-            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logOutBtn.FlatAppearance.BorderSize = 0;
-            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logOutBtn.Location = new System.Drawing.Point(12, 59);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(43, 42);
-            this.logOutBtn.TabIndex = 15;
-            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.logOutBtn.UseVisualStyleBackColor = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
-            // 
             // Ayarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,7 +228,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cikisButon;
-        private System.Windows.Forms.Button infoBtn;
+        private System.Windows.Forms.Button istBtn;
         private System.Windows.Forms.Button anasayfaBtn;
         private System.Windows.Forms.Button kitapBtn;
         private System.Windows.Forms.Button emanetBtn;

@@ -21,6 +21,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         public static string ad, soyad;
 
+        private void GirisEkrani_Load(object sender, EventArgs e)
+        {
+            //txtUser.Text = "Kullanıcı Adı";
+            //txtUser.ForeColor = Color.Gray;
+
+            //txtPass.Text = "Şifre";
+            //txtPass.ForeColor = Color.Gray;
+        }
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (txtUser.Text == "Kullanıcı Adı")
@@ -29,7 +37,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 txtUser.ForeColor = Color.Black;
             }
         }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (txtUser.Text == "")
@@ -38,13 +45,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 txtUser.ForeColor = Color.Gray;
             }
         }
-
         private void textBox2_Enter(object sender, EventArgs e)
         {
             if (txtPass.Text == "Şifre")
             {
                 txtPass.Text = "";
                 txtPass.ForeColor = Color.Black;
+                txtPass.PasswordChar = '*';
             }
         }
         private void textBox2_Leave(object sender, EventArgs e)
@@ -53,9 +60,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 txtPass.Text = "Şifre";
                 txtPass.ForeColor = Color.Gray;
+                txtPass.PasswordChar = '\0';
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -83,8 +90,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_x = e.X;
             mouse_y = e.Y;
         }
-
-        
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlCommand command;
