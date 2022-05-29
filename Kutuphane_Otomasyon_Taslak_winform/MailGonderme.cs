@@ -20,6 +20,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnMail_Click(object sender, EventArgs e)
         {
+
             /* MailMessage ePosta = new MailMessage();
               ePosta.From = new MailAddress("berkaygrcn34@gmail.com");
               ePosta.To.Add(txtMail.Text);
