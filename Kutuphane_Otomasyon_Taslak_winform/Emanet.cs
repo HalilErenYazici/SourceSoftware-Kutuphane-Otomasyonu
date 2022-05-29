@@ -439,5 +439,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             searchBox.Clear();
         }
+
+        private void btnMail_Click(object sender, EventArgs e)
+        {
+            MailGonderme mail = new MailGonderme();
+            mail.Show();
+            this.Hide();
+        }
+
+        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewemanet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
