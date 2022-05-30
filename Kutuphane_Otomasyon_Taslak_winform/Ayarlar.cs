@@ -20,7 +20,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         bool move;
         int mouse_x;
         int mouse_y;
-        int KacKezEmanetAlindi = 0;
+        //int KacKezEmanetAlindi = 0;
 
         private void Panel_MouseMove(object sender, MouseEventArgs e)
         {

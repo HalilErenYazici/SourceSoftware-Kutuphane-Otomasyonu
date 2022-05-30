@@ -57,7 +57,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             YayinEvtel();
             cevirmenadi();
             cevirmensoyadi();
-
         }
         private void kategoriEkle()
         {
@@ -248,17 +247,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-     
-
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-   
-
-
-
-        }
-
         private void tureklebtn_Click(object sender, EventArgs e)
         {
             if (txttur.Text=="")
@@ -383,12 +371,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
 
         }
-
-        private void txtcilt_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
         private void txtbarkod_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
@@ -449,16 +431,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
         }
 
-        private void cmbcevirmensayisi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void cmbyazarad_TextChanged(object sender, EventArgs e)
         {
             //
@@ -498,11 +470,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             //   // lblkategori.Text = oku[0].ToString();
             //}
             connection.Close();
-
-        }
-
-        private void lblYazar_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -760,30 +727,35 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        //private void ClearAll(Control ctl)
+        //{
+        //    foreach (Control c in ctl.Controls)
+        //    {
+        //        if (c is TextBox)
+        //        {
+        //            ((TextBox)c).Clear();
+        //        }
+        //        if (c.Controls.Count > 0)
+        //        {
+        //            ClearAll(c);
+        //        }
+        //    }
+        //}
 
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcevirmen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcevirmensoyad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        //private void ClearAllCombo(Control ctl)
+        //{
+        //    foreach (Control c in ctl.Controls)
+        //    {
+        //        if (c is ComboBox)
+        //        {
+        //            ((ComboBox)c).ResetText();
+        //        }
+        //        if (c.Controls.Count > 0)
+        //        {
+        //            ClearAllCombo(c);
+        //        }
+        //    }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -847,9 +819,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                         connection.Close();
                         MessageBox.Show("kayıt başarıyla gerçekleştirildi");
-                        Kitap kitap = new Kitap();
-                        kitap.Show();
-                        this.Close();
+                        //Kitap kitap = new Kitap();
+                        //kitap.Show();
+                        //this.Close();
                     }
                     else
                     {
@@ -896,9 +868,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         connection.Close();
                         MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
 
-                        AnaSayfa AnaSayfa = new AnaSayfa();
-                        AnaSayfa.Show();
-                        this.Hide();
+
+                        //AnaSayfa AnaSayfa = new AnaSayfa();
+                        //AnaSayfa.Show();
+                        //this.Hide();
                     }
                   
 
@@ -909,14 +882,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
                     connection.Close();
                 }
-
-           }
-       
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
         }
 
-        private void cmbyazarad_SelectedIndexChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            
+            bxTurEkle a = new bxTurEkle();
+            a.ShowDialog();
         }
     }
 }

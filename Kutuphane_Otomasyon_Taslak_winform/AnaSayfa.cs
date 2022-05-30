@@ -132,18 +132,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             form.Show();
             this.Close();
         }
-        private void button12_Click(object sender, EventArgs e)
-        {
-            Grafikler grafik = new Grafikler();
-            grafik.Show();
-            this.Close();
-        }
-        private void btnogrenciisleri_Click(object sender, EventArgs e)
-        {
-            OgrenciIsleri ogris = new OgrenciIsleri();
-            ogris.Show();
-            this.Hide();
-        }
         private void kitapBtn_Click_1(object sender, EventArgs e)
         {
             Form form = new Kitap();

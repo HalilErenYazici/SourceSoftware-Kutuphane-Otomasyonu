@@ -14,7 +14,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
     public partial class tabOgrenciEkle : Form
     {
         int okuduguKitapSayisi = 0;
-        string  bolum;
+        //string  bolum;
         public tabOgrenciEkle()
         {
             InitializeComponent();
@@ -292,8 +292,5 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             connection.Close();
         }
-
-
-
     }
 }

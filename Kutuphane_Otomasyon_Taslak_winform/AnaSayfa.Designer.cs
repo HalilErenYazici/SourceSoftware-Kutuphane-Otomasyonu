@@ -37,46 +37,52 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon = new System.Windows.Forms.Button();
             this.simgeButon = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.istBtn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.istBtn);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.anasayfaBtn);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.emanetBtn);
             this.panel1.Controls.Add(this.ogrenciBtn);
             this.panel1.Controls.Add(this.kitapBtn);
@@ -93,6 +99,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pncrTxt);
             this.panel3.Controls.Add(this.adTxt);
             this.panel3.Controls.Add(this.kaplaButon);
@@ -145,7 +152,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1225, 1);
+            this.kaplaButon.Location = new System.Drawing.Point(1223, 1);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
             this.kaplaButon.Size = new System.Drawing.Size(20, 20);
@@ -165,7 +172,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(1195, 1);
+            this.simgeButon.Location = new System.Drawing.Point(1193, 1);
             this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simgeButon.Name = "simgeButon";
             this.simgeButon.Size = new System.Drawing.Size(20, 20);
@@ -185,7 +192,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(1255, 1);
+            this.cikisButon.Location = new System.Drawing.Point(1253, 1);
             this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButon.Name = "cikisButon";
             this.cikisButon.Size = new System.Drawing.Size(20, 20);
@@ -193,163 +200,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 494);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1278, 224);
-            this.panel2.TabIndex = 16;
-            // 
-            // button12
-            // 
-            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button12.BackColor = System.Drawing.Color.Cyan;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(1016, 73);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(85, 81);
-            this.button12.TabIndex = 36;
-            this.button12.Text = "Grafikler";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // button10
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(816, 162);
+            this.button10.Location = new System.Drawing.Point(813, 614);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(157, 34);
-            this.button10.TabIndex = 34;
+            this.button10.TabIndex = 45;
             this.button10.Text = "Kitap Düzenle";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button9
-            // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Location = new System.Drawing.Point(816, 96);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(157, 34);
-            this.button9.TabIndex = 33;
-            this.button9.Text = "Kitap Ekle";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(816, 28);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(157, 34);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Kitap Görüntüle";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(560, 162);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(157, 34);
-            this.button7.TabIndex = 31;
-            this.button7.Text = "Öğrenci Düzenle";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(560, 96);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 34);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Öğrenci Ekle";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(560, 28);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 34);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Öğrenci Görüntüle";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(304, 162);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 34);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Emanet İade";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(304, 96);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 34);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Emanet Teslim";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(304, 28);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 34);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Emanet Görüntüle";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -364,6 +227,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.TabIndex = 14;
             this.label5.Text = "İSTATİSTİK";
             // 
+            // button9
+            // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Location = new System.Drawing.Point(813, 548);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(157, 34);
+            this.button9.TabIndex = 44;
+            this.button9.Text = "Kitap Ekle";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -371,11 +248,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(868, 334);
+            this.label4.Location = new System.Drawing.Point(863, 334);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 28);
             this.label4.TabIndex = 13;
             this.label4.Text = "KİTAP";
+            // 
+            // button8
+            // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Location = new System.Drawing.Point(813, 480);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(157, 34);
+            this.button8.TabIndex = 43;
+            this.button8.Text = "Kitap Görüntüle";
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -391,6 +281,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label3.Text = "ÖĞRENCİ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button7.Location = new System.Drawing.Point(560, 614);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(157, 34);
+            this.button7.TabIndex = 42;
+            this.button7.Text = "Öğrenci Düzenle";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -398,11 +302,38 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(312, 334);
+            this.label2.Location = new System.Drawing.Point(310, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "EMANET İŞLERİ";
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Location = new System.Drawing.Point(560, 548);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(157, 34);
+            this.button6.TabIndex = 41;
+            this.button6.Text = "Öğrenci Ekle";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(560, 480);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(157, 34);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "Öğrenci Görüntüle";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -416,6 +347,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.Size = new System.Drawing.Size(109, 28);
             this.label1.TabIndex = 10;
             this.label1.Text = "ANASAYFA";
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Location = new System.Drawing.Point(304, 614);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(157, 34);
+            this.button4.TabIndex = 39;
+            this.button4.Text = "Emanet İade";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // istBtn
             // 
@@ -438,6 +383,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.istBtn.UseVisualStyleBackColor = false;
             this.istBtn.Click += new System.EventHandler(this.istBtn_Click_1);
             // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(304, 548);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 34);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Emanet Teslim";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // anasayfaBtn
             // 
             this.anasayfaBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -457,6 +416,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 1;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(304, 480);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 34);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Emanet Görüntüle";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // emanetBtn
             // 
@@ -543,8 +515,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -560,8 +532,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button emanetBtn;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label pncrTxt;
+        private System.Windows.Forms.Label adTxt;
+        private System.Windows.Forms.Button kaplaButon;
+        private System.Windows.Forms.Button simgeButon;
+        private System.Windows.Forms.Button cikisButon;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
@@ -571,11 +547,5 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label pncrTxt;
-        private System.Windows.Forms.Label adTxt;
-        private System.Windows.Forms.Button kaplaButon;
-        private System.Windows.Forms.Button simgeButon;
-        private System.Windows.Forms.Button cikisButon;
     }
 }

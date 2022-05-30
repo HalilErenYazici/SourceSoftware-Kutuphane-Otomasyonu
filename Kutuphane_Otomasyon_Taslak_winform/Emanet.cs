@@ -133,7 +133,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtOgrSoyad.Enabled = false;*/
         }
 
-        DateTime Dtn = new DateTime();
+        //DateTime Dtn = new DateTime();
 
         private void Emanet_Load(object sender, EventArgs e)
         {

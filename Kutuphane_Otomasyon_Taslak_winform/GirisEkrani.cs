@@ -28,6 +28,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             //txtPass.Text = "Şifre";
             //txtPass.ForeColor = Color.Gray;
+
+            //cmbGorev.Text = "Görev Tipi Seçiniz...";
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -90,6 +92,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_x = e.X;
             mouse_y = e.Y;
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlCommand command;
