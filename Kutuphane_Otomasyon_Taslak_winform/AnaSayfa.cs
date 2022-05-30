@@ -100,37 +100,49 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
             EmanetVer.Show();
+            this.Hide();
         }
         private void button4_Click(object sender, EventArgs e)
         {
             Emanetiade Emanetiade = new Emanetiade();
             Emanetiade.Show();
+            this.Hide();
+
         }
         private void button6_Click(object sender, EventArgs e)
         {
             Form form = new tabOgrenciEkle();
             form.Show();
+            this.Hide();
+
         }
         private void button7_Click(object sender, EventArgs e)
         {
             Form form = new tabOgrenciDuzenle();
             form.Show();
+            this.Hide();
+
         }
         private void button9_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapEkle();
             form.Show();
+            this.Hide();
+
         }
         private void button10_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapDuzenle();
             form.Show();
+            this.Hide();
+
         }
         private void button11_Click(object sender, EventArgs e)
         {
             Form form = new Istatistik();
             form.Show();
             this.Close();
+
         }
         private void kitapBtn_Click_1(object sender, EventArgs e)
         {
@@ -147,6 +159,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
 
         private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
