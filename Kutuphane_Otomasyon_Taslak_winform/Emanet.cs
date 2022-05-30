@@ -306,9 +306,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 }
             }
-            else if (cmbaramatip.Text == "Demirbaş No")
+            else if (cmbaramatip.Text == "Barkod")
             {
-                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where demirbasNo like'%" + searchBox.Text + "%'", connection);
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where barkod like'%" + searchBox.Text + "%'", connection);
                 DataTable dt = new DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
@@ -319,7 +319,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 }
             }
-       
+            else if (cmbaramatip.Text == "ISBN")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ISBN like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+
+                }
+            }
             else if (cmbaramatip.Text == "Kitap Ad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapAd like'%" + searchBox.Text + "%'", connection);

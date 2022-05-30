@@ -154,9 +154,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 }
             }
-            else if (cmbaramatip.Text == "Demirbaş No")
+            else if (cmbaramatip.Text == "Barkod")
             {
-                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where demirbasNo like'%" + searchBox.Text + "%'", connection);
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where barkod like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                if (searchBox.Text == "")
+                {
+                    emanetlistele();
+
+                }
+            }
+            else if (cmbaramatip.Text == "ISBN")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ISBN like'%" + searchBox.Text + "%'", connection);
                 DataTable dt = new DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
@@ -261,7 +274,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         }
 
-      
+        private void searchboxkitap_TextChanged(object sender, EventArgs e)
+        {   
+            connection.Open();
+            MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapAd like'%" + searchboxkitap.Text + "%'", connection);
+            DataTable dt = new DataTable();
+            adtr.Fill(dt);
+            dataGridViewemanet.DataSource = dt;
+            connection.Close();
+            if (searchboxkitap.Text == "")
+            {
+                emanetlistele();
+
+            }
+        }
 
         private void btnemanetkaldir_Click(object sender, EventArgs e)
         {
@@ -352,7 +378,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             searchBox.Clear();
         }
 
-      
+        private void searchboxkitap_Click(object sender, EventArgs e)
+        {
+            searchboxkitap.Clear();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

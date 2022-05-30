@@ -31,7 +31,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabKitapEkle));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label24 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.btnyazar = new System.Windows.Forms.Button();
@@ -39,34 +41,35 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label25 = new System.Windows.Forms.Label();
             this.tureklebtn = new System.Windows.Forms.Button();
             this.txtyazar = new System.Windows.Forms.TextBox();
-            this.lblidcevirmensoyad = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.lblidcevirmenad = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.lbltur = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.lblkategori = new System.Windows.Forms.Label();
             this.txtyayinevi = new System.Windows.Forms.TextBox();
-            this.lblyayinevitel = new System.Windows.Forms.Label();
             this.btnkategori = new System.Windows.Forms.Button();
-            this.lblyayinevi = new System.Windows.Forms.Label();
             this.txtyazarsoyad = new System.Windows.Forms.TextBox();
-            this.lblyazarsoyadi = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.lblYazar = new System.Windows.Forms.Label();
             this.yayinevibtn = new System.Windows.Forms.Button();
-            this.lbldemirbasno = new System.Windows.Forms.Label();
             this.txtcevirmensoyad = new System.Windows.Forms.TextBox();
-            this.lblisbn = new System.Windows.Forms.Label();
             this.msktel = new System.Windows.Forms.MaskedTextBox();
-            this.lblbarkod = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.cmbcevirmensoyadi = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.cmbcevirmenadi = new System.Windows.Forms.ComboBox();
             this.txtkategori = new System.Windows.Forms.TextBox();
-            this.cmbyayinevitel = new System.Windows.Forms.ComboBox();
             this.txtcevirmen = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblidcevirmensoyad = new System.Windows.Forms.Label();
+            this.lblidcevirmenad = new System.Windows.Forms.Label();
+            this.lbltur = new System.Windows.Forms.Label();
+            this.lblkategori = new System.Windows.Forms.Label();
+            this.lblyayinevitel = new System.Windows.Forms.Label();
+            this.lblyayinevi = new System.Windows.Forms.Label();
+            this.lblyazarsoyadi = new System.Windows.Forms.Label();
+            this.lblYazar = new System.Windows.Forms.Label();
+            this.lbldemirbasno = new System.Windows.Forms.Label();
+            this.lblisbn = new System.Windows.Forms.Label();
+            this.lblbarkod = new System.Windows.Forms.Label();
+            this.cmbcevirmensoyadi = new System.Windows.Forms.ComboBox();
+            this.cmbcevirmenadi = new System.Windows.Forms.ComboBox();
+            this.cmbyayinevitel = new System.Windows.Forms.ComboBox();
             this.cmbyayinevi = new System.Windows.Forms.ComboBox();
             this.cmbtur = new System.Windows.Forms.ComboBox();
             this.cmbyazarsoyad = new System.Windows.Forms.ComboBox();
@@ -124,11 +127,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtbarkod = new System.Windows.Forms.TextBox();
             this.txtKitapAd = new System.Windows.Forms.TextBox();
             this.txtcilt = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -139,8 +142,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.btnyazar);
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.txttur);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.tureklebtn);
@@ -229,21 +235,52 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 585);
+            this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // label20
             // 
-            this.button3.Location = new System.Drawing.Point(932, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(18, 20);
-            this.button3.TabIndex = 102;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(41, 569);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(173, 19);
+            this.label20.TabIndex = 95;
+            this.label20.Text = "Kitabın Çevirmeni Var Mı?: ";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.radioButton2.Location = new System.Drawing.Point(317, 567);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(52, 23);
+            this.radioButton2.TabIndex = 94;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Yok";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.radioButton1.Location = new System.Drawing.Point(260, 567);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(50, 23);
+            this.radioButton1.TabIndex = 93;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Var";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label24
             // 
@@ -251,9 +288,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Location = new System.Drawing.Point(626, 357);
+            this.label24.Location = new System.Drawing.Point(835, 439);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.Size = new System.Drawing.Size(56, 19);
             this.label24.TabIndex = 85;
             this.label24.Text = "Tür Adı:";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,9 +303,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label35.Location = new System.Drawing.Point(597, 436);
+            this.label35.Location = new System.Drawing.Point(796, 537);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(72, 13);
+            this.label35.Size = new System.Drawing.Size(88, 19);
             this.label35.TabIndex = 88;
             this.label35.Text = "Yazar Soyadı:";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -276,9 +315,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnyazar
             // 
             this.btnyazar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnyazar.Location = new System.Drawing.Point(842, 413);
+            this.btnyazar.Location = new System.Drawing.Point(1122, 508);
+            this.btnyazar.Margin = new System.Windows.Forms.Padding(4);
             this.btnyazar.Name = "btnyazar";
-            this.btnyazar.Size = new System.Drawing.Size(58, 39);
+            this.btnyazar.Size = new System.Drawing.Size(78, 48);
             this.btnyazar.TabIndex = 82;
             this.btnyazar.Text = "Yazar Ekle";
             this.btnyazar.UseVisualStyleBackColor = true;
@@ -288,10 +328,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // txttur
             // 
             this.txttur.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txttur.Location = new System.Drawing.Point(681, 354);
-            this.txttur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttur.Location = new System.Drawing.Point(908, 436);
+            this.txttur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttur.Name = "txttur";
-            this.txttur.Size = new System.Drawing.Size(156, 21);
+            this.txttur.Size = new System.Drawing.Size(207, 25);
             this.txttur.TabIndex = 15;
             this.txttur.Visible = false;
             // 
@@ -301,9 +341,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(602, 306);
+            this.label25.Location = new System.Drawing.Point(803, 377);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 13);
+            this.label25.Size = new System.Drawing.Size(85, 19);
             this.label25.TabIndex = 86;
             this.label25.Text = "Yayınevi Adı:";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -312,9 +353,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // tureklebtn
             // 
             this.tureklebtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tureklebtn.Location = new System.Drawing.Point(842, 351);
+            this.tureklebtn.Location = new System.Drawing.Point(1122, 432);
+            this.tureklebtn.Margin = new System.Windows.Forms.Padding(4);
             this.tureklebtn.Name = "tureklebtn";
-            this.tureklebtn.Size = new System.Drawing.Size(75, 24);
+            this.tureklebtn.Size = new System.Drawing.Size(100, 30);
             this.tureklebtn.TabIndex = 76;
             this.tureklebtn.Text = "Tür Ekle";
             this.tureklebtn.UseVisualStyleBackColor = true;
@@ -324,50 +366,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // txtyazar
             // 
             this.txtyazar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyazar.Location = new System.Drawing.Point(681, 413);
-            this.txtyazar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtyazar.Location = new System.Drawing.Point(908, 508);
+            this.txtyazar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyazar.Name = "txtyazar";
-            this.txtyazar.Size = new System.Drawing.Size(156, 21);
+            this.txtyazar.Size = new System.Drawing.Size(207, 25);
             this.txtyazar.TabIndex = 7;
             this.txtyazar.Visible = false;
-            // 
-            // lblidcevirmensoyad
-            // 
-            this.lblidcevirmensoyad.AutoSize = true;
-            this.lblidcevirmensoyad.BackColor = System.Drawing.Color.Transparent;
-            this.lblidcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblidcevirmensoyad.ForeColor = System.Drawing.Color.White;
-            this.lblidcevirmensoyad.Location = new System.Drawing.Point(420, 507);
-            this.lblidcevirmensoyad.Name = "lblidcevirmensoyad";
-            this.lblidcevirmensoyad.Size = new System.Drawing.Size(95, 13);
-            this.lblidcevirmensoyad.TabIndex = 89;
-            this.lblidcevirmensoyad.Text = "lblcevirmensoyad";
-            this.lblidcevirmensoyad.Visible = false;
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(842, 458);
+            this.button6.Location = new System.Drawing.Point(1122, 564);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(58, 38);
+            this.button6.Size = new System.Drawing.Size(77, 47);
             this.button6.TabIndex = 81;
             this.button6.Text = "Çevirmen Ekle";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // lblidcevirmenad
-            // 
-            this.lblidcevirmenad.AutoSize = true;
-            this.lblidcevirmenad.BackColor = System.Drawing.Color.Transparent;
-            this.lblidcevirmenad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblidcevirmenad.ForeColor = System.Drawing.Color.White;
-            this.lblidcevirmenad.Location = new System.Drawing.Point(420, 485);
-            this.lblidcevirmenad.Name = "lblidcevirmenad";
-            this.lblidcevirmenad.Size = new System.Drawing.Size(78, 13);
-            this.lblidcevirmenad.TabIndex = 88;
-            this.lblidcevirmenad.Text = "lblcevirmenad";
-            this.lblidcevirmenad.Visible = false;
             // 
             // label29
             // 
@@ -375,26 +392,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label29.Location = new System.Drawing.Point(602, 329);
+            this.label29.Location = new System.Drawing.Point(803, 405);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 13);
+            this.label29.Size = new System.Drawing.Size(81, 19);
             this.label29.TabIndex = 86;
             this.label29.Text = "Yayınevi Tel:";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label29.Visible = false;
-            // 
-            // lbltur
-            // 
-            this.lbltur.AutoSize = true;
-            this.lbltur.BackColor = System.Drawing.Color.Transparent;
-            this.lbltur.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbltur.ForeColor = System.Drawing.Color.White;
-            this.lbltur.Location = new System.Drawing.Point(420, 371);
-            this.lbltur.Name = "lbltur";
-            this.lbltur.Size = new System.Drawing.Size(35, 13);
-            this.lbltur.TabIndex = 87;
-            this.lbltur.Text = "lbltur";
-            this.lbltur.Visible = false;
             // 
             // label32
             // 
@@ -402,97 +407,47 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label32.Location = new System.Drawing.Point(580, 481);
+            this.label32.Location = new System.Drawing.Point(774, 592);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(94, 13);
+            this.label32.Size = new System.Drawing.Size(114, 19);
             this.label32.TabIndex = 86;
             this.label32.Text = "Çevirmen Soyadı:";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label32.Visible = false;
             // 
-            // lblkategori
-            // 
-            this.lblkategori.AutoSize = true;
-            this.lblkategori.BackColor = System.Drawing.Color.Transparent;
-            this.lblkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblkategori.ForeColor = System.Drawing.Color.White;
-            this.lblkategori.Location = new System.Drawing.Point(420, 394);
-            this.lblkategori.Name = "lblkategori";
-            this.lblkategori.Size = new System.Drawing.Size(63, 13);
-            this.lblkategori.TabIndex = 86;
-            this.lblkategori.Text = "lblkategori";
-            this.lblkategori.Visible = false;
-            // 
             // txtyayinevi
             // 
             this.txtyayinevi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyayinevi.Location = new System.Drawing.Point(681, 304);
-            this.txtyayinevi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtyayinevi.Location = new System.Drawing.Point(908, 374);
+            this.txtyayinevi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyayinevi.Name = "txtyayinevi";
-            this.txtyayinevi.Size = new System.Drawing.Size(156, 21);
+            this.txtyayinevi.Size = new System.Drawing.Size(207, 25);
             this.txtyayinevi.TabIndex = 14;
             this.txtyayinevi.Visible = false;
-            // 
-            // lblyayinevitel
-            // 
-            this.lblyayinevitel.AutoSize = true;
-            this.lblyayinevitel.BackColor = System.Drawing.Color.Transparent;
-            this.lblyayinevitel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblyayinevitel.ForeColor = System.Drawing.Color.White;
-            this.lblyayinevitel.Location = new System.Drawing.Point(420, 350);
-            this.lblyayinevitel.Name = "lblyayinevitel";
-            this.lblyayinevitel.Size = new System.Drawing.Size(73, 13);
-            this.lblyayinevitel.TabIndex = 84;
-            this.lblyayinevitel.Text = "lblyayinevitel";
-            this.lblyayinevitel.Visible = false;
             // 
             // btnkategori
             // 
             this.btnkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnkategori.Location = new System.Drawing.Point(842, 382);
+            this.btnkategori.Location = new System.Drawing.Point(1122, 470);
+            this.btnkategori.Margin = new System.Windows.Forms.Padding(4);
             this.btnkategori.Name = "btnkategori";
-            this.btnkategori.Size = new System.Drawing.Size(75, 24);
+            this.btnkategori.Size = new System.Drawing.Size(100, 30);
             this.btnkategori.TabIndex = 79;
             this.btnkategori.Text = "Kategori Ekle";
             this.btnkategori.UseVisualStyleBackColor = true;
             this.btnkategori.Visible = false;
             this.btnkategori.Click += new System.EventHandler(this.btnkategori_Click);
             // 
-            // lblyayinevi
-            // 
-            this.lblyayinevi.AutoSize = true;
-            this.lblyayinevi.BackColor = System.Drawing.Color.Transparent;
-            this.lblyayinevi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblyayinevi.ForeColor = System.Drawing.Color.White;
-            this.lblyayinevi.Location = new System.Drawing.Point(420, 328);
-            this.lblyayinevi.Name = "lblyayinevi";
-            this.lblyayinevi.Size = new System.Drawing.Size(60, 13);
-            this.lblyayinevi.TabIndex = 83;
-            this.lblyayinevi.Text = "lblyayinevi";
-            this.lblyayinevi.Visible = false;
-            // 
             // txtyazarsoyad
             // 
             this.txtyazarsoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyazarsoyad.Location = new System.Drawing.Point(681, 434);
-            this.txtyazarsoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtyazarsoyad.Location = new System.Drawing.Point(908, 534);
+            this.txtyazarsoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyazarsoyad.Name = "txtyazarsoyad";
-            this.txtyazarsoyad.Size = new System.Drawing.Size(156, 21);
+            this.txtyazarsoyad.Size = new System.Drawing.Size(207, 25);
             this.txtyazarsoyad.TabIndex = 51;
             this.txtyazarsoyad.Visible = false;
-            // 
-            // lblyazarsoyadi
-            // 
-            this.lblyazarsoyadi.AutoSize = true;
-            this.lblyazarsoyadi.BackColor = System.Drawing.Color.Transparent;
-            this.lblyazarsoyadi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblyazarsoyadi.ForeColor = System.Drawing.Color.White;
-            this.lblyazarsoyadi.Location = new System.Drawing.Point(420, 438);
-            this.lblyazarsoyadi.Name = "lblyazarsoyadi";
-            this.lblyazarsoyadi.Size = new System.Drawing.Size(79, 13);
-            this.lblyazarsoyadi.TabIndex = 81;
-            this.lblyazarsoyadi.Text = "lblyazarsoyadi";
-            this.lblyazarsoyadi.Visible = false;
             // 
             // label30
             // 
@@ -500,97 +455,48 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label30.Location = new System.Drawing.Point(602, 388);
+            this.label30.Location = new System.Drawing.Point(803, 478);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(73, 13);
+            this.label30.Size = new System.Drawing.Size(87, 19);
             this.label30.TabIndex = 86;
             this.label30.Text = "Kategori Adı:";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label30.Visible = false;
             // 
-            // lblYazar
-            // 
-            this.lblYazar.AutoSize = true;
-            this.lblYazar.BackColor = System.Drawing.Color.Transparent;
-            this.lblYazar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYazar.ForeColor = System.Drawing.Color.White;
-            this.lblYazar.Location = new System.Drawing.Point(420, 416);
-            this.lblYazar.Name = "lblYazar";
-            this.lblYazar.Size = new System.Drawing.Size(46, 13);
-            this.lblYazar.TabIndex = 80;
-            this.lblYazar.Text = "lblyazar";
-            this.lblYazar.Visible = false;
-            // 
             // yayinevibtn
             // 
             this.yayinevibtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yayinevibtn.Location = new System.Drawing.Point(842, 304);
+            this.yayinevibtn.Location = new System.Drawing.Point(1122, 374);
+            this.yayinevibtn.Margin = new System.Windows.Forms.Padding(4);
             this.yayinevibtn.Name = "yayinevibtn";
-            this.yayinevibtn.Size = new System.Drawing.Size(58, 41);
+            this.yayinevibtn.Size = new System.Drawing.Size(78, 50);
             this.yayinevibtn.TabIndex = 77;
             this.yayinevibtn.Text = "Yayınevi Ekle";
             this.yayinevibtn.UseVisualStyleBackColor = true;
             this.yayinevibtn.Visible = false;
             this.yayinevibtn.Click += new System.EventHandler(this.yayinevibtn_Click);
             // 
-            // lbldemirbasno
-            // 
-            this.lbldemirbasno.AutoSize = true;
-            this.lbldemirbasno.BackColor = System.Drawing.Color.Transparent;
-            this.lbldemirbasno.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbldemirbasno.ForeColor = System.Drawing.Color.White;
-            this.lbldemirbasno.Location = new System.Drawing.Point(356, 117);
-            this.lbldemirbasno.Name = "lbldemirbasno";
-            this.lbldemirbasno.Size = new System.Drawing.Size(52, 13);
-            this.lbldemirbasno.TabIndex = 79;
-            this.lbldemirbasno.Text = "avalaible";
-            this.lbldemirbasno.Visible = false;
-            // 
             // txtcevirmensoyad
             // 
             this.txtcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcevirmensoyad.Location = new System.Drawing.Point(681, 479);
-            this.txtcevirmensoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcevirmensoyad.Location = new System.Drawing.Point(908, 589);
+            this.txtcevirmensoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcevirmensoyad.Name = "txtcevirmensoyad";
-            this.txtcevirmensoyad.Size = new System.Drawing.Size(156, 21);
+            this.txtcevirmensoyad.Size = new System.Drawing.Size(207, 25);
             this.txtcevirmensoyad.TabIndex = 53;
             this.txtcevirmensoyad.Visible = false;
-            // 
-            // lblisbn
-            // 
-            this.lblisbn.AutoSize = true;
-            this.lblisbn.BackColor = System.Drawing.Color.Transparent;
-            this.lblisbn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblisbn.ForeColor = System.Drawing.Color.White;
-            this.lblisbn.Location = new System.Drawing.Point(356, 138);
-            this.lblisbn.Name = "lblisbn";
-            this.lblisbn.Size = new System.Drawing.Size(52, 13);
-            this.lblisbn.TabIndex = 78;
-            this.lblisbn.Text = "avalaible";
-            this.lblisbn.Visible = false;
             // 
             // msktel
             // 
             this.msktel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.msktel.Location = new System.Drawing.Point(681, 327);
+            this.msktel.Location = new System.Drawing.Point(908, 402);
+            this.msktel.Margin = new System.Windows.Forms.Padding(4);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
-            this.msktel.Size = new System.Drawing.Size(156, 21);
+            this.msktel.Size = new System.Drawing.Size(207, 25);
             this.msktel.TabIndex = 61;
             this.msktel.Visible = false;
-            // 
-            // lblbarkod
-            // 
-            this.lblbarkod.AutoSize = true;
-            this.lblbarkod.BackColor = System.Drawing.Color.Transparent;
-            this.lblbarkod.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblbarkod.ForeColor = System.Drawing.Color.White;
-            this.lblbarkod.Location = new System.Drawing.Point(356, 96);
-            this.lblbarkod.Name = "lblbarkod";
-            this.lblbarkod.Size = new System.Drawing.Size(52, 13);
-            this.lblbarkod.TabIndex = 77;
-            this.lblbarkod.Text = "avalaible";
-            this.lblbarkod.Visible = false;
             // 
             // label31
             // 
@@ -598,13 +504,212 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label31.Location = new System.Drawing.Point(598, 460);
+            this.label31.Location = new System.Drawing.Point(797, 566);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(77, 13);
+            this.label31.Size = new System.Drawing.Size(94, 19);
             this.label31.TabIndex = 86;
             this.label31.Text = "Çevirmen Adı:";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label31.Visible = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label36.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label36.Location = new System.Drawing.Point(819, 511);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(68, 19);
+            this.label36.TabIndex = 89;
+            this.label36.Text = "Yazar Adı:";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label36.Visible = false;
+            // 
+            // txtkategori
+            // 
+            this.txtkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtkategori.Location = new System.Drawing.Point(908, 475);
+            this.txtkategori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtkategori.Name = "txtkategori";
+            this.txtkategori.Size = new System.Drawing.Size(207, 25);
+            this.txtkategori.TabIndex = 20;
+            this.txtkategori.Visible = false;
+            // 
+            // txtcevirmen
+            // 
+            this.txtcevirmen.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtcevirmen.Location = new System.Drawing.Point(908, 563);
+            this.txtcevirmen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcevirmen.Name = "txtcevirmen";
+            this.txtcevirmen.Size = new System.Drawing.Size(207, 25);
+            this.txtcevirmen.TabIndex = 22;
+            this.txtcevirmen.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(478, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 50);
+            this.button2.TabIndex = 91;
+            this.button2.Text = "Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblidcevirmensoyad
+            // 
+            this.lblidcevirmensoyad.AutoSize = true;
+            this.lblidcevirmensoyad.BackColor = System.Drawing.Color.Transparent;
+            this.lblidcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblidcevirmensoyad.ForeColor = System.Drawing.Color.White;
+            this.lblidcevirmensoyad.Location = new System.Drawing.Point(560, 624);
+            this.lblidcevirmensoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblidcevirmensoyad.Name = "lblidcevirmensoyad";
+            this.lblidcevirmensoyad.Size = new System.Drawing.Size(114, 19);
+            this.lblidcevirmensoyad.TabIndex = 89;
+            this.lblidcevirmensoyad.Text = "lblcevirmensoyad";
+            // 
+            // lblidcevirmenad
+            // 
+            this.lblidcevirmenad.AutoSize = true;
+            this.lblidcevirmenad.BackColor = System.Drawing.Color.Transparent;
+            this.lblidcevirmenad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblidcevirmenad.ForeColor = System.Drawing.Color.White;
+            this.lblidcevirmenad.Location = new System.Drawing.Point(560, 597);
+            this.lblidcevirmenad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblidcevirmenad.Name = "lblidcevirmenad";
+            this.lblidcevirmenad.Size = new System.Drawing.Size(93, 19);
+            this.lblidcevirmenad.TabIndex = 88;
+            this.lblidcevirmenad.Text = "lblcevirmenad";
+            // 
+            // lbltur
+            // 
+            this.lbltur.AutoSize = true;
+            this.lbltur.BackColor = System.Drawing.Color.Transparent;
+            this.lbltur.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltur.ForeColor = System.Drawing.Color.White;
+            this.lbltur.Location = new System.Drawing.Point(560, 457);
+            this.lbltur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltur.Name = "lbltur";
+            this.lbltur.Size = new System.Drawing.Size(41, 19);
+            this.lbltur.TabIndex = 87;
+            this.lbltur.Text = "lbltur";
+            this.lbltur.Visible = false;
+            // 
+            // lblkategori
+            // 
+            this.lblkategori.AutoSize = true;
+            this.lblkategori.BackColor = System.Drawing.Color.Transparent;
+            this.lblkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblkategori.ForeColor = System.Drawing.Color.White;
+            this.lblkategori.Location = new System.Drawing.Point(560, 485);
+            this.lblkategori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblkategori.Name = "lblkategori";
+            this.lblkategori.Size = new System.Drawing.Size(73, 19);
+            this.lblkategori.TabIndex = 86;
+            this.lblkategori.Text = "lblkategori";
+            this.lblkategori.Visible = false;
+            // 
+            // lblyayinevitel
+            // 
+            this.lblyayinevitel.AutoSize = true;
+            this.lblyayinevitel.BackColor = System.Drawing.Color.Transparent;
+            this.lblyayinevitel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblyayinevitel.ForeColor = System.Drawing.Color.White;
+            this.lblyayinevitel.Location = new System.Drawing.Point(560, 431);
+            this.lblyayinevitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblyayinevitel.Name = "lblyayinevitel";
+            this.lblyayinevitel.Size = new System.Drawing.Size(87, 19);
+            this.lblyayinevitel.TabIndex = 84;
+            this.lblyayinevitel.Text = "lblyayinevitel";
+            this.lblyayinevitel.Visible = false;
+            // 
+            // lblyayinevi
+            // 
+            this.lblyayinevi.AutoSize = true;
+            this.lblyayinevi.BackColor = System.Drawing.Color.Transparent;
+            this.lblyayinevi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblyayinevi.ForeColor = System.Drawing.Color.White;
+            this.lblyayinevi.Location = new System.Drawing.Point(560, 404);
+            this.lblyayinevi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblyayinevi.Name = "lblyayinevi";
+            this.lblyayinevi.Size = new System.Drawing.Size(72, 19);
+            this.lblyayinevi.TabIndex = 83;
+            this.lblyayinevi.Text = "lblyayinevi";
+            this.lblyayinevi.Visible = false;
+            // 
+            // lblyazarsoyadi
+            // 
+            this.lblyazarsoyadi.AutoSize = true;
+            this.lblyazarsoyadi.BackColor = System.Drawing.Color.Transparent;
+            this.lblyazarsoyadi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblyazarsoyadi.ForeColor = System.Drawing.Color.White;
+            this.lblyazarsoyadi.Location = new System.Drawing.Point(560, 539);
+            this.lblyazarsoyadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblyazarsoyadi.Name = "lblyazarsoyadi";
+            this.lblyazarsoyadi.Size = new System.Drawing.Size(94, 19);
+            this.lblyazarsoyadi.TabIndex = 81;
+            this.lblyazarsoyadi.Text = "lblyazarsoyadi";
+            this.lblyazarsoyadi.Visible = false;
+            // 
+            // lblYazar
+            // 
+            this.lblYazar.AutoSize = true;
+            this.lblYazar.BackColor = System.Drawing.Color.Transparent;
+            this.lblYazar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblYazar.ForeColor = System.Drawing.Color.White;
+            this.lblYazar.Location = new System.Drawing.Point(560, 512);
+            this.lblYazar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblYazar.Name = "lblYazar";
+            this.lblYazar.Size = new System.Drawing.Size(55, 19);
+            this.lblYazar.TabIndex = 80;
+            this.lblYazar.Text = "lblyazar";
+            this.lblYazar.Visible = false;
+            // 
+            // lbldemirbasno
+            // 
+            this.lbldemirbasno.AutoSize = true;
+            this.lbldemirbasno.BackColor = System.Drawing.Color.Transparent;
+            this.lbldemirbasno.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbldemirbasno.ForeColor = System.Drawing.Color.White;
+            this.lbldemirbasno.Location = new System.Drawing.Point(474, 144);
+            this.lbldemirbasno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldemirbasno.Name = "lbldemirbasno";
+            this.lbldemirbasno.Size = new System.Drawing.Size(61, 19);
+            this.lbldemirbasno.TabIndex = 79;
+            this.lbldemirbasno.Text = "avalaible";
+            this.lbldemirbasno.Visible = false;
+            // 
+            // lblisbn
+            // 
+            this.lblisbn.AutoSize = true;
+            this.lblisbn.BackColor = System.Drawing.Color.Transparent;
+            this.lblisbn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblisbn.ForeColor = System.Drawing.Color.White;
+            this.lblisbn.Location = new System.Drawing.Point(475, 170);
+            this.lblisbn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblisbn.Name = "lblisbn";
+            this.lblisbn.Size = new System.Drawing.Size(61, 19);
+            this.lblisbn.TabIndex = 78;
+            this.lblisbn.Text = "avalaible";
+            this.lblisbn.Visible = false;
+            // 
+            // lblbarkod
+            // 
+            this.lblbarkod.AutoSize = true;
+            this.lblbarkod.BackColor = System.Drawing.Color.Transparent;
+            this.lblbarkod.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblbarkod.ForeColor = System.Drawing.Color.White;
+            this.lblbarkod.Location = new System.Drawing.Point(474, 118);
+            this.lblbarkod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblbarkod.Name = "lblbarkod";
+            this.lblbarkod.Size = new System.Drawing.Size(61, 19);
+            this.lblbarkod.TabIndex = 77;
+            this.lblbarkod.Text = "avalaible";
+            this.lblbarkod.Visible = false;
             // 
             // cmbcevirmensoyadi
             // 
@@ -614,25 +719,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensoyadi.Items.AddRange(new object[] {
             "Çevirmen Var",
             "Çevirmen Yok"});
-            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(195, 505);
+            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(260, 622);
+            this.cmbcevirmensoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
-            this.cmbcevirmensoyadi.Size = new System.Drawing.Size(156, 20);
+            this.cmbcevirmensoyadi.Size = new System.Drawing.Size(207, 25);
             this.cmbcevirmensoyadi.TabIndex = 73;
+            this.cmbcevirmensoyadi.Visible = false;
             this.cmbcevirmensoyadi.TextChanged += new System.EventHandler(this.cmbcevirmensoyadi_TextChanged);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label36.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label36.Location = new System.Drawing.Point(614, 415);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(55, 13);
-            this.label36.TabIndex = 89;
-            this.label36.Text = "Yazar Adı:";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label36.Visible = false;
             // 
             // cmbcevirmenadi
             // 
@@ -642,42 +735,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmenadi.Items.AddRange(new object[] {
             "Çevirmen Var",
             "Çevirmen Yok"});
-            this.cmbcevirmenadi.Location = new System.Drawing.Point(195, 483);
+            this.cmbcevirmenadi.Location = new System.Drawing.Point(260, 595);
+            this.cmbcevirmenadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
-            this.cmbcevirmenadi.Size = new System.Drawing.Size(156, 20);
+            this.cmbcevirmenadi.Size = new System.Drawing.Size(207, 25);
             this.cmbcevirmenadi.TabIndex = 72;
+            this.cmbcevirmenadi.Visible = false;
             this.cmbcevirmenadi.TextChanged += new System.EventHandler(this.cmbcevirmenadi_TextChanged);
-            // 
-            // txtkategori
-            // 
-            this.txtkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkategori.Location = new System.Drawing.Point(681, 386);
-            this.txtkategori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtkategori.Name = "txtkategori";
-            this.txtkategori.Size = new System.Drawing.Size(156, 21);
-            this.txtkategori.TabIndex = 20;
-            this.txtkategori.Visible = false;
             // 
             // cmbyayinevitel
             // 
             this.cmbyayinevitel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyayinevitel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyayinevitel.FormattingEnabled = true;
-            this.cmbyayinevitel.Location = new System.Drawing.Point(195, 348);
+            this.cmbyayinevitel.Location = new System.Drawing.Point(260, 428);
+            this.cmbyayinevitel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevitel.Name = "cmbyayinevitel";
-            this.cmbyayinevitel.Size = new System.Drawing.Size(156, 20);
+            this.cmbyayinevitel.Size = new System.Drawing.Size(207, 25);
             this.cmbyayinevitel.TabIndex = 71;
             this.cmbyayinevitel.TextChanged += new System.EventHandler(this.cmbyayinevitel_TextChanged);
-            // 
-            // txtcevirmen
-            // 
-            this.txtcevirmen.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcevirmen.Location = new System.Drawing.Point(681, 457);
-            this.txtcevirmen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtcevirmen.Name = "txtcevirmen";
-            this.txtcevirmen.Size = new System.Drawing.Size(156, 21);
-            this.txtcevirmen.TabIndex = 22;
-            this.txtcevirmen.Visible = false;
             // 
             // cmbyayinevi
             // 
@@ -685,9 +761,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyayinevi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyayinevi.FormattingEnabled = true;
             this.cmbyayinevi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cmbyayinevi.Location = new System.Drawing.Point(195, 326);
+            this.cmbyayinevi.Location = new System.Drawing.Point(260, 401);
+            this.cmbyayinevi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevi.Name = "cmbyayinevi";
-            this.cmbyayinevi.Size = new System.Drawing.Size(156, 20);
+            this.cmbyayinevi.Size = new System.Drawing.Size(207, 25);
             this.cmbyayinevi.TabIndex = 70;
             this.cmbyayinevi.TextChanged += new System.EventHandler(this.cmbyayinevi_TextChanged);
             // 
@@ -696,9 +773,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbtur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtur.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbtur.FormattingEnabled = true;
-            this.cmbtur.Location = new System.Drawing.Point(195, 370);
+            this.cmbtur.Location = new System.Drawing.Point(260, 455);
+            this.cmbtur.Margin = new System.Windows.Forms.Padding(4);
             this.cmbtur.Name = "cmbtur";
-            this.cmbtur.Size = new System.Drawing.Size(156, 20);
+            this.cmbtur.Size = new System.Drawing.Size(207, 25);
             this.cmbtur.TabIndex = 69;
             this.cmbtur.TextChanged += new System.EventHandler(this.cmbtur_TextChanged);
             // 
@@ -707,9 +785,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyazarsoyad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyazarsoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyazarsoyad.FormattingEnabled = true;
-            this.cmbyazarsoyad.Location = new System.Drawing.Point(195, 436);
+            this.cmbyazarsoyad.Location = new System.Drawing.Point(260, 536);
+            this.cmbyazarsoyad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarsoyad.Name = "cmbyazarsoyad";
-            this.cmbyazarsoyad.Size = new System.Drawing.Size(156, 20);
+            this.cmbyazarsoyad.Size = new System.Drawing.Size(207, 25);
             this.cmbyazarsoyad.TabIndex = 67;
             this.cmbyazarsoyad.TextChanged += new System.EventHandler(this.cmbyazarsoyad_TextChanged);
             // 
@@ -718,9 +797,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyazarad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyazarad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyazarad.FormattingEnabled = true;
-            this.cmbyazarad.Location = new System.Drawing.Point(195, 414);
+            this.cmbyazarad.Location = new System.Drawing.Point(260, 509);
+            this.cmbyazarad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarad.Name = "cmbyazarad";
-            this.cmbyazarad.Size = new System.Drawing.Size(156, 20);
+            this.cmbyazarad.Size = new System.Drawing.Size(207, 25);
             this.cmbyazarad.TabIndex = 66;
             this.cmbyazarad.TextChanged += new System.EventHandler(this.cmbyazarad_TextChanged);
             // 
@@ -729,9 +809,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbkategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbkategori.FormattingEnabled = true;
-            this.cmbkategori.Location = new System.Drawing.Point(195, 392);
+            this.cmbkategori.Location = new System.Drawing.Point(260, 482);
+            this.cmbkategori.Margin = new System.Windows.Forms.Padding(4);
             this.cmbkategori.Name = "cmbkategori";
-            this.cmbkategori.Size = new System.Drawing.Size(156, 20);
+            this.cmbkategori.Size = new System.Drawing.Size(207, 25);
             this.cmbkategori.TabIndex = 65;
             this.cmbkategori.TextChanged += new System.EventHandler(this.cmbkategori_TextChanged);
             // 
@@ -739,10 +820,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtisbn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtisbn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtisbn.Location = new System.Drawing.Point(195, 136);
-            this.txtisbn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtisbn.Location = new System.Drawing.Point(260, 167);
+            this.txtisbn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtisbn.Name = "txtisbn";
-            this.txtisbn.Size = new System.Drawing.Size(156, 21);
+            this.txtisbn.Size = new System.Drawing.Size(207, 25);
             this.txtisbn.TabIndex = 6;
             this.txtisbn.TextChanged += new System.EventHandler(this.txtisbn_TextChanged);
             // 
@@ -750,10 +831,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtcikisyili.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcikisyili.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcikisyili.Location = new System.Drawing.Point(195, 284);
-            this.txtcikisyili.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcikisyili.Location = new System.Drawing.Point(260, 349);
+            this.txtcikisyili.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcikisyili.Name = "txtcikisyili";
-            this.txtcikisyili.Size = new System.Drawing.Size(156, 21);
+            this.txtcikisyili.Size = new System.Drawing.Size(207, 25);
             this.txtcikisyili.TabIndex = 62;
             // 
             // label27
@@ -762,10 +843,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(31, 350);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(41, 431);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(139, 13);
+            this.label27.Size = new System.Drawing.Size(166, 19);
             this.label27.TabIndex = 60;
             this.label27.Text = "Kitabın Yayınevi Telefonu: ";
             // 
@@ -775,12 +855,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.BackColor = System.Drawing.Color.Transparent;
             this.lblcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblcevirmensoyad.ForeColor = System.Drawing.Color.White;
-            this.lblcevirmensoyad.Location = new System.Drawing.Point(31, 508);
-            this.lblcevirmensoyad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblcevirmensoyad.Location = new System.Drawing.Point(41, 625);
             this.lblcevirmensoyad.Name = "lblcevirmensoyad";
-            this.lblcevirmensoyad.Size = new System.Drawing.Size(146, 13);
+            this.lblcevirmensoyad.Size = new System.Drawing.Size(175, 19);
             this.lblcevirmensoyad.TabIndex = 54;
             this.lblcevirmensoyad.Text = "Kitap Çevirmeninin Soyadı: ";
+            this.lblcevirmensoyad.Visible = false;
             // 
             // label23
             // 
@@ -788,10 +868,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(31, 138);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(41, 170);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(65, 13);
+            this.label23.Size = new System.Drawing.Size(80, 19);
             this.label23.TabIndex = 52;
             this.label23.Text = "Kitab ISBN: ";
             // 
@@ -799,10 +878,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.mskkurumkayittarihi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskkurumkayittarihi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskkurumkayittarihi.Location = new System.Drawing.Point(195, 241);
+            this.mskkurumkayittarihi.Location = new System.Drawing.Point(260, 297);
+            this.mskkurumkayittarihi.Margin = new System.Windows.Forms.Padding(4);
             this.mskkurumkayittarihi.Mask = "00/00/0000";
             this.mskkurumkayittarihi.Name = "mskkurumkayittarihi";
-            this.mskkurumkayittarihi.Size = new System.Drawing.Size(156, 21);
+            this.mskkurumkayittarihi.Size = new System.Drawing.Size(207, 25);
             this.mskkurumkayittarihi.TabIndex = 50;
             this.mskkurumkayittarihi.ValidatingType = typeof(System.DateTime);
             // 
@@ -810,10 +890,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.mskkitapyayinyili.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskkitapyayinyili.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskkitapyayinyili.Location = new System.Drawing.Point(195, 262);
+            this.mskkitapyayinyili.Location = new System.Drawing.Point(260, 323);
+            this.mskkitapyayinyili.Margin = new System.Windows.Forms.Padding(4);
             this.mskkitapyayinyili.Mask = "00/00/0000";
             this.mskkitapyayinyili.Name = "mskkitapyayinyili";
-            this.mskkitapyayinyili.Size = new System.Drawing.Size(156, 21);
+            this.mskkitapyayinyili.Size = new System.Drawing.Size(207, 25);
             this.mskkitapyayinyili.TabIndex = 48;
             this.mskkitapyayinyili.ValidatingType = typeof(System.DateTime);
             // 
@@ -823,10 +904,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(31, 180);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(41, 222);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(115, 13);
+            this.label22.Size = new System.Drawing.Size(137, 19);
             this.label22.TabIndex = 47;
             this.label22.Text = "Kitabın Raf Konumu: ";
             // 
@@ -834,10 +914,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtrafkonum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtrafkonum.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtrafkonum.Location = new System.Drawing.Point(195, 178);
-            this.txtrafkonum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtrafkonum.Location = new System.Drawing.Point(260, 219);
+            this.txtrafkonum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtrafkonum.Name = "txtrafkonum";
-            this.txtrafkonum.Size = new System.Drawing.Size(156, 21);
+            this.txtrafkonum.Size = new System.Drawing.Size(207, 25);
             this.txtrafkonum.TabIndex = 46;
             // 
             // button1
@@ -845,10 +925,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(883, 539);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(1177, 663);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 37);
+            this.button1.Size = new System.Drawing.Size(91, 46);
             this.button1.TabIndex = 45;
             this.button1.Text = " Kaydet";
             this.button1.UseVisualStyleBackColor = false;
@@ -860,10 +940,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(517, 138);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(689, 170);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 13);
+            this.label16.Size = new System.Drawing.Size(81, 19);
             this.label16.TabIndex = 44;
             this.label16.Text = "Kitabın Dili: ";
             // 
@@ -873,10 +952,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(31, 243);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(41, 299);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 13);
+            this.label17.Size = new System.Drawing.Size(172, 19);
             this.label17.TabIndex = 43;
             this.label17.Text = "Kitabın Kurum Kayıt Tarihi: ";
             // 
@@ -886,10 +964,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(31, 394);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(41, 485);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(103, 13);
+            this.label18.Size = new System.Drawing.Size(122, 19);
             this.label18.TabIndex = 42;
             this.label18.Text = "Kitabın Kategorisi: ";
             // 
@@ -899,10 +976,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(517, 159);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(689, 196);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(79, 13);
+            this.label19.Size = new System.Drawing.Size(94, 19);
             this.label19.TabIndex = 41;
             this.label19.Text = "Kitabın Özeti: ";
             // 
@@ -912,12 +988,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.BackColor = System.Drawing.Color.Transparent;
             this.lblcevirmenad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblcevirmenad.ForeColor = System.Drawing.Color.White;
-            this.lblcevirmenad.Location = new System.Drawing.Point(31, 486);
-            this.lblcevirmenad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblcevirmenad.Location = new System.Drawing.Point(41, 598);
             this.lblcevirmenad.Name = "lblcevirmenad";
-            this.lblcevirmenad.Size = new System.Drawing.Size(129, 13);
+            this.lblcevirmenad.Size = new System.Drawing.Size(155, 19);
             this.lblcevirmenad.TabIndex = 40;
             this.lblcevirmenad.Text = "Kitap Çevirmeninin Adı: ";
+            this.lblcevirmenad.Visible = false;
             // 
             // label21
             // 
@@ -925,10 +1001,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(31, 159);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(41, 196);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(129, 13);
+            this.label21.Size = new System.Drawing.Size(154, 19);
             this.label21.TabIndex = 39;
             this.label21.Text = "Kitabın Dolap Konumu: ";
             // 
@@ -938,10 +1013,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(31, 202);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(41, 248);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 13);
+            this.label11.Size = new System.Drawing.Size(160, 19);
             this.label11.TabIndex = 38;
             this.label11.Text = "Kitabın Basım Numarası: ";
             // 
@@ -951,10 +1025,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(31, 328);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(41, 404);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.Size = new System.Drawing.Size(111, 19);
             this.label12.TabIndex = 37;
             this.label12.Text = "Kitabın Yayınevi: ";
             // 
@@ -964,10 +1037,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(31, 372);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(41, 458);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 13);
+            this.label13.Size = new System.Drawing.Size(90, 19);
             this.label13.TabIndex = 36;
             this.label13.Text = "Kitabın Türü: ";
             // 
@@ -977,10 +1049,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(31, 262);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(41, 323);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 13);
+            this.label14.Size = new System.Drawing.Size(115, 19);
             this.label14.TabIndex = 35;
             this.label14.Text = "Kitabın Yayın Yılı: ";
             // 
@@ -990,10 +1061,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(31, 284);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(41, 350);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 13);
+            this.label15.Size = new System.Drawing.Size(111, 19);
             this.label15.TabIndex = 34;
             this.label15.Text = "Kitabın Çıkış Yılı: ";
             // 
@@ -1003,10 +1073,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(31, 416);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(41, 512);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 13);
+            this.label6.Size = new System.Drawing.Size(129, 19);
             this.label6.TabIndex = 33;
             this.label6.Text = "Kitap Yazarının Adı: ";
             // 
@@ -1016,10 +1085,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(31, 307);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(41, 378);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.Size = new System.Drawing.Size(131, 19);
             this.label7.TabIndex = 32;
             this.label7.Text = "Kitabın Sayfa Sayısı: ";
             // 
@@ -1029,10 +1097,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(517, 96);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(689, 118);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.Size = new System.Drawing.Size(108, 19);
             this.label8.TabIndex = 31;
             this.label8.Text = "Kitabın Konusu: ";
             // 
@@ -1042,10 +1109,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(31, 223);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(41, 274);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.Size = new System.Drawing.Size(127, 19);
             this.label9.TabIndex = 30;
             this.label9.Text = "Kitabın Stok Bilgisi: ";
             // 
@@ -1055,10 +1121,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(517, 117);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(689, 144);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 13);
+            this.label10.Size = new System.Drawing.Size(173, 19);
             this.label10.TabIndex = 29;
             this.label10.Text = "Kitabın Anahtar Kelimeleri: ";
             // 
@@ -1068,10 +1133,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(31, 438);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(41, 539);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 13);
+            this.label5.Size = new System.Drawing.Size(149, 19);
             this.label5.TabIndex = 28;
             this.label5.Text = "Kitap Yazarının Soyadı: ";
             // 
@@ -1081,10 +1145,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 117);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(41, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 13);
+            this.label4.Size = new System.Drawing.Size(182, 19);
             this.label4.TabIndex = 27;
             this.label4.Text = "Kitabın Demirbaş Numarası: ";
             // 
@@ -1094,10 +1157,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(31, 96);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(41, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(113, 19);
             this.label3.TabIndex = 26;
             this.label3.Text = "Kitabın Barkodu: ";
             // 
@@ -1107,10 +1169,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(517, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(689, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(82, 19);
             this.label2.TabIndex = 25;
             this.label2.Text = "Kitabın Adı: ";
             // 
@@ -1120,10 +1181,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 75);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(41, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.Size = new System.Drawing.Size(144, 19);
             this.label1.TabIndex = 24;
             this.label1.Text = "Kitabın Cilt Numarası: ";
             // 
@@ -1131,77 +1191,77 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtdolapkonum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtdolapkonum.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtdolapkonum.Location = new System.Drawing.Point(195, 157);
-            this.txtdolapkonum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdolapkonum.Location = new System.Drawing.Point(260, 193);
+            this.txtdolapkonum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdolapkonum.Name = "txtdolapkonum";
-            this.txtdolapkonum.Size = new System.Drawing.Size(156, 21);
+            this.txtdolapkonum.Size = new System.Drawing.Size(207, 25);
             this.txtdolapkonum.TabIndex = 23;
             // 
             // txtozet
             // 
             this.txtozet.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtozet.Location = new System.Drawing.Point(681, 158);
-            this.txtozet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtozet.Location = new System.Drawing.Point(908, 194);
+            this.txtozet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtozet.Multiline = true;
             this.txtozet.Name = "txtozet";
-            this.txtozet.Size = new System.Drawing.Size(156, 124);
+            this.txtozet.Size = new System.Drawing.Size(207, 152);
             this.txtozet.TabIndex = 21;
             // 
             // txtdil
             // 
             this.txtdil.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtdil.Location = new System.Drawing.Point(681, 136);
-            this.txtdil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdil.Location = new System.Drawing.Point(908, 167);
+            this.txtdil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdil.Name = "txtdil";
-            this.txtdil.Size = new System.Drawing.Size(156, 21);
+            this.txtdil.Size = new System.Drawing.Size(207, 25);
             this.txtdil.TabIndex = 18;
             // 
             // txtbasimnumara
             // 
             this.txtbasimnumara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbasimnumara.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbasimnumara.Location = new System.Drawing.Point(195, 199);
-            this.txtbasimnumara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbasimnumara.Location = new System.Drawing.Point(260, 245);
+            this.txtbasimnumara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbasimnumara.Name = "txtbasimnumara";
-            this.txtbasimnumara.Size = new System.Drawing.Size(156, 21);
+            this.txtbasimnumara.Size = new System.Drawing.Size(207, 25);
             this.txtbasimnumara.TabIndex = 13;
             // 
             // txtanahtarkelime
             // 
             this.txtanahtarkelime.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtanahtarkelime.Location = new System.Drawing.Point(681, 115);
-            this.txtanahtarkelime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtanahtarkelime.Location = new System.Drawing.Point(908, 141);
+            this.txtanahtarkelime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtanahtarkelime.Name = "txtanahtarkelime";
-            this.txtanahtarkelime.Size = new System.Drawing.Size(156, 21);
+            this.txtanahtarkelime.Size = new System.Drawing.Size(207, 25);
             this.txtanahtarkelime.TabIndex = 12;
             // 
             // txtstok
             // 
             this.txtstok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtstok.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtstok.Location = new System.Drawing.Point(195, 220);
-            this.txtstok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstok.Location = new System.Drawing.Point(260, 271);
+            this.txtstok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstok.Name = "txtstok";
-            this.txtstok.Size = new System.Drawing.Size(156, 21);
+            this.txtstok.Size = new System.Drawing.Size(207, 25);
             this.txtstok.TabIndex = 11;
             // 
             // txtkitapkonusu
             // 
             this.txtkitapkonusu.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkitapkonusu.Location = new System.Drawing.Point(681, 93);
-            this.txtkitapkonusu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtkitapkonusu.Location = new System.Drawing.Point(908, 115);
+            this.txtkitapkonusu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkitapkonusu.Name = "txtkitapkonusu";
-            this.txtkitapkonusu.Size = new System.Drawing.Size(156, 21);
+            this.txtkitapkonusu.Size = new System.Drawing.Size(207, 25);
             this.txtkitapkonusu.TabIndex = 10;
             // 
             // txtkitapsayfasayisi
             // 
             this.txtkitapsayfasayisi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtkitapsayfasayisi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkitapsayfasayisi.Location = new System.Drawing.Point(195, 305);
-            this.txtkitapsayfasayisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtkitapsayfasayisi.Location = new System.Drawing.Point(260, 375);
+            this.txtkitapsayfasayisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkitapsayfasayisi.Name = "txtkitapsayfasayisi";
-            this.txtkitapsayfasayisi.Size = new System.Drawing.Size(156, 21);
+            this.txtkitapsayfasayisi.Size = new System.Drawing.Size(207, 25);
             this.txtkitapsayfasayisi.TabIndex = 9;
             // 
             // panel2
@@ -1217,9 +1277,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Controls.Add(this.ogrenciBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 34);
+            this.panel2.Size = new System.Drawing.Size(1280, 42);
             this.panel2.TabIndex = 8;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -1236,10 +1296,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(920, 2);
-            this.kaplaButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kaplaButon.Location = new System.Drawing.Point(1227, 2);
+            this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(15, 16);
+            this.kaplaButon.Size = new System.Drawing.Size(20, 20);
             this.kaplaButon.TabIndex = 16;
             this.kaplaButon.UseVisualStyleBackColor = true;
             this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
@@ -1255,10 +1315,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(898, 2);
-            this.simgeButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simgeButon.Location = new System.Drawing.Point(1197, 2);
+            this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(15, 16);
+            this.simgeButon.Size = new System.Drawing.Size(20, 20);
             this.simgeButon.TabIndex = 15;
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
@@ -1274,10 +1334,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(943, 2);
-            this.cikisButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cikisButon.Location = new System.Drawing.Point(1257, 2);
+            this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(15, 16);
+            this.cikisButon.Size = new System.Drawing.Size(20, 20);
             this.cikisButon.TabIndex = 14;
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
@@ -1293,10 +1353,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(195, 0);
-            this.infoBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoBtn.Location = new System.Drawing.Point(260, 0);
+            this.infoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(32, 34);
+            this.infoBtn.Size = new System.Drawing.Size(43, 42);
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
@@ -1313,10 +1373,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.anasayfaBtn.Location = new System.Drawing.Point(9, 0);
-            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
+            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.anasayfaBtn.Name = "anasayfaBtn";
-            this.anasayfaBtn.Size = new System.Drawing.Size(32, 34);
+            this.anasayfaBtn.Size = new System.Drawing.Size(43, 42);
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
@@ -1333,10 +1393,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kitapBtn.Location = new System.Drawing.Point(148, 0);
-            this.kitapBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kitapBtn.Location = new System.Drawing.Point(197, 0);
+            this.kitapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kitapBtn.Name = "kitapBtn";
-            this.kitapBtn.Size = new System.Drawing.Size(32, 34);
+            this.kitapBtn.Size = new System.Drawing.Size(43, 42);
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
@@ -1353,10 +1413,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emanetBtn.Location = new System.Drawing.Point(56, 0);
-            this.emanetBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emanetBtn.Location = new System.Drawing.Point(75, 0);
+            this.emanetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emanetBtn.Name = "emanetBtn";
-            this.emanetBtn.Size = new System.Drawing.Size(32, 34);
+            this.emanetBtn.Size = new System.Drawing.Size(43, 42);
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
@@ -1373,10 +1433,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ogrenciBtn.Location = new System.Drawing.Point(102, 0);
-            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
+            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ogrenciBtn.Name = "ogrenciBtn";
-            this.ogrenciBtn.Size = new System.Drawing.Size(32, 34);
+            this.ogrenciBtn.Size = new System.Drawing.Size(43, 42);
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
@@ -1386,10 +1446,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtdemirbas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtdemirbas.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtdemirbas.Location = new System.Drawing.Point(195, 115);
-            this.txtdemirbas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdemirbas.Location = new System.Drawing.Point(260, 141);
+            this.txtdemirbas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdemirbas.Name = "txtdemirbas";
-            this.txtdemirbas.Size = new System.Drawing.Size(156, 21);
+            this.txtdemirbas.Size = new System.Drawing.Size(207, 25);
             this.txtdemirbas.TabIndex = 5;
             this.txtdemirbas.TextChanged += new System.EventHandler(this.txtdemirbas_TextChanged);
             // 
@@ -1397,102 +1457,99 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtbarkod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbarkod.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbarkod.Location = new System.Drawing.Point(195, 93);
-            this.txtbarkod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbarkod.Location = new System.Drawing.Point(260, 115);
+            this.txtbarkod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbarkod.Name = "txtbarkod";
-            this.txtbarkod.Size = new System.Drawing.Size(156, 21);
+            this.txtbarkod.Size = new System.Drawing.Size(207, 25);
             this.txtbarkod.TabIndex = 4;
             this.txtbarkod.TextChanged += new System.EventHandler(this.txtbarkod_TextChanged);
             // 
             // txtKitapAd
             // 
             this.txtKitapAd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKitapAd.Location = new System.Drawing.Point(681, 72);
-            this.txtKitapAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKitapAd.Location = new System.Drawing.Point(908, 89);
+            this.txtKitapAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKitapAd.Name = "txtKitapAd";
-            this.txtKitapAd.Size = new System.Drawing.Size(156, 21);
+            this.txtKitapAd.Size = new System.Drawing.Size(207, 25);
             this.txtKitapAd.TabIndex = 3;
             // 
             // txtcilt
             // 
             this.txtcilt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcilt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcilt.Location = new System.Drawing.Point(195, 72);
-            this.txtcilt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcilt.Location = new System.Drawing.Point(260, 89);
+            this.txtcilt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcilt.Name = "txtcilt";
-            this.txtcilt.Size = new System.Drawing.Size(156, 21);
+            this.txtcilt.Size = new System.Drawing.Size(207, 25);
             this.txtcilt.TabIndex = 2;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button9.Location = new System.Drawing.Point(358, 483);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(56, 41);
-            this.button9.TabIndex = 101;
-            this.button9.Text = "Ekle";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.Location = new System.Drawing.Point(358, 414);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 41);
-            this.button7.TabIndex = 99;
-            this.button7.Text = "Ekle";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(358, 392);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 20);
-            this.button5.TabIndex = 98;
-            this.button5.Text = "Ekle";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(358, 370);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(478, 455);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 20);
+            this.button4.Size = new System.Drawing.Size(75, 24);
             this.button4.TabIndex = 97;
             this.button4.Text = "Ekle";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button2
+            // button5
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(358, 327);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 41);
-            this.button2.TabIndex = 91;
-            this.button2.Text = "Ekle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.Location = new System.Drawing.Point(478, 482);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 24);
+            this.button5.TabIndex = 98;
+            this.button5.Text = "Ekle";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.Location = new System.Drawing.Point(478, 509);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 51);
+            this.button7.TabIndex = 99;
+            this.button7.Text = "Ekle";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button9.Location = new System.Drawing.Point(478, 595);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 51);
+            this.button9.TabIndex = 101;
+            this.button9.Text = "Ekle";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1243, 375);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 24);
+            this.button3.TabIndex = 102;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabKitapEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tabKitapEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tabKitapEkle";
@@ -1600,6 +1657,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnyazar;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
