@@ -46,7 +46,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_y = e.Y;
         }
 
-        private void tabKitapEkle_Load(object sender, EventArgs e)
+        public void tabKitapEkle_Load(object sender, EventArgs e)
         {
             lblYazar.Text = "";
             kategoriEkle();
@@ -75,8 +75,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             
 
         }
-      
-       
 
         private void yazarAd()
         {
@@ -124,6 +122,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             while (oku.Read())
             {
                 cmbtur.Items.Add(oku[1].ToString());
+
             }
             connection.Close();
             
@@ -765,7 +764,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" /*txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""/*||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text==""*/)
              {
 
-                 MessageBox.Show("lütfen alanları boş geçmeyiniz");
+                 MessageBox.Show("Lütfen alanları boş geçmeyiniz.");
              }
             else
              {
@@ -818,7 +817,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
                         connection.Close();
-                        MessageBox.Show("kayıt başarıyla gerçekleştirildi");
+                        MessageBox.Show("Kayıt başarıyla gerçekleştirildi.");
                         //Kitap kitap = new Kitap();
                         //kitap.Show();
                         //this.Close();
@@ -866,7 +865,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
 
                         connection.Close();
-                        MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+                        MessageBox.Show("Kayıt başarıyla gerçekleştirildi.");
 
 
                         //AnaSayfa AnaSayfa = new AnaSayfa();
