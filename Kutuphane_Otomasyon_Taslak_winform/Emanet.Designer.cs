@@ -64,18 +64,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.btnemanet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 720);
+            this.panel1.Size = new System.Drawing.Size(960, 585);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnMail
             // 
-            this.btnMail.Location = new System.Drawing.Point(1036, 625);
-            this.btnMail.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMail.Location = new System.Drawing.Point(777, 508);
             this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(211, 65);
+            this.btnMail.Size = new System.Drawing.Size(158, 53);
             this.btnMail.TabIndex = 16;
             this.btnMail.Text = "E-Mail Gönderme";
             this.btnMail.UseVisualStyleBackColor = true;
@@ -86,10 +85,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(659, 460);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(494, 374);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(608, 46);
+            this.button2.Size = new System.Drawing.Size(456, 37);
             this.button2.TabIndex = 15;
             this.button2.Text = "Emanet İade Sayfası";
             this.button2.UseVisualStyleBackColor = false;
@@ -106,8 +105,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Ogrenci Eposta",
             "Ogrenci Telefon",
             "Kitap Id",
-            "Barkod",
-            "ISBN",
+            "Demirbaş No",
             "Kitap Ad",
             "Yazar Ad",
             "Yazar Soyad",
@@ -115,20 +113,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Veriş Tarihi",
             "Alış Tarihi",
             "Emanet Alinan Kitap Sayisi"});
-            this.cmbaramatip.Location = new System.Drawing.Point(13, 68);
-            this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbaramatip.Location = new System.Drawing.Point(10, 55);
             this.cmbaramatip.Name = "cmbaramatip";
-            this.cmbaramatip.Size = new System.Drawing.Size(169, 24);
+            this.cmbaramatip.Size = new System.Drawing.Size(128, 21);
             this.cmbaramatip.TabIndex = 14;
             this.cmbaramatip.Text = "Arama Filtresi Seçiniz...";
             this.cmbaramatip.SelectedIndexChanged += new System.EventHandler(this.cmbaramatip_SelectedIndexChanged);
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(225, 68);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchBox.Location = new System.Drawing.Point(169, 55);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(220, 22);
+            this.searchBox.Size = new System.Drawing.Size(166, 20);
             this.searchBox.TabIndex = 13;
             this.searchBox.Text = "Öğrenci Ara...";
             this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
@@ -138,11 +135,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.dataGridViewemanet.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewemanet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewemanet.Location = new System.Drawing.Point(12, 116);
-            this.dataGridViewemanet.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewemanet.Location = new System.Drawing.Point(9, 94);
             this.dataGridViewemanet.Name = "dataGridViewemanet";
             this.dataGridViewemanet.RowHeadersWidth = 51;
-            this.dataGridViewemanet.Size = new System.Drawing.Size(1255, 338);
+            this.dataGridViewemanet.Size = new System.Drawing.Size(941, 275);
             this.dataGridViewemanet.TabIndex = 12;
             this.dataGridViewemanet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewemanet_CellContentClick);
             // 
@@ -159,9 +155,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Controls.Add(this.ogrenciBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1280, 42);
+            this.panel2.Size = new System.Drawing.Size(960, 34);
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
@@ -179,10 +175,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1227, 2);
-            this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kaplaButon.Location = new System.Drawing.Point(920, 2);
+            this.kaplaButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kaplaButon.Name = "kaplaButon";
-            this.kaplaButon.Size = new System.Drawing.Size(20, 20);
+            this.kaplaButon.Size = new System.Drawing.Size(15, 16);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
             this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
@@ -198,10 +194,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.simgeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simgeButon.ForeColor = System.Drawing.Color.Transparent;
-            this.simgeButon.Location = new System.Drawing.Point(1197, 2);
-            this.simgeButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simgeButon.Location = new System.Drawing.Point(898, 2);
+            this.simgeButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simgeButon.Name = "simgeButon";
-            this.simgeButon.Size = new System.Drawing.Size(20, 20);
+            this.simgeButon.Size = new System.Drawing.Size(15, 16);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
             this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
@@ -217,10 +213,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.cikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButon.ForeColor = System.Drawing.Color.Transparent;
-            this.cikisButon.Location = new System.Drawing.Point(1257, 2);
-            this.cikisButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cikisButon.Location = new System.Drawing.Point(943, 2);
+            this.cikisButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(20, 20);
+            this.cikisButon.Size = new System.Drawing.Size(15, 16);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
@@ -236,10 +232,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.infoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.infoBtn.Location = new System.Drawing.Point(260, 0);
-            this.infoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.infoBtn.Location = new System.Drawing.Point(195, 0);
+            this.infoBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(42, 42);
+            this.infoBtn.Size = new System.Drawing.Size(32, 34);
             this.infoBtn.TabIndex = 9;
             this.infoBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoBtn.UseVisualStyleBackColor = false;
@@ -256,10 +252,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
-            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.anasayfaBtn.Location = new System.Drawing.Point(9, 0);
+            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.anasayfaBtn.Name = "anasayfaBtn";
-            this.anasayfaBtn.Size = new System.Drawing.Size(42, 42);
+            this.anasayfaBtn.Size = new System.Drawing.Size(32, 34);
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
@@ -276,10 +272,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kitapBtn.Location = new System.Drawing.Point(197, 0);
-            this.kitapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitapBtn.Location = new System.Drawing.Point(148, 0);
+            this.kitapBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kitapBtn.Name = "kitapBtn";
-            this.kitapBtn.Size = new System.Drawing.Size(42, 42);
+            this.kitapBtn.Size = new System.Drawing.Size(32, 34);
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
@@ -296,10 +292,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emanetBtn.Location = new System.Drawing.Point(75, 0);
-            this.emanetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emanetBtn.Location = new System.Drawing.Point(56, 0);
+            this.emanetBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emanetBtn.Name = "emanetBtn";
-            this.emanetBtn.Size = new System.Drawing.Size(42, 42);
+            this.emanetBtn.Size = new System.Drawing.Size(32, 34);
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
@@ -316,10 +312,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
-            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ogrenciBtn.Location = new System.Drawing.Point(102, 0);
+            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ogrenciBtn.Name = "ogrenciBtn";
-            this.ogrenciBtn.Size = new System.Drawing.Size(42, 42);
+            this.ogrenciBtn.Size = new System.Drawing.Size(32, 34);
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
@@ -332,10 +328,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnemanet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnemanet.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnemanet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnemanet.Location = new System.Drawing.Point(12, 460);
-            this.btnemanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnemanet.Location = new System.Drawing.Point(9, 374);
+            this.btnemanet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnemanet.Name = "btnemanet";
-            this.btnemanet.Size = new System.Drawing.Size(641, 46);
+            this.btnemanet.Size = new System.Drawing.Size(481, 37);
             this.btnemanet.TabIndex = 8;
             this.btnemanet.Text = "Emanet Teslim Sayfası";
             this.btnemanet.UseVisualStyleBackColor = false;
@@ -343,15 +339,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // Emanet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Emanet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emanet Sayfası";

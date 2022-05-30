@@ -104,7 +104,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void SepeteEkle_Click(object sender, EventArgs e)
         {
-            if (txtkitapIsbn.Text==""||txtkitapAd.Text==""|| txtKitapBarkod.Text=="" || txtkitapId.Text == "" || txtEmanetAkts.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyayinevi.Text == "" || mskalistarihi.Text == "" || mskveristarihi.Text == "")
+            if (txtkitapAd.Text==""|| txtDemirbas.Text=="" || txtkitapId.Text == "" || txtEmanetAkts.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyayinevi.Text == "" || mskalistarihi.Text == "" || mskveristarihi.Text == "")
             {
                 MessageBox.Show("Kitap seçiniz");
             }
@@ -125,10 +125,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 else
                 {
                     connection.Open();
-                    MySqlCommand komut = new MySqlCommand("insert into sepet(kitapId,barkod,ISBN,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@kitapId,@barkod,@ISBN,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
+                    MySqlCommand komut = new MySqlCommand("insert into sepet(kitapId,demirbasNo,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@kitapId,@demirbasNo,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
                     komut.Parameters.AddWithValue("@kitapId", txtkitapId.Text);
-                    komut.Parameters.AddWithValue("@barkod", txtKitapBarkod.Text);
-                    komut.Parameters.AddWithValue("@ISBN", txtkitapIsbn.Text);
+                    komut.Parameters.AddWithValue("@demirbasNo", txtDemirbas.Text);
                     komut.Parameters.AddWithValue("@kitapAd", txtkitapAd.Text);
                     komut.Parameters.AddWithValue("@yzrAd", txtyazar.Text);
                     komut.Parameters.AddWithValue("@yzrSoyad", txtyazarsoyad.Text);
@@ -165,8 +164,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             
      
             txtkitapId.Text = dataGridViewkitap.CurrentRow.Cells["kitapId"].Value.ToString();
-            txtKitapBarkod.Text = dataGridViewkitap.CurrentRow.Cells["barkod"].Value.ToString();
-            txtkitapIsbn.Text = dataGridViewkitap.CurrentRow.Cells["ISBN"].Value.ToString();
+            txtDemirbas.Text = dataGridViewkitap.CurrentRow.Cells["demirbasNo"].Value.ToString();
             txtkitapAd.Text = dataGridViewkitap.CurrentRow.Cells["kitapAd"].Value.ToString();
             txtyazar.Text = dataGridViewkitap.CurrentRow.Cells["yzrAd"].Value.ToString();
             txtyazarsoyad.Text = dataGridViewkitap.CurrentRow.Cells["yzrSoyad"].Value.ToString();
@@ -174,7 +172,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtstokadet.Text = dataGridViewkitap.CurrentRow.Cells["stok"].Value.ToString();
             
             txtkitapId.Enabled = false;
-            txtKitapBarkod.Enabled = false;
+            txtDemirbas.Enabled = false;
             txtkitapIsbn.Enabled = false;
             txtkitapAd.Enabled = false;
             txtyazarsoyad.Enabled = false;
@@ -275,7 +273,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         {
                             
                             connection.Open();
-                            MySqlCommand komut = new MySqlCommand("insert into Emanet(ogrId,ogrNo,ogrAd,ogrSoyad,ogrEposta,ogrTel,kitapId,barkod,ISBN,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@ogrId,@ogrNo,@ogrAd,@ogrSoyad,@ogrEposta,@ogrTel,@kitapId,@barkod,@ISBN,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
+                            MySqlCommand komut = new MySqlCommand("insert into Emanet(ogrId,ogrNo,ogrAd,ogrSoyad,ogrEposta,ogrTel,kitapId,demirbasNo,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@ogrId,@ogrNo,@ogrAd,@ogrSoyad,@ogrEposta,@ogrTel,@kitapId,@demirbasNo,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
                             komut.Parameters.AddWithValue("@ogrId", txtogrID.Text);
                             komut.Parameters.AddWithValue("@ogrNo", txtogrNo.Text);
                             komut.Parameters.AddWithValue("@ogrAd", txtOgrAd.Text);
@@ -283,8 +281,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                             komut.Parameters.AddWithValue("@ogrEposta", mskOgrenciPosta.Text);
                             komut.Parameters.AddWithValue("@ogrTel", mskOgrenciTelefon.Text);
                             komut.Parameters.AddWithValue("@kitapId", dataGridView1.Rows[i].Cells["kitapId"].Value.ToString());
-                            komut.Parameters.AddWithValue("@barkod", dataGridView1.Rows[i].Cells["barkod"].Value.ToString());
-                            komut.Parameters.AddWithValue("@ISBN", dataGridView1.Rows[i].Cells["ISBN"].Value.ToString());
+                            komut.Parameters.AddWithValue("@demirbasNo", dataGridView1.Rows[i].Cells["demirbasNo"].Value.ToString());
                             komut.Parameters.AddWithValue("@kitapAd", dataGridView1.Rows[i].Cells["kitapAd"].Value.ToString());
                             komut.Parameters.AddWithValue("@yzrAd", dataGridView1.Rows[i].Cells["yzrAd"].Value.ToString());
                             komut.Parameters.AddWithValue("@yzrSoyad", dataGridView1.Rows[i].Cells["yzrSoyad"].Value.ToString());
