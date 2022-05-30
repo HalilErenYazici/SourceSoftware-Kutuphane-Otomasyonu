@@ -761,7 +761,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
           /*  string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);*/
 
-            if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" /*txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""/*||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text==""*/)
+            if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" &&txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
              {
 
                  MessageBox.Show("Lütfen alanları boş geçmeyiniz.");
@@ -772,9 +772,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 connection.Open();
 
-                if (/*lblisbn.Text == "Yazılabilir" &&*/ lbldemirbasno.Text == "Yazılabilir" /* lblbarkod.Text == "Yazılabilir"*/) {
+                if (lblisbn.Text == "Yazılabilir" && lbldemirbasno.Text == "Yazılabilir" &&lblbarkod.Text == "Yazılabilir") {
 
-                    if (cmbyazarad.Text=="")
+                  /*  if (cmbyazarad.Text=="")
                     {
                         string ekle2 = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo,KacKezAlindi) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo,@KacKezAlindi)";
                         MySqlCommand eklekomut2 = new MySqlCommand(ekle2, connection);
@@ -821,9 +821,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         //Kitap kitap = new Kitap();
                         //kitap.Show();
                         //this.Close();
-                    }
-                    else
-                    {
+                    }*/
+                 
                         string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo,KacKezAlindi) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo,@KacKezAlindi)";
                         MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
@@ -871,7 +870,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         //AnaSayfa AnaSayfa = new AnaSayfa();
                         //AnaSayfa.Show();
                         //this.Hide();
-                    }
+                    
                   
 
                 }
