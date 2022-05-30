@@ -88,7 +88,7 @@ LIMIT 1; */
                 connection.Open();
 
            
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi asc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi desc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
@@ -104,7 +104,7 @@ LIMIT 1; */
             connection.Open();
 
 
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi desc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi asc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
@@ -116,7 +116,7 @@ LIMIT 1; */
         {
             connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by okuduguKitapSayisi desc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by okuduguKitapSayisi asc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
@@ -130,7 +130,7 @@ LIMIT 1; */
         {
             connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by okuduguKitapSayisi asc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by okuduguKitapSayisi desc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
@@ -144,11 +144,11 @@ LIMIT 1; */
         {
             connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by dil desc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by dil asc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
-                lblencokOkunanKitapDili.Text = dr1["dil"].ToString();
+                lblencokOkunankitapDili.Text = dr1["dil"].ToString();
             }
             connection.Close();
 
@@ -157,7 +157,7 @@ LIMIT 1; */
         {
             connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by dil asc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by dil desc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
@@ -209,7 +209,7 @@ LIMIT 1; */
         {
             connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by ogrBolum desc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by ogrBolum asc", connection);
             MySqlDataReader dr2 = komut.ExecuteReader();
             while (dr2.Read())
             {
@@ -220,19 +220,15 @@ LIMIT 1; */
         }
         private void enAzKayitOlanBolum()
         {
-          /*  connection.Open();
-            /*SELECT COUNT(CustomerID), country 
-FROM customers
-GROUP BY country
-ORDER BY COUNT(CustomerID) DESC
-LIMIT 1;*/
-           /* MySqlCommand komut = new MySqlCommand("select count(ogrId) from Ogrenci order by ogrBolum desc", connection);
+            connection.Open();
+
+            MySqlCommand komut = new MySqlCommand("select * from Ogrenci order by ogrBolum desc", connection);
             MySqlDataReader dr2 = komut.ExecuteReader();
             while (dr2.Read())
             {
                 lblenAzKayitOlanBolum.Text = dr2["ogrBolum"].ToString();
             }
-            connection.Close();*/
+            connection.Close();
 
         }
 
