@@ -62,7 +62,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button1_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapEkle();
-            form.ShowDialog();
+            form.Show();
+            this.Hide();
         }
 
         private void anasayfaBtn_Click(object sender, EventArgs e)
@@ -103,7 +104,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button2_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapDuzenle();
-            form.ShowDialog();
+            form.Show();
+            this.Close();
         }
 
         private void Kitap_Load(object sender, EventArgs e)

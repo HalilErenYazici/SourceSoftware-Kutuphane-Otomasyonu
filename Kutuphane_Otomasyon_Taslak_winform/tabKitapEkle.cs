@@ -823,17 +823,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         //this.Close();
                     }*/
                  
-                        string ekle = "insert into Kitap (ktgrId,turId,yzrId,yynevId,cvrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo,KacKezAlindi) values(@ktgrId,@turId,@yzrId,@yynevId,@cvrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo,@KacKezAlindi)";
+                        string ekle = "insert into Kitap (ktgrId,barkod,ISBN,demirbasNo,kitapAd,cilt,konu,ozet,sayfa,stok,anhtrK,dil,ynSenesi,kkTarih,basimNo,cikisYili,dolapNo,rafNo,KacKezAlindi,turId,yzrId,yynevId,cvrId) values(@ktgrId,@barkod,@ISBN,@demirbasNo,@kitapAd,@cilt,@konu,@ozet,@sayfa,@stok,@anhtrK,@dil,@ynSenesi,@kkTarih,@basimNo,@cikisYili,@dolapNo,@rafNo,@KacKezAlindi,@turId,@yzrId,@yynevId,@cvrId)";
                         MySqlCommand eklekomut = new MySqlCommand(ekle, connection);
 
-                        eklekomut.Parameters.AddWithValue("@ktgrId", lblkategori.Text);
-
-                        eklekomut.Parameters.AddWithValue("@turId", lbltur.Text);
-
-                        eklekomut.Parameters.AddWithValue("@yzrId", lblYazar.Text);
-                        eklekomut.Parameters.AddWithValue("@yynevId", lblyayinevi.Text);
-
-                        eklekomut.Parameters.AddWithValue("@cvrId", lblidcevirmensoyad.Text);
+                        
                         eklekomut.Parameters.AddWithValue("@barkod", txtbarkod.Text);
                         eklekomut.Parameters.AddWithValue("@ISBN", txtisbn.Text);
                         eklekomut.Parameters.AddWithValue("@demirbasNo", txtdemirbas.Text);
@@ -853,6 +846,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         eklekomut.Parameters.AddWithValue("@dolapNo", txtdolapkonum.Text);
                         eklekomut.Parameters.AddWithValue("@rafNo", txtrafkonum.Text);
                         eklekomut.Parameters.AddWithValue("@KacKezAlindi", KacKezEmanetAlindi);
+                        eklekomut.Parameters.AddWithValue("@ktgrId", lblkategori.Text);
+
+                        eklekomut.Parameters.AddWithValue("@turId", lbltur.Text);
+
+                        eklekomut.Parameters.AddWithValue("@yzrId", lblYazar.Text);
+                        eklekomut.Parameters.AddWithValue("@yynevId", lblyayinevi.Text);
+
+                        eklekomut.Parameters.AddWithValue("@cvrId", lblidcevirmensoyad.Text);
 
 
 
@@ -867,9 +868,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         MessageBox.Show("Kayıt başarıyla gerçekleştirildi.");
 
 
-                        //AnaSayfa AnaSayfa = new AnaSayfa();
-                        //AnaSayfa.Show();
-                        //this.Hide();
+                        AnaSayfa AnaSayfa = new AnaSayfa();
+                        AnaSayfa.Show();
+                        this.Hide();
                     
                   
 
@@ -880,8 +881,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
                     connection.Close();
                 }
-                this.Controls.Clear();
-                this.InitializeComponent();
+               
             }
         }
 
