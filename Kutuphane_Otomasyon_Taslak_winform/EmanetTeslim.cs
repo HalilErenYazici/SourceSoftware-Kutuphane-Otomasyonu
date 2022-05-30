@@ -108,6 +108,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 MessageBox.Show("Kitap seçiniz");
             }
+            
             else
             {
                 if (int.Parse(txtstokadet.Text) <= 0)
