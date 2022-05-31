@@ -75,24 +75,27 @@ LIMIT 1; */
             encokOkuyanKitapOkuyanOgrenci();
             enazOkuyanKitapOkuyanOgrenci();
             encokokunanKitapDili();
-            enazokunanKitapDili();
             toplamOgrenciSayisi();
             toplamKitapSayisi();
             toplamAlinanKitapSayisi();
             enCokKayitOlanBolum();
             enAzKayitOlanBolum();
-            }
+            encokokuyanogrenci();
+            enazokuyanOgrenci();
+            encokEmanetAlinanKitap();
+            enazEmanetAlinanKitap();
+        }
 
         private void encokOkunanKitap()
         {
                 connection.Open();
 
            
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi desc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi asc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
-                lblEnAzOkunanKitap.Text = dr1["kitapAd"].ToString();
+                lblencokOkunanKitap.Text = dr1["kitapAd"].ToString();
             }
             connection.Close();
 
@@ -104,11 +107,11 @@ LIMIT 1; */
             connection.Open();
 
 
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi asc", connection);
+            MySqlCommand komut = new MySqlCommand("select * from Kitap order by KacKezAlindi desc", connection);
             MySqlDataReader dr1 = komut.ExecuteReader();
             while (dr1.Read())
             {
-                lblencokOkunanKitap.Text = dr1["kitapAd"].ToString();
+                lblEnAzOkunanKitap.Text = dr1["kitapAd"].ToString();
             }
             connection.Close();
         }
@@ -153,19 +156,7 @@ LIMIT 1; */
             connection.Close();
 
         }
-        private void enazokunanKitapDili()
-        {
-            connection.Open();
 
-            MySqlCommand komut = new MySqlCommand("select * from Kitap order by dil desc", connection);
-            MySqlDataReader dr1 = komut.ExecuteReader();
-            while (dr1.Read())
-            {
-                lblenazokunankitapdili.Text = dr1["dil"].ToString();
-            }
-            connection.Close();
-
-        }
         private void toplamOgrenciSayisi()
         {
             connection.Open();
@@ -232,6 +223,95 @@ LIMIT 1; */
 
         }
 
+        private void Grafikler_Load(object sender, EventArgs e)
+        {
+        }
+        private void encokokuyanogrenci()
+        {
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand("Select ogrAd,ogrSoyad,okuduguKitapSayisi from Ogrenci order by okuduguKitapSayisi desc LIMIT 5", connection);
+            MySqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
+            {
+                chartencokkitapokuyan.Series["En çok kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+                // chart2.Series["En çok kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+            }
+
+            connection.Close();
+            chartencokkitapokuyan.Series["En çok kitap okuyan öğrenci"].Color = Color.Orange;
+        }
+        private void enazokuyanOgrenci()
+        {
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand("Select ogrAd,ogrSoyad,okuduguKitapSayisi from Ogrenci order by okuduguKitapSayisi ASC LIMIT 5", connection);
+            MySqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
+            {
+                chartenazkitapokuyan.Series["En az kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+                // chart2.Series["En çok kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+            }
+            connection.Close();
+            chartenazkitapokuyan.Series["En az kitap okuyan öğrenci"].Color = Color.LightGreen;
+
+        }
+        private void encokEmanetAlinanKitap()
+        {
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand("Select kitapAd,KacKezAlindi from Kitap order by KacKezAlindi desc LIMIT 5", connection);
+            MySqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
+            {
+                chrtEnCokEmanetAlinanKitap.Series["En çok emanet alınan kitap"].Points.AddXY(read["kitapAd"].ToString(), read["KacKezAlindi"]);
+
+
+
+                // chart2.Series["En çok kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+            }
+            connection.Close();
+            chrtEnCokEmanetAlinanKitap.Series["En çok emanet alınan kitap"].Color = Color.Purple;
+
+        }
+        private void enazEmanetAlinanKitap()
+        {
+            connection.Open();
+            MySqlCommand komut = new MySqlCommand("Select kitapAd,KacKezAlindi from Kitap order by KacKezAlindi asc LIMIT 5", connection);
+            MySqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
+            {
+                chrtEnAzEmanetAlinanKitap.Series["En az emanet alınan kitap"].Points.AddXY(read["kitapAd"].ToString(), read["KacKezAlindi"]);
+
+
+
+                // chart2.Series["En çok kitap okuyan öğrenci"].Points.AddXY(read["ogrAd"].ToString() + " " + read["ogrSoyad"].ToString(), read["okuduguKitapSayisi"]);
+
+
+
+            }
+            connection.Close();
+            chrtEnCokEmanetAlinanKitap.Series["En çok emanet alınan kitap"].Color = Color.Purple;
+
+        }
+
+
         private void anasayfaBtn_Click(object sender, EventArgs e)
         {
 
@@ -264,12 +344,31 @@ LIMIT 1; */
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
+        }
+
+        private void btnOgrGtr_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+            panel5.Visible = false;
+            chartenazkitapokuyan.Visible = true;
+            chartencokkitapokuyan.Visible = true;
+            chrtEnAzEmanetAlinanKitap.Visible = false;
+            chrtEnCokEmanetAlinanKitap.Visible = false;
+        }
+
+        private void btnKtpGtr_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+            panel5.Visible = false;
+            chartenazkitapokuyan.Visible = false;
+            chartencokkitapokuyan.Visible = false;
+            chrtEnAzEmanetAlinanKitap.Visible = true;
+            chrtEnCokEmanetAlinanKitap.Visible = true;
         }
     }
 }

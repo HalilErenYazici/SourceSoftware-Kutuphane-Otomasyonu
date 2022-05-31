@@ -198,7 +198,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
        
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         private void kaplaButon_Click(object sender, EventArgs e)
         {
@@ -239,9 +239,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }
@@ -762,12 +762,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);*/
 
             if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" &&txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
-             {
+            {
 
                  MessageBox.Show("Lütfen alanları boş geçmeyiniz.");
-             }
+            }
             else
-             {
+            {
                 
 
                 connection.Open();
@@ -868,11 +868,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         MessageBox.Show("Kayıt başarıyla gerçekleştirildi.");
 
 
-                        AnaSayfa AnaSayfa = new AnaSayfa();
-                        AnaSayfa.Show();
-                        this.Hide();
-                    
-                  
+                    Kitap form = new Kitap();
+                    form.Show();
+                    this.Hide();
+
+
 
                 }
                 else
@@ -881,7 +881,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
                     connection.Close();
                 }
-               
+                //this.Controls.Clear();
+                //this.InitializeComponent();
             }
         }
 
@@ -1041,25 +1042,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             button3.Visible = false;
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            lblcevirmenad.Visible = true;
-            cmbcevirmenadi.Visible = true;
-            lblcevirmensoyad.Visible = true;
-            cmbcevirmensoyadi.Visible = true;
-            button9.Visible = true;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            lblcevirmenad.Visible = false;
-            cmbcevirmenadi.Visible = false;
-            lblcevirmensoyad.Visible = false;
-            cmbcevirmensoyadi.Visible = false;
-
-            cmbcevirmenadi.Items.Clear();
-            cmbcevirmensoyadi.Items.Clear();
-
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
+            this.Close();
         }
     }
 }

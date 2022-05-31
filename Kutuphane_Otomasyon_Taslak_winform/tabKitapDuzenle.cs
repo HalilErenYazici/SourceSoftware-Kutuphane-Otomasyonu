@@ -70,8 +70,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbkategori.Items.Add(oku[1].ToString());
             }
             connection.Close();
-
-
         }
 
 
@@ -107,7 +105,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 cmbyazarsoyad.Items.Add(oku[2].ToString());
             }
             connection.Close();
-
         }
 
         private void turEkle()
@@ -398,7 +395,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void anasayfaBtn_Click(object sender, EventArgs e)
@@ -422,9 +419,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }
@@ -436,24 +433,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void tureklebtn_Click(object sender, EventArgs e)
         {
-            if (txttur.Text == "")
-            {
-                MessageBox.Show("tür verisi boş");
-            }
-            else
-            {
-                connection.Open();
-                string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
-                var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);
-                string turekle = "insert into Tur(turAd) values('" + txttur.Text + "');";
-                MySqlCommand turkomut = new MySqlCommand(turekle, connection);
-                turkomut.ExecuteNonQuery();
-                int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("tur eklendi");
-                connection.Close();
-                turEkle();
 
-            }
         }
 
         private void yayinevibtn_Click(object sender, EventArgs e)
@@ -505,7 +485,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btncevirmen_Click(object sender, EventArgs e)
         {
             if (txtcevirmen.Text == "" || txtcevirmensoyad.Text == "")
             {
@@ -1167,6 +1147,169 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
 
             connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label25.Visible = true;
+            txtyayinevi.Visible = true;
+            yayinevibtn.Visible = true;
+            label29.Visible = true;
+            msktel.Visible = true;
+            label25.Visible = false;
+            txttur.Visible = false;
+            tureklebtn.Visible = false;
+            label30.Visible = false;
+            txtkategori.Visible = false;
+            btnkategori.Visible = false;
+            label36.Visible = false;
+            label35.Visible = false;
+            txtyazar.Visible = false;
+            txtyazarsoyad.Visible = false;
+            btnyazar.Visible = false;
+            label31.Visible = false;
+            label32.Visible = false;
+            txtcevirmen.Visible = false;
+            txtcevirmensoyad.Visible = false;
+            button6.Visible = false;
+            button3.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            label25.Visible = false;
+            txtyayinevi.Visible = false;
+            yayinevibtn.Visible = false;
+            label29.Visible = false;
+            msktel.Visible = false;
+            label25.Visible = true;
+            txttur.Visible = true;
+            tureklebtn.Visible = true;
+            label30.Visible = false;
+            txtkategori.Visible = false;
+            btnkategori.Visible = false;
+            label36.Visible = false;
+            label35.Visible = false;
+            txtyazar.Visible = false;
+            txtyazarsoyad.Visible = false;
+            btnyazar.Visible = false;
+            label31.Visible = false;
+            label32.Visible = false;
+            txtcevirmen.Visible = false;
+            txtcevirmensoyad.Visible = false;
+            button6.Visible = false;
+            button3.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            label25.Visible = false;
+            txtyayinevi.Visible = false;
+            yayinevibtn.Visible = false;
+            label29.Visible = false;
+            msktel.Visible = false;
+            label25.Visible = false;
+            txttur.Visible = false;
+            tureklebtn.Visible = false;
+            label30.Visible = true;
+            txtkategori.Visible = true;
+            btnkategori.Visible = true;
+            label36.Visible = false;
+            label35.Visible = false;
+            txtyazar.Visible = false;
+            txtyazarsoyad.Visible = false;
+            btnyazar.Visible = false;
+            label31.Visible = false;
+            label32.Visible = false;
+            txtcevirmen.Visible = false;
+            txtcevirmensoyad.Visible = false;
+            button6.Visible = false;
+            button3.Visible = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            label25.Visible = false;
+            txtyayinevi.Visible = false;
+            yayinevibtn.Visible = false;
+            label29.Visible = false;
+            msktel.Visible = false;
+            label25.Visible = false;
+            txttur.Visible = false;
+            tureklebtn.Visible = false;
+            label30.Visible = false;
+            txtkategori.Visible = false;
+            btnkategori.Visible = false;
+            label36.Visible = true;
+            label35.Visible = true;
+            txtyazar.Visible = true;
+            txtyazarsoyad.Visible = true;
+            btnyazar.Visible = true;
+            label31.Visible = false;
+            label32.Visible = false;
+            txtcevirmen.Visible = false;
+            txtcevirmensoyad.Visible = false;
+            button6.Visible = false;
+            button3.Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            label25.Visible = false;
+            txtyayinevi.Visible = false;
+            yayinevibtn.Visible = false;
+            label29.Visible = false;
+            msktel.Visible = false;
+            label25.Visible = false;
+            txttur.Visible = false;
+            tureklebtn.Visible = false;
+            label30.Visible = false;
+            txtkategori.Visible = false;
+            btnkategori.Visible = false;
+            label36.Visible = false;
+            label35.Visible = false;
+            txtyazar.Visible = false;
+            txtyazarsoyad.Visible = false;
+            btnyazar.Visible = false;
+            label31.Visible = true;
+            label32.Visible = true;
+            txtcevirmen.Visible = true;
+            txtcevirmensoyad.Visible = true;
+            button6.Visible = true;
+            button3.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label25.Visible = false;
+            txtyayinevi.Visible = false;
+            yayinevibtn.Visible = false;
+            label29.Visible = false;
+            msktel.Visible = false;
+            label25.Visible = false;
+            txttur.Visible = false;
+            tureklebtn.Visible = false;
+            label30.Visible = false;
+            txtkategori.Visible = false;
+            btnkategori.Visible = false;
+            label36.Visible = false;
+            label35.Visible = false;
+            txtyazar.Visible = false;
+            txtyazarsoyad.Visible = false;
+            btnyazar.Visible = false;
+            label31.Visible = false;
+            label32.Visible = false;
+            txtcevirmen.Visible = false;
+            txtcevirmensoyad.Visible = false;
+            button6.Visible = false;
+            button3.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
+            this.Close();
         }
     }
 }

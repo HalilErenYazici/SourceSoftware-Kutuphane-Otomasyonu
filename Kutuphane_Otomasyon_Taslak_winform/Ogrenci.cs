@@ -92,9 +92,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }

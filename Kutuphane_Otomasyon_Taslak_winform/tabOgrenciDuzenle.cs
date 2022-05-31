@@ -59,13 +59,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void tabOgrenciDuzenle_Load(object sender, EventArgs e)
         {
-
-
             listele();
-           // ogrenciListele();
-
-
-           
+            dataGridView1.ForeColor = Color.Black;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -152,6 +147,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button3_Click(object sender, EventArgs e)
         {
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
             this.Close();
         }
 
@@ -316,9 +313,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }

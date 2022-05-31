@@ -48,7 +48,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
 
         }
         private void kaplaButon_Click(object sender, EventArgs e)
@@ -92,9 +92,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }
@@ -291,6 +291,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             }
             connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
+            this.Close();
         }
     }
 }

@@ -18,52 +18,33 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             InitializeComponent();
         }
 
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+        private void cikisButon_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnMail_Click(object sender, EventArgs e)
         {
-
-            /* MailMessage ePosta = new MailMessage();
-              ePosta.From = new MailAddress("berkaygrcn34@gmail.com");
-              ePosta.To.Add(txtMail.Text);
-              ePosta.Subject = txtBaslik.Text;
-              ePosta.Body = txtMesajicerigi.Text;
-              SmtpClient smtp = new SmtpClient();
-              smtp.Credentials = new System.Net.NetworkCredential("berkaygrcn34@gmail.com", "123bjk456");
-              smtp.Port = 587;
-              smtp.Host = "smtp.gmail.com";
-              smtp.EnableSsl = false;
-              smtp.Send(ePosta);
-              MessageBox.Show("Mail başarıyla gönderilmiştir.!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-         /*  MailMessage eposta = new MailMessage();
-           SmtpClient istemci = new SmtpClient();
-           istemci.Credentials = new System.Net.NetworkCredential("berkaygrcn34@gmail.com", "123bjk456");
-           istemci.Port = 587;
-           istemci.Host = "smtp.gmail.com";
-           istemci.EnableSsl = false;
-           eposta.To.Add(txtMail.Text);
-           eposta.From = new MailAddress("berkaygrcn34@gmail.com");
-           eposta.Subject = txtBaslik.Text;
-           eposta.Body = txtMesajicerigi.Text;
-           istemci.Send(eposta);
-           MessageBox.Show("Mail başarıyla gönderilmiştir.!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-         */
-            /* 
-            MailMessage ePosta = new MailMessage();
-            ePosta.From = new MailAddress("mail@gmail.com");
-            ePosta.To.Add("alan@gmail.com");
-            ePosta.Attachments.Add(new Attachment(@"D:\ek.txt"));
-            ePosta.Subject = "konu";
-            ePosta.Body = "içerik";
-            SmtpClient smtp = new SmtpClient();
-            smtp.Credentials = new System.Net.NetworkCredential("mail@gmail.com", "password");
-            smtp.Port = 587;
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = false;
-            smtp.Send(ePosta);
-            MessageBox.Show("Mail başarıyla gönderilmiştir.!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Soru ve görüşleriniz için burak@karadasburak.com adresine mail atabilirsiniz. 
-
-             */
             MailMessage eposta = new MailMessage();
             eposta.From = new MailAddress("berkaygrcn34@gmail.com");
             eposta.To.Add(txtMail.Text);
@@ -80,12 +61,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Emanet emanet = new Emanet();
             emanet.Show();
             this.Hide();
-       
-
-
-
-
-
         }
     }
 }

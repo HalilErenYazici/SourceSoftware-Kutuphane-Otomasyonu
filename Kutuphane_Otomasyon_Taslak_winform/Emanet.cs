@@ -85,18 +85,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Ayarlar();
+            Form form = new Istatistik();
             form.Show();
             this.Close();
         }
-
-        private void dataGridViewogrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         public void listeleOgrenci()
         {
@@ -138,17 +132,30 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void Emanet_Load(object sender, EventArgs e)
         {
             listelemanet();
-          /*  listeleOgrenci();
-            listeleKitap();
-            Dtn = DateTime.Now;
-            mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");*/
-        }
+            /*  listeleOgrenci();
+              listeleKitap();
+              Dtn = DateTime.Now;
+              mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");*/
 
-        private void dataGridViewkitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            searchBox.Text = "Ara...";
+            searchBox.ForeColor = Color.Gray;
+        }
+        private void textBox1_Enter(object sender, EventArgs e)
         {
-
+            if (searchBox.Text == "Ara...")
+            {
+            searchBox.Text = "";
+            searchBox.ForeColor = Color.Black;
+            }
         }
-
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "")
+            {
+            searchBox.Text = "Ara...";
+            searchBox.ForeColor = Color.Gray;
+            }
+        }
 
         private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -172,36 +179,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
             MessageBox.Show("Silme işlemi gerçekleşti.");
             listelemanet();
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtOgrSoyad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOgrAd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtogrNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtogrID_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -415,9 +392,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         }
 
-
-    
-
     private void button2_Click(object sender, EventArgs e)
         {
             Emanetiade emanetiade = new Emanetiade();
@@ -425,36 +399,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Hide();
         }
 
-        private void searchBox_Click(object sender, EventArgs e)
-        {
-            searchBox.Clear();
-        }
-
         private void btnMail_Click(object sender, EventArgs e)
         {
             MailGonderme mail = new MailGonderme();
             mail.Show();
-            this.Hide();
-        }
-
-        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewemanet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

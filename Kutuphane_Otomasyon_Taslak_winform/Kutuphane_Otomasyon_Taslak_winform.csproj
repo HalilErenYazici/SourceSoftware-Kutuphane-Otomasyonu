@@ -112,12 +112,6 @@
     <Compile Include="Ayarlar.Designer.cs">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </Compile>
-    <Compile Include="bxTurEkle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="bxTurEkle.Designer.cs">
-      <DependentUpon>bxTurEkle.cs</DependentUpon>
-    </Compile>
     <Compile Include="data.cs" />
     <Compile Include="Emanet.cs">
       <SubType>Form</SubType>
@@ -142,12 +136,6 @@
     </Compile>
     <Compile Include="GirisEkrani.Designer.cs">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grafikler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Grafikler.Designer.cs">
-      <DependentUpon>Grafikler.cs</DependentUpon>
     </Compile>
     <Compile Include="Istatistik.cs">
       <SubType>Form</SubType>
@@ -211,9 +199,6 @@
     <EmbeddedResource Include="Ayarlar.resx">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bxTurEkle.resx">
-      <DependentUpon>bxTurEkle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Emanet.resx">
       <DependentUpon>Emanet.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,9 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Grafikler.resx">
-      <DependentUpon>Grafikler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Istatistik.resx">
       <DependentUpon>Istatistik.cs</DependentUpon>
@@ -386,6 +368,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-male-student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-male-student1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

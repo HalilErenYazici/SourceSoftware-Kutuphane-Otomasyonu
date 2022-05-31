@@ -60,12 +60,46 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             listeleOgrenci();
             listeleKitap();
             kitapsayisi();
-        }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+            searchBoxOgr.Text = "Öğrenci Ara...";
+            searchBoxOgr.ForeColor = Color.Gray;
+            searchBoxKtp.Text = "Kitap Ara...";
+            searchBoxKtp.ForeColor = Color.Gray;
+        }
+        private void textBox1_Enter(object sender, EventArgs e)
         {
-
+            if (searchBoxOgr.Text == "Öğrenci Ara...")
+            {
+                searchBoxOgr.Text = "";
+                searchBoxOgr.ForeColor = Color.Black;
+            }
         }
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (searchBoxOgr.Text == "")
+            {
+                searchBoxOgr.Text = "Öğrenci Ara...";
+                searchBoxOgr.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (searchBoxKtp.Text == "Kitap Ara...")
+            {
+                searchBoxKtp.Text = "";
+                searchBoxKtp.ForeColor = Color.Black;
+            }
+        }
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (searchBoxKtp.Text == "")
+            {
+                searchBoxKtp.Text = "Kitap Ara...";
+                searchBoxKtp.ForeColor = Color.Gray;
+            }
+        }
+
 
 
         public void sepetlistele()
@@ -154,9 +188,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                  }*/
             }
-
-
-
         }
 
         private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -177,10 +208,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtyazarsoyad.Enabled = false;
             txtyayinevi.Enabled = false;
             txtstokadet.Enabled = false;
-
-
-
-
         }
 
         private void dataGridViewogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -218,20 +245,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     {
                         item.Text = "";
                     }
-
-
                 }
                 lblkayitli.Text = "";
-
-
             }
         }
 
         private void btnsil_Click(object sender, EventArgs e)
         {
             connection.Open();
-         
-
 
             if (dataGridView1.CurrentRow==null)
             {
@@ -298,15 +319,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                             komut5.ExecuteNonQuery();
                             connection.Close();
 
-                            
-
-                            
-                          
-
-
-
-
-
                         }
                         connection.Open();
                         MySqlCommand komut4 = new MySqlCommand("delete from sepet", connection);
@@ -357,11 +369,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             da.Fill(dt);
 
             dataGridView1.DataSource = dt;
-        }
-
-        private void txtkitapadara_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtogrenciarama_TextChanged(object sender, EventArgs e)
@@ -799,8 +806,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            this.Close();
-
+            Application.Exit();
         }
 
         private void simgeButon_Click(object sender, EventArgs e)
@@ -843,31 +849,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Hide();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Ayarlar info = new Ayarlar();
-            info.Show();
+            Istatistik ist = new Istatistik();
+            ist.Show();
             this.Hide();
         }
 
-        private void searchBoxOgr_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            searchBoxOgr.Clear();
-        }
-
-        private void searchBoxKtp_Click(object sender, EventArgs e)
-        {
-            searchBoxKtp.Clear();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerveris_ValueChanged(object sender, EventArgs e)
-        {
-
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
+            this.Close();
         }
     }
 }

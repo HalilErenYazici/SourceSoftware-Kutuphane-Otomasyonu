@@ -68,104 +68,71 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void anasayfaBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
             AnaSayfa a = new AnaSayfa();
             a.ShowDialog();
+            this.Close();
         }
         private void emanetBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
             Emanet b = new Emanet();
             b.ShowDialog();
+            this.Close();
         }
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
             Ogrenci c = new Ogrenci();
             c.ShowDialog();
+            this.Close();
         }
         private void kitapBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
             Kitap d = new Kitap();
             d.ShowDialog();
-        }
-        private void ayrBtn_Click(object sender, EventArgs e)
-        {
             this.Close();
-            Ayarlar f = new Ayarlar();
-            f.ShowDialog();
+        }
+        private void istBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Istatistik();
+            form.Show();
+            this.Close();
         }
         private void button3_Click(object sender, EventArgs e)
         {
             EmanetTeslim EmanetVer = new EmanetTeslim();
             EmanetVer.Show();
-            this.Hide();
+            this.Close();
         }
         private void button4_Click(object sender, EventArgs e)
         {
             Emanetiade Emanetiade = new Emanetiade();
             Emanetiade.Show();
-            this.Hide();
-
+            this.Close();
         }
         private void button6_Click(object sender, EventArgs e)
         {
             Form form = new tabOgrenciEkle();
             form.Show();
-            this.Hide();
-
+            this.Close();
         }
         private void button7_Click(object sender, EventArgs e)
         {
             Form form = new tabOgrenciDuzenle();
             form.Show();
-            this.Hide();
+            this.Close();
 
         }
         private void button9_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapEkle();
             form.Show();
-            this.Hide();
+            this.Close();
 
         }
         private void button10_Click(object sender, EventArgs e)
         {
             Form form = new tabKitapDuzenle();
             form.Show();
-            this.Hide();
-
-        }
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Form form = new Istatistik();
-            form.Show();
             this.Close();
-
-        }
-        private void kitapBtn_Click_1(object sender, EventArgs e)
-        {
-            Form form = new Kitap();
-            form.Show();
-            this.Close();
-        }
-        private void istBtn_Click_1(object sender, EventArgs e)
-        {
-
-            Form form = new Istatistik();
-            form.Show();
-            this.Close();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

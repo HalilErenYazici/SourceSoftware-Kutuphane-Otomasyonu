@@ -24,6 +24,25 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void Emanetiade_Load(object sender, EventArgs e)
         {
             emanetlistele();
+
+            searchBox.Text = "Ara...";
+            searchBox.ForeColor = Color.Gray;
+        }
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "Ara...")
+            {
+                searchBox.Text = "";
+                searchBox.ForeColor = Color.Black;
+            }
+        }
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "")
+            {
+                searchBox.Text = "Ara...";
+                searchBox.ForeColor = Color.Gray;
+            }
         }
 
         bool move;
@@ -324,10 +343,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Hide();
         }
 
-        private void infoBtn_Click(object sender, EventArgs e)
+        private void istBtn_Click(object sender, EventArgs e)
         {
-            Ayarlar info = new Ayarlar();
-            info.Show();
+            Istatistik ist = new Istatistik();
+            ist.Show();
             this.Hide();
         }
 
@@ -347,16 +366,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.Close();
         }
-
-        private void searchBox_Click(object sender, EventArgs e)
-        {
-            searchBox.Clear();
-        }
-
-  
-
         private void button1_Click(object sender, EventArgs e)
         {
+            AnaSayfa form = new AnaSayfa();
+            form.Show();
             this.Close();
         }
     }
