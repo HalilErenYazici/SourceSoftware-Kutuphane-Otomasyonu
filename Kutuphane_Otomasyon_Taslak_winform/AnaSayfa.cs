@@ -74,21 +74,41 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void emanetBtn_Click(object sender, EventArgs e)
         {
-            Emanet b = new Emanet();
-            b.ShowDialog();
-            this.Close();
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
         }
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            Ogrenci c = new Ogrenci();
-            c.ShowDialog();
-            this.Close();
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = true;
+            button5.Visible = true;
+            button6.Visible = true;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+
         }
         private void kitapBtn_Click(object sender, EventArgs e)
         {
-            Kitap d = new Kitap();
-            d.ShowDialog();
-            this.Close();
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = true;
+            button8.Visible = true;
+            button9.Visible = true;
+
         }
         private void istBtn_Click(object sender, EventArgs e)
         {
@@ -133,6 +153,29 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new tabKitapDuzenle();
             form.Show();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Emanet b = new Emanet();
+            b.ShowDialog();
+            this.Close();
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Ogrenci c = new Ogrenci();
+            c.Show();
+            this.Close();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Kitap d = new Kitap();
+            d.ShowDialog();
+            this.Close();
+
         }
     }
 }

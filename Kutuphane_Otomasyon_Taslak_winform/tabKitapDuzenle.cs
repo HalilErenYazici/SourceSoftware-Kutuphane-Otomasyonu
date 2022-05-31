@@ -13,6 +13,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabKitapDuzenle : Form
     {
+        MySqlCommand cmd;
+
         public tabKitapDuzenle()
         {
             InitializeComponent();
@@ -300,6 +302,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
               
         }
+        public int varMi(string sorgu)
+        {
+
+            int sonuc1;
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
+            cmd = new MySqlCommand(sorgu, connection);
+            sonuc1 = Convert.ToInt32(cmd.ExecuteScalar());
+            connection.Close();
+            return sonuc1;
+
+        }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -308,6 +322,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || cmbcevirmensoyadi.Text == "" || cmbcevirmenadi.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || cmbkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || cmbtur.Text == "" || cmbyayinevi.Text == "" || cmbyazarad.Text == "" || cmbyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || cmbyayinevitel.Text == "")
             {
                 MessageBox.Show("Silmek için önce kitap seçiniz");
@@ -315,38 +330,48 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             else
             {
                 connection.Open();
-                DialogResult dialog;
-                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                string sil = "delete from Kitap where kitapId=@kitapId";
-                /*string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
-                string silKategori = "delete from Kategori where ktgrId=@ktgrId";
-                string silTur = "delete from Tur where turId=@turId";
-                string silYazar = "delete from Yazar where yzrId=@yzrId";
-                string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
-                */
-                MySqlCommand command = new MySqlCommand(sil, connection);
-              /*  MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
-                MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
-                MySqlCommand commandTur = new MySqlCommand(silTur, connection);
-                MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
-                MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);*/
 
-                command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
-               /* commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
-                commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
-                commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
-                commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
-                commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
-               */
-                command.ExecuteNonQuery();
-                /*commandYayinEvi.ExecuteNonQuery();
-                commandKategori.ExecuteNonQuery();
-                commandTur.ExecuteNonQuery();
-                commandYazar.ExecuteNonQuery();
-                commandCevirmen.ExecuteNonQuery();*/
+                if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0)
+                {
+                    DialogResult dialog;
+                    dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    string sil = "delete from Kitap where kitapId=@kitapId";
+                    /*string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
+                    string silKategori = "delete from Kategori where ktgrId=@ktgrId";
+                    string silTur = "delete from Tur where turId=@turId";
+                    string silYazar = "delete from Yazar where yzrId=@yzrId";
+                    string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
+                    */
+                    MySqlCommand command = new MySqlCommand(sil, connection);
+                    /*  MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
+                      MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
+                      MySqlCommand commandTur = new MySqlCommand(silTur, connection);
+                      MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
+                      MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);*/
 
-                connection.Close();
-                MessageBox.Show("Silme işlemi gerçekleşti.");
+                    command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
+                    /* commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
+                     commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
+                     commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
+                     commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
+                     commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
+                    */
+                    command.ExecuteNonQuery();
+                    /*commandYayinEvi.ExecuteNonQuery();
+                    commandKategori.ExecuteNonQuery();
+                    commandTur.ExecuteNonQuery();
+                    commandYazar.ExecuteNonQuery();
+                    commandCevirmen.ExecuteNonQuery();*/
+
+                    connection.Close();
+                    MessageBox.Show("Silme işlemi gerçekleşti.");
+                }
+                else
+                {
+                    MessageBox.Show("Kitap emanette olduğundan dolayı silinemez.");
+                }
+
+               
 
 
                 Form form = new Kitap();

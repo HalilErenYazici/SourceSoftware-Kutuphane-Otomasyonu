@@ -256,12 +256,12 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void mskOgrNo_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
-            MySqlDataAdapter adp = new MySqlDataAdapter("select ogrNo from Ogrenci where ogrNo='" + mskOgrenciPosta.Text + "'", connection);
+            MySqlDataAdapter adp = new MySqlDataAdapter("select ogrNo from Ogrenci where ogrNo='" + mskOgrNo.Text + "'", connection);
             DataSet ds = new DataSet();
             adp.Fill(ds, "Ogrenci");
             if (ds.Tables["Ogrenci"].Rows.Count > 0)
             {
-                lblogrencino.Text = "Veri tabanında bu mail var";
+                lblogrencino.Text = "Veri tabanında bu ogrenci no var";
                 lblogrencino.Visible = true;
             }
             else

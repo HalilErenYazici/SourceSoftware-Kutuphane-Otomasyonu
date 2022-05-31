@@ -137,8 +137,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
               Dtn = DateTime.Now;
               mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");*/
 
-            searchBox.Text = "Ara...";
-            searchBox.ForeColor = Color.Gray;
+            //searchBox.Text = "Ara...";
+            //searchBox.ForeColor = Color.Gray;
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {

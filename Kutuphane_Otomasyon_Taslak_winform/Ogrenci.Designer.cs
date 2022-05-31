@@ -85,7 +85,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Ögrenci Eposta",
             "Ögrenci Fakülte ",
             "Ögrenci Bölüm"});
-            this.cmbaramatip.Location = new System.Drawing.Point(51, 352);
+            this.cmbaramatip.Location = new System.Drawing.Point(12, 378);
             this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
             this.cmbaramatip.Name = "cmbaramatip";
             this.cmbaramatip.Size = new System.Drawing.Size(168, 24);
@@ -109,7 +109,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(260, 353);
+            this.searchBox.Location = new System.Drawing.Point(221, 379);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(220, 22);

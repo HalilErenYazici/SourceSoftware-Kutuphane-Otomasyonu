@@ -25,8 +25,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             emanetlistele();
 
-            searchBox.Text = "Ara...";
-            searchBox.ForeColor = Color.Gray;
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -370,7 +368,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             AnaSayfa form = new AnaSayfa();
             form.Show();
-            Application.Exit();
+            this.Close();
         }
     }
 }

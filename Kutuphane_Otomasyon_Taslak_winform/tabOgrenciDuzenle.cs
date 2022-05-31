@@ -13,6 +13,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabOgrenciDuzenle : Form
     {
+        MySqlCommand cmd;
+
         public tabOgrenciDuzenle()
         {
             InitializeComponent();
@@ -152,33 +154,57 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Close();
         }
 
+        public int varMi(string sorgu)
+        {
+
+            int sonuc1;
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
+            cmd = new MySqlCommand(sorgu, connection);
+            sonuc1 = Convert.ToInt32(cmd.ExecuteScalar());
+            connection.Close();
+            return sonuc1;
+
+        }
+
         private void btnSil_Click(object sender, EventArgs e)
         {
+            int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[1].Value);
             if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
             {
                 MessageBox.Show("Silinecek öğrenciyi seçmediniz öğrenci seçin!");
             }
             else
             {
-                connection.Open();
-                DialogResult dialog;
-                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                string sil = "delete from Ogrenci where ogrNo=@ogrNo";
-                MySqlCommand command = new MySqlCommand(sil, connection);
-                command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Silme işlemi gerçekleşti.");
-                //daset.Tables["Ogrenci"].Clear();
-
-                listele();
-                foreach (Control item in Controls)
+                if (varMi("SELECT COUNT('') FROM Emanet WHERE ogrId = '" + secilenId + "'") == 0)
                 {
-                    if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                    connection.Open();
+                    DialogResult dialog;
+                    dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    string sil = "delete from Ogrenci where ogrNo=@ogrNo";
+                    MySqlCommand command = new MySqlCommand(sil, connection);
+                    command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Silme işlemi gerçekleşti.");
+                    //daset.Tables["Ogrenci"].Clear();
+
+                    listele();
+                    foreach (Control item in Controls)
                     {
-                        item.Text = null;
+                        if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                        {
+                            item.Text = null;
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Kişinin üzerinde emanet olduğundan dolayı silinemez.");
+                }
+
+
+                
 
             }
 

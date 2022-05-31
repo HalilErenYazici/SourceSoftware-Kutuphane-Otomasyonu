@@ -490,7 +490,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             //komut.CommandText = "select * from Yazar where yzrAd='" + cekilenAd + "'";
             //oku = komut.ExecuteReader();
             string query = "select yzrId from Yazar where yzrSoyad='" + cekilensoyad + "'";
-
+                                                                                                                                                                                                                                                                                                                                  
             MySqlCommand cmd = new MySqlCommand(query, connection);
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
