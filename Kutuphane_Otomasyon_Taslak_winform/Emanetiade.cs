@@ -370,7 +370,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             AnaSayfa form = new AnaSayfa();
             form.Show();
-            this.Close();
+            Application.Exit();
         }
     }
 }

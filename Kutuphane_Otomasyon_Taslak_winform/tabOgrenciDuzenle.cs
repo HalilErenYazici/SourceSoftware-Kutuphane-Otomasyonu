@@ -43,7 +43,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            this.Close();
+           Application.Exit();
         }
         private void kaplaButon_Click(object sender, EventArgs e)
         {
