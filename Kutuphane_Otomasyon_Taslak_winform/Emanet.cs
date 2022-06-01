@@ -130,10 +130,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 Application.DoEvents();
                 // Math.DivRem(i, 2, out sayi);
                 DataGridViewCellStyle renk = new DataGridViewCellStyle();
-                if (dataGridViewemanet.Rows[i].Cells[16].Value.ToString() == "Teslim Alındı"
-)
+                if (dataGridViewemanet.Rows[i].Cells[16].Value.ToString() == "Teslim Alindi")
                 {
-                    dataGridViewemanet.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                    dataGridViewemanet.Rows[i].Cells[16].Style.BackColor = System.Drawing.Color.Red;
 
                  //   dataGridViewemanet.DefaultCellStyle.BackColor = Color.Green;
 
