@@ -1,7 +1,7 @@
 ﻿
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
-    partial class Emanetiade
+    partial class EmanetGecmis
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emanetiade));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtemanetId = new System.Windows.Forms.TextBox();
-            this.btnemanetal = new System.Windows.Forms.Button();
-            this.btnemanetkaldir = new System.Windows.Forms.Button();
             this.cmbaramatip = new System.Windows.Forms.ComboBox();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.dataGridViewemanet = new System.Windows.Forms.DataGridView();
@@ -46,7 +42,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -57,59 +52,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtemanetId);
-            this.panel1.Controls.Add(this.btnemanetal);
-            this.panel1.Controls.Add(this.btnemanetkaldir);
             this.panel1.Controls.Add(this.cmbaramatip);
             this.panel1.Controls.Add(this.searchBox);
             this.panel1.Controls.Add(this.dataGridViewemanet);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 585);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // txtemanetId
-            // 
-            this.txtemanetId.Location = new System.Drawing.Point(182, 403);
-            this.txtemanetId.Name = "txtemanetId";
-            this.txtemanetId.Size = new System.Drawing.Size(100, 21);
-            this.txtemanetId.TabIndex = 18;
-            this.txtemanetId.Visible = false;
-            this.txtemanetId.TextChanged += new System.EventHandler(this.txtemanetId_TextChanged);
-            // 
-            // btnemanetal
-            // 
-            this.btnemanetal.BackColor = System.Drawing.Color.Green;
-            this.btnemanetal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnemanetal.ForeColor = System.Drawing.Color.White;
-            this.btnemanetal.Location = new System.Drawing.Point(844, 466);
-            this.btnemanetal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnemanetal.Name = "btnemanetal";
-            this.btnemanetal.Size = new System.Drawing.Size(106, 48);
-            this.btnemanetal.TabIndex = 17;
-            this.btnemanetal.Text = "Emanet Kaldır";
-            this.btnemanetal.UseVisualStyleBackColor = false;
-            this.btnemanetal.Click += new System.EventHandler(this.btnemanetal_Click);
-            // 
-            // btnemanetkaldir
-            // 
-            this.btnemanetkaldir.BackColor = System.Drawing.Color.Red;
-            this.btnemanetkaldir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnemanetkaldir.ForeColor = System.Drawing.Color.White;
-            this.btnemanetkaldir.Location = new System.Drawing.Point(844, 357);
-            this.btnemanetkaldir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnemanetkaldir.Name = "btnemanetkaldir";
-            this.btnemanetkaldir.Size = new System.Drawing.Size(106, 48);
-            this.btnemanetkaldir.TabIndex = 16;
-            this.btnemanetkaldir.Text = "Emanet Kaldır";
-            this.btnemanetkaldir.UseVisualStyleBackColor = false;
-            this.btnemanetkaldir.Click += new System.EventHandler(this.btnemanetkaldir_Click);
+            this.panel1.Size = new System.Drawing.Size(964, 542);
+            this.panel1.TabIndex = 3;
             // 
             // cmbaramatip
             // 
@@ -135,7 +88,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbaramatip.Size = new System.Drawing.Size(151, 20);
             this.cmbaramatip.TabIndex = 14;
             this.cmbaramatip.Text = "Arama Filtresi Seçiniz...";
-            this.cmbaramatip.SelectedIndexChanged += new System.EventHandler(this.cmbaramatip_SelectedIndexChanged);
             // 
             // searchBox
             // 
@@ -144,9 +96,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(166, 21);
             this.searchBox.TabIndex = 13;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // dataGridViewemanet
             // 
@@ -158,8 +107,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridViewemanet.RowHeadersWidth = 51;
             this.dataGridViewemanet.Size = new System.Drawing.Size(941, 275);
             this.dataGridViewemanet.TabIndex = 12;
-            this.dataGridViewemanet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewemanet_CellClick);
-            this.dataGridViewemanet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewemanet_CellContentClick);
             // 
             // panel2
             // 
@@ -176,12 +123,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(958, 34);
+            this.panel2.Size = new System.Drawing.Size(962, 34);
             this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // kaplaButon
             // 
@@ -200,7 +143,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.Size = new System.Drawing.Size(15, 16);
             this.kaplaButon.TabIndex = 13;
             this.kaplaButon.UseVisualStyleBackColor = true;
-            this.kaplaButon.Click += new System.EventHandler(this.kaplaButon_Click);
             // 
             // simgeButon
             // 
@@ -219,7 +161,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.simgeButon.Size = new System.Drawing.Size(15, 16);
             this.simgeButon.TabIndex = 12;
             this.simgeButon.UseVisualStyleBackColor = true;
-            this.simgeButon.Click += new System.EventHandler(this.simgeButon_Click);
             // 
             // cikisButon
             // 
@@ -238,7 +179,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cikisButon.Size = new System.Drawing.Size(15, 16);
             this.cikisButon.TabIndex = 11;
             this.cikisButon.UseVisualStyleBackColor = true;
-            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
             // 
             // istBtn
             // 
@@ -258,7 +198,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.istBtn.TabIndex = 9;
             this.istBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.istBtn.UseVisualStyleBackColor = false;
-            this.istBtn.Click += new System.EventHandler(this.istBtn_Click);
             // 
             // anasayfaBtn
             // 
@@ -278,7 +217,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.anasayfaBtn.TabIndex = 2;
             this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.anasayfaBtn.UseVisualStyleBackColor = false;
-            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
             // 
             // kitapBtn
             // 
@@ -298,7 +236,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TabIndex = 8;
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
-            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
             // 
             // emanetBtn
             // 
@@ -318,7 +255,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn.TabIndex = 6;
             this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.emanetBtn.UseVisualStyleBackColor = false;
-            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
             // 
             // ogrenciBtn
             // 
@@ -338,34 +274,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TabIndex = 7;
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
-            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(9, 528);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 48);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "İptal";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Emanetiade
+            // EmanetGecmis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(964, 542);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Emanetiade";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Emanet İade Sayfası";
-            this.Load += new System.EventHandler(this.Emanetiade_Load);
+            this.Name = "EmanetGecmis";
+            this.Text = "EmanetGecmis";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).EndInit();
@@ -375,23 +293,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbaramatip;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.DataGridView dataGridViewemanet;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button kaplaButon;
         private System.Windows.Forms.Button simgeButon;
         private System.Windows.Forms.Button cikisButon;
+        private System.Windows.Forms.ComboBox cmbaramatip;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.DataGridView dataGridViewemanet;
         private System.Windows.Forms.Button istBtn;
         private System.Windows.Forms.Button anasayfaBtn;
         private System.Windows.Forms.Button kitapBtn;
         private System.Windows.Forms.Button emanetBtn;
         private System.Windows.Forms.Button ogrenciBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnemanetkaldir;
-        private System.Windows.Forms.Button btnemanetal;
-        private System.Windows.Forms.TextBox txtemanetId;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

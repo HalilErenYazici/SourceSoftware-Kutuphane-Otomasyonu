@@ -119,6 +119,12 @@
     <Compile Include="Emanet.Designer.cs">
       <DependentUpon>Emanet.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmanetGecmis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmanetGecmis.Designer.cs">
+      <DependentUpon>EmanetGecmis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Emanetiade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Emanet.resx">
       <DependentUpon>Emanet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmanetGecmis.resx">
+      <DependentUpon>EmanetGecmis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Emanetiade.resx">
       <DependentUpon>Emanetiade.cs</DependentUpon>

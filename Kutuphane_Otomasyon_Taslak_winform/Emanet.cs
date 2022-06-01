@@ -115,7 +115,45 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
 
         }
+        public void renk()
+        {
+            connection.Open();
 
+            /*  MySqlDataAdapter da = new MySqlDataAdapter("select * from Emanet where Durum='Teslim Alındı'", connection);
+              dataGridViewemanet.RowsDefaultCellStyle.BackColor = Color.Yellow;
+              dataGridViewemanet.CurrentRow.Cells["EmanetalinanKitapSayisi"].
+
+              */
+
+            for (int i = 0; i < dataGridViewemanet.Rows.Count - 1; i++)
+            {
+                Application.DoEvents();
+                // Math.DivRem(i, 2, out sayi);
+                DataGridViewCellStyle renk = new DataGridViewCellStyle();
+                if (dataGridViewemanet.Rows[i].Cells[16].Value.ToString() == "Teslim Alındı"
+)
+                {
+                    dataGridViewemanet.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+
+                 //   dataGridViewemanet.DefaultCellStyle.BackColor = Color.Green;
+
+                }
+                else if(dataGridViewemanet.Rows[i].Cells[16].Value.ToString() == "Emanette")
+                {
+                    dataGridViewemanet.Rows[i].Cells[16].Style.BackColor = System.Drawing.Color.Green;
+
+
+                    //dataGridViewemanet.Rows[i].Cells["Durum"].Style.BackColor = System.Drawing.Color.Red;
+                    //dataGridViewemanet.Columns[i].DefaultCellStyle.BackColor = Color.Red;
+
+                }
+             
+
+                dataGridViewemanet.Rows[i].DefaultCellStyle = renk;
+            }
+            connection.Close();
+
+        }
         private void dataGridViewogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
           /*  txtogrID.Text = dataGridViewogrenci.CurrentRow.Cells["ogrId"].Value.ToString();
@@ -135,7 +173,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             //DateTime dt = DateTime.Now;
             listelemanet();
-
+            renk();
             /*MySqlCommand command;
             command = new MySqlCommand();
             connection.Open();
@@ -198,6 +236,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Close();
             MessageBox.Show("Silme işlemi gerçekleşti.");
             listelemanet();
+            renk();
+
 
         }
 
@@ -210,7 +250,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            connection.Open();
 
             if (cmbaramatip.Text == "Ogrenci Id")
             {
@@ -219,9 +258,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -232,9 +276,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -245,9 +294,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -258,9 +312,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -271,9 +330,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -284,9 +348,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -297,9 +366,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -310,9 +384,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -324,9 +403,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -337,9 +421,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -350,9 +439,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -363,9 +457,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -376,9 +475,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -389,9 +493,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
+
+                }
+            }
+            else if (cmbaramatip.Text == "Durum")
+            {
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBox.Text + "%'", connection);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridViewemanet.DataSource = dt;
+                connection.Close();
+                renk();
+
+                if (searchBox.Text == "")
+                {
+                    listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -402,9 +529,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
+                renk();
+
                 if (searchBox.Text == "")
                 {
                     listelemanet();
+                    renk();
+
+
 
                 }
             }
@@ -425,6 +557,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

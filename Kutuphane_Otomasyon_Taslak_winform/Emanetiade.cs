@@ -20,7 +20,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
         DataSet daset = new DataSet();
-        
+        String durum = "Teslim Alındı";
         private void Emanetiade_Load(object sender, EventArgs e)
         {
             emanetlistele();
@@ -70,7 +70,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet where Durum='Emanette'", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridViewemanet.DataSource = dt;
@@ -369,6 +369,89 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             AnaSayfa form = new AnaSayfa();
             form.Show();
             this.Close();
+        }
+
+        private void btnemanetal_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (dataGridViewemanet.CurrentRow == null)
+            {
+                MessageBox.Show("lütfen emanet alınacak veriyi seçiniz");
+                connection.Close();
+            }
+            else
+            {
+
+                /*
+                   MySqlCommand command = new MySqlCommand("update Ogrenci set kartId=@kartId,ogrId=@ogrId,ogrNo=@ogrNo,ogrAd=@ogrAd,ogrSoyad=@ogrSoyad,cinsiyet=@cinsiyet,ogrTel=@ogrTel,ogrEposta=@ogrEposta,ogrFakulte=@ogrFakulte,ogrBolum=@ogrBolum where ogrId=@ogrId", connection);
+
+
+
+                command.Parameters.AddWithValue("@kartId", mskKartId.Text);
+
+                command.Parameters.AddWithValue("@ogrId", txtogrenciId.Text);
+                command.Parameters.AddWithValue("@ogrNo", mskOgrNo.Text);
+
+                command.Parameters.AddWithValue("@ogrAd", txtOgrenciAd.Text);
+                command.Parameters.AddWithValue("@ogrSoyad", txtOgrenciSoyad.Text);
+                command.Parameters.AddWithValue("@cinsiyet", cmbcinsiyet.Text);
+
+                command.Parameters.AddWithValue("@ogrTel", mskOgrenciTelefon.Text);
+                command.Parameters.AddWithValue("@ogrEposta", mskOgrenciPosta.Text);
+                command.Parameters.AddWithValue("@ogrFakulte", cmbFakulte.Text);
+                command.Parameters.AddWithValue("@ogrBolum", cmbmyo.Text);
+
+                command.ExecuteNonQuery();
+                 */
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string guncelle = "update Emanet set Durum=@Durum where emanetId=@emanetId";
+                MySqlCommand command = new MySqlCommand(guncelle, connection);
+                command.Parameters.AddWithValue("@emanetId", txtemanetId.Text);
+
+                command.Parameters.AddWithValue("@Durum",durum);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Emanet Alma işlemi gerçekleşti.");
+                MySqlCommand komut2 = new MySqlCommand("update Kitap set stok=stok+'" + dataGridViewemanet.CurrentRow.Cells["EmanetalinanKitapSayisi"].Value.ToString() + "' where kitapId=@kitapId", connection);
+                komut2.Parameters.AddWithValue("@kitapId", dataGridViewemanet.CurrentRow.Cells["kitapId"].Value.ToString());
+                komut2.ExecuteNonQuery();
+                connection.Close();
+
+                MessageBox.Show("Kitap(lar) iade edildi!");
+
+                emanetlistele();
+            }
+        }
+
+        private void dataGridViewemanet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtemanetId.Text = dataGridViewemanet.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+        }
+
+        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewemanet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtemanetId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

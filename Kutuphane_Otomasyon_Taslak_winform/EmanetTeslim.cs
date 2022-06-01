@@ -45,7 +45,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
         DataSet daset = new DataSet();
-
+        String durum = "Emanette";
         private void kitapsayisi()
         {
             connection.Open();
@@ -296,7 +296,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         {
                             
                             connection.Open();
-                            MySqlCommand komut = new MySqlCommand("insert into Emanet(ogrId,ogrNo,ogrAd,ogrSoyad,ogrEposta,ogrTel,kitapId,demirbasNo,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi) values(@ogrId,@ogrNo,@ogrAd,@ogrSoyad,@ogrEposta,@ogrTel,@kitapId,@demirbasNo,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi)", connection);
+                            MySqlCommand komut = new MySqlCommand("insert into Emanet(ogrId,ogrNo,ogrAd,ogrSoyad,ogrEposta,ogrTel,kitapId,demirbasNo,kitapAd,yzrAd,yzrSoyad,yynevAd,veristarihi,alistarihi,EmanetalinanKitapSayisi,Durum) values(@ogrId,@ogrNo,@ogrAd,@ogrSoyad,@ogrEposta,@ogrTel,@kitapId,@demirbasNo,@kitapAd,@yzrAd,@yzrSoyad,@yynevAd,@veristarihi,@alistarihi,@EmanetalinanKitapSayisi,@Durum)", connection);
                             komut.Parameters.AddWithValue("@ogrId", txtogrID.Text);
                             komut.Parameters.AddWithValue("@ogrNo", txtogrNo.Text);
                             komut.Parameters.AddWithValue("@ogrAd", txtOgrAd.Text);
@@ -312,6 +312,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                             komut.Parameters.AddWithValue("@veristarihi", dataGridView1.Rows[i].Cells["veristarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@alistarihi", dataGridView1.Rows[i].Cells["alistarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString()));
+                            komut.Parameters.AddWithValue("@Durum", durum);
+
+
 
                             komut.ExecuteNonQuery();
                             MySqlCommand komut2 = new MySqlCommand("update Ogrenci set okuduguKitapSayisi=okuduguKitapSayisi+'"+int.Parse(dataGridView1.Rows[i].Cells["EmanetalinanKitapSayisi"].Value.ToString())+ "' where ogrId='" + txtogrID.Text+"'", connection);

@@ -329,10 +329,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {
-                connection.Open();
 
                 if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0)
                 {
+                    connection.Open();
+
                     DialogResult dialog;
                     dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     string sil = "delete from Kitap where kitapId=@kitapId";
