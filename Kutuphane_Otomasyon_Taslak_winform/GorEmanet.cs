@@ -179,21 +179,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             //DateTime dt = DateTime.Now;
             listelemanet();
             renk();
-            /*MySqlCommand command;
-            command = new MySqlCommand();
-            connection.Open();
-            command.CommandText = "Select * From Emanet";
-            for (int i = 0; i < dataGridViewemanet.Rows.Count; i++)
-            {
-                alisTarih = dataGridViewemanet.CurrentRow.Cells["alistarihi"].Value.ToString();
-
-            }
-            label1.Text = alisTarih;
-            if (alisTarih==dt.ToString("dd.MM.yyyy"))
-            {
-                MessageBox.Show("Emanet Teslim Tarihi Dolan Kitap/lar Var!");
-            }
-            connection.Close();*/
             /*  listeleOgrenci();
               listeleKitap();
               Dtn = DateTime.Now;
@@ -572,6 +557,43 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             tabMailGonderme mail = new tabMailGonderme();
             mail.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            btnemanet.Visible = false;
+            button2.Visible = false;
+            cmbaramatip.Visible = false;
+            searchBox.Visible = false;
+            button1.Visible = false;
+            kapatBtn.Visible = true;
+            btnMail.Visible = true;
+            string tarih;
+            DateTime dateTime = DateTime.Now;
+            tarih = dateTime.ToString("dd.MM.yyyy");
+            searchBoxEmanet.Text = tarih;
+            MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where alistarihi like'%" + searchBoxEmanet.Text + "%'", connection);
+            DataTable dt = new DataTable();
+            adtr.Fill(dt);
+            dataGridViewemanet.DataSource = dt;
+            connection.Close();
+            if(dataGridViewemanet.Rows.Count==1)
+            {
+                MessageBox.Show("Teslim Tarihi Gelen Kitap Bulunmamaktadır.");
+            }
+            if(dataGridViewemanet.Rows.Count > 1)
+            {
+                int kitapSayi = dataGridViewemanet.Rows.Count - 1;
+                MessageBox.Show("Teslim Tarihi Gelen " + kitapSayi + " Kitap Vardır");
+            }
+        }
+
+        private void kapatBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new GorEmanet();
+            form.Show();
+            this.Close();
         }
     }
 }
