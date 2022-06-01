@@ -17,6 +17,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             InitializeComponent();
         }
+        public static string alisTarih;
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void cikisButon_Click(object sender, EventArgs e)
@@ -127,11 +128,29 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtOgrSoyad.Enabled = false;*/
         }
 
-        //DateTime Dtn = new DateTime();
+       
+       
 
         private void Emanet_Load(object sender, EventArgs e)
         {
+            //DateTime dt = DateTime.Now;
             listelemanet();
+
+            /*MySqlCommand command;
+            command = new MySqlCommand();
+            connection.Open();
+            command.CommandText = "Select * From Emanet";
+            for (int i = 0; i < dataGridViewemanet.Rows.Count; i++)
+            {
+                alisTarih = dataGridViewemanet.CurrentRow.Cells["alistarihi"].Value.ToString();
+
+            }
+            label1.Text = alisTarih;
+            if (alisTarih==dt.ToString("dd.MM.yyyy"))
+            {
+                MessageBox.Show("Emanet Teslim Tarihi Dolan Kitap/lar Var!");
+            }
+            connection.Close();*/
             /*  listeleOgrenci();
               listeleKitap();
               Dtn = DateTime.Now;
@@ -403,6 +422,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             MailGonderme mail = new MailGonderme();
             mail.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

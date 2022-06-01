@@ -142,6 +142,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             {
                 MessageBox.Show("Kitap seçiniz");
             }
+            else if (txtEmanetAkts.Text =="0")
+            {
+                MessageBox.Show("Emanet Edilen Kitap Sayısı 0 Olamaz");
+            }
             else
             {
                 if (int.Parse(txtstokadet.Text) <= 0)
@@ -281,7 +285,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnemanetver_Click(object sender, EventArgs e)
         {
-
             if (lblkitapsayisi.Text != "")
             {
 
