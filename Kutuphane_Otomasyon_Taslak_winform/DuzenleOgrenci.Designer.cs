@@ -388,7 +388,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // cmbcinsiyet
             // 
             this.cmbcinsiyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmbcinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbcinsiyet.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbcinsiyet.FormattingEnabled = true;
             this.cmbcinsiyet.Items.AddRange(new object[] {
@@ -522,7 +521,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // cmbmyo
             // 
             this.cmbmyo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmbmyo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbmyo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbmyo.FormattingEnabled = true;
             this.cmbmyo.Items.AddRange(new object[] {
@@ -549,7 +547,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // cmbFakulte
             // 
             this.cmbFakulte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFakulte.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbFakulte.FormattingEnabled = true;
             this.cmbFakulte.Items.AddRange(new object[] {

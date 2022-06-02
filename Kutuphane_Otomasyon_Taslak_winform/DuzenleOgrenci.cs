@@ -281,9 +281,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             //cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             //cmbmyo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-            /*cmbcinsiyet.Text = dataGridView1.CurrentRow.Cells["cinsiyet"].Value.ToString();
+            cmbcinsiyet.Text = dataGridView1.CurrentRow.Cells["cinsiyet"].Value.ToString();
             cmbFakulte.Text = dataGridView1.CurrentRow.Cells["ogrFakulte"].Value.ToString();
-            cmbmyo.Text = dataGridView1.CurrentRow.Cells["ogrBolum"].Value.ToString();*/
+            cmbmyo.Text = dataGridView1.CurrentRow.Cells["ogrBolum"].Value.ToString();
 
 
 

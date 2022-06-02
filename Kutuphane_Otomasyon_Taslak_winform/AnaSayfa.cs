@@ -179,7 +179,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button7_Click_1(object sender, EventArgs e)
         {
             GorKitap d = new GorKitap();
-            d.ShowDialog();
+            d.Show();
             this.Close();
 
         }
