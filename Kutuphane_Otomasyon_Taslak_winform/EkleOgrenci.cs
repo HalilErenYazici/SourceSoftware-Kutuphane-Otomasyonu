@@ -212,7 +212,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     connection.Close();
                     MessageBox.Show("Kayıt başarıyla gerçekleştirildi. Anasayfaya yönlendiriliyorsunuz.");
 
-                    AnaSayfa yeni = new AnaSayfa();
+                    GorOgrenci yeni = new GorOgrenci();
                     yeni.Show();
                     this.Hide();
                 }

@@ -1057,7 +1057,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AnaSayfa form = new AnaSayfa();
+            GorKitap form = new GorKitap();
             form.Show();
             this.Close();
         }

@@ -209,5 +209,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 searchBox.Text = "";
             }
         }
+
+        private void mailBtn_Click(object sender, EventArgs e)
+        {
+            tabMailGonderme mail = new tabMailGonderme();
+            mail.Show();
+        }
     }
 }

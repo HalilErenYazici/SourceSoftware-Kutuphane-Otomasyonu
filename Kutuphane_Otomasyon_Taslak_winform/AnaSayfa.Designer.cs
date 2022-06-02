@@ -33,8 +33,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mailBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.logOutBtn = new System.Windows.Forms.Button();
+            this.mailBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tire = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
-            this.logOutBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,26 +116,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AnaSayfa_MouseUp);
             // 
-            // mailBtn
-            // 
-            this.mailBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.mailBtn.BackColor = System.Drawing.Color.Transparent;
-            this.mailBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.envelope;
-            this.mailBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mailBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mailBtn.FlatAppearance.BorderSize = 0;
-            this.mailBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.mailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mailBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.mailBtn.Location = new System.Drawing.Point(1220, 3);
-            this.mailBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mailBtn.Name = "mailBtn";
-            this.mailBtn.Size = new System.Drawing.Size(24, 24);
-            this.mailBtn.TabIndex = 52;
-            this.mailBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mailBtn.UseVisualStyleBackColor = false;
-            this.mailBtn.Click += new System.EventHandler(this.mailBtn_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -149,6 +129,48 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1278, 30);
             this.panel2.TabIndex = 24;
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logOutBtn.Location = new System.Drawing.Point(1250, 3);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(24, 24);
+            this.logOutBtn.TabIndex = 53;
+            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
+            // mailBtn
+            // 
+            this.mailBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.mailBtn.BackColor = System.Drawing.Color.Transparent;
+            this.mailBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.envelope;
+            this.mailBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mailBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mailBtn.FlatAppearance.BorderSize = 0;
+            this.mailBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.mailBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.mailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mailBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.mailBtn.Location = new System.Drawing.Point(1220, 3);
+            this.mailBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mailBtn.Name = "mailBtn";
+            this.mailBtn.Size = new System.Drawing.Size(24, 24);
+            this.mailBtn.TabIndex = 52;
+            this.mailBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.mailBtn.UseVisualStyleBackColor = false;
+            this.mailBtn.Click += new System.EventHandler(this.mailBtn_Click);
             // 
             // label6
             // 
@@ -644,27 +666,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kitapBtn.UseVisualStyleBackColor = false;
             this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
-            // 
-            // logOutBtn
-            // 
-            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.logout512;
-            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logOutBtn.FlatAppearance.BorderSize = 0;
-            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logOutBtn.Location = new System.Drawing.Point(1250, 3);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(24, 24);
-            this.logOutBtn.TabIndex = 53;
-            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.logOutBtn.UseVisualStyleBackColor = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // AnaSayfa
             // 

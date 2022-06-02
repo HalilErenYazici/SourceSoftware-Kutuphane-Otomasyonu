@@ -750,6 +750,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // yayinevibtn
             // 
             this.yayinevibtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.yayinevibtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.yayinevibtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yayinevibtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.yayinevibtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yayinevibtn.Location = new System.Drawing.Point(1242, 401);
             this.yayinevibtn.Margin = new System.Windows.Forms.Padding(4);
@@ -757,7 +760,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.yayinevibtn.Size = new System.Drawing.Size(80, 30);
             this.yayinevibtn.TabIndex = 112;
             this.yayinevibtn.Text = "Ekle";
-            this.yayinevibtn.UseVisualStyleBackColor = true;
+            this.yayinevibtn.UseVisualStyleBackColor = false;
             this.yayinevibtn.Visible = false;
             this.yayinevibtn.Click += new System.EventHandler(this.yayinevibtn_Click);
             // 
@@ -830,6 +833,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnkategori
             // 
             this.btnkategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnkategori.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnkategori.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnkategori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnkategori.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnkategori.Location = new System.Drawing.Point(1242, 477);
             this.btnkategori.Margin = new System.Windows.Forms.Padding(4);
@@ -837,7 +843,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnkategori.Size = new System.Drawing.Size(80, 30);
             this.btnkategori.TabIndex = 113;
             this.btnkategori.Text = "Ekle";
-            this.btnkategori.UseVisualStyleBackColor = true;
+            this.btnkategori.UseVisualStyleBackColor = false;
             this.btnkategori.Visible = false;
             this.btnkategori.Click += new System.EventHandler(this.btnkategori_Click);
             // 
@@ -935,6 +941,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button6.Location = new System.Drawing.Point(1242, 591);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
@@ -942,7 +951,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button6.Size = new System.Drawing.Size(80, 30);
             this.button6.TabIndex = 114;
             this.button6.Text = "Ekle";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.btncevirmen_Click);
             // 
@@ -986,6 +995,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // tureklebtn
             // 
             this.tureklebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tureklebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tureklebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tureklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tureklebtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tureklebtn.Location = new System.Drawing.Point(1242, 438);
             this.tureklebtn.Margin = new System.Windows.Forms.Padding(4);
@@ -993,7 +1005,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.tureklebtn.Size = new System.Drawing.Size(80, 30);
             this.tureklebtn.TabIndex = 111;
             this.tureklebtn.Text = "Ekle";
-            this.tureklebtn.UseVisualStyleBackColor = true;
+            this.tureklebtn.UseVisualStyleBackColor = false;
             this.tureklebtn.Visible = false;
             this.tureklebtn.Click += new System.EventHandler(this.tureklebtn_Click);
             // 
@@ -1037,6 +1049,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnyazar
             // 
             this.btnyazar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnyazar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnyazar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnyazar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnyazar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnyazar.Location = new System.Drawing.Point(1242, 535);
             this.btnyazar.Margin = new System.Windows.Forms.Padding(4);
@@ -1044,7 +1059,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnyazar.Size = new System.Drawing.Size(80, 30);
             this.btnyazar.TabIndex = 115;
             this.btnyazar.Text = "Ekle";
-            this.btnyazar.UseVisualStyleBackColor = true;
+            this.btnyazar.UseVisualStyleBackColor = false;
             this.btnyazar.Visible = false;
             this.btnyazar.Click += new System.EventHandler(this.btnyazar_Click);
             // 
@@ -1395,61 +1410,76 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // button9
             // 
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button9.Location = new System.Drawing.Point(838, 542);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(54, 52);
             this.button9.TabIndex = 225;
             this.button9.Text = "Ekle";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button7.Location = new System.Drawing.Point(838, 488);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(54, 52);
             this.button7.TabIndex = 224;
             this.button7.Text = "Ekle";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.Location = new System.Drawing.Point(838, 461);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(54, 24);
             this.button5.TabIndex = 223;
             this.button5.Text = "Ekle";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.Location = new System.Drawing.Point(838, 434);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(54, 24);
             this.button4.TabIndex = 222;
             this.button4.Text = "Ekle";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Location = new System.Drawing.Point(838, 381);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(54, 50);
             this.button2.TabIndex = 221;
             this.button2.Text = "Ekle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label16

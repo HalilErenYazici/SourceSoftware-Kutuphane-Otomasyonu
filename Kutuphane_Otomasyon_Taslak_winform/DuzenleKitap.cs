@@ -375,7 +375,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                
 
 
-                Form form = new GorKitap();
+                GorKitap form = new GorKitap();
                 form.Show();
                 this.Close();
             }
@@ -1346,7 +1346,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AnaSayfa form = new AnaSayfa();
+            GorOgrenci form = new GorOgrenci();
             form.Show();
             this.Close();
         }

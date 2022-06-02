@@ -182,7 +182,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // userImg
             // 
             this.userImg.BackColor = System.Drawing.Color.Transparent;
-            this.userImg.Image = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.user;
+            this.userImg.Image = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.uu_logo;
             this.userImg.Location = new System.Drawing.Point(350, 90);
             this.userImg.Name = "userImg";
             this.userImg.Size = new System.Drawing.Size(100, 100);
@@ -190,7 +190,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.userImg.TabIndex = 0;
             this.userImg.TabStop = false;
             // 
-            // GirisEkrani
+            // AnaGirisEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -198,7 +198,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "GirisEkrani";
+            this.Name = "AnaGirisEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Ekranı";
             this.Load += new System.EventHandler(this.GirisEkrani_Load);

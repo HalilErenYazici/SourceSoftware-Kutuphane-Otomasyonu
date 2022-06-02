@@ -306,6 +306,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         lblkayitli.Text = "";
                         lblkitapsayisi.Text = "";
                         kitapsayisi();
+
                         GorEmanet emanet = new GorEmanet();
                         emanet.Show();
                         this.Hide();

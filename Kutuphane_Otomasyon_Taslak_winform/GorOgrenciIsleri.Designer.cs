@@ -46,6 +46,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mailBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,6 +78,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.mailBtn);
             this.panel2.Controls.Add(this.logOutBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 25);
@@ -99,7 +101,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logOutBtn.Location = new System.Drawing.Point(11, 5);
+            this.logOutBtn.Location = new System.Drawing.Point(54, 5);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(32, 32);
@@ -295,6 +297,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridView1.Size = new System.Drawing.Size(1256, 262);
             this.dataGridView1.TabIndex = 2;
             // 
+            // mailBtn
+            // 
+            this.mailBtn.BackColor = System.Drawing.Color.Transparent;
+            this.mailBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.envelope;
+            this.mailBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mailBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mailBtn.FlatAppearance.BorderSize = 0;
+            this.mailBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.mailBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.mailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mailBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.mailBtn.Location = new System.Drawing.Point(11, 5);
+            this.mailBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mailBtn.Name = "mailBtn";
+            this.mailBtn.Size = new System.Drawing.Size(32, 32);
+            this.mailBtn.TabIndex = 15;
+            this.mailBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.mailBtn.UseVisualStyleBackColor = false;
+            this.mailBtn.Click += new System.EventHandler(this.mailBtn_Click);
+            // 
             // GorOgrenciIsleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -335,5 +357,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button mailBtn;
     }
 }

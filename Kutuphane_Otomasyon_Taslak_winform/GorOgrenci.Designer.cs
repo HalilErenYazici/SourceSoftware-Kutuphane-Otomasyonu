@@ -178,7 +178,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.duzenleButon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.duzenleButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.duzenleButon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.duzenleButon.Location = new System.Drawing.Point(218, 123);
+            this.duzenleButon.Location = new System.Drawing.Point(1169, 123);
             this.duzenleButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.duzenleButon.Name = "duzenleButon";
             this.duzenleButon.Size = new System.Drawing.Size(98, 98);
@@ -193,7 +193,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(218, 21);
+            this.button1.Location = new System.Drawing.Point(1169, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 98);

@@ -16,11 +16,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void GirisEkrani_Load(object sender, EventArgs e)
         {
-            //txtUser.Text = "Kullanıcı Adı";
-            //txtUser.ForeColor = Color.Gray;
+            txtUser.Text = "Kullanıcı Adı";
+            txtUser.ForeColor = Color.Gray;
 
-            //txtPass.Text = "Şifre";
-            //txtPass.ForeColor = Color.Gray;
+            txtPass.Text = "Şifre";
+            txtPass.ForeColor = Color.Gray;
 
             //cmbGorev.Text = "Görev Tipi Seçiniz...";
         }

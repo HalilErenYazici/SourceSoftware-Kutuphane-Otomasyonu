@@ -111,7 +111,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                Form form = new GorOgrenci();
+                GorOgrenci form = new GorOgrenci();
                 form.Show();
                 this.Close();
 
@@ -165,7 +165,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AnaSayfa form = new AnaSayfa();
+            GorOgrenci form = new GorOgrenci();
             form.Show();
             this.Close();
         }
@@ -218,15 +218,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     MessageBox.Show("Bu öğrencinin üzerinde emanet olduğundan dolayı silinemez.");
                 }
-
-
-                
-
             }
-
-
-
-
         }
 
         public void listele()

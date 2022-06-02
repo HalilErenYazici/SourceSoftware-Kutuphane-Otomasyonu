@@ -112,6 +112,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnMail.TabIndex = 35;
             this.btnMail.Text = "Mail Gönder";
             this.btnMail.UseVisualStyleBackColor = false;
+            this.btnMail.Click += new System.EventHandler(this.btnMail_Click);
             // 
             // label3
             // 
