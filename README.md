@@ -32,14 +32,14 @@ Kütüphane otomasyonumuz öğrenci ve kitaplar arasındaki her türlü işlemi 
 Giriş Ekranı:
 
 Programa giriş yaparken üç farklı seçenekle giriş yapabiliyoruz.
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/HalilErenYazici/SourceSoftware-Kutuphane-Otomasyonu/blob/main/Resimler/Giriş.png))
 
 
 
 Anasayfa Ekranı:
 
 Anasayfada emanet, öğrenci, kitap, istatistik ve mail gönderme sayfalarına erişim sağlanır.
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/HalilErenYazici/SourceSoftware-Kutuphane-Otomasyonu/blob/main/Resimler/AnaSayfa.png))
 
 
 
