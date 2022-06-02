@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -179,11 +173,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
                  if (txtOgrenciAd.Text.Length < 2)
                 {
-                    MessageBox.Show("Adınızı giriniz!");
+                    MessageBox.Show("Öğrenci adını giriniz!");
                 }
                  if (txtOgrenciSoyad.Text.Length < 2)
                 {
-                    MessageBox.Show("Soyadınızı giriniz!");
+                    MessageBox.Show("Öğrenci soyadını giriniz!");
                 }
 
                  if (mskOgrenciTelefon.Text.Length != 14)
@@ -192,18 +186,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
                  if (mskOgrenciPosta.Text == "")
                 {
-                    MessageBox.Show("Lütfen geçerli bir E-Posta giriniz");
+                    MessageBox.Show("Lütfen geçerli bir E-Posta adresi giriniz!");
                 }
 
 
 
                  if (cmbFakulte.Text == "")
                 {
-                    MessageBox.Show("Bölüm seçiniz");
+                    MessageBox.Show("Lütfen bölüm seçiniz.");
                 }
                 if (cmbcinsiyet.Text == "")
                 {
-                    MessageBox.Show("CİNSİYET SEÇİNİZ");
+                    MessageBox.Show("Lütfen cinsiyet seçiniz.");
                 }
             
              
@@ -216,7 +210,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MySqlCommand command = new MySqlCommand(ekleme, connection);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("kayıt başarıyla gerçekleştirildi Anasayfaya yönlendiriliyorsunuz");
+                    MessageBox.Show("Kayıt başarıyla gerçekleştirildi. Anasayfaya yönlendiriliyorsunuz.");
 
                     AnaSayfa yeni = new AnaSayfa();
                     yeni.Show();
@@ -224,7 +218,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
                 else
                 {
-                    MessageBox.Show("Öğrencino ve kartId veritabanında başkasına ait");
+                    MessageBox.Show("Öğrenci No veya Kart Id veritabanında başka birisine ait.");
                     connection.Close();
                 }
                 /*string ekleme = "insert into Ogrenci (kartId,ogrNo,ogrAd,ogrSoyad,cinsiyet,ogrTel,ogrEposta,ogrFakulte,ogrBolum,okuduguKitapSayisi) values('" + mskKartId.Text + "','" + mskOgrNo.Text + "', '" + txtOgrenciAd.Text + "','" + txtOgrenciSoyad.Text + "','" + cmbcinsiyet.Text +"','" + mskOgrenciTelefon.Text + "','" + mskOgrenciPosta.Text + "','" + cmbFakulte.Text + "','" + cmbisletme.Text +"','"+ okuduguKitapSayisi + "');";

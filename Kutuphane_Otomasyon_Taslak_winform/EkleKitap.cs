@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -270,7 +264,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txttur.Text=="")
             {
-                MessageBox.Show("tür verisi boş");
+                MessageBox.Show("Tür bilgisini boş geçmeyiniz.");
             }
             else
             {
@@ -281,7 +275,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand turkomut = new MySqlCommand(turekle, connection);
                 turkomut.ExecuteNonQuery();
                 int turId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("tur eklendi");
+                MessageBox.Show("Tür eklendi.");
                 connection.Close();
                 turEkle();
 
@@ -291,9 +285,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void yayinevibtn_Click(object sender, EventArgs e)
         {
-            if (txtyayinevi.Text == ""||msktel.Text=="")
+            if (txtyayinevi.Text == "" || msktel.Text=="")
             {
-                MessageBox.Show("Yayın evi adı ve yayın evi telefon verisi boş");
+                MessageBox.Show("Yayınevi adı veya Yayınevi numarasını boş geçmeyiniz.");
             }
             else
             {
@@ -304,7 +298,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
                 yayinEviKomut.ExecuteNonQuery();
                 int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Yayın evi adı ve telefonu eklendi");
+                MessageBox.Show("Yayınevi adı veya telefonu eklendi.");
                 connection.Close();
                 yayinevekle();
                 YayinEvtel();
@@ -320,7 +314,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtkategori.Text == "")
             {
-                MessageBox.Show("Kategori adı verisi boş");
+                MessageBox.Show("Kategori adını boş geçmeyiniz.");
             }
             else
             {
@@ -344,7 +338,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtcevirmen.Text == ""||txtcevirmensoyad.Text=="")
             {
-                MessageBox.Show("Çevirmen bilgileri boş");
+                MessageBox.Show("Çevirmen bilgilerini boş geçmeyiniz.");
             }
             else
             {
@@ -355,7 +349,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand cevirmenKomut = new MySqlCommand(cevirmenEkle, connection);
                 cevirmenKomut.ExecuteNonQuery();
                 int cevirmenId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Çevirmen bilgileri eklendi");
+                MessageBox.Show("Çevirmen bilgileri eklendi.");
                 connection.Close();
                 cevirmenadi();
                 cevirmensoyadi();
@@ -369,7 +363,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtyazar.Text == "" || txtyazarsoyad.Text == "")
             {
-                MessageBox.Show("Yazar bilgileri boş");
+                MessageBox.Show("Yazar bilgilerini boş geçmeyiniz.");
             }
             else
             {
@@ -380,7 +374,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
                 yazarkomut.ExecuteNonQuery();
                 int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Yazar bilgileri eklendi");
+                MessageBox.Show("Yazar bilgileri eklendi.");
                 connection.Close();
                 yazarAd();
                 yazarSoyad();
@@ -780,7 +774,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
           /*  string lastInsertedIdStatement = "SELECT LAST_INSERT_ID();";
             var lastInsertedCmd = new MySqlCommand(lastInsertedIdStatement, connection);*/
 
-            if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" &&txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapkonusu.Text==""||txtkitapsayfasayisi.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyayinevitel.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
+            if (txtKitapAd.Text==""||txtdemirbas.Text==""||cmbtur.Text=="" && txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||txtKitapAd.Text==""||txtkitapsayfasayisi.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbkategori.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text=="")
             {
 
                  MessageBox.Show("Lütfen alanları boş geçmeyiniz.");
@@ -897,7 +891,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 else
                 {
 
-                    MessageBox.Show("ISBN ,Barkod ve Demirbaş no veritabanında başka kitaba ait");
+                    MessageBox.Show("ISBN ,Barkod veya Demirbaş No veritabanında başka bir kitaba ait.");
                     connection.Close();
                 }
                 //this.Controls.Clear();

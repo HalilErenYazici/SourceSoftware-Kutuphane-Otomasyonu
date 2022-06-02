@@ -31,7 +31,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmanetIade));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.istBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
@@ -52,18 +54,22 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox = new System.Windows.Forms.TextBox();
             this.dataGridViewemanet = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtemanetId);
@@ -79,6 +85,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(260, 75);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 19);
+            this.label20.TabIndex = 229;
+            this.label20.Text = "Ara: ";
             // 
             // panel2
             // 
@@ -346,14 +364,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnemanetal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnemanetal.BackColor = System.Drawing.Color.Green;
+            this.btnemanetal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnemanetal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnemanetal.ForeColor = System.Drawing.Color.White;
-            this.btnemanetal.Location = new System.Drawing.Point(1126, 649);
+            this.btnemanetal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnemanetal.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnemanetal.Location = new System.Drawing.Point(1137, 663);
             this.btnemanetal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnemanetal.Name = "btnemanetal";
-            this.btnemanetal.Size = new System.Drawing.Size(141, 59);
+            this.btnemanetal.Size = new System.Drawing.Size(130, 45);
             this.btnemanetal.TabIndex = 17;
-            this.btnemanetal.Text = "Emanet Kaldır";
+            this.btnemanetal.Text = "İade Al";
             this.btnemanetal.UseVisualStyleBackColor = false;
             this.btnemanetal.Click += new System.EventHandler(this.btnemanetal_Click);
             // 
@@ -385,21 +405,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(243, 73);
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Location = new System.Drawing.Point(303, 73);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(220, 25);
             this.searchBox.TabIndex = 13;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // dataGridViewemanet
             // 
             this.dataGridViewemanet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewemanet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewemanet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewemanet.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewemanet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewemanet.Location = new System.Drawing.Point(12, 106);
@@ -414,20 +433,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(12, 650);
+            this.button1.Location = new System.Drawing.Point(11, 663);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 59);
+            this.button1.Size = new System.Drawing.Size(130, 45);
             this.button1.TabIndex = 7;
             this.button1.Text = "İptal";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // EmanetIade
             // 
@@ -476,5 +493,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label20;
     }
 }

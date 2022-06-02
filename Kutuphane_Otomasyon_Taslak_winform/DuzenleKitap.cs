@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -235,7 +229,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtanahtarkelime.Text==""||txtbarkod.Text==""||txtbasimnumara.Text==""||cmbcevirmenadi.Text==""||cmbcevirmensoyadi.Text==""||txtcikisyili.Text==""||txtcilt.Text==""||txtdemirbas.Text==""||txtdil.Text==""||txtdolapkonum.Text==""||txtisbn.Text==""||cmbkategori.Text==""||txtKitapAd.Text==""||txtkitapId.Text==""||txtkitapkonusu.Text==""||txtozet.Text==""||txtrafkonum.Text==""||txtstok.Text==""||cmbtur.Text==""||cmbyayinevi.Text==""||cmbyazarad.Text==""||cmbyazarsoyad.Text==""||mskkitapyayinyili.Text==""||mskkurumkayittarihi.Text==""||cmbyayinevitel.Text=="")
             {
-                MessageBox.Show("Kitap seçiniz");
+                MessageBox.Show("Lütfen kitap seçiniz.");
             }
             else
             {
@@ -331,7 +325,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || cmbcevirmensoyadi.Text == "" || cmbcevirmenadi.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || cmbkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || cmbtur.Text == "" || cmbyayinevi.Text == "" || cmbyazarad.Text == "" || cmbyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || cmbyayinevitel.Text == "")
             {
-                MessageBox.Show("Silmek için önce kitap seçiniz");
+                MessageBox.Show("Lütfen silmek için kitap seçiniz.");
             }
             else
             {
@@ -341,7 +335,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     connection.Open();
 
                     DialogResult dialog;
-                    dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    dialog = MessageBox.Show("Bu kaydı silmek istiyor musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     string sil = "delete from Kitap where kitapId=@kitapId";
                     /*string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
                     string silKategori = "delete from Kategori where ktgrId=@ktgrId";
@@ -371,7 +365,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     commandCevirmen.ExecuteNonQuery();*/
 
                     connection.Close();
-                    MessageBox.Show("Silme işlemi gerçekleşti.");
+                    MessageBox.Show("Silme işlemi başarıyla gerçekleşti.");
                 }
                 else
                 {
@@ -488,7 +482,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtyayinevi.Text == "" || msktel.Text == "")
             {
-                MessageBox.Show("Yayın evi adı ve yayın evi telefon verisi boş");
+                MessageBox.Show("Yayınevi adı veya yayınevi telefon verisi boş geçilemez.");
             }
             else
             {
@@ -499,13 +493,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand yayinEviKomut = new MySqlCommand(yayinEviEkle, connection);
                 yayinEviKomut.ExecuteNonQuery();
                 int yayinEviId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Yayın evi adı ve telefonu eklendi");
+                MessageBox.Show("Yayınevi bilgileri eklendi.");
                 connection.Close();
                 yayinevekle();
                 YayinEvtel();
-
-
-
             }
         }
 
@@ -513,7 +504,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtkategori.Text == "")
             {
-                MessageBox.Show("Kategori adı verisi boş");
+                MessageBox.Show("Lütfen kategori adını giriniz.");
             }
             else
             {
@@ -524,7 +515,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand kategorikomut = new MySqlCommand(kategoriekle, connection);
                 kategorikomut.ExecuteNonQuery();
                 int kategoriId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Kategori adı eklendi");
+                MessageBox.Show("Kategori adı eklendi.");
                 connection.Close();
                 kategoriEkle();
 
@@ -537,7 +528,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtcevirmen.Text == "" || txtcevirmensoyad.Text == "")
             {
-                MessageBox.Show("Çevirmen bilgileri boş");
+                MessageBox.Show("Lütfen çevirmen bilgilerini giriniz.");
             }
             else
             {
@@ -846,7 +837,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtyazar.Text == "" || txtyazarsoyad.Text == "")
             {
-                MessageBox.Show("Yazar bilgileri boş");
+                MessageBox.Show("Lütfen yazar bilgilerini giriniz.");
             }
             else
             {
@@ -857,7 +848,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MySqlCommand yazarkomut = new MySqlCommand(yazarekle, connection);
                 yazarkomut.ExecuteNonQuery();
                 int yazarId = int.Parse(lastInsertedCmd.ExecuteScalar().ToString());
-                MessageBox.Show("Yazar bilgileri eklendi");
+                MessageBox.Show("Yazar bilgileri eklendi.");
                 connection.Close();
                 yazarAd();
                 yazarSoyad();

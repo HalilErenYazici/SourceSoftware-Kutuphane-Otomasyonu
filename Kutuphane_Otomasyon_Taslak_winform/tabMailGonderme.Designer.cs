@@ -101,13 +101,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // btnMail
             // 
+            this.btnMail.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMail.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMail.Location = new System.Drawing.Point(174, 296);
             this.btnMail.Margin = new System.Windows.Forms.Padding(4);
             this.btnMail.Name = "btnMail";
             this.btnMail.Size = new System.Drawing.Size(100, 45);
             this.btnMail.TabIndex = 35;
             this.btnMail.Text = "Mail Gönder";
-            this.btnMail.UseVisualStyleBackColor = true;
+            this.btnMail.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -170,7 +174,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtMail.Size = new System.Drawing.Size(191, 22);
             this.txtMail.TabIndex = 29;
             // 
-            // MailGonderme
+            // tabMailGonderme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,8 +183,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "MailGonderme";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "tabMailGonderme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mail Gönderme";
             this.panel1.ResumeLayout(false);

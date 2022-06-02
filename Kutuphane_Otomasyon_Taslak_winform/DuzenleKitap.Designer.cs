@@ -32,6 +32,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DuzenleKitap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.istBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
@@ -154,6 +155,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button1);
@@ -252,8 +254,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 768);
+            this.panel1.Size = new System.Drawing.Size(1366, 768);
             this.panel1.TabIndex = 4;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(259, 74);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 19);
+            this.label20.TabIndex = 228;
+            this.label20.Text = "Ara: ";
             // 
             // panel2
             // 
@@ -267,7 +281,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel2.Location = new System.Drawing.Point(0, 25);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1363, 42);
+            this.panel2.Size = new System.Drawing.Size(1364, 42);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
@@ -389,7 +403,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1363, 25);
+            this.panel3.Size = new System.Drawing.Size(1364, 25);
             this.panel3.TabIndex = 227;
             // 
             // tire
@@ -438,7 +452,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
             this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
-            this.pncrTxt.Location = new System.Drawing.Point(622, 1);
+            this.pncrTxt.Location = new System.Drawing.Point(623, 1);
             this.pncrTxt.Name = "pncrTxt";
             this.pncrTxt.Size = new System.Drawing.Size(118, 21);
             this.pncrTxt.TabIndex = 23;
@@ -456,7 +470,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(1309, 1);
+            this.button8.Location = new System.Drawing.Point(1310, 1);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(20, 20);
@@ -476,7 +490,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(1279, 1);
+            this.button10.Location = new System.Drawing.Point(1280, 1);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(20, 20);
@@ -496,7 +510,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(1339, 1);
+            this.button11.Location = new System.Drawing.Point(1340, 1);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(20, 20);
@@ -508,7 +522,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(12, 711);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -551,7 +567,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbaramakitap.Location = new System.Drawing.Point(12, 73);
             this.cmbaramakitap.Margin = new System.Windows.Forms.Padding(4);
             this.cmbaramakitap.Name = "cmbaramakitap";
-            this.cmbaramakitap.Size = new System.Drawing.Size(177, 24);
+            this.cmbaramakitap.Size = new System.Drawing.Size(200, 24);
             this.cmbaramakitap.TabIndex = 71;
             this.cmbaramakitap.Text = "Arama Filtresi Seçiniz...";
             // 
@@ -562,7 +578,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(935, 382);
+            this.label26.Location = new System.Drawing.Point(936, 382);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(85, 19);
@@ -573,19 +589,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(220, 73);
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.searchBox.Location = new System.Drawing.Point(302, 72);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(228, 22);
+            this.searchBox.Size = new System.Drawing.Size(228, 25);
             this.searchBox.TabIndex = 70;
-            this.searchBox.Text = "Kitap Ara";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // txtcevirmen
             // 
             this.txtcevirmen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtcevirmen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcevirmen.Location = new System.Drawing.Point(1027, 569);
+            this.txtcevirmen.Location = new System.Drawing.Point(1028, 569);
             this.txtcevirmen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcevirmen.Name = "txtcevirmen";
             this.txtcevirmen.Size = new System.Drawing.Size(207, 25);
@@ -596,7 +613,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtkategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtkategori.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkategori.Location = new System.Drawing.Point(1027, 481);
+            this.txtkategori.Location = new System.Drawing.Point(1028, 481);
             this.txtkategori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkategori.Name = "txtkategori";
             this.txtkategori.Size = new System.Drawing.Size(207, 25);
@@ -612,7 +629,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmensoyadi.Items.AddRange(new object[] {
             "Çevirmen Var",
             "Çevirmen Yok"});
-            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(619, 569);
+            this.cmbcevirmensoyadi.Location = new System.Drawing.Point(620, 569);
             this.cmbcevirmensoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmensoyadi.Name = "cmbcevirmensoyadi";
             this.cmbcevirmensoyadi.Size = new System.Drawing.Size(207, 25);
@@ -626,7 +643,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label36.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label36.Location = new System.Drawing.Point(952, 516);
+            this.label36.Location = new System.Drawing.Point(953, 516);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(68, 19);
@@ -644,7 +661,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbcevirmenadi.Items.AddRange(new object[] {
             "Çevirmen Var",
             "Çevirmen Yok"});
-            this.cmbcevirmenadi.Location = new System.Drawing.Point(619, 542);
+            this.cmbcevirmenadi.Location = new System.Drawing.Point(620, 542);
             this.cmbcevirmenadi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcevirmenadi.Name = "cmbcevirmenadi";
             this.cmbcevirmenadi.Size = new System.Drawing.Size(207, 25);
@@ -658,7 +675,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label31.Location = new System.Drawing.Point(926, 571);
+            this.label31.Location = new System.Drawing.Point(927, 571);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(94, 19);
@@ -673,7 +690,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyayinevitel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyayinevitel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyayinevitel.FormattingEnabled = true;
-            this.cmbyayinevitel.Location = new System.Drawing.Point(619, 407);
+            this.cmbyayinevitel.Location = new System.Drawing.Point(620, 407);
             this.cmbyayinevitel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevitel.Name = "cmbyayinevitel";
             this.cmbyayinevitel.Size = new System.Drawing.Size(207, 25);
@@ -684,7 +701,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.msktel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.msktel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.msktel.Location = new System.Drawing.Point(1027, 406);
+            this.msktel.Location = new System.Drawing.Point(1028, 406);
             this.msktel.Margin = new System.Windows.Forms.Padding(4);
             this.msktel.Mask = "(999) 000-0000";
             this.msktel.Name = "msktel";
@@ -699,7 +716,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyayinevi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyayinevi.FormattingEnabled = true;
             this.cmbyayinevi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cmbyayinevi.Location = new System.Drawing.Point(619, 380);
+            this.cmbyayinevi.Location = new System.Drawing.Point(620, 380);
             this.cmbyayinevi.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyayinevi.Name = "cmbyayinevi";
             this.cmbyayinevi.Size = new System.Drawing.Size(207, 25);
@@ -710,7 +727,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtcevirmensoyad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcevirmensoyad.Location = new System.Drawing.Point(1027, 595);
+            this.txtcevirmensoyad.Location = new System.Drawing.Point(1028, 595);
             this.txtcevirmensoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcevirmensoyad.Name = "txtcevirmensoyad";
             this.txtcevirmensoyad.Size = new System.Drawing.Size(207, 25);
@@ -723,7 +740,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbtur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtur.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbtur.FormattingEnabled = true;
-            this.cmbtur.Location = new System.Drawing.Point(619, 434);
+            this.cmbtur.Location = new System.Drawing.Point(620, 434);
             this.cmbtur.Margin = new System.Windows.Forms.Padding(4);
             this.cmbtur.Name = "cmbtur";
             this.cmbtur.Size = new System.Drawing.Size(207, 25);
@@ -734,7 +751,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.yayinevibtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.yayinevibtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yayinevibtn.Location = new System.Drawing.Point(1241, 401);
+            this.yayinevibtn.Location = new System.Drawing.Point(1242, 401);
             this.yayinevibtn.Margin = new System.Windows.Forms.Padding(4);
             this.yayinevibtn.Name = "yayinevibtn";
             this.yayinevibtn.Size = new System.Drawing.Size(80, 30);
@@ -750,7 +767,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyazarsoyad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyazarsoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyazarsoyad.FormattingEnabled = true;
-            this.cmbyazarsoyad.Location = new System.Drawing.Point(619, 515);
+            this.cmbyazarsoyad.Location = new System.Drawing.Point(620, 515);
             this.cmbyazarsoyad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarsoyad.Name = "cmbyazarsoyad";
             this.cmbyazarsoyad.Size = new System.Drawing.Size(207, 25);
@@ -764,7 +781,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label30.Location = new System.Drawing.Point(933, 483);
+            this.label30.Location = new System.Drawing.Point(934, 483);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(87, 19);
@@ -779,7 +796,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbyazarad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbyazarad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbyazarad.FormattingEnabled = true;
-            this.cmbyazarad.Location = new System.Drawing.Point(619, 488);
+            this.cmbyazarad.Location = new System.Drawing.Point(620, 488);
             this.cmbyazarad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbyazarad.Name = "cmbyazarad";
             this.cmbyazarad.Size = new System.Drawing.Size(207, 25);
@@ -790,7 +807,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtyazarsoyad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtyazarsoyad.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyazarsoyad.Location = new System.Drawing.Point(1027, 540);
+            this.txtyazarsoyad.Location = new System.Drawing.Point(1028, 540);
             this.txtyazarsoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyazarsoyad.Name = "txtyazarsoyad";
             this.txtyazarsoyad.Size = new System.Drawing.Size(207, 25);
@@ -803,7 +820,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.cmbkategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbkategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbkategori.FormattingEnabled = true;
-            this.cmbkategori.Location = new System.Drawing.Point(619, 461);
+            this.cmbkategori.Location = new System.Drawing.Point(620, 461);
             this.cmbkategori.Margin = new System.Windows.Forms.Padding(4);
             this.cmbkategori.Name = "cmbkategori";
             this.cmbkategori.Size = new System.Drawing.Size(207, 25);
@@ -814,7 +831,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnkategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnkategori.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnkategori.Location = new System.Drawing.Point(1241, 477);
+            this.btnkategori.Location = new System.Drawing.Point(1242, 477);
             this.btnkategori.Margin = new System.Windows.Forms.Padding(4);
             this.btnkategori.Name = "btnkategori";
             this.btnkategori.Size = new System.Drawing.Size(80, 30);
@@ -839,7 +856,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtyayinevi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtyayinevi.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyayinevi.Location = new System.Drawing.Point(1027, 380);
+            this.txtyayinevi.Location = new System.Drawing.Point(1028, 380);
             this.txtyayinevi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyayinevi.Name = "txtyayinevi";
             this.txtyayinevi.Size = new System.Drawing.Size(207, 25);
@@ -864,7 +881,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label32.Location = new System.Drawing.Point(906, 597);
+            this.label32.Location = new System.Drawing.Point(907, 597);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(114, 19);
@@ -880,7 +897,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(425, 410);
+            this.label27.Location = new System.Drawing.Point(426, 410);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(166, 19);
             this.label27.TabIndex = 211;
@@ -893,7 +910,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label29.Location = new System.Drawing.Point(939, 408);
+            this.label29.Location = new System.Drawing.Point(940, 408);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(81, 19);
@@ -909,7 +926,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmensoyad.BackColor = System.Drawing.Color.Transparent;
             this.lblcevirmensoyad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblcevirmensoyad.ForeColor = System.Drawing.Color.White;
-            this.lblcevirmensoyad.Location = new System.Drawing.Point(425, 572);
+            this.lblcevirmensoyad.Location = new System.Drawing.Point(426, 572);
             this.lblcevirmensoyad.Name = "lblcevirmensoyad";
             this.lblcevirmensoyad.Size = new System.Drawing.Size(175, 19);
             this.lblcevirmensoyad.TabIndex = 210;
@@ -919,7 +936,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(1241, 591);
+            this.button6.Location = new System.Drawing.Point(1242, 591);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(80, 30);
@@ -946,7 +963,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtyazar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtyazar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtyazar.Location = new System.Drawing.Point(1027, 514);
+            this.txtyazar.Location = new System.Drawing.Point(1028, 514);
             this.txtyazar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtyazar.Name = "txtyazar";
             this.txtyazar.Size = new System.Drawing.Size(207, 25);
@@ -970,7 +987,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.tureklebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tureklebtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tureklebtn.Location = new System.Drawing.Point(1241, 438);
+            this.tureklebtn.Location = new System.Drawing.Point(1242, 438);
             this.tureklebtn.Margin = new System.Windows.Forms.Padding(4);
             this.tureklebtn.Name = "tureklebtn";
             this.tureklebtn.Size = new System.Drawing.Size(80, 30);
@@ -997,7 +1014,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txttur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txttur.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txttur.Location = new System.Drawing.Point(1027, 442);
+            this.txttur.Location = new System.Drawing.Point(1028, 442);
             this.txttur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttur.Name = "txttur";
             this.txttur.Size = new System.Drawing.Size(207, 25);
@@ -1021,7 +1038,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnyazar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnyazar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnyazar.Location = new System.Drawing.Point(1241, 535);
+            this.btnyazar.Location = new System.Drawing.Point(1242, 535);
             this.btnyazar.Margin = new System.Windows.Forms.Padding(4);
             this.btnyazar.Name = "btnyazar";
             this.btnyazar.Size = new System.Drawing.Size(80, 30);
@@ -1049,7 +1066,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label35.Location = new System.Drawing.Point(932, 542);
+            this.label35.Location = new System.Drawing.Point(933, 542);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(88, 19);
@@ -1078,7 +1095,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(964, 444);
+            this.label25.Location = new System.Drawing.Point(965, 444);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 19);
@@ -1094,7 +1111,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(425, 464);
+            this.label18.Location = new System.Drawing.Point(426, 464);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(122, 19);
             this.label18.TabIndex = 203;
@@ -1104,8 +1121,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Tomato;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(1329, 375);
+            this.button3.Location = new System.Drawing.Point(1330, 375);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 24);
@@ -1122,7 +1140,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblcevirmenad.BackColor = System.Drawing.Color.Transparent;
             this.lblcevirmenad.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblcevirmenad.ForeColor = System.Drawing.Color.White;
-            this.lblcevirmenad.Location = new System.Drawing.Point(425, 545);
+            this.lblcevirmenad.Location = new System.Drawing.Point(426, 545);
             this.lblcevirmenad.Name = "lblcevirmenad";
             this.lblcevirmenad.Size = new System.Drawing.Size(155, 19);
             this.lblcevirmenad.TabIndex = 202;
@@ -1161,7 +1179,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(425, 383);
+            this.label12.Location = new System.Drawing.Point(426, 383);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 19);
             this.label12.TabIndex = 199;
@@ -1174,7 +1192,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(425, 437);
+            this.label13.Location = new System.Drawing.Point(426, 437);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 19);
             this.label13.TabIndex = 198;
@@ -1213,7 +1231,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(425, 491);
+            this.label6.Location = new System.Drawing.Point(426, 491);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 19);
             this.label6.TabIndex = 195;
@@ -1252,7 +1270,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(425, 518);
+            this.label5.Location = new System.Drawing.Point(426, 518);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 19);
             this.label5.TabIndex = 192;
@@ -1378,7 +1396,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button9.Location = new System.Drawing.Point(837, 542);
+            this.button9.Location = new System.Drawing.Point(838, 542);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(54, 52);
             this.button9.TabIndex = 225;
@@ -1390,7 +1408,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.Location = new System.Drawing.Point(837, 488);
+            this.button7.Location = new System.Drawing.Point(838, 488);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(54, 52);
             this.button7.TabIndex = 224;
@@ -1402,7 +1420,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(837, 461);
+            this.button5.Location = new System.Drawing.Point(838, 461);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(54, 24);
             this.button5.TabIndex = 223;
@@ -1414,7 +1432,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(837, 434);
+            this.button4.Location = new System.Drawing.Point(838, 434);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(54, 24);
             this.button4.TabIndex = 222;
@@ -1426,7 +1444,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(837, 381);
+            this.button2.Location = new System.Drawing.Point(838, 381);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(54, 50);
             this.button2.TabIndex = 221;
@@ -1441,7 +1459,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(425, 677);
+            this.label16.Location = new System.Drawing.Point(426, 677);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(81, 19);
             this.label16.TabIndex = 179;
@@ -1454,7 +1472,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(425, 703);
+            this.label19.Location = new System.Drawing.Point(426, 703);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(94, 19);
             this.label19.TabIndex = 178;
@@ -1467,7 +1485,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(425, 625);
+            this.label8.Location = new System.Drawing.Point(426, 625);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 19);
             this.label8.TabIndex = 177;
@@ -1480,7 +1498,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(425, 651);
+            this.label10.Location = new System.Drawing.Point(426, 651);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(173, 19);
             this.label10.TabIndex = 176;
@@ -1493,7 +1511,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(425, 599);
+            this.label2.Location = new System.Drawing.Point(426, 599);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 19);
             this.label2.TabIndex = 175;
@@ -1503,7 +1521,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtozet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtozet.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtozet.Location = new System.Drawing.Point(619, 701);
+            this.txtozet.Location = new System.Drawing.Point(620, 701);
             this.txtozet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtozet.Multiline = true;
             this.txtozet.Name = "txtozet";
@@ -1514,7 +1532,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtdil.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtdil.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtdil.Location = new System.Drawing.Point(619, 674);
+            this.txtdil.Location = new System.Drawing.Point(620, 674);
             this.txtdil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdil.Name = "txtdil";
             this.txtdil.Size = new System.Drawing.Size(207, 25);
@@ -1524,7 +1542,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtanahtarkelime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtanahtarkelime.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtanahtarkelime.Location = new System.Drawing.Point(619, 648);
+            this.txtanahtarkelime.Location = new System.Drawing.Point(620, 648);
             this.txtanahtarkelime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtanahtarkelime.Name = "txtanahtarkelime";
             this.txtanahtarkelime.Size = new System.Drawing.Size(207, 25);
@@ -1534,7 +1552,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtkitapkonusu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtkitapkonusu.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkitapkonusu.Location = new System.Drawing.Point(619, 622);
+            this.txtkitapkonusu.Location = new System.Drawing.Point(620, 622);
             this.txtkitapkonusu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkitapkonusu.Name = "txtkitapkonusu";
             this.txtkitapkonusu.Size = new System.Drawing.Size(207, 25);
@@ -1544,7 +1562,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.txtKitapAd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtKitapAd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKitapAd.Location = new System.Drawing.Point(619, 596);
+            this.txtKitapAd.Location = new System.Drawing.Point(620, 596);
             this.txtKitapAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKitapAd.Name = "txtKitapAd";
             this.txtKitapAd.Size = new System.Drawing.Size(207, 25);
@@ -1645,7 +1663,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(1101, 83);
+            this.label28.Location = new System.Drawing.Point(1102, 83);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(38, 12);
             this.label28.TabIndex = 67;
@@ -1657,7 +1675,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.txtkitapId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtkitapId.Enabled = false;
             this.txtkitapId.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkitapId.Location = new System.Drawing.Point(1145, 80);
+            this.txtkitapId.Location = new System.Drawing.Point(1146, 80);
             this.txtkitapId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkitapId.Name = "txtkitapId";
             this.txtkitapId.Size = new System.Drawing.Size(207, 19);
@@ -1671,6 +1689,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1680,7 +1699,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1341, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(1342, 261);
             this.dataGridView1.TabIndex = 65;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -1689,10 +1708,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSil.BackColor = System.Drawing.Color.DarkRed;
+            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSil.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSil.Location = new System.Drawing.Point(1085, 711);
+            this.btnSil.Location = new System.Drawing.Point(1086, 710);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(131, 46);
@@ -1705,10 +1725,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnGuncelle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuncelle.BackColor = System.Drawing.Color.Green;
+            this.btnGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuncelle.Location = new System.Drawing.Point(1222, 711);
+            this.btnGuncelle.Location = new System.Drawing.Point(1223, 711);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(131, 46);
@@ -1726,7 +1747,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1365, 768);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1856,5 +1877,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label saat;
         private System.Windows.Forms.Label tire;
+        private System.Windows.Forms.Label label20;
     }
 }

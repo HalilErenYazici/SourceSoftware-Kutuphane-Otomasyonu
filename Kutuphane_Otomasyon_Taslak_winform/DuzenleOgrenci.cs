@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -90,7 +85,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
             {
-                MessageBox.Show("Öğrenci seçmediniz öğrenci seçin!");
+                MessageBox.Show("Lütfen önce öğrenci seçiniz.");
             }
             else
             {
@@ -193,7 +188,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[1].Value);
             if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
             {
-                MessageBox.Show("Silinecek öğrenciyi seçmediniz öğrenci seçin!");
+                MessageBox.Show("Lütfen önce öğrenci seçiniz.");
             }
             else
             {
@@ -201,7 +196,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 {
                     connection.Open();
                     DialogResult dialog;
-                    dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    dialog = MessageBox.Show("Bu kaydı silmek istiyor musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     string sil = "delete from Ogrenci where ogrNo=@ogrNo";
                     MySqlCommand command = new MySqlCommand(sil, connection);
                     command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
@@ -221,7 +216,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 }
                 else
                 {
-                    MessageBox.Show("Kişinin üzerinde emanet olduğundan dolayı silinemez.");
+                    MessageBox.Show("Bu öğrencinin üzerinde emanet olduğundan dolayı silinemez.");
                 }
 
 

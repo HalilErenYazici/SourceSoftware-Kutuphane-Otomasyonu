@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -43,12 +37,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mouse_x = e.X;
             mouse_y = e.Y;
         }
-
-        private void searchBox_Click(object sender, EventArgs e)
-        {
-            searchBox.Clear();
-        }
-
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Application.Exit();

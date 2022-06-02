@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -59,22 +53,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             tarih.Text = DateTime.Now.ToLongDateString();
             saat.Text = DateTime.Now.ToLongTimeString();
-        }
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (searchBox.Text == "Ara...")
-            {
-                searchBox.Text = "";
-                searchBox.ForeColor = Color.Black;
-            }
-        }
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (searchBox.Text == "")
-            {
-                searchBox.Text = "Ara...";
-                searchBox.ForeColor = Color.Gray;
-            }
         }
 
         bool move;
@@ -359,7 +337,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             connection.Open();
             if (dataGridViewemanet.CurrentRow == null)
             {
-                MessageBox.Show("lütfen emanet alınacak veriyi seçiniz");
+                MessageBox.Show("Lütfen iade alınacak veriyi seçiniz.");
                 connection.Close();
             }
             else
@@ -387,7 +365,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 command.ExecuteNonQuery();
                  */
                 DialogResult dialog;
-                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                dialog = MessageBox.Show("Seçilenler iade alınsın mı?", "İADE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 string guncelle = "update Emanet set Durum=@Durum where emanetId=@emanetId";
                 MySqlCommand command = new MySqlCommand(guncelle, connection);
                 command.Parameters.AddWithValue("@emanetId", txtemanetId.Text);
@@ -400,7 +378,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 komut2.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Kitap(lar) iade edildi!");
+                MessageBox.Show("Kitap(lar) iade alındı.");
 
                 emanetlistele();
             }

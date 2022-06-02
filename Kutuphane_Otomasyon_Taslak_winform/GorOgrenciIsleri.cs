@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -67,7 +61,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void searchBox_Click(object sender, EventArgs e)
         {
-            searchBox.Clear();
             button1.Visible = false;
         }
 

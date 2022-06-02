@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -184,10 +178,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
               Dtn = DateTime.Now;
               mskalis.Text = Dtn.ToString("dd.MM.yyyy" + "HH:mm:ss");*/
 
-            //searchBox.Text = "Ara...";
-            //searchBox.ForeColor = Color.Gray;
             vakit();
             timer1.Start();
+            mevcut.Checked = true;
         }
 
         private void vakit()
@@ -199,22 +192,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             tarih.Text = DateTime.Now.ToLongDateString();
             saat.Text = DateTime.Now.ToLongTimeString();
-        }
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (searchBox.Text == "Ara...")
-            {
-            searchBox.Text = "";
-            searchBox.ForeColor = Color.Black;
-            }
-        }
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (searchBox.Text == "")
-            {
-            searchBox.Text = "Ara...";
-            searchBox.ForeColor = Color.Gray;
-            }
         }
 
         private void dataGridViewkitap_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -561,14 +538,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            label20.Visible = false;
             btnemanet.Visible = false;
             button2.Visible = false;
             cmbaramatip.Visible = false;
             searchBox.Visible = false;
             button1.Visible = false;
             kapatBtn.Visible = true;
-            btnMail.Visible = true;
             string tarih;
             DateTime dateTime = DateTime.Now;
             tarih = dateTime.ToString("dd.MM.yyyy");
@@ -594,6 +570,39 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Form form = new GorEmanet();
             form.Show();
             this.Close();
+        }
+
+        private void mevcut_CheckedChanged(object sender, EventArgs e)
+        {
+            searchBoxEmanet.Text = "";
+            string durum = "Emanette";
+            searchBoxEmanet.Text = durum;
+            MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBoxEmanet.Text + "%'", connection);
+            DataTable dt = new DataTable();
+            adtr.Fill(dt);
+            dataGridViewemanet.DataSource = dt;
+            renk();
+            connection.Close();
+
+        }
+
+        private void gecmis_CheckedChanged(object sender, EventArgs e)
+        {
+            searchBoxEmanet.Text = "";
+            string durum = "Teslim Alindi";
+            searchBoxEmanet.Text = durum;
+            MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBoxEmanet.Text + "%'", connection);
+            DataTable dt = new DataTable();
+            adtr.Fill(dt);
+            dataGridViewemanet.DataSource = dt;
+            renk();
+            connection.Close();
+        }
+
+        private void tumEmanetler_CheckedChanged(object sender, EventArgs e)
+        {
+            listelemanet();
+            renk();
         }
     }
 }

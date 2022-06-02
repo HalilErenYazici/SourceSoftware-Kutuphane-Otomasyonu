@@ -30,24 +30,36 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GorIstatistik));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.istBtn = new System.Windows.Forms.Button();
+            this.anasayfaBtn = new System.Windows.Forms.Button();
+            this.kitapBtn = new System.Windows.Forms.Button();
+            this.emanetBtn = new System.Windows.Forms.Button();
+            this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tire = new System.Windows.Forms.Label();
+            this.saat = new System.Windows.Forms.Label();
+            this.tarih = new System.Windows.Forms.Label();
+            this.pncrTxt = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOgrGtr = new System.Windows.Forms.Button();
             this.btnKtpGtr = new System.Windows.Forms.Button();
@@ -71,35 +83,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lbltoplamAlinanKitapSayisi = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblencokOkunankitapDili = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.istBtn = new System.Windows.Forms.Button();
-            this.anasayfaBtn = new System.Windows.Forms.Button();
-            this.kitapBtn = new System.Windows.Forms.Button();
-            this.emanetBtn = new System.Windows.Forms.Button();
-            this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chrtEnAzEmanetAlinanKitap = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chrtEnCokEmanetAlinanKitap = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartencokkitapokuyan = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartenazkitapokuyan = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chrtEnCokEmanetAlinanKitap = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chrtEnAzEmanetAlinanKitap = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tire = new System.Windows.Forms.Label();
-            this.saat = new System.Windows.Forms.Label();
-            this.tarih = new System.Windows.Forms.Label();
-            this.pncrTxt = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrtEnAzEmanetAlinanKitap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrtEnCokEmanetAlinanKitap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartencokkitapokuyan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartenazkitapokuyan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtEnCokEmanetAlinanKitap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtEnAzEmanetAlinanKitap)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,6 +124,257 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.istBtn);
+            this.panel2.Controls.Add(this.anasayfaBtn);
+            this.panel2.Controls.Add(this.kitapBtn);
+            this.panel2.Controls.Add(this.emanetBtn);
+            this.panel2.Controls.Add(this.ogrenciBtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 25);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1278, 42);
+            this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            // 
+            // istBtn
+            // 
+            this.istBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.istBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
+            this.istBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.istBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.istBtn.FlatAppearance.BorderSize = 0;
+            this.istBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.istBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.istBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.istBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.istBtn.Location = new System.Drawing.Point(260, 0);
+            this.istBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.istBtn.Name = "istBtn";
+            this.istBtn.Size = new System.Drawing.Size(43, 42);
+            this.istBtn.TabIndex = 9;
+            this.istBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.istBtn.UseVisualStyleBackColor = false;
+            this.istBtn.Click += new System.EventHandler(this.istBtn_Click);
+            // 
+            // anasayfaBtn
+            // 
+            this.anasayfaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.anasayfaBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.home1;
+            this.anasayfaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.anasayfaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.anasayfaBtn.FlatAppearance.BorderSize = 0;
+            this.anasayfaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
+            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.anasayfaBtn.Name = "anasayfaBtn";
+            this.anasayfaBtn.Size = new System.Drawing.Size(43, 42);
+            this.anasayfaBtn.TabIndex = 2;
+            this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.anasayfaBtn.UseVisualStyleBackColor = false;
+            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
+            // 
+            // kitapBtn
+            // 
+            this.kitapBtn.BackColor = System.Drawing.Color.Transparent;
+            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bookSyh;
+            this.kitapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.kitapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kitapBtn.FlatAppearance.BorderSize = 0;
+            this.kitapBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.kitapBtn.Location = new System.Drawing.Point(197, 0);
+            this.kitapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitapBtn.Name = "kitapBtn";
+            this.kitapBtn.Size = new System.Drawing.Size(43, 42);
+            this.kitapBtn.TabIndex = 8;
+            this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.kitapBtn.UseVisualStyleBackColor = false;
+            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
+            // 
+            // emanetBtn
+            // 
+            this.emanetBtn.BackColor = System.Drawing.Color.Transparent;
+            this.emanetBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.exchange;
+            this.emanetBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.emanetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.emanetBtn.FlatAppearance.BorderSize = 0;
+            this.emanetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.emanetBtn.Location = new System.Drawing.Point(75, 0);
+            this.emanetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emanetBtn.Name = "emanetBtn";
+            this.emanetBtn.Size = new System.Drawing.Size(43, 42);
+            this.emanetBtn.TabIndex = 6;
+            this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.emanetBtn.UseVisualStyleBackColor = false;
+            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
+            // 
+            // ogrenciBtn
+            // 
+            this.ogrenciBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ogrenciBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.male_student;
+            this.ogrenciBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ogrenciBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ogrenciBtn.FlatAppearance.BorderSize = 0;
+            this.ogrenciBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
+            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ogrenciBtn.Name = "ogrenciBtn";
+            this.ogrenciBtn.Size = new System.Drawing.Size(43, 42);
+            this.ogrenciBtn.TabIndex = 7;
+            this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ogrenciBtn.UseVisualStyleBackColor = false;
+            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.tire);
+            this.panel6.Controls.Add(this.saat);
+            this.panel6.Controls.Add(this.tarih);
+            this.panel6.Controls.Add(this.pncrTxt);
+            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.button10);
+            this.panel6.Controls.Add(this.button11);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1278, 25);
+            this.panel6.TabIndex = 228;
+            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.panel6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.panel6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            // 
+            // tire
+            // 
+            this.tire.AutoSize = true;
+            this.tire.BackColor = System.Drawing.Color.Transparent;
+            this.tire.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tire.ForeColor = System.Drawing.Color.Gainsboro;
+            this.tire.Location = new System.Drawing.Point(215, -1);
+            this.tire.Name = "tire";
+            this.tire.Size = new System.Drawing.Size(17, 23);
+            this.tire.TabIndex = 26;
+            this.tire.Text = "-";
+            this.tire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // saat
+            // 
+            this.saat.AutoSize = true;
+            this.saat.BackColor = System.Drawing.Color.Transparent;
+            this.saat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.saat.ForeColor = System.Drawing.Color.Gainsboro;
+            this.saat.Location = new System.Drawing.Point(238, -1);
+            this.saat.Name = "saat";
+            this.saat.Size = new System.Drawing.Size(43, 23);
+            this.saat.TabIndex = 25;
+            this.saat.Text = "Saat";
+            this.saat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tarih
+            // 
+            this.tarih.AutoSize = true;
+            this.tarih.BackColor = System.Drawing.Color.Transparent;
+            this.tarih.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tarih.ForeColor = System.Drawing.Color.Gainsboro;
+            this.tarih.Location = new System.Drawing.Point(2, -1);
+            this.tarih.Name = "tarih";
+            this.tarih.Size = new System.Drawing.Size(46, 23);
+            this.tarih.TabIndex = 24;
+            this.tarih.Text = "Tarih";
+            this.tarih.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pncrTxt
+            // 
+            this.pncrTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pncrTxt.AutoSize = true;
+            this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
+            this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
+            this.pncrTxt.Location = new System.Drawing.Point(598, 1);
+            this.pncrTxt.Name = "pncrTxt";
+            this.pncrTxt.Size = new System.Drawing.Size(82, 21);
+            this.pncrTxt.TabIndex = 23;
+            this.pncrTxt.Text = "İSTATİSTİK";
+            // 
+            // button8
+            // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.maximizeSyhKntr30;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Transparent;
+            this.button8.Location = new System.Drawing.Point(1224, 1);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(20, 20);
+            this.button8.TabIndex = 21;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.kaplaButon_Click);
+            // 
+            // button10
+            // 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.minus;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.Transparent;
+            this.button10.Location = new System.Drawing.Point(1194, 1);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(20, 20);
+            this.button10.TabIndex = 20;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.simgeButon_Click);
+            // 
+            // button11
+            // 
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.remove;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.Transparent;
+            this.button11.Location = new System.Drawing.Point(1254, 1);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(20, 20);
+            this.button11.TabIndex = 19;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.cikisButon_Click);
+            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -143,25 +394,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label6.Size = new System.Drawing.Size(444, 28);
             this.label6.TabIndex = 1;
             this.label6.Text = "Grafikleri Görüntülemek İçin Butonları Kullanınız...";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SlateGray;
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(13, 88);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(601, 300);
-            this.panel4.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(75, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(444, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Grafikleri Görüntülemek İçin Butonları Kullanınız...";
             // 
             // panel3
             // 
@@ -200,13 +432,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnOgrGtr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOgrGtr.BackColor = System.Drawing.Color.SlateGray;
             this.btnOgrGtr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOgrGtr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOgrGtr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOgrGtr.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOgrGtr.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOgrGtr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOgrGtr.Location = new System.Drawing.Point(1058, 219);
+            this.btnOgrGtr.Location = new System.Drawing.Point(1039, 210);
             this.btnOgrGtr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOgrGtr.Name = "btnOgrGtr";
-            this.btnOgrGtr.Size = new System.Drawing.Size(90, 70);
+            this.btnOgrGtr.Size = new System.Drawing.Size(100, 80);
             this.btnOgrGtr.TabIndex = 30;
             this.btnOgrGtr.Text = "Öğrenci Grafiklerini Getir";
             this.btnOgrGtr.UseVisualStyleBackColor = false;
@@ -217,13 +450,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnKtpGtr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKtpGtr.BackColor = System.Drawing.Color.SlateGray;
             this.btnKtpGtr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKtpGtr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKtpGtr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnKtpGtr.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKtpGtr.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKtpGtr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKtpGtr.Location = new System.Drawing.Point(1154, 219);
+            this.btnKtpGtr.Location = new System.Drawing.Point(1145, 210);
             this.btnKtpGtr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKtpGtr.Name = "btnKtpGtr";
-            this.btnKtpGtr.Size = new System.Drawing.Size(90, 70);
+            this.btnKtpGtr.Size = new System.Drawing.Size(100, 80);
             this.btnKtpGtr.TabIndex = 29;
             this.btnKtpGtr.Text = "Kitap Grafiklerini Getir";
             this.btnKtpGtr.UseVisualStyleBackColor = false;
@@ -479,137 +713,75 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.lblencokOkunankitapDili.Size = new System.Drawing.Size(0, 21);
             this.lblencokOkunankitapDili.TabIndex = 20;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.istBtn);
-            this.panel2.Controls.Add(this.anasayfaBtn);
-            this.panel2.Controls.Add(this.kitapBtn);
-            this.panel2.Controls.Add(this.emanetBtn);
-            this.panel2.Controls.Add(this.ogrenciBtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 25);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1278, 42);
-            this.panel2.TabIndex = 0;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            this.panel4.BackColor = System.Drawing.Color.SlateGray;
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(13, 88);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(601, 300);
+            this.panel4.TabIndex = 34;
             // 
-            // istBtn
+            // label4
             // 
-            this.istBtn.BackColor = System.Drawing.Color.DarkGray;
-            this.istBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bar_chart2Rgb;
-            this.istBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.istBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.istBtn.FlatAppearance.BorderSize = 0;
-            this.istBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.istBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.istBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.istBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.istBtn.Location = new System.Drawing.Point(260, 0);
-            this.istBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.istBtn.Name = "istBtn";
-            this.istBtn.Size = new System.Drawing.Size(43, 42);
-            this.istBtn.TabIndex = 9;
-            this.istBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.istBtn.UseVisualStyleBackColor = false;
-            this.istBtn.Click += new System.EventHandler(this.istBtn_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(75, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(444, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Grafikleri Görüntülemek İçin Butonları Kullanınız...";
             // 
-            // anasayfaBtn
+            // chrtEnAzEmanetAlinanKitap
             // 
-            this.anasayfaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.anasayfaBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.home1;
-            this.anasayfaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.anasayfaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.anasayfaBtn.FlatAppearance.BorderSize = 0;
-            this.anasayfaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.anasayfaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.anasayfaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.anasayfaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.anasayfaBtn.Location = new System.Drawing.Point(12, 0);
-            this.anasayfaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.anasayfaBtn.Name = "anasayfaBtn";
-            this.anasayfaBtn.Size = new System.Drawing.Size(43, 42);
-            this.anasayfaBtn.TabIndex = 2;
-            this.anasayfaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.anasayfaBtn.UseVisualStyleBackColor = false;
-            this.anasayfaBtn.Click += new System.EventHandler(this.anasayfaBtn_Click);
+            this.chrtEnAzEmanetAlinanKitap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chrtEnAzEmanetAlinanKitap.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrtEnAzEmanetAlinanKitap.Legends.Add(legend1);
+            this.chrtEnAzEmanetAlinanKitap.Location = new System.Drawing.Point(668, 88);
+            this.chrtEnAzEmanetAlinanKitap.Margin = new System.Windows.Forms.Padding(4);
+            this.chrtEnAzEmanetAlinanKitap.Name = "chrtEnAzEmanetAlinanKitap";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "En az emanet alınan kitap";
+            this.chrtEnAzEmanetAlinanKitap.Series.Add(series1);
+            this.chrtEnAzEmanetAlinanKitap.Size = new System.Drawing.Size(600, 300);
+            this.chrtEnAzEmanetAlinanKitap.TabIndex = 32;
+            this.chrtEnAzEmanetAlinanKitap.Text = "chart2";
+            this.chrtEnAzEmanetAlinanKitap.Visible = false;
             // 
-            // kitapBtn
+            // chrtEnCokEmanetAlinanKitap
             // 
-            this.kitapBtn.BackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.bookSyh;
-            this.kitapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.kitapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kitapBtn.FlatAppearance.BorderSize = 0;
-            this.kitapBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.kitapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.kitapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kitapBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kitapBtn.Location = new System.Drawing.Point(197, 0);
-            this.kitapBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kitapBtn.Name = "kitapBtn";
-            this.kitapBtn.Size = new System.Drawing.Size(43, 42);
-            this.kitapBtn.TabIndex = 8;
-            this.kitapBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.kitapBtn.UseVisualStyleBackColor = false;
-            this.kitapBtn.Click += new System.EventHandler(this.kitapBtn_Click);
-            // 
-            // emanetBtn
-            // 
-            this.emanetBtn.BackColor = System.Drawing.Color.Transparent;
-            this.emanetBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.exchange;
-            this.emanetBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.emanetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.emanetBtn.FlatAppearance.BorderSize = 0;
-            this.emanetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.emanetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.emanetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emanetBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emanetBtn.Location = new System.Drawing.Point(75, 0);
-            this.emanetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.emanetBtn.Name = "emanetBtn";
-            this.emanetBtn.Size = new System.Drawing.Size(43, 42);
-            this.emanetBtn.TabIndex = 6;
-            this.emanetBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.emanetBtn.UseVisualStyleBackColor = false;
-            this.emanetBtn.Click += new System.EventHandler(this.emanetBtn_Click);
-            // 
-            // ogrenciBtn
-            // 
-            this.ogrenciBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ogrenciBtn.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.male_student;
-            this.ogrenciBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ogrenciBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ogrenciBtn.FlatAppearance.BorderSize = 0;
-            this.ogrenciBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ogrenciBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ogrenciBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ogrenciBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ogrenciBtn.Location = new System.Drawing.Point(136, 0);
-            this.ogrenciBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ogrenciBtn.Name = "ogrenciBtn";
-            this.ogrenciBtn.Size = new System.Drawing.Size(43, 42);
-            this.ogrenciBtn.TabIndex = 7;
-            this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ogrenciBtn.UseVisualStyleBackColor = false;
-            this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
+            chartArea2.Name = "ChartArea1";
+            this.chrtEnCokEmanetAlinanKitap.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chrtEnCokEmanetAlinanKitap.Legends.Add(legend2);
+            this.chrtEnCokEmanetAlinanKitap.Location = new System.Drawing.Point(13, 88);
+            this.chrtEnCokEmanetAlinanKitap.Margin = new System.Windows.Forms.Padding(4);
+            this.chrtEnCokEmanetAlinanKitap.Name = "chrtEnCokEmanetAlinanKitap";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "En çok emanet alınan kitap";
+            this.chrtEnCokEmanetAlinanKitap.Series.Add(series2);
+            this.chrtEnCokEmanetAlinanKitap.Size = new System.Drawing.Size(601, 300);
+            this.chrtEnCokEmanetAlinanKitap.TabIndex = 31;
+            this.chrtEnCokEmanetAlinanKitap.Text = "chart3";
+            this.chrtEnCokEmanetAlinanKitap.Visible = false;
             // 
             // chartencokkitapokuyan
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartencokkitapokuyan.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartencokkitapokuyan.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chartencokkitapokuyan.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartencokkitapokuyan.Legends.Add(legend3);
             this.chartencokkitapokuyan.Location = new System.Drawing.Point(14, 88);
             this.chartencokkitapokuyan.Margin = new System.Windows.Forms.Padding(4);
             this.chartencokkitapokuyan.Name = "chartencokkitapokuyan";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "En çok kitap okuyan öğrenci";
-            this.chartencokkitapokuyan.Series.Add(series5);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "En çok kitap okuyan öğrenci";
+            this.chartencokkitapokuyan.Series.Add(series3);
             this.chartencokkitapokuyan.Size = new System.Drawing.Size(600, 300);
             this.chartencokkitapokuyan.TabIndex = 29;
             this.chartencokkitapokuyan.Text = "chart1";
@@ -618,191 +790,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // chartenazkitapokuyan
             // 
             this.chartenazkitapokuyan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea6.Name = "ChartArea1";
-            this.chartenazkitapokuyan.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartenazkitapokuyan.Legends.Add(legend6);
+            chartArea4.Name = "ChartArea1";
+            this.chartenazkitapokuyan.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartenazkitapokuyan.Legends.Add(legend4);
             this.chartenazkitapokuyan.Location = new System.Drawing.Point(668, 88);
             this.chartenazkitapokuyan.Margin = new System.Windows.Forms.Padding(4);
             this.chartenazkitapokuyan.Name = "chartenazkitapokuyan";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "En az kitap okuyan öğrenci";
-            this.chartenazkitapokuyan.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "En az kitap okuyan öğrenci";
+            this.chartenazkitapokuyan.Series.Add(series4);
             this.chartenazkitapokuyan.Size = new System.Drawing.Size(600, 300);
             this.chartenazkitapokuyan.TabIndex = 30;
             this.chartenazkitapokuyan.Text = "chart2";
             this.chartenazkitapokuyan.Visible = false;
-            // 
-            // chrtEnCokEmanetAlinanKitap
-            // 
-            chartArea7.Name = "ChartArea1";
-            this.chrtEnCokEmanetAlinanKitap.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chrtEnCokEmanetAlinanKitap.Legends.Add(legend7);
-            this.chrtEnCokEmanetAlinanKitap.Location = new System.Drawing.Point(13, 88);
-            this.chrtEnCokEmanetAlinanKitap.Margin = new System.Windows.Forms.Padding(4);
-            this.chrtEnCokEmanetAlinanKitap.Name = "chrtEnCokEmanetAlinanKitap";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "En çok emanet alınan kitap";
-            this.chrtEnCokEmanetAlinanKitap.Series.Add(series7);
-            this.chrtEnCokEmanetAlinanKitap.Size = new System.Drawing.Size(601, 300);
-            this.chrtEnCokEmanetAlinanKitap.TabIndex = 31;
-            this.chrtEnCokEmanetAlinanKitap.Text = "chart3";
-            this.chrtEnCokEmanetAlinanKitap.Visible = false;
-            // 
-            // chrtEnAzEmanetAlinanKitap
-            // 
-            this.chrtEnAzEmanetAlinanKitap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea8.Name = "ChartArea1";
-            this.chrtEnAzEmanetAlinanKitap.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chrtEnAzEmanetAlinanKitap.Legends.Add(legend8);
-            this.chrtEnAzEmanetAlinanKitap.Location = new System.Drawing.Point(668, 88);
-            this.chrtEnAzEmanetAlinanKitap.Margin = new System.Windows.Forms.Padding(4);
-            this.chrtEnAzEmanetAlinanKitap.Name = "chrtEnAzEmanetAlinanKitap";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "En az emanet alınan kitap";
-            this.chrtEnAzEmanetAlinanKitap.Series.Add(series8);
-            this.chrtEnAzEmanetAlinanKitap.Size = new System.Drawing.Size(600, 300);
-            this.chrtEnAzEmanetAlinanKitap.TabIndex = 32;
-            this.chrtEnAzEmanetAlinanKitap.Text = "chart2";
-            this.chrtEnAzEmanetAlinanKitap.Visible = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.tire);
-            this.panel6.Controls.Add(this.saat);
-            this.panel6.Controls.Add(this.tarih);
-            this.panel6.Controls.Add(this.pncrTxt);
-            this.panel6.Controls.Add(this.button8);
-            this.panel6.Controls.Add(this.button10);
-            this.panel6.Controls.Add(this.button11);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1278, 25);
-            this.panel6.TabIndex = 228;
-            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
-            this.panel6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
-            this.panel6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
-            // 
-            // tire
-            // 
-            this.tire.AutoSize = true;
-            this.tire.BackColor = System.Drawing.Color.Transparent;
-            this.tire.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tire.ForeColor = System.Drawing.Color.Gainsboro;
-            this.tire.Location = new System.Drawing.Point(215, -1);
-            this.tire.Name = "tire";
-            this.tire.Size = new System.Drawing.Size(17, 23);
-            this.tire.TabIndex = 26;
-            this.tire.Text = "-";
-            this.tire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // saat
-            // 
-            this.saat.AutoSize = true;
-            this.saat.BackColor = System.Drawing.Color.Transparent;
-            this.saat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.saat.ForeColor = System.Drawing.Color.Gainsboro;
-            this.saat.Location = new System.Drawing.Point(238, -1);
-            this.saat.Name = "saat";
-            this.saat.Size = new System.Drawing.Size(43, 23);
-            this.saat.TabIndex = 25;
-            this.saat.Text = "Saat";
-            this.saat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tarih
-            // 
-            this.tarih.AutoSize = true;
-            this.tarih.BackColor = System.Drawing.Color.Transparent;
-            this.tarih.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tarih.ForeColor = System.Drawing.Color.Gainsboro;
-            this.tarih.Location = new System.Drawing.Point(2, -1);
-            this.tarih.Name = "tarih";
-            this.tarih.Size = new System.Drawing.Size(46, 23);
-            this.tarih.TabIndex = 24;
-            this.tarih.Text = "Tarih";
-            this.tarih.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pncrTxt
-            // 
-            this.pncrTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pncrTxt.AutoSize = true;
-            this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
-            this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
-            this.pncrTxt.Location = new System.Drawing.Point(598, 1);
-            this.pncrTxt.Name = "pncrTxt";
-            this.pncrTxt.Size = new System.Drawing.Size(82, 21);
-            this.pncrTxt.TabIndex = 23;
-            this.pncrTxt.Text = "İSTATİSTİK";
-            // 
-            // button8
-            // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.maximizeSyhKntr30;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(1224, 1);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(20, 20);
-            this.button8.TabIndex = 21;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.kaplaButon_Click);
-            // 
-            // button10
-            // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.minus;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(1194, 1);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(20, 20);
-            this.button10.TabIndex = 20;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.simgeButon_Click);
-            // 
-            // button11
-            // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.remove;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(1254, 1);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(20, 20);
-            this.button11.TabIndex = 19;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.cikisButon_Click);
             // 
             // timer1
             // 
@@ -823,19 +825,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Text = "İstatistik";
             this.Load += new System.EventHandler(this.Istatistik_Load);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartencokkitapokuyan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartenazkitapokuyan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtEnCokEmanetAlinanKitap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtEnAzEmanetAlinanKitap)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrtEnAzEmanetAlinanKitap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrtEnCokEmanetAlinanKitap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartencokkitapokuyan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartenazkitapokuyan)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,13 +1,6 @@
-﻿using DocumentFormat.OpenXml.Bibliography;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
@@ -60,12 +53,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             listeleOgrenci();
             listeleKitap();
             kitapsayisi();
-
-            //searchBoxOgr.Text = "Öğrenci Ara...";
-            //searchBoxOgr.ForeColor = Color.Gray;
-            //searchBoxKtp.Text = "Kitap Ara...";
-            //searchBoxKtp.ForeColor = Color.Gray;
-
             vakit();
             timer1.Start();
         }
@@ -80,40 +67,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             tarih.Text = DateTime.Now.ToLongDateString();
             saat.Text = DateTime.Now.ToLongTimeString();
         }
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (searchBoxOgr.Text == "Öğrenci Ara...")
-            {
-                searchBoxOgr.Text = "";
-                searchBoxOgr.ForeColor = Color.Black;
-            }
-        }
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (searchBoxOgr.Text == "")
-            {
-                searchBoxOgr.Text = "Öğrenci Ara...";
-                searchBoxOgr.ForeColor = Color.Gray;
-            }
-        }
-
-        private void textBox2_Enter(object sender, EventArgs e)
-        {
-            if (searchBoxKtp.Text == "Kitap Ara...")
-            {
-                searchBoxKtp.Text = "";
-                searchBoxKtp.ForeColor = Color.Black;
-            }
-        }
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (searchBoxKtp.Text == "")
-            {
-                searchBoxKtp.Text = "Kitap Ara...";
-                searchBoxKtp.ForeColor = Color.Gray;
-            }
-        }
-
 
 
         public void sepetlistele()
@@ -154,17 +107,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtkitapAd.Text==""|| txtDemirbas.Text=="" || txtkitapId.Text == "" || txtEmanetAkts.Text == "" || txtyazar.Text == "" || txtyazarsoyad.Text == "" || txtyayinevi.Text == "" || mskalistarihi.Text == "" || mskveristarihi.Text == "")
             {
-                MessageBox.Show("Kitap seçiniz");
+                MessageBox.Show("Kitap seçiniz.");
             }
             else if (txtEmanetAkts.Text =="0")
             {
-                MessageBox.Show("Emanet Edilen Kitap Sayısı 0 Olamaz");
+                MessageBox.Show("Emanet verilen kitap sayısı 0 olamaz!");
             }
             else
             {
                 if (int.Parse(txtstokadet.Text) <= 0)
                 {
-                    MessageBox.Show("Kitap stok da kalmamıştır. Emanet verilemez!!!!");
+                    MessageBox.Show("Kitap stokta kalmamıştır. Emanet verilemez.");
                 }
                 else if (int.Parse(txtstokadet.Text)==2&&int.Parse(txtEmanetAkts.Text)>=3)
                 {
@@ -189,9 +142,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     komut.Parameters.AddWithValue("@EmanetalinanKitapSayisi", int.Parse(txtEmanetAkts.Text));
                     komut.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Kitap(lar) sepete eklendi", "Ekleme İşlemi");
+                    MessageBox.Show("Kitap(lar) sepete eklendi.", "EKLEME İŞLEMİ");
                     sepetlistele();
                     lblkitapsayisi.Text = "";
+                    lblkayitli.Text = "";
                     kitapsayisi();
                 }
 
@@ -223,6 +177,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             txtkitapId.Enabled = false;
             txtDemirbas.Enabled = false;
             txtkitapAd.Enabled = false;
+            txtyazar.Enabled = false;
             txtyazarsoyad.Enabled = false;
             txtyayinevi.Enabled = false;
             txtstokadet.Enabled = false;
@@ -274,20 +229,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             if (dataGridView1.CurrentRow==null)
             {
-                MessageBox.Show("lütfen sepetteki silincek veriyi seçiniz");
+                MessageBox.Show("Lütfen sepetten çıkartmak istediğiniz kitapları seçiniz.");
                 connection.Close();
             }
             else
             {
                 DialogResult dialog;
-                dialog = MessageBox.Show("Bu Sepeti Boşaltmak İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                dialog = MessageBox.Show("Seçilenleri sepetten çıkartmak istediğinizden emin misiniz?", "SEPET", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 string sil = "delete from sepet where kitapId='" + dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString() + "'";
                 MySqlCommand command = new MySqlCommand(sil, connection);
 
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Silme işlemi gerçekleşti.");
+                MessageBox.Show("Çıkartma işlemi başarıyla gerçekleşti.");
                 //  daset.Tables["sepet"].Clear();
                 sepetlistele();
                 lblkitapsayisi.Text = "";
@@ -344,7 +299,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         MySqlCommand komut4 = new MySqlCommand("delete from sepet", connection);
                         komut4.ExecuteNonQuery();
                         connection.Close();
-                        MessageBox.Show("kitap(lar) emanet edildi");
+                        MessageBox.Show("Kitap(lar) emanet edildi.");
                         sepetlistele();
                         txtogrID.Text = "";
                         txtkitapId.Text = "";
@@ -357,14 +312,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     }
                     else
                     {
-                        MessageBox.Show("Önce üye ismi seçmeniz gerekir!!!", "Uyarı");
+                        MessageBox.Show("Lütfen önce emanet alacak öğrenciyi seçiniz!", "UYARI");
                     }
 
                    
                 }
                 else
                 {
-                    MessageBox.Show("Emanet kkitap sayısı 3 ten fazla olamaz!!!","Uyarı");
+                    MessageBox.Show("Emanet kitap sayısı tek seferde 3'ten fazla olamaz!","UYARI");
                 }
 
 
@@ -373,7 +328,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {
-                MessageBox.Show("Önce sepete kitap eklenmelidir", "Uyarı");
+                MessageBox.Show("Lütfen önce sepete kitap ekleyiniz.", "UYARI");
 
             }
 

@@ -31,7 +31,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GorEmanet));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tumEmanetler = new System.Windows.Forms.RadioButton();
+            this.gecmis = new System.Windows.Forms.RadioButton();
+            this.mevcut = new System.Windows.Forms.RadioButton();
+            this.searchBoxEmanet = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.istBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
@@ -52,9 +59,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox = new System.Windows.Forms.TextBox();
             this.dataGridViewemanet = new System.Windows.Forms.DataGridView();
             this.btnemanet = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.searchBoxEmanet = new System.Windows.Forms.TextBox();
             this.kapatBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,12 +66,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewemanet)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.kapatBtn);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.tumEmanetler);
+            this.panel1.Controls.Add(this.gecmis);
+            this.panel1.Controls.Add(this.mevcut);
             this.panel1.Controls.Add(this.searchBoxEmanet);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -78,6 +89,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Controls.Add(this.searchBox);
             this.panel1.Controls.Add(this.dataGridViewemanet);
             this.panel1.Controls.Add(this.btnemanet);
+            this.panel1.Controls.Add(this.kapatBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +97,93 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(262, 76);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 19);
+            this.label20.TabIndex = 235;
+            this.label20.Text = "Ara: ";
+            // 
+            // tumEmanetler
+            // 
+            this.tumEmanetler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tumEmanetler.AutoSize = true;
+            this.tumEmanetler.BackColor = System.Drawing.Color.Transparent;
+            this.tumEmanetler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tumEmanetler.ForeColor = System.Drawing.SystemColors.Control;
+            this.tumEmanetler.Location = new System.Drawing.Point(12, 683);
+            this.tumEmanetler.Name = "tumEmanetler";
+            this.tumEmanetler.Size = new System.Drawing.Size(203, 24);
+            this.tumEmanetler.TabIndex = 234;
+            this.tumEmanetler.TabStop = true;
+            this.tumEmanetler.Text = "Tüm Emanetleri Görüntüle";
+            this.tumEmanetler.UseVisualStyleBackColor = false;
+            this.tumEmanetler.CheckedChanged += new System.EventHandler(this.tumEmanetler_CheckedChanged);
+            // 
+            // gecmis
+            // 
+            this.gecmis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gecmis.AutoSize = true;
+            this.gecmis.BackColor = System.Drawing.Color.Transparent;
+            this.gecmis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gecmis.ForeColor = System.Drawing.SystemColors.Control;
+            this.gecmis.Location = new System.Drawing.Point(12, 654);
+            this.gecmis.Name = "gecmis";
+            this.gecmis.Size = new System.Drawing.Size(222, 24);
+            this.gecmis.TabIndex = 233;
+            this.gecmis.TabStop = true;
+            this.gecmis.Text = "Geçmiş Emanetleri Görüntüle";
+            this.gecmis.UseVisualStyleBackColor = false;
+            this.gecmis.CheckedChanged += new System.EventHandler(this.gecmis_CheckedChanged);
+            // 
+            // mevcut
+            // 
+            this.mevcut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.mevcut.AutoSize = true;
+            this.mevcut.BackColor = System.Drawing.Color.Transparent;
+            this.mevcut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mevcut.ForeColor = System.Drawing.SystemColors.Control;
+            this.mevcut.Location = new System.Drawing.Point(12, 625);
+            this.mevcut.Name = "mevcut";
+            this.mevcut.Size = new System.Drawing.Size(222, 24);
+            this.mevcut.TabIndex = 232;
+            this.mevcut.TabStop = true;
+            this.mevcut.Text = "Mevcut Emanetleri Görüntüle";
+            this.mevcut.UseVisualStyleBackColor = false;
+            this.mevcut.CheckedChanged += new System.EventHandler(this.mevcut_CheckedChanged);
+            // 
+            // searchBoxEmanet
+            // 
+            this.searchBoxEmanet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBoxEmanet.Location = new System.Drawing.Point(1046, 75);
+            this.searchBoxEmanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchBoxEmanet.Name = "searchBoxEmanet";
+            this.searchBoxEmanet.Size = new System.Drawing.Size(220, 25);
+            this.searchBoxEmanet.TabIndex = 230;
+            this.searchBoxEmanet.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(432, 450);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(414, 45);
+            this.button1.TabIndex = 229;
+            this.button1.Text = "Teslim Tarihi Gelmiş Kitapları Görüntüle";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel2
             // 
@@ -341,29 +440,30 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             this.btnMail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMail.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMail.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMail.Location = new System.Drawing.Point(551, 501);
+            this.btnMail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMail.Location = new System.Drawing.Point(1136, 661);
             this.btnMail.Margin = new System.Windows.Forms.Padding(4);
             this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(149, 60);
+            this.btnMail.Size = new System.Drawing.Size(130, 45);
             this.btnMail.TabIndex = 16;
-            this.btnMail.Text = "E-Mail Gönderme";
+            this.btnMail.Text = "E-Mail Gönder";
             this.btnMail.UseVisualStyleBackColor = false;
-            this.btnMail.Visible = false;
             this.btnMail.Click += new System.EventHandler(this.btnMail_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(645, 450);
+            this.button2.Location = new System.Drawing.Point(852, 450);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(622, 45);
+            this.button2.Size = new System.Drawing.Size(414, 45);
             this.button2.TabIndex = 15;
             this.button2.Text = "Emanet İade Sayfası";
             this.button2.UseVisualStyleBackColor = false;
@@ -386,8 +486,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             "Yayınevi Ad",
             "Veriş Tarihi",
             "Alış Tarihi",
-            "Emanet Alinan Kitap Sayisi",
-            "Durum"});
+            "Emanet Alinan Kitap Sayisi"});
             this.cmbaramatip.Location = new System.Drawing.Point(12, 73);
             this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
             this.cmbaramatip.Name = "cmbaramatip";
@@ -397,14 +496,13 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(243, 73);
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Location = new System.Drawing.Point(303, 73);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(220, 25);
             this.searchBox.TabIndex = 13;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // dataGridViewemanet
             // 
@@ -424,8 +522,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // btnemanet
             // 
             this.btnemanet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnemanet.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnemanet.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnemanet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnemanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnemanet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnemanet.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnemanet.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -433,49 +532,21 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.btnemanet.Location = new System.Drawing.Point(12, 450);
             this.btnemanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnemanet.Name = "btnemanet";
-            this.btnemanet.Size = new System.Drawing.Size(622, 45);
+            this.btnemanet.Size = new System.Drawing.Size(414, 45);
             this.btnemanet.TabIndex = 8;
             this.btnemanet.Text = "Emanet Teslim Sayfası";
             this.btnemanet.UseVisualStyleBackColor = false;
             this.btnemanet.Click += new System.EventHandler(this.btnemanet_Click_1);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(324, 499);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(622, 45);
-            this.button1.TabIndex = 229;
-            this.button1.Text = "Teslim Tarihi Gelmiş Kitapları Görüntüle";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // searchBoxEmanet
-            // 
-            this.searchBoxEmanet.Location = new System.Drawing.Point(1046, 75);
-            this.searchBoxEmanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchBoxEmanet.Name = "searchBoxEmanet";
-            this.searchBoxEmanet.Size = new System.Drawing.Size(220, 25);
-            this.searchBoxEmanet.TabIndex = 230;
-            this.searchBoxEmanet.Visible = false;
-            // 
             // kapatBtn
             // 
-            this.kapatBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kapatBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.kapatBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.kapatBtn.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.kapatBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kapatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.kapatBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kapatBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kapatBtn.Location = new System.Drawing.Point(324, 450);
+            this.kapatBtn.Location = new System.Drawing.Point(328, 450);
             this.kapatBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kapatBtn.Name = "kapatBtn";
             this.kapatBtn.Size = new System.Drawing.Size(622, 45);
@@ -536,5 +607,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox searchBoxEmanet;
         private System.Windows.Forms.Button kapatBtn;
+        private System.Windows.Forms.RadioButton gecmis;
+        private System.Windows.Forms.RadioButton mevcut;
+        private System.Windows.Forms.RadioButton tumEmanetler;
+        private System.Windows.Forms.Label label20;
     }
 }

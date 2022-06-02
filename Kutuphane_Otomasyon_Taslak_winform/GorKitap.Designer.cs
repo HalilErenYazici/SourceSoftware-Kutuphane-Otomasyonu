@@ -31,19 +31,15 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GorKitap));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbaramakitap = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.istBtn = new System.Windows.Forms.Button();
             this.anasayfaBtn = new System.Windows.Forms.Button();
             this.kitapBtn = new System.Windows.Forms.Button();
             this.emanetBtn = new System.Windows.Forms.Button();
             this.ogrenciBtn = new System.Windows.Forms.Button();
-            this.kitaplarıListele = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tire = new System.Windows.Forms.Label();
             this.saat = new System.Windows.Forms.Label();
@@ -52,18 +48,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmbaramakitap = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.kitaplarıListele = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Kutuphane_Otomasyon_Taslak_winform.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.cmbaramakitap);
@@ -80,107 +86,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // cmbaramakitap
+            // label20
             // 
-            this.cmbaramakitap.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbaramakitap.FormattingEnabled = true;
-            this.cmbaramakitap.Items.AddRange(new object[] {
-            "kitapId",
-            "barkod",
-            "ISBN",
-            "demirbasNo",
-            "KitapAd",
-            "cilt",
-            "konu",
-            "ozet",
-            "sayfa",
-            "anhtrK",
-            "dil",
-            "ynSenesi",
-            "kkTarih",
-            "basimNo",
-            "cikisYili",
-            "dolapNo",
-            "rafNo",
-            "KtgrAd",
-            "turAd",
-            "yzrAd",
-            "yzrSoyad",
-            "yynevAd",
-            "yynevTel",
-            "cvrAd",
-            "cvrSoyad"});
-            this.cmbaramakitap.Location = new System.Drawing.Point(12, 98);
-            this.cmbaramakitap.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbaramakitap.Name = "cmbaramakitap";
-            this.cmbaramakitap.Size = new System.Drawing.Size(200, 25);
-            this.cmbaramakitap.TabIndex = 69;
-            this.cmbaramakitap.Text = "Arama Filtresi Seçiniz...";
-            this.cmbaramakitap.SelectedIndexChanged += new System.EventHandler(this.cmbaramakitap_SelectedIndexChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 129);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1256, 580);
-            this.dataGridView1.TabIndex = 66;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1176, 77);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 46);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Kitap Düzenle";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1079, 77);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 46);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Kitap Ekle";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.searchBox.Location = new System.Drawing.Point(220, 98);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(220, 25);
-            this.searchBox.TabIndex = 11;
-            this.searchBox.Text = "Kitap Ara";
-            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged_1);
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(261, 101);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 19);
+            this.label20.TabIndex = 236;
+            this.label20.Text = "Ara: ";
             // 
             // panel2
             // 
@@ -299,16 +215,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
-            // 
-            // kitaplarıListele
-            // 
-            this.kitaplarıListele.FormattingEnabled = true;
-            this.kitaplarıListele.ItemHeight = 16;
-            this.kitaplarıListele.Location = new System.Drawing.Point(12, 129);
-            this.kitaplarıListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kitaplarıListele.Name = "kitaplarıListele";
-            this.kitaplarıListele.Size = new System.Drawing.Size(1256, 580);
-            this.kitaplarıListele.TabIndex = 1;
             // 
             // panel3
             // 
@@ -443,9 +349,117 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.cikisButon_Click);
             // 
-            // timer1
+            // cmbaramakitap
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.cmbaramakitap.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbaramakitap.FormattingEnabled = true;
+            this.cmbaramakitap.Items.AddRange(new object[] {
+            "kitapId",
+            "barkod",
+            "ISBN",
+            "demirbasNo",
+            "KitapAd",
+            "cilt",
+            "konu",
+            "ozet",
+            "sayfa",
+            "anhtrK",
+            "dil",
+            "ynSenesi",
+            "kkTarih",
+            "basimNo",
+            "cikisYili",
+            "dolapNo",
+            "rafNo",
+            "KtgrAd",
+            "turAd",
+            "yzrAd",
+            "yzrSoyad",
+            "yynevAd",
+            "yynevTel",
+            "cvrAd",
+            "cvrSoyad"});
+            this.cmbaramakitap.Location = new System.Drawing.Point(12, 98);
+            this.cmbaramakitap.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbaramakitap.Name = "cmbaramakitap";
+            this.cmbaramakitap.Size = new System.Drawing.Size(200, 25);
+            this.cmbaramakitap.TabIndex = 69;
+            this.cmbaramakitap.Text = "Arama Filtresi Seçiniz...";
+            this.cmbaramakitap.SelectedIndexChanged += new System.EventHandler(this.cmbaramakitap_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 129);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 580);
+            this.dataGridView1.TabIndex = 66;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1137, 75);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 45);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Kitap Düzenle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(1001, 75);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 45);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Kitap Ekle";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // searchBox
+            // 
+            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.searchBox.Location = new System.Drawing.Point(304, 98);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(220, 25);
+            this.searchBox.TabIndex = 11;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged_1);
+            // 
+            // kitaplarıListele
+            // 
+            this.kitaplarıListele.FormattingEnabled = true;
+            this.kitaplarıListele.ItemHeight = 16;
+            this.kitaplarıListele.Location = new System.Drawing.Point(12, 129);
+            this.kitaplarıListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitaplarıListele.Name = "kitaplarıListele";
+            this.kitaplarıListele.Size = new System.Drawing.Size(1256, 580);
+            this.kitaplarıListele.TabIndex = 1;
             // 
             // GorKitap
             // 
@@ -463,10 +477,10 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.Load += new System.EventHandler(this.Kitap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,5 +509,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label20;
     }
 }

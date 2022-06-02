@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
 using System.Net.Mail;
+using System.Windows.Forms;
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
     public partial class tabMailGonderme : Form
@@ -57,7 +49,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             smtp.EnableSsl = true;
             smtp.Port = 587;
             smtp.Send(eposta);
-            MessageBox.Show("Mail başarıyla gönderilmiştir");
+            MessageBox.Show("Mail başarıyla gönderilmiştir.");
             GorEmanet emanet = new GorEmanet();
             emanet.Show();
             this.Hide();

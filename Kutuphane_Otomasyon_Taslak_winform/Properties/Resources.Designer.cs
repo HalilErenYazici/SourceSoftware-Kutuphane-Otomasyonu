@@ -223,6 +223,26 @@ namespace Kutuphane_Otomasyon_Taslak_winform.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap data_source {
+            get {
+                object obj = ResourceManager.GetObject("data-source", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap envelope {
+            get {
+                object obj = ResourceManager.GetObject("envelope", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap exchange {
             get {
                 object obj = ResourceManager.GetObject("exchange", resourceCulture);
@@ -306,6 +326,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform.Properties {
         internal static System.Drawing.Bitmap logout512 {
             get {
                 object obj = ResourceManager.GetObject("logout512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout5121 {
+            get {
+                object obj = ResourceManager.GetObject("logout5121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

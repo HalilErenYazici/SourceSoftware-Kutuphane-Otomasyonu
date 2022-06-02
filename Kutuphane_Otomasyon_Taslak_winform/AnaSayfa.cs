@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
@@ -24,6 +17,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
             adTxt.Text = AnaGirisEkrani.ad + " " + AnaGirisEkrani.soyad;
+            vakit();
+            timer1.Start();
+        }
+
+        private void vakit()
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
         }
 
         bool move;
@@ -176,6 +182,27 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             d.ShowDialog();
             this.Close();
 
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogresult = MessageBox.Show("Çıkış Yapmak İstediğinizden Emin Misiniz?", "ÇIKIŞ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogresult == DialogResult.Yes)
+            {
+                Form form = new AnaGirisEkrani();
+                form.Show();
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void mailBtn_Click(object sender, EventArgs e)
+        {
+            tabMailGonderme mail = new tabMailGonderme();
+            mail.Show();
         }
     }
 }

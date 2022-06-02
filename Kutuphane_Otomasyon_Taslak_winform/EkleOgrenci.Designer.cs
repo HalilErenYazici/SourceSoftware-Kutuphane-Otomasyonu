@@ -32,6 +32,20 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EkleOgrenci));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.istBtn = new System.Windows.Forms.Button();
+            this.anasayfaBtn = new System.Windows.Forms.Button();
+            this.kitapBtn = new System.Windows.Forms.Button();
+            this.emanetBtn = new System.Windows.Forms.Button();
+            this.ogrenciBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tire = new System.Windows.Forms.Label();
+            this.saat = new System.Windows.Forms.Label();
+            this.tarih = new System.Windows.Forms.Label();
+            this.pncrTxt = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lbleposta = new System.Windows.Forms.Label();
             this.lblogrencino = new System.Windows.Forms.Label();
@@ -54,22 +68,8 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.istBtn = new System.Windows.Forms.Button();
-            this.anasayfaBtn = new System.Windows.Forms.Button();
-            this.kitapBtn = new System.Windows.Forms.Button();
-            this.emanetBtn = new System.Windows.Forms.Button();
-            this.ogrenciBtn = new System.Windows.Forms.Button();
             this.txtOgrenciAd = new System.Windows.Forms.TextBox();
             this.txtOgrenciSoyad = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tire = new System.Windows.Forms.Label();
-            this.saat = new System.Windows.Forms.Label();
-            this.tarih = new System.Windows.Forms.Label();
-            this.pncrTxt = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,303 +116,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1137, 663);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 46);
-            this.button2.TabIndex = 227;
-            this.button2.Text = "İptal";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbleposta
-            // 
-            this.lbleposta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbleposta.AutoSize = true;
-            this.lbleposta.Location = new System.Drawing.Point(855, 448);
-            this.lbleposta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbleposta.Name = "lbleposta";
-            this.lbleposta.Size = new System.Drawing.Size(74, 20);
-            this.lbleposta.TabIndex = 34;
-            this.lbleposta.Text = "avalaible";
-            this.lbleposta.Visible = false;
-            // 
-            // lblogrencino
-            // 
-            this.lblogrencino.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblogrencino.AutoSize = true;
-            this.lblogrencino.Location = new System.Drawing.Point(852, 201);
-            this.lblogrencino.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblogrencino.Name = "lblogrencino";
-            this.lblogrencino.Size = new System.Drawing.Size(74, 20);
-            this.lblogrencino.TabIndex = 33;
-            this.lblogrencino.Text = "avalaible";
-            this.lblogrencino.Visible = false;
-            // 
-            // lblkartid
-            // 
-            this.lblkartid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblkartid.AutoSize = true;
-            this.lblkartid.Location = new System.Drawing.Point(852, 170);
-            this.lblkartid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblkartid.Name = "lblkartid";
-            this.lblkartid.Size = new System.Drawing.Size(74, 20);
-            this.lblkartid.TabIndex = 32;
-            this.lblkartid.Text = "avalaible";
-            this.lblkartid.Visible = false;
-            // 
-            // cmbcinsiyet
-            // 
-            this.cmbcinsiyet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbcinsiyet.FormattingEnabled = true;
-            this.cmbcinsiyet.Items.AddRange(new object[] {
-            "Erkek",
-            "Kadın"});
-            this.cmbcinsiyet.Location = new System.Drawing.Point(573, 298);
-            this.cmbcinsiyet.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbcinsiyet.Name = "cmbcinsiyet";
-            this.cmbcinsiyet.Size = new System.Drawing.Size(272, 28);
-            this.cmbcinsiyet.TabIndex = 31;
-            this.cmbcinsiyet.SelectedIndexChanged += new System.EventHandler(this.cmbcinsiyet_SelectedIndexChanged);
-            // 
-            // mskKartId
-            // 
-            this.mskKartId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskKartId.Location = new System.Drawing.Point(573, 167);
-            this.mskKartId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskKartId.Mask = "00000000000";
-            this.mskKartId.Name = "mskKartId";
-            this.mskKartId.Size = new System.Drawing.Size(272, 26);
-            this.mskKartId.TabIndex = 30;
-            this.mskKartId.TextChanged += new System.EventHandler(this.mskKartId_TextChanged);
-            // 
-            // mskOgrNo
-            // 
-            this.mskOgrNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskOgrNo.Location = new System.Drawing.Point(573, 198);
-            this.mskOgrNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskOgrNo.Mask = "000000000";
-            this.mskOgrNo.Name = "mskOgrNo";
-            this.mskOgrNo.Size = new System.Drawing.Size(272, 26);
-            this.mskOgrNo.TabIndex = 29;
-            this.mskOgrNo.TextChanged += new System.EventHandler(this.mskOgrNo_TextChanged);
-            // 
-            // cmbmyo
-            // 
-            this.cmbmyo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbmyo.FormattingEnabled = true;
-            this.cmbmyo.Items.AddRange(new object[] {
-            "Çocuk Bakımı ve Gençlik Hizmetleri Bölümü",
-            "Dış Ticaret Bölümü",
-            "Elektrik ve Enerji Bölümü",
-            "İnşaat Bölümü",
-            "Makine ve Metal Teknolojileri Bölümü",
-            "Malzeme ve Malzeme İşleme Teknolojileri Bölümü",
-            "Pazarlama ve Reklamcılık Bölümü",
-            "Tasarım Bölümü",
-            "Tekstil, Giyim, Ayakkabı ve Deri Bölümü",
-            "Tıbbi Hizmetler ve Teknikler Bölümü",
-            "Yönetim ve Organizasyon Bölümü",
-            "Sağlık Bakım Hizmetleri Bölümü",
-            "Terapi ve Rehabilitasyon Bölümü",
-            "Sosyal Hizmet ve Danışmanlık Bölümü"});
-            this.cmbmyo.Location = new System.Drawing.Point(365, 465);
-            this.cmbmyo.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbmyo.Name = "cmbmyo";
-            this.cmbmyo.Size = new System.Drawing.Size(272, 28);
-            this.cmbmyo.TabIndex = 28;
-            this.cmbmyo.Visible = false;
-            // 
-            // cmbisletme
-            // 
-            this.cmbisletme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbisletme.FormattingEnabled = true;
-            this.cmbisletme.Location = new System.Drawing.Point(365, 422);
-            this.cmbisletme.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbisletme.Name = "cmbisletme";
-            this.cmbisletme.Size = new System.Drawing.Size(272, 28);
-            this.cmbisletme.TabIndex = 27;
-            this.cmbisletme.Visible = false;
-            // 
-            // cmbFakulte
-            // 
-            this.cmbFakulte.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbFakulte.FormattingEnabled = true;
-            this.cmbFakulte.Items.AddRange(new object[] {
-            "İnegöl İşletme Fakültesi",
-            "İnegöl MYO"});
-            this.cmbFakulte.Location = new System.Drawing.Point(365, 384);
-            this.cmbFakulte.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbFakulte.Name = "cmbFakulte";
-            this.cmbFakulte.Size = new System.Drawing.Size(272, 28);
-            this.cmbFakulte.TabIndex = 25;
-            this.cmbFakulte.SelectedIndexChanged += new System.EventHandler(this.cmbFakulte_SelectedIndexChanged);
-            // 
-            // mskOgrenciPosta
-            // 
-            this.mskOgrenciPosta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskOgrenciPosta.Location = new System.Drawing.Point(855, 418);
-            this.mskOgrenciPosta.Margin = new System.Windows.Forms.Padding(4);
-            this.mskOgrenciPosta.Mask = "000000000@ogr,aaaaaa,edu,tr";
-            this.mskOgrenciPosta.Name = "mskOgrenciPosta";
-            this.mskOgrenciPosta.Size = new System.Drawing.Size(272, 26);
-            this.mskOgrenciPosta.TabIndex = 24;
-            this.mskOgrenciPosta.TextChanged += new System.EventHandler(this.mskOgrenciPosta_TextChanged);
-            // 
-            // mskOgrenciTelefon
-            // 
-            this.mskOgrenciTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskOgrenciTelefon.Location = new System.Drawing.Point(855, 385);
-            this.mskOgrenciTelefon.Margin = new System.Windows.Forms.Padding(4);
-            this.mskOgrenciTelefon.Mask = "(999) 000-0000";
-            this.mskOgrenciTelefon.Name = "mskOgrenciTelefon";
-            this.mskOgrenciTelefon.Size = new System.Drawing.Size(272, 26);
-            this.mskOgrenciTelefon.TabIndex = 23;
-            // 
-            // lblCinsiyet
-            // 
-            this.lblCinsiyet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCinsiyet.AutoSize = true;
-            this.lblCinsiyet.Location = new System.Drawing.Point(484, 302);
-            this.lblCinsiyet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCinsiyet.Name = "lblCinsiyet";
-            this.lblCinsiyet.Size = new System.Drawing.Size(79, 20);
-            this.lblCinsiyet.TabIndex = 20;
-            this.lblCinsiyet.Text = "Cinsiyet :";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(699, 422);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Öğrenci E-Posta :";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(701, 389);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Öğrenci Telefon :";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(428, 267);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Öğrenci Soyad :";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(459, 234);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Öğrenci Ad :";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(221, 422);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Öğrenci Bölüm :";
-            this.label4.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(457, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Öğrenci No :";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(213, 389);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Öğrenci Fakülte :";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(496, 167);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Kart ID :";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(644, 528);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 46);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Öğrenci Ekle";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -530,26 +233,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.ogrenciBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ogrenciBtn.UseVisualStyleBackColor = false;
             this.ogrenciBtn.Click += new System.EventHandler(this.ogrenciBtn_Click);
-            // 
-            // txtOgrenciAd
-            // 
-            this.txtOgrenciAd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtOgrenciAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrenciAd.Location = new System.Drawing.Point(573, 230);
-            this.txtOgrenciAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOgrenciAd.Name = "txtOgrenciAd";
-            this.txtOgrenciAd.Size = new System.Drawing.Size(272, 26);
-            this.txtOgrenciAd.TabIndex = 6;
-            // 
-            // txtOgrenciSoyad
-            // 
-            this.txtOgrenciSoyad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtOgrenciSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrenciSoyad.Location = new System.Drawing.Point(573, 263);
-            this.txtOgrenciSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOgrenciSoyad.Name = "txtOgrenciSoyad";
-            this.txtOgrenciSoyad.Size = new System.Drawing.Size(272, 26);
-            this.txtOgrenciSoyad.TabIndex = 7;
             // 
             // panel3
             // 
@@ -683,6 +366,332 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.button12.TabIndex = 19;
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.cikisButon_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(1137, 663);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 46);
+            this.button2.TabIndex = 227;
+            this.button2.Text = "İptal";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbleposta
+            // 
+            this.lbleposta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbleposta.AutoSize = true;
+            this.lbleposta.Location = new System.Drawing.Point(786, 440);
+            this.lbleposta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbleposta.Name = "lbleposta";
+            this.lbleposta.Size = new System.Drawing.Size(74, 20);
+            this.lbleposta.TabIndex = 34;
+            this.lbleposta.Text = "avalaible";
+            this.lbleposta.Visible = false;
+            // 
+            // lblogrencino
+            // 
+            this.lblogrencino.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblogrencino.AutoSize = true;
+            this.lblogrencino.Location = new System.Drawing.Point(782, 201);
+            this.lblogrencino.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblogrencino.Name = "lblogrencino";
+            this.lblogrencino.Size = new System.Drawing.Size(74, 20);
+            this.lblogrencino.TabIndex = 33;
+            this.lblogrencino.Text = "avalaible";
+            this.lblogrencino.Visible = false;
+            // 
+            // lblkartid
+            // 
+            this.lblkartid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblkartid.AutoSize = true;
+            this.lblkartid.Location = new System.Drawing.Point(782, 170);
+            this.lblkartid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblkartid.Name = "lblkartid";
+            this.lblkartid.Size = new System.Drawing.Size(74, 20);
+            this.lblkartid.TabIndex = 32;
+            this.lblkartid.Text = "avalaible";
+            this.lblkartid.Visible = false;
+            // 
+            // cmbcinsiyet
+            // 
+            this.cmbcinsiyet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbcinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbcinsiyet.FormattingEnabled = true;
+            this.cmbcinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.cmbcinsiyet.Location = new System.Drawing.Point(503, 283);
+            this.cmbcinsiyet.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbcinsiyet.Name = "cmbcinsiyet";
+            this.cmbcinsiyet.Size = new System.Drawing.Size(272, 28);
+            this.cmbcinsiyet.TabIndex = 31;
+            this.cmbcinsiyet.SelectedIndexChanged += new System.EventHandler(this.cmbcinsiyet_SelectedIndexChanged);
+            // 
+            // mskKartId
+            // 
+            this.mskKartId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mskKartId.Location = new System.Drawing.Point(503, 167);
+            this.mskKartId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mskKartId.Mask = "00000000000";
+            this.mskKartId.Name = "mskKartId";
+            this.mskKartId.Size = new System.Drawing.Size(272, 26);
+            this.mskKartId.TabIndex = 30;
+            this.mskKartId.TextChanged += new System.EventHandler(this.mskKartId_TextChanged);
+            // 
+            // mskOgrNo
+            // 
+            this.mskOgrNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mskOgrNo.Location = new System.Drawing.Point(503, 196);
+            this.mskOgrNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mskOgrNo.Mask = "000000000";
+            this.mskOgrNo.Name = "mskOgrNo";
+            this.mskOgrNo.Size = new System.Drawing.Size(272, 26);
+            this.mskOgrNo.TabIndex = 29;
+            this.mskOgrNo.TextChanged += new System.EventHandler(this.mskOgrNo_TextChanged);
+            // 
+            // cmbmyo
+            // 
+            this.cmbmyo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbmyo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbmyo.FormattingEnabled = true;
+            this.cmbmyo.Items.AddRange(new object[] {
+            "Çocuk Bakımı ve Gençlik Hizmetleri Bölümü",
+            "Dış Ticaret Bölümü",
+            "Elektrik ve Enerji Bölümü",
+            "İnşaat Bölümü",
+            "Makine ve Metal Teknolojileri Bölümü",
+            "Malzeme ve Malzeme İşleme Teknolojileri Bölümü",
+            "Pazarlama ve Reklamcılık Bölümü",
+            "Tasarım Bölümü",
+            "Tekstil, Giyim, Ayakkabı ve Deri Bölümü",
+            "Tıbbi Hizmetler ve Teknikler Bölümü",
+            "Yönetim ve Organizasyon Bölümü",
+            "Sağlık Bakım Hizmetleri Bölümü",
+            "Terapi ve Rehabilitasyon Bölümü",
+            "Sosyal Hizmet ve Danışmanlık Bölümü"});
+            this.cmbmyo.Location = new System.Drawing.Point(303, 443);
+            this.cmbmyo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbmyo.Name = "cmbmyo";
+            this.cmbmyo.Size = new System.Drawing.Size(272, 28);
+            this.cmbmyo.TabIndex = 28;
+            this.cmbmyo.Visible = false;
+            // 
+            // cmbisletme
+            // 
+            this.cmbisletme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbisletme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbisletme.FormattingEnabled = true;
+            this.cmbisletme.Location = new System.Drawing.Point(303, 412);
+            this.cmbisletme.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbisletme.Name = "cmbisletme";
+            this.cmbisletme.Size = new System.Drawing.Size(272, 28);
+            this.cmbisletme.TabIndex = 27;
+            this.cmbisletme.Visible = false;
+            // 
+            // cmbFakulte
+            // 
+            this.cmbFakulte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbFakulte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFakulte.FormattingEnabled = true;
+            this.cmbFakulte.Items.AddRange(new object[] {
+            "İnegöl İşletme Fakültesi",
+            "İnegöl MYO"});
+            this.cmbFakulte.Location = new System.Drawing.Point(303, 381);
+            this.cmbFakulte.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbFakulte.Name = "cmbFakulte";
+            this.cmbFakulte.Size = new System.Drawing.Size(272, 28);
+            this.cmbFakulte.TabIndex = 25;
+            this.cmbFakulte.SelectedIndexChanged += new System.EventHandler(this.cmbFakulte_SelectedIndexChanged);
+            // 
+            // mskOgrenciPosta
+            // 
+            this.mskOgrenciPosta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mskOgrenciPosta.Location = new System.Drawing.Point(786, 410);
+            this.mskOgrenciPosta.Margin = new System.Windows.Forms.Padding(4);
+            this.mskOgrenciPosta.Mask = "000000000@ogr,aaaaaa,edu,tr";
+            this.mskOgrenciPosta.Name = "mskOgrenciPosta";
+            this.mskOgrenciPosta.Size = new System.Drawing.Size(272, 26);
+            this.mskOgrenciPosta.TabIndex = 24;
+            this.mskOgrenciPosta.TextChanged += new System.EventHandler(this.mskOgrenciPosta_TextChanged);
+            // 
+            // mskOgrenciTelefon
+            // 
+            this.mskOgrenciTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mskOgrenciTelefon.Location = new System.Drawing.Point(786, 381);
+            this.mskOgrenciTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.mskOgrenciTelefon.Mask = "(999) 000-0000";
+            this.mskOgrenciTelefon.Name = "mskOgrenciTelefon";
+            this.mskOgrenciTelefon.Size = new System.Drawing.Size(272, 26);
+            this.mskOgrenciTelefon.TabIndex = 23;
+            // 
+            // lblCinsiyet
+            // 
+            this.lblCinsiyet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCinsiyet.AutoSize = true;
+            this.lblCinsiyet.Location = new System.Drawing.Point(417, 286);
+            this.lblCinsiyet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCinsiyet.Name = "lblCinsiyet";
+            this.lblCinsiyet.Size = new System.Drawing.Size(79, 20);
+            this.lblCinsiyet.TabIndex = 20;
+            this.lblCinsiyet.Text = "Cinsiyet :";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
+            this.label8.Location = new System.Drawing.Point(635, 413);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Öğrenci E-Posta :";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(640, 384);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Öğrenci Telefon :";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(367, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Öğrenci Soyad :";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(393, 228);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Öğrenci Ad :";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(164, 415);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Öğrenci Bölüm :";
+            this.label4.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(392, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Öğrenci No :";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(158, 384);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Öğrenci Fakülte :";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(424, 170);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Kart ID :";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(574, 528);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 46);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Öğrenci Ekle";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtOgrenciAd
+            // 
+            this.txtOgrenciAd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtOgrenciAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOgrenciAd.Location = new System.Drawing.Point(503, 225);
+            this.txtOgrenciAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOgrenciAd.Name = "txtOgrenciAd";
+            this.txtOgrenciAd.Size = new System.Drawing.Size(272, 26);
+            this.txtOgrenciAd.TabIndex = 6;
+            // 
+            // txtOgrenciSoyad
+            // 
+            this.txtOgrenciSoyad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtOgrenciSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOgrenciSoyad.Location = new System.Drawing.Point(503, 254);
+            this.txtOgrenciSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOgrenciSoyad.Name = "txtOgrenciSoyad";
+            this.txtOgrenciSoyad.Size = new System.Drawing.Size(272, 26);
+            this.txtOgrenciSoyad.TabIndex = 7;
             // 
             // timer1
             // 
