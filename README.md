@@ -62,8 +62,6 @@ Anasayfada emanet, öğrenci, kitap, istatistik ve mail gönderme sayfalarına e
 Emanet işlemlerinde; emanetin görüntülenmesi, emanetin ödünç olarak verilmesi ve geri alınması işlemleri yapılır. 
   
   ![](Resimler/Emanet.png)
-  ![](Resimler/Emanet Ver.png)
-  ![](Resimler/Emanet Al.png)
   
 
 
@@ -73,8 +71,6 @@ Emanet işlemlerinde; emanetin görüntülenmesi, emanetin ödünç olarak veril
 Öğrenci sayfalarında; öğrencilerin görüntülenmesi, öğrencilerin sisteme eklenmesi ve öğrenci bilgilerinin düzenlenmesi işlemleri yapılır.
   
   ![](Resimler/Öğrenci.png)
-  ![](ÖğrenciEkle.png)
-  ![](Resimler/ÖğrenciDüzenle.png)
 
 
 
@@ -83,8 +79,6 @@ Emanet işlemlerinde; emanetin görüntülenmesi, emanetin ödünç olarak veril
 Kitap sayfalarında; kitapların görüntülenmesi, kitapların sisteme eklenmesi ve kitap bilgilerinin düzenlenmesi işlemleri yapılır.
   
   ![](Resimler/Kitap.png)
-  ![](Resimler/KitapEkle.png)
-  ![](Resimler/KitapDüzenle.png)
 
 
 
@@ -92,9 +86,7 @@ Kitap sayfalarında; kitapların görüntülenmesi, kitapların sisteme eklenmes
 
 İstatistik verilerin görüntülenmesi ve grafik verilerinin görüntülenmesi işlemleri yapılır. 
   
-  ![](Resimler/İstatistikle.png)
   ![](Resimler/İstatiklerGrafik1.png)
-  ![](Resimler/İstatiklerGrafik2.png)
   
 
 
@@ -102,7 +94,6 @@ Kitap sayfalarında; kitapların görüntülenmesi, kitapların sisteme eklenmes
 
 Öğrenci işleri sayfasında öğrencinin emanette bulunan kitabı var olup olmadığı kontrol edilip gerekli durumda belge verilmesi işlemi yapılır.
   
-  ![](Resimler/Öğrenciİşleri.png)
   ![](Resimler/ÖğrenciİşleriBelge.png)
 
 
