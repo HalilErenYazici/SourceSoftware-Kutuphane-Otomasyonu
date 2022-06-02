@@ -322,15 +322,27 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+
             int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            string durum = dataGridView1.CurrentRow.Cells[16].Value.ToString();
             if (txtanahtarkelime.Text == "" || txtbarkod.Text == "" || txtbasimnumara.Text == "" || cmbcevirmensoyadi.Text == "" || cmbcevirmenadi.Text == "" || txtcikisyili.Text == "" || txtcilt.Text == "" || txtdemirbas.Text == "" || txtdil.Text == "" || txtdolapkonum.Text == "" || txtisbn.Text == "" || cmbkategori.Text == "" || txtKitapAd.Text == "" || txtkitapId.Text == "" || txtkitapkonusu.Text == "" || txtkitapsayfasayisi.Text == "" || txtozet.Text == "" || txtrafkonum.Text == "" || txtstok.Text == "" || cmbtur.Text == "" || cmbyayinevi.Text == "" || cmbyazarad.Text == "" || cmbyazarsoyad.Text == "" || mskkitapyayinyili.Text == "" || mskkurumkayittarihi.Text == "" || cmbyayinevitel.Text == "")
             {
                 MessageBox.Show("Lütfen silmek için kitap seçiniz.");
             }
             else
             {
+                int durumNumber=0;
 
-                if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0)
+                if (durum == "Teslim Alindi")
+                {
+                    durumNumber = 1;
+                }
+                if (durum == "Emanette")
+                {
+                    durumNumber = 0;
+                }
+
+                if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0 || varMi("SELECT COUNT('') FROM Emanet WHERE Durum = ") == durumNumber)
                 {
                     connection.Open();
 
