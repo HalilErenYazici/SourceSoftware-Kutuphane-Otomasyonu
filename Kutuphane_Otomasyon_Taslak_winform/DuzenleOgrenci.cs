@@ -274,12 +274,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mskOgrNo.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOgrenciAd.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtOgrenciSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            //cmbcinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
             mskOgrenciTelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             mskOgrenciPosta.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            //cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            //cmbmyo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
 
             cmbcinsiyet.Text = dataGridView1.CurrentRow.Cells["cinsiyet"].Value.ToString();
             cmbFakulte.Text = dataGridView1.CurrentRow.Cells["ogrFakulte"].Value.ToString();
