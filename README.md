@@ -39,7 +39,7 @@ Programa giriş yaparken üç farklı seçenekle giriş yapabiliyoruz.
 Anasayfa Ekranı:
 
 Anasayfada emanet, öğrenci, kitap, istatistik ve mail gönderme sayfalarına erişim sağlanır.
-![alt text]([http://url/to/img.png](https://github.com/HalilErenYazici/SourceSoftware-Kutuphane-Otomasyonu/blob/main/Resimler/AnaSayfa.png))
+![alt text](https://drive.google.com/file/d/1coHAvq8-pUplVz5IexN_8SO44tC-HyxZ/view?usp=sharing)
 
 
 
