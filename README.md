@@ -10,17 +10,29 @@ Otomasyonu kütüphane görevlisi ve öğrenci işleri kullanacaktır, öğrenci
 Hedefler ve Başarı Kriterleri:
 
 -Projemizin öncelikli hedeflerinden birisi otomasyonun sorunsuz bir şekilde çalışmasını sağlamak, 
+
 -Kitap veya öğrenci kaydı girildiğinde sorunsuz bir şekilde veri tabanına kaydedebilmek,
+
 -Ödünç aldığı kitabi getirmeyen öğrenciye mail gönderilmesini sağlamak,
+
 -Emanet sisteminin sorunsuz bir şekilde çalışmasını sağlamak,
+
 -Eğitim kalitesi için bu sistem geri bildirimleri uygun şekilde desteklemek,
+
 -Görevli kütüphane görevlisinin yetkileri dahilinde ulaşması gereken bilgilere ulaşabilmesini sağlamak,
+
 -Öğrenci işlerindeki görevlinin yetkileri dahilinde ulaşması gereken bilgilere ulaşabilmesini sağlamak,
+
 -Kitap veya öğrenci bilgilerini eksiksiz getirmek,
+
 -Öğrenci kayıt ve personel sisteminin sorunsuz çalışmasını sağlamak,
+
 -Kitap veya öğrenci ekleme, okuma, güncelleme, silme işlemlerinin sorunsuz bir şekilde çalışmasını sağlamak,
+
 -İstatistik kısmının, otomasyonun ihtiyacı doğrultusunda eksiksiz bir şekilde, bizden istenen verilerin ve değerlerin çekilmesinin sağlamak,
+
 -Emanet sisteminde öğrencinin hangi kitabı aldığını ve hangi tarihte kütüphaneye teslim etmesini sağlayan sistemin çalışmasını sağlamak.
+
 
 
 Genel Bakış:
