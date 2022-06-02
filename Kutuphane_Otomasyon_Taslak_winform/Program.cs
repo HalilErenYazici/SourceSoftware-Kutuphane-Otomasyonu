@@ -19,7 +19,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GirisEkrani());
+            Application.Run(new AnaGirisEkrani());
         }
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();

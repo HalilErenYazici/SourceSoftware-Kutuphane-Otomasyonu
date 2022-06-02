@@ -61,10 +61,24 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             listeleKitap();
             kitapsayisi();
 
-            searchBoxOgr.Text = "Öğrenci Ara...";
-            searchBoxOgr.ForeColor = Color.Gray;
-            searchBoxKtp.Text = "Kitap Ara...";
-            searchBoxKtp.ForeColor = Color.Gray;
+            //searchBoxOgr.Text = "Öğrenci Ara...";
+            //searchBoxOgr.ForeColor = Color.Gray;
+            //searchBoxKtp.Text = "Kitap Ara...";
+            //searchBoxKtp.ForeColor = Color.Gray;
+
+            vakit();
+            timer1.Start();
+        }
+
+        private void vakit()
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -337,7 +351,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                         lblkayitli.Text = "";
                         lblkitapsayisi.Text = "";
                         kitapsayisi();
-                        Emanet emanet = new Emanet();
+                        GorEmanet emanet = new GorEmanet();
                         emanet.Show();
                         this.Hide();
                     }
@@ -815,18 +829,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             Application.Exit();
         }
 
+        private void kaplaButon_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Normal)
+            {
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else if (this.WindowState == System.Windows.Forms.FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
         private void simgeButon_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-
         }
 
-        private void kaplaButon_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-
-        }
-        
         private void anasayfaBtn_Click(object sender, EventArgs e)
         {
             AnaSayfa anasayfa = new AnaSayfa();
@@ -836,28 +855,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void emanetBtn_Click(object sender, EventArgs e)
         {
-            Emanet emanet = new Emanet();
+            GorEmanet emanet = new GorEmanet();
             emanet.Show();
             this.Hide();
         }
 
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            Ogrenci ogrenci = new Ogrenci();
+            GorOgrenci ogrenci = new GorOgrenci();
             ogrenci.Show();
             this.Hide();
         }
 
         private void kitapBtn_Click(object sender, EventArgs e)
         {
-            Kitap kitap = new Kitap();
+            GorKitap kitap = new GorKitap();
             kitap.Show();
             this.Hide();
         }
 
         private void istBtn_Click(object sender, EventArgs e)
         {
-            Istatistik ist = new Istatistik();
+            GorIstatistik ist = new GorIstatistik();
             ist.Show();
             this.Hide();
         }

@@ -165,15 +165,16 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             // 
             // pncrTxt
             // 
+            this.pncrTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pncrTxt.AutoSize = true;
             this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
+            this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
-            this.pncrTxt.Location = new System.Drawing.Point(600, 1);
+            this.pncrTxt.Location = new System.Drawing.Point(595, 1);
             this.pncrTxt.Name = "pncrTxt";
-            this.pncrTxt.Size = new System.Drawing.Size(80, 16);
+            this.pncrTxt.Size = new System.Drawing.Size(88, 21);
             this.pncrTxt.TabIndex = 23;
-            this.pncrTxt.Text = "[PENCERE]";
-            this.pncrTxt.Visible = false;
+            this.pncrTxt.Text = "ANA SAYFA";
             // 
             // adTxt
             // 
@@ -181,7 +182,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.adTxt.BackColor = System.Drawing.Color.Transparent;
             this.adTxt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.adTxt.ForeColor = System.Drawing.Color.Gainsboro;
-            this.adTxt.Location = new System.Drawing.Point(3, 1);
+            this.adTxt.Location = new System.Drawing.Point(2, -1);
             this.adTxt.Name = "adTxt";
             this.adTxt.Size = new System.Drawing.Size(82, 23);
             this.adTxt.TabIndex = 22;
@@ -200,7 +201,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.kaplaButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.kaplaButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kaplaButon.ForeColor = System.Drawing.Color.Transparent;
-            this.kaplaButon.Location = new System.Drawing.Point(1222, 1);
+            this.kaplaButon.Location = new System.Drawing.Point(1223, 1);
             this.kaplaButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kaplaButon.Name = "kaplaButon";
             this.kaplaButon.Size = new System.Drawing.Size(20, 20);

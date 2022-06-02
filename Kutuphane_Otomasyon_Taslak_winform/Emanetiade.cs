@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyon_Taslak_winform
 {
-    public partial class Emanetiade : Form
+    public partial class EmanetIade : Form
     {
-        public Emanetiade()
+        public EmanetIade()
         {
             InitializeComponent();
         }
@@ -21,10 +21,44 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
         DataSet daset = new DataSet();
         String durum = "Teslim Alindi";
+
+        private void cikisButon_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void kaplaButon_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Normal)
+            {
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else if (this.WindowState == System.Windows.Forms.FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+        private void simgeButon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void Emanetiade_Load(object sender, EventArgs e)
         {
             emanetlistele();
+            vakit();
+            timer1.Start();
+        }
 
+        private void vakit()
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tarih.Text = DateTime.Now.ToLongDateString();
+            saat.Text = DateTime.Now.ToLongTimeString();
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -276,41 +310,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                 }
             }
-
-        }
-
-      
-
-        private void btnemanetkaldir_Click(object sender, EventArgs e)
-        {
-            connection.Open();
-            if (dataGridViewemanet.CurrentRow == null)
-            {
-                MessageBox.Show("lütfen emanette silincek veriyi seçiniz");
-                connection.Close();
-            }
-            else
-            {
-                DialogResult dialog;
-                dialog = MessageBox.Show("Bu Kaydı Silmek İstiyor Musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                string sil = "delete from Emanet where ogrNo=@ogrNo and kitapAd=@kitapAd";
-                MySqlCommand command = new MySqlCommand(sil, connection);
-                command.Parameters.AddWithValue("@ogrNo", dataGridViewemanet.CurrentRow.Cells["ogrNo"].Value.ToString());
-                command.Parameters.AddWithValue("@kitapAd", dataGridViewemanet.CurrentRow.Cells["kitapAd"].Value.ToString());
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Silme işlemi gerçekleşti.");
-                MySqlCommand komut2 = new MySqlCommand("update Kitap set stok=stok+'" + dataGridViewemanet.CurrentRow.Cells["EmanetalinanKitapSayisi"].Value.ToString() + "' where kitapId=@kitapId", connection);
-                komut2.Parameters.AddWithValue("@kitapId", dataGridViewemanet.CurrentRow.Cells["kitapId"].Value.ToString());
-                komut2.ExecuteNonQuery();
-                connection.Close();
-
-                MessageBox.Show("Kitap(lar) iade edildi!");
-
-                emanetlistele();
-            }
-          
-
         }
 
         private void anasayfaBtn_Click(object sender, EventArgs e)
@@ -322,48 +321,32 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void emanetBtn_Click(object sender, EventArgs e)
         {
-            Emanet emanet = new Emanet();
+            GorEmanet emanet = new GorEmanet();
             emanet.Show();
             this.Hide();
         }
 
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            Ogrenci ogrenci = new Ogrenci();
+            GorOgrenci ogrenci = new GorOgrenci();
             ogrenci.Show();
             this.Hide();
         }
 
         private void kitapBtn_Click(object sender, EventArgs e)
         {
-            Kitap kitap = new Kitap();
+            GorKitap kitap = new GorKitap();
             kitap.Show();
             this.Hide();
         }
 
         private void istBtn_Click(object sender, EventArgs e)
         {
-            Istatistik ist = new Istatistik();
+            GorIstatistik ist = new GorIstatistik();
             ist.Show();
             this.Hide();
         }
 
-        private void simgeButon_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void kaplaButon_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-
-        }
-
-        private void cikisButon_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             AnaSayfa form = new AnaSayfa();
@@ -426,31 +409,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void dataGridViewemanet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtemanetId.Text = dataGridViewemanet.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-        }
-
-        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewemanet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtemanetId_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

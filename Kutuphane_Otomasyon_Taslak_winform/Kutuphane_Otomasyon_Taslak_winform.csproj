@@ -106,30 +106,18 @@
     <Compile Include="AnaSayfa.Designer.cs">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ayarlar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ayarlar.Designer.cs">
-      <DependentUpon>Ayarlar.cs</DependentUpon>
-    </Compile>
     <Compile Include="data.cs" />
-    <Compile Include="Emanet.cs">
+    <Compile Include="GorEmanet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Emanet.Designer.cs">
-      <DependentUpon>Emanet.cs</DependentUpon>
+    <Compile Include="GorEmanet.Designer.cs">
+      <DependentUpon>GorEmanet.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmanetGecmis.cs">
+    <Compile Include="EmanetIade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmanetGecmis.Designer.cs">
-      <DependentUpon>EmanetGecmis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Emanetiade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Emanetiade.Designer.cs">
-      <DependentUpon>Emanetiade.cs</DependentUpon>
+    <Compile Include="EmanetIade.Designer.cs">
+      <DependentUpon>EmanetIade.cs</DependentUpon>
     </Compile>
     <Compile Include="EmanetTeslim.cs">
       <SubType>Form</SubType>
@@ -137,119 +125,113 @@
     <Compile Include="EmanetTeslim.Designer.cs">
       <DependentUpon>EmanetTeslim.cs</DependentUpon>
     </Compile>
-    <Compile Include="GirisEkrani.cs">
+    <Compile Include="AnaGirisEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GirisEkrani.Designer.cs">
-      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    <Compile Include="AnaGirisEkrani.Designer.cs">
+      <DependentUpon>AnaGirisEkrani.cs</DependentUpon>
     </Compile>
-    <Compile Include="Istatistik.cs">
+    <Compile Include="GorIstatistik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Istatistik.Designer.cs">
-      <DependentUpon>Istatistik.cs</DependentUpon>
+    <Compile Include="GorIstatistik.Designer.cs">
+      <DependentUpon>GorIstatistik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kitap.cs">
+    <Compile Include="GorKitap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kitap.Designer.cs">
-      <DependentUpon>Kitap.cs</DependentUpon>
+    <Compile Include="GorKitap.Designer.cs">
+      <DependentUpon>GorKitap.cs</DependentUpon>
     </Compile>
-    <Compile Include="MailGonderme.cs">
+    <Compile Include="tabMailGonderme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MailGonderme.Designer.cs">
-      <DependentUpon>MailGonderme.cs</DependentUpon>
+    <Compile Include="tabMailGonderme.Designer.cs">
+      <DependentUpon>tabMailGonderme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ogrenci.cs">
+    <Compile Include="GorOgrenci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ogrenci.Designer.cs">
-      <DependentUpon>Ogrenci.cs</DependentUpon>
+    <Compile Include="GorOgrenci.Designer.cs">
+      <DependentUpon>GorOgrenci.cs</DependentUpon>
     </Compile>
-    <Compile Include="OgrenciIsleri.cs">
+    <Compile Include="GorOgrenciIsleri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OgrenciIsleri.Designer.cs">
-      <DependentUpon>OgrenciIsleri.cs</DependentUpon>
+    <Compile Include="GorOgrenciIsleri.Designer.cs">
+      <DependentUpon>GorOgrenciIsleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tabKitapDuzenle.cs">
+    <Compile Include="DuzenleKitap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tabKitapDuzenle.Designer.cs">
-      <DependentUpon>tabKitapDuzenle.cs</DependentUpon>
+    <Compile Include="DuzenleKitap.Designer.cs">
+      <DependentUpon>DuzenleKitap.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabKitapEkle.cs">
+    <Compile Include="EkleKitap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tabKitapEkle.Designer.cs">
-      <DependentUpon>tabKitapEkle.cs</DependentUpon>
+    <Compile Include="EkleKitap.Designer.cs">
+      <DependentUpon>EkleKitap.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabOgrenciDuzenle.cs">
+    <Compile Include="DuzenleOgrenci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tabOgrenciDuzenle.Designer.cs">
-      <DependentUpon>tabOgrenciDuzenle.cs</DependentUpon>
+    <Compile Include="DuzenleOgrenci.Designer.cs">
+      <DependentUpon>DuzenleOgrenci.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabOgrenciEkle.cs">
+    <Compile Include="EkleOgrenci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tabOgrenciEkle.Designer.cs">
-      <DependentUpon>tabOgrenciEkle.cs</DependentUpon>
+    <Compile Include="EkleOgrenci.Designer.cs">
+      <DependentUpon>EkleOgrenci.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ayarlar.resx">
-      <DependentUpon>Ayarlar.cs</DependentUpon>
+    <EmbeddedResource Include="GorEmanet.resx">
+      <DependentUpon>GorEmanet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Emanet.resx">
-      <DependentUpon>Emanet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmanetGecmis.resx">
-      <DependentUpon>EmanetGecmis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Emanetiade.resx">
-      <DependentUpon>Emanetiade.cs</DependentUpon>
+    <EmbeddedResource Include="EmanetIade.resx">
+      <DependentUpon>EmanetIade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmanetTeslim.resx">
       <DependentUpon>EmanetTeslim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GirisEkrani.resx">
-      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    <EmbeddedResource Include="AnaGirisEkrani.resx">
+      <DependentUpon>AnaGirisEkrani.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Istatistik.resx">
-      <DependentUpon>Istatistik.cs</DependentUpon>
+    <EmbeddedResource Include="GorIstatistik.resx">
+      <DependentUpon>GorIstatistik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kitap.resx">
-      <DependentUpon>Kitap.cs</DependentUpon>
+    <EmbeddedResource Include="GorKitap.resx">
+      <DependentUpon>GorKitap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MailGonderme.resx">
-      <DependentUpon>MailGonderme.cs</DependentUpon>
+    <EmbeddedResource Include="tabMailGonderme.resx">
+      <DependentUpon>tabMailGonderme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ogrenci.resx">
-      <DependentUpon>Ogrenci.cs</DependentUpon>
+    <EmbeddedResource Include="GorOgrenci.resx">
+      <DependentUpon>GorOgrenci.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OgrenciIsleri.resx">
-      <DependentUpon>OgrenciIsleri.cs</DependentUpon>
+    <EmbeddedResource Include="GorOgrenciIsleri.resx">
+      <DependentUpon>GorOgrenciIsleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="tabKitapDuzenle.resx">
-      <DependentUpon>tabKitapDuzenle.cs</DependentUpon>
+    <EmbeddedResource Include="DuzenleKitap.resx">
+      <DependentUpon>DuzenleKitap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tabKitapEkle.resx">
-      <DependentUpon>tabKitapEkle.cs</DependentUpon>
+    <EmbeddedResource Include="EkleKitap.resx">
+      <DependentUpon>EkleKitap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tabOgrenciDuzenle.resx">
-      <DependentUpon>tabOgrenciDuzenle.cs</DependentUpon>
+    <EmbeddedResource Include="DuzenleOgrenci.resx">
+      <DependentUpon>DuzenleOgrenci.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tabOgrenciEkle.resx">
-      <DependentUpon>tabOgrenciEkle.cs</DependentUpon>
+    <EmbeddedResource Include="EkleOgrenci.resx">
+      <DependentUpon>EkleOgrenci.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

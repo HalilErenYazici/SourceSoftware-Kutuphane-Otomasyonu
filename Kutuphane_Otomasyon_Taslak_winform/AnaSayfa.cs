@@ -23,7 +23,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            adTxt.Text = GirisEkrani.ad + " " + GirisEkrani.soyad;
+            adTxt.Text = AnaGirisEkrani.ad + " " + AnaGirisEkrani.soyad;
         }
 
         bool move;
@@ -112,7 +112,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void istBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Istatistik();
+            Form form = new GorIstatistik();
             form.Show();
             this.Close();
         }
@@ -124,40 +124,40 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            Emanetiade Emanetiade = new Emanetiade();
+            EmanetIade Emanetiade = new EmanetIade();
             Emanetiade.Show();
             this.Close();
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            Form form = new tabOgrenciEkle();
+            Form form = new EkleOgrenci();
             form.Show();
             this.Close();
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            Form form = new tabOgrenciDuzenle();
+            Form form = new DuzenleOgrenci();
             form.Show();
             this.Close();
 
         }
         private void button9_Click(object sender, EventArgs e)
         {
-            Form form = new tabKitapEkle();
+            Form form = new EkleKitap();
             form.Show();
             this.Close();
 
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            Form form = new tabKitapDuzenle();
+            Form form = new DuzenleKitap();
             form.Show();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Emanet b = new Emanet();
+            GorEmanet b = new GorEmanet();
             b.ShowDialog();
             this.Close();
 
@@ -165,14 +165,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            Ogrenci c = new Ogrenci();
+            GorOgrenci c = new GorOgrenci();
             c.Show();
             this.Close();
         }
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            Kitap d = new Kitap();
+            GorKitap d = new GorKitap();
             d.ShowDialog();
             this.Close();
 
