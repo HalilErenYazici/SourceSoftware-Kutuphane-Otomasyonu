@@ -52,39 +52,65 @@ Programa giriş yaparken üç farklı seçenekle giriş yapabiliyoruz.
 <h4> Anasayfa Ekranı: <h4>
 
 Anasayfada emanet, öğrenci, kitap, istatistik ve mail gönderme sayfalarına erişim sağlanır.
-
+  
+  ![](Resimler/AnaSayfa.png)
+  
 
 
 <h4> Emanet Sayfaları: <h4>
 
 Emanet işlemlerinde; emanetin görüntülenmesi, emanetin ödünç olarak verilmesi ve geri alınması işlemleri yapılır. 
+  
+  ![](Resimler/Emanet.png)
+  ![](Resimler/Emanet Ver.png)
+  ![](Resimler/Emanet Al.png)
+  
 
 
 
 <h4> Öğrenci Sayfaları: <h4>
 
 Öğrenci sayfalarında; öğrencilerin görüntülenmesi, öğrencilerin sisteme eklenmesi ve öğrenci bilgilerinin düzenlenmesi işlemleri yapılır.
+  
+  ![](Resimler/Öğrenci.png)
+  ![](ÖğrenciEkle.png)
+  ![](Resimler/ÖğrenciDüzenle.png)
 
 
 
 <h4> Kitap Sayfaları: <h4>
 
 Kitap sayfalarında; kitapların görüntülenmesi, kitapların sisteme eklenmesi ve kitap bilgilerinin düzenlenmesi işlemleri yapılır.
+  
+  ![](Resimler/Kitap.png)
+  ![](Resimler/KitapEkle.png)
+  ![](Resimler/KitapDüzenle.png)
 
 
 
 <h4> İstatistik Sayfası: <h4>
 
 İstatistik verilerin görüntülenmesi ve grafik verilerinin görüntülenmesi işlemleri yapılır. 
+  
+  ![](Resimler/İstatistikle.png)
+  ![](Resimler/İstatiklerGrafik1.png)
+  ![](Resimler/İstatiklerGrafik2.png)
+  
 
 
 <h4> Öğrenci İşleri Sayfası: <h4>
 
 Öğrenci işleri sayfasında öğrencinin emanette bulunan kitabı var olup olmadığı kontrol edilip gerekli durumda belge verilmesi işlemi yapılır.
+  
+  ![](Resimler/Öğrenciİşleri.png)
+  ![](Resimler/ÖğrenciİşleriBelge.png)
 
 
 
 <h4> Mail Gönderme Sayfası: <h4>
 
 Öğrenciye mail gönderilmesi işlemi yapılır.
+  
+  ![](Resimler/MailGönderme.png)
+  
 
