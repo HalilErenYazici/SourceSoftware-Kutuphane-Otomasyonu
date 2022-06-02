@@ -85,7 +85,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
             {
-                MessageBox.Show("Lütfen önce öğrenci seçiniz.");
+                MessageBox.Show("Tüm Boşlukların Dolu Olduğundan Emin Olun");
             }
             else
             {
@@ -186,9 +186,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void btnSil_Click(object sender, EventArgs e)
         {
             int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[1].Value);
-            if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "" || cmbcinsiyet.Text == "" || cmbFakulte.Text == "" || cmbmyo.Text == "")
+            if (txtOgrenciAd.Text == "" || txtogrenciId.Text == "" || txtOgrenciSoyad.Text == "" || mskKartId.Text == "" || mskOgrenciPosta.Text == "" || mskOgrenciTelefon.Text == "" || mskOgrNo.Text == "")
             {
-                MessageBox.Show("Lütfen önce öğrenci seçiniz.");
+                MessageBox.Show("Tüm Boşlukların Dolu Olduğundan Emin Olun");
             }
             else
             {
@@ -197,21 +197,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     connection.Open();
                     DialogResult dialog;
                     dialog = MessageBox.Show("Bu kaydı silmek istiyor musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    string sil = "delete from Ogrenci where ogrNo=@ogrNo";
-                    MySqlCommand command = new MySqlCommand(sil, connection);
-                    command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("Silme işlemi gerçekleşti.");
-                    //daset.Tables["Ogrenci"].Clear();
-
-                    listele();
-                    foreach (Control item in Controls)
+                    if (dialog == DialogResult.Yes)
                     {
-                        if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                        string sil = "delete from Ogrenci where ogrNo=@ogrNo";
+                        MySqlCommand command = new MySqlCommand(sil, connection);
+                        command.Parameters.AddWithValue("@ogrNo", dataGridView1.CurrentRow.Cells["ogrNo"].Value.ToString());
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        MessageBox.Show("Silme işlemi gerçekleşti.");
+                        //daset.Tables["Ogrenci"].Clear();
+
+                        listele();
+                        foreach (Control item in Controls)
                         {
-                            item.Text = null;
+                            if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                            {
+                                item.Text = null;
+                            }
                         }
+                    }
+                    else
+                    {
+
                     }
                 }
                 else
@@ -267,12 +274,17 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             mskOgrNo.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtOgrenciAd.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtOgrenciSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cmbcinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //cmbcinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
             mskOgrenciTelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             mskOgrenciPosta.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            cmbmyo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            //cmbFakulte.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            //cmbmyo.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+
+            /*cmbcinsiyet.Text = dataGridView1.CurrentRow.Cells["cinsiyet"].Value.ToString();
+            cmbFakulte.Text = dataGridView1.CurrentRow.Cells["ogrFakulte"].Value.ToString();
+            cmbmyo.Text = dataGridView1.CurrentRow.Cells["ogrBolum"].Value.ToString();*/
+
 
 
         }

@@ -210,7 +210,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                     MySqlCommand command = new MySqlCommand(ekleme, connection);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Kayıt başarıyla gerçekleştirildi. Anasayfaya yönlendiriliyorsunuz.");
+                    MessageBox.Show("Kayıt başarıyla gerçekleştirildi. Kitap sayfasına yönlendiriliyorsunuz.");
 
                     GorOgrenci yeni = new GorOgrenci();
                     yeni.Show();

@@ -331,53 +331,56 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             }
             else
             {
-                int durumNumber=0;
 
-                if (durum == "Teslim Alindi")
-                {
-                    durumNumber = 1;
-                }
-                if (durum == "Emanette")
-                {
-                    durumNumber = 0;
-                }
-
-                if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0 || varMi("SELECT COUNT('') FROM Emanet WHERE Durum = ") == durumNumber)
+                if (varMi("SELECT COUNT('') FROM Emanet WHERE kitapId = '"+ secilenId +"'") == 0)
                 {
                     connection.Open();
 
                     DialogResult dialog;
                     dialog = MessageBox.Show("Bu kaydı silmek istiyor musunuz?", "SİL!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    string sil = "delete from Kitap where kitapId=@kitapId";
-                    /*string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
-                    string silKategori = "delete from Kategori where ktgrId=@ktgrId";
-                    string silTur = "delete from Tur where turId=@turId";
-                    string silYazar = "delete from Yazar where yzrId=@yzrId";
-                    string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
-                    */
-                    MySqlCommand command = new MySqlCommand(sil, connection);
-                    /*  MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
-                      MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
-                      MySqlCommand commandTur = new MySqlCommand(silTur, connection);
-                      MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
-                      MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);*/
+                    if (dialog == DialogResult.Yes)
+                    {
 
-                    command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
-                    /* commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
-                     commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
-                     commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
-                     commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
-                     commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
-                    */
-                    command.ExecuteNonQuery();
-                    /*commandYayinEvi.ExecuteNonQuery();
-                    commandKategori.ExecuteNonQuery();
-                    commandTur.ExecuteNonQuery();
-                    commandYazar.ExecuteNonQuery();
-                    commandCevirmen.ExecuteNonQuery();*/
+                        string sil = "delete from Kitap where kitapId=@kitapId";
+                        /*string silYayinEvi = "delete from YayinEvi where yynevId=@yynevId";
+                        string silKategori = "delete from Kategori where ktgrId=@ktgrId";
+                        string silTur = "delete from Tur where turId=@turId";
+                        string silYazar = "delete from Yazar where yzrId=@yzrId";
+                        string silCevirmen = "delete from Cevirmen where cvrId=@cvrId";
+                        */
+                        MySqlCommand command = new MySqlCommand(sil, connection);
+                        /*  MySqlCommand commandYayinEvi = new MySqlCommand(silYayinEvi, connection);
+                          MySqlCommand commandKategori = new MySqlCommand(silKategori, connection);
+                          MySqlCommand commandTur = new MySqlCommand(silTur, connection);
+                          MySqlCommand commandYazar = new MySqlCommand(silYazar, connection);
+                          MySqlCommand commandCevirmen = new MySqlCommand(silCevirmen, connection);*/
 
-                    connection.Close();
-                    MessageBox.Show("Silme işlemi başarıyla gerçekleşti.");
+                        command.Parameters.AddWithValue("@kitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString());
+                        /* commandYayinEvi.Parameters.AddWithValue("@yynevId", dataGridView1.CurrentRow.Cells["yynevId"].Value.ToString());
+                         commandKategori.Parameters.AddWithValue("@ktgrId", dataGridView1.CurrentRow.Cells["ktgrId"].Value.ToString());
+                         commandTur.Parameters.AddWithValue("@turId", dataGridView1.CurrentRow.Cells["turId"].Value.ToString());
+                         commandYazar.Parameters.AddWithValue("@yzrId", dataGridView1.CurrentRow.Cells["yzrId"].Value.ToString());
+                         commandCevirmen.Parameters.AddWithValue("@cvrId", dataGridView1.CurrentRow.Cells["cvrId"].Value.ToString());
+                        */
+                        command.ExecuteNonQuery();
+                        /*commandYayinEvi.ExecuteNonQuery();
+                        commandKategori.ExecuteNonQuery();
+                        commandTur.ExecuteNonQuery();
+                        commandYazar.ExecuteNonQuery();
+                        commandCevirmen.ExecuteNonQuery();*/
+
+                        connection.Close();
+                        MessageBox.Show("Silme işlemi başarıyla gerçekleşti.");
+
+
+                        GorKitap form = new GorKitap();
+                        form.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+
+                    }
                 }
                 else
                 {
@@ -386,10 +389,6 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                
 
-
-                GorKitap form = new GorKitap();
-                form.Show();
-                this.Close();
             }
             
         }

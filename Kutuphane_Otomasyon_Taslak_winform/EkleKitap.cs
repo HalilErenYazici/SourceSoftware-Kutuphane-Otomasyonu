@@ -278,6 +278,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MessageBox.Show("Tür eklendi.");
                 connection.Close();
                 turEkle();
+                label25.Visible = false;
+                txtyayinevi.Visible = false;
+                yayinevibtn.Visible = false;
+                label29.Visible = false;
+                msktel.Visible = false;
+                label24.Visible = false;
+                txttur.Visible = false;
+                tureklebtn.Visible = false;
+                label30.Visible = false;
+                txtkategori.Visible = false;
+                btnkategori.Visible = false;
+                label36.Visible = false;
+                label35.Visible = false;
+                txtyazar.Visible = false;
+                txtyazarsoyad.Visible = false;
+                btnyazar.Visible = false;
+                label31.Visible = false;
+                label32.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                button6.Visible = false;
+                button3.Visible = false;
 
             }
 
@@ -302,8 +324,29 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Close();
                 yayinevekle();
                 YayinEvtel();
-                
 
+                label25.Visible = false;
+                txtyayinevi.Visible = false;
+                yayinevibtn.Visible = false;
+                label29.Visible = false;
+                msktel.Visible = false;
+                label24.Visible = false;
+                txttur.Visible = false;
+                tureklebtn.Visible = false;
+                label30.Visible = false;
+                txtkategori.Visible = false;
+                btnkategori.Visible = false;
+                label36.Visible = false;
+                label35.Visible = false;
+                txtyazar.Visible = false;
+                txtyazarsoyad.Visible = false;
+                btnyazar.Visible = false;
+                label31.Visible = false;
+                label32.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                button6.Visible = false;
+                button3.Visible = false;
 
             }
         }
@@ -328,7 +371,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 MessageBox.Show("Kategori adı eklendi");
                 connection.Close();
                 kategoriEkle();
-
+                label25.Visible = false;
+                txtyayinevi.Visible = false;
+                yayinevibtn.Visible = false;
+                label29.Visible = false;
+                msktel.Visible = false;
+                label24.Visible = false;
+                txttur.Visible = false;
+                tureklebtn.Visible = false;
+                label30.Visible = false;
+                txtkategori.Visible = false;
+                btnkategori.Visible = false;
+                label36.Visible = false;
+                label35.Visible = false;
+                txtyazar.Visible = false;
+                txtyazarsoyad.Visible = false;
+                btnyazar.Visible = false;
+                label31.Visible = false;
+                label32.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                button6.Visible = false;
+                button3.Visible = false;
 
 
             }
@@ -353,7 +417,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 connection.Close();
                 cevirmenadi();
                 cevirmensoyadi();
-
+                label25.Visible = false;
+                txtyayinevi.Visible = false;
+                yayinevibtn.Visible = false;
+                label29.Visible = false;
+                msktel.Visible = false;
+                label24.Visible = false;
+                txttur.Visible = false;
+                tureklebtn.Visible = false;
+                label30.Visible = false;
+                txtkategori.Visible = false;
+                btnkategori.Visible = false;
+                label36.Visible = false;
+                label35.Visible = false;
+                txtyazar.Visible = false;
+                txtyazarsoyad.Visible = false;
+                btnyazar.Visible = false;
+                label31.Visible = false;
+                label32.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                button6.Visible = false;
+                button3.Visible = false;
 
 
             }
@@ -379,7 +464,28 @@ namespace Kutuphane_Otomasyon_Taslak_winform
                 yazarAd();
                 yazarSoyad();
 
-
+                label25.Visible = false;
+                txtyayinevi.Visible = false;
+                yayinevibtn.Visible = false;
+                label29.Visible = false;
+                msktel.Visible = false;
+                label24.Visible = false;
+                txttur.Visible = false;
+                tureklebtn.Visible = false;
+                label30.Visible = false;
+                txtkategori.Visible = false;
+                btnkategori.Visible = false;
+                label36.Visible = false;
+                label35.Visible = false;
+                txtyazar.Visible = false;
+                txtyazarsoyad.Visible = false;
+                btnyazar.Visible = false;
+                label31.Visible = false;
+                label32.Visible = false;
+                txtcevirmen.Visible = false;
+                txtcevirmensoyad.Visible = false;
+                button6.Visible = false;
+                button3.Visible = false;
 
             }
 
