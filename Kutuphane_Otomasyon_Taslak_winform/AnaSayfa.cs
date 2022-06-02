@@ -164,7 +164,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         private void button1_Click(object sender, EventArgs e)
         {
             GorEmanet b = new GorEmanet();
-            b.ShowDialog();
+            b.Show();
             this.Close();
 
         }
