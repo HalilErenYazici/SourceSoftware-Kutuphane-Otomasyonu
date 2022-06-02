@@ -44,6 +44,8 @@ Kütüphane otomasyonumuz öğrenci ve kitaplar arasındaki her türlü işlemi 
 <h4> Giriş Ekranı: <h4>
 
 Programa giriş yaparken üç farklı seçenekle giriş yapabiliyoruz.
+  
+  ![](Resimler/Giriş.png)
 
 
 
