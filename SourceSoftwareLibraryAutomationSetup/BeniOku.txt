@@ -1,0 +1,1 @@
+Debug klasöründeki setup.exe dosyasını çalıştırarak uygulamayı kurunuz.
