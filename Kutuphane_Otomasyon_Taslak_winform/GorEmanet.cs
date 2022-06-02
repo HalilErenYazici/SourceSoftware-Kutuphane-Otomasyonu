@@ -538,6 +538,9 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            mevcut.Visible = false;
+            gecmis.Visible = false;
+            tumEmanetler.Visible = false;
             label20.Visible = false;
             btnemanet.Visible = false;
             button2.Visible = false;
@@ -603,6 +606,11 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             listelemanet();
             renk();
+        }
+
+        private void searchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

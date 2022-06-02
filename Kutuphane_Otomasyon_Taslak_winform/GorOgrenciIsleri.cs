@@ -15,6 +15,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         static string connection_strg = "Server = 172.21.54.3; uid=sourcesoftware; pwd=Software16344158.; database=sourcesoftware";
         MySqlConnection connection = new MySqlConnection(connection_strg);
 
+        bool emptyBox;
         bool move;
         int mouse_x;
         int mouse_y;
@@ -61,12 +62,18 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         }
         private void searchBox_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
+            if(emptyBox)
+            {
+                Form form = new GorOgrenciIsleri();
+                form.Show();
+                this.Close();
+            }
         }
 
 
         private void OgrenciIsleri_Load(object sender, EventArgs e)
         {
+            emptyBox=false;
             listelemanet();
             vakit();
             timer1.Start();
@@ -115,11 +122,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                     dataGridView1.DataSource = dt;
 
-                if(dt.Rows.Count == 0)
-                {
-                    MessageBox.Show("Sonuç Bulunamadı");
 
-                    button1.Visible = true;
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    if (dataGridView1.Rows[i].Cells[16].Value.ToString() == "Teslim Alindi")
+                    {
+                        button1.Visible = true;
+                        emptyBox = true;
+                    }
                 }
 
 
@@ -136,12 +146,14 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                     dataGridView1.DataSource = dt;
 
-
-                if (dt.Rows.Count == 0)
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                    MessageBox.Show("Sonuç Bulunamadı");
+                    if (dataGridView1.Rows[i].Cells[16].Value.ToString() == "Teslim Alindi")
+                    {
+                        button1.Visible = true;
+                        emptyBox = true;
 
-                    button1.Visible = true;
+                    }
                 }
 
             }
@@ -158,12 +170,23 @@ namespace Kutuphane_Otomasyon_Taslak_winform
 
                     dataGridView1.DataSource = dt;
 
-                if (dt.Rows.Count == 0)
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                    MessageBox.Show("Sonuç Bulunamadı");
+                    if (dataGridView1.Rows[i].Cells[16].Value.ToString() == "Teslim Alindi")
+                    {
+                        button1.Visible = true;
+                        emptyBox = true;
 
-                    button1.Visible = true;
+                    }
                 }
+            }
+            if(searchBox.Text == "")
+            {
+                button1.Visible = false;
+            }
+            if(dataGridView1.Rows.Count==1)
+            {
+                button1.Visible = false;
             }
         }
 
@@ -172,8 +195,19 @@ namespace Kutuphane_Otomasyon_Taslak_winform
         {
             MessageBox.Show("Belge Verildi! Almak İçin OK'a Basın.");
             System.Diagnostics.Process.Start("https://docs.google.com/document/d/1CQuo5pUr1WReHRSAWFSIAWAGITs-HbbS/edit?usp=sharing&ouid=103281766253877385045&rtpof=true&sd=true");
-            button1.Visible = false;
-            searchBox.Text = "";
+            
+                Form form = new GorOgrenciIsleri();
+                form.Show();
+                this.Close();
+        }
+
+        private void searchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Back)
+            {
+                searchBox.Text = "";
+            }
         }
     }
 }

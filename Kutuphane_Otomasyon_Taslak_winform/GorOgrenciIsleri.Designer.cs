@@ -265,6 +265,7 @@ namespace Kutuphane_Otomasyon_Taslak_winform
             this.searchBox.TabIndex = 5;
             this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyDown);
             // 
             // comboBox1
             // 
