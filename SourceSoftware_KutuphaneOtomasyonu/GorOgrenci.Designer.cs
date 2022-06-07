@@ -120,7 +120,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.cmbaramatip.Size = new System.Drawing.Size(168, 24);
             this.cmbaramatip.TabIndex = 6;
             this.cmbaramatip.Text = "Arama Filtresi Seçiniz...";
-            this.cmbaramatip.SelectedIndexChanged += new System.EventHandler(this.cmbaramatip_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

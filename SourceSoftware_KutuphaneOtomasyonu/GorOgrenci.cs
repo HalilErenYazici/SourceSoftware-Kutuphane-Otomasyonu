@@ -239,13 +239,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
-
-
             }
-
-
-
-
 
             /*MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'",connection);
             DataTable dt = new DataTable();
@@ -253,11 +247,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
             // dataGridView1.DataSource = dt;
             connection.Close();
-        }
-
-        private void cmbaramatip_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

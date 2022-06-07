@@ -399,6 +399,10 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                 btnSil.Visible = true;
                 btnIptal.Visible = true;
             }
+            else
+            {
+                MessageBox.Show("Lütfen düzenlemek için önce bir üye seçiniz.");
+            }
         }
     }
 }
