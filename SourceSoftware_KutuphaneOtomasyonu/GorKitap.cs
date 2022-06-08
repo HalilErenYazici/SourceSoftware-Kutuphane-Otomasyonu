@@ -89,7 +89,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            Form form = new GorOgrenci();
+            Form form = new Gor_DuzenleOgrenci();
             form.Show();
             this.Close();
         }

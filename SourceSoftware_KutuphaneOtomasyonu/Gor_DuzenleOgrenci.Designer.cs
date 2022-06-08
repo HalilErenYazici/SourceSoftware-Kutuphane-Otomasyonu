@@ -1,7 +1,7 @@
 ﻿
 namespace SourceSoftware_KutuphaneOtomasyonu
 {
-    partial class DuzenleOgrenci
+    partial class Gor_DuzenleOgrenci
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,9 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DuzenleOgrenci));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gor_DuzenleOgrenci));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbaramatip = new System.Windows.Forms.ComboBox();
             this.btnIptal = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
@@ -91,6 +92,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.BackgroundImage = global::SourceSoftware_KutuphaneOtomasyonu.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbaramatip);
             this.panel1.Controls.Add(this.btnIptal);
             this.panel1.Controls.Add(this.btnGuncelle);
             this.panel1.Controls.Add(this.btnSil);
@@ -108,6 +110,29 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 4;
+            // 
+            // cmbaramatip
+            // 
+            this.cmbaramatip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmbaramatip.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbaramatip.FormattingEnabled = true;
+            this.cmbaramatip.Items.AddRange(new object[] {
+            "Kart Id",
+            "Ögrenci Id",
+            "Ögrenci No",
+            "Ögrenci Ad",
+            "Ögrenci Soyad",
+            "Cinsiyet",
+            "Ögrenci Tel",
+            "Ögrenci Eposta",
+            "Ögrenci Fakülte ",
+            "Ögrenci Bölüm"});
+            this.cmbaramatip.Location = new System.Drawing.Point(12, 375);
+            this.cmbaramatip.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbaramatip.Name = "cmbaramatip";
+            this.cmbaramatip.Size = new System.Drawing.Size(200, 25);
+            this.cmbaramatip.TabIndex = 232;
+            this.cmbaramatip.Text = "Arama Filtresi Seçiniz...";
             // 
             // btnIptal
             // 
@@ -237,6 +262,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.button1.TabIndex = 2;
             this.button1.Text = "Öğrenci Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // mskOgrenciTelefon
             // 
@@ -506,7 +532,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(19, 383);
+            this.label20.Location = new System.Drawing.Point(256, 378);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(37, 19);
             this.label20.TabIndex = 229;
@@ -726,11 +752,11 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
             this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
-            this.pncrTxt.Location = new System.Drawing.Point(567, 1);
+            this.pncrTxt.Location = new System.Drawing.Point(519, 1);
             this.pncrTxt.Name = "pncrTxt";
-            this.pncrTxt.Size = new System.Drawing.Size(144, 21);
+            this.pncrTxt.Size = new System.Drawing.Size(240, 21);
             this.pncrTxt.TabIndex = 23;
-            this.pncrTxt.Text = "ÖĞRENCİ DÜZENLE";
+            this.pncrTxt.Text = "ÖĞRENCİ GÖRÜNTÜLE/DÜZENLE";
             // 
             // button8
             // 
@@ -796,7 +822,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.searchBox.Location = new System.Drawing.Point(62, 379);
+            this.searchBox.Location = new System.Drawing.Point(299, 375);
             this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(220, 25);
@@ -827,7 +853,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // DuzenleOgrenci
+            // Gor_DuzenleOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -837,7 +863,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "DuzenleOgrenci";
+            this.Name = "Gor_DuzenleOgrenci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tabOgrenciDuzenle";
             this.Load += new System.EventHandler(this.tabOgrenciDuzenle_Load);
@@ -903,5 +929,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button duzenleButon;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbaramatip;
     }
 }

@@ -149,12 +149,6 @@
     <Compile Include="tabMailGonderme.Designer.cs">
       <DependentUpon>tabMailGonderme.cs</DependentUpon>
     </Compile>
-    <Compile Include="GorOgrenci.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GorOgrenci.Designer.cs">
-      <DependentUpon>GorOgrenci.cs</DependentUpon>
-    </Compile>
     <Compile Include="GorOgrenciIsleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,11 +169,11 @@
     <Compile Include="EkleKitap.Designer.cs">
       <DependentUpon>EkleKitap.cs</DependentUpon>
     </Compile>
-    <Compile Include="DuzenleOgrenci.cs">
+    <Compile Include="Gor_DuzenleOgrenci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DuzenleOgrenci.Designer.cs">
-      <DependentUpon>DuzenleOgrenci.cs</DependentUpon>
+    <Compile Include="Gor_DuzenleOgrenci.Designer.cs">
+      <DependentUpon>Gor_DuzenleOgrenci.cs</DependentUpon>
     </Compile>
     <Compile Include="EkleOgrenci.cs">
       <SubType>Form</SubType>
@@ -211,9 +205,6 @@
     <EmbeddedResource Include="tabMailGonderme.resx">
       <DependentUpon>tabMailGonderme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GorOgrenci.resx">
-      <DependentUpon>GorOgrenci.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GorOgrenciIsleri.resx">
       <DependentUpon>GorOgrenciIsleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,8 +218,8 @@
     <EmbeddedResource Include="EkleKitap.resx">
       <DependentUpon>EkleKitap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DuzenleOgrenci.resx">
-      <DependentUpon>DuzenleOgrenci.cs</DependentUpon>
+    <EmbeddedResource Include="Gor_DuzenleOgrenci.resx">
+      <DependentUpon>Gor_DuzenleOgrenci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EkleOgrenci.resx">
       <DependentUpon>EkleOgrenci.cs</DependentUpon>

@@ -94,7 +94,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            Form form = new GorOgrenci();
+            Form form = new Gor_DuzenleOgrenci();
             form.Show();
             this.Close();
         }
@@ -212,7 +212,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                     connection.Close();
                     MessageBox.Show("Kayıt başarıyla gerçekleştirildi. Kitap sayfasına yönlendiriliyorsunuz.");
 
-                    GorOgrenci yeni = new GorOgrenci();
+                    Gor_DuzenleOgrenci yeni = new Gor_DuzenleOgrenci();
                     yeni.Show();
                     this.Hide();
                 }

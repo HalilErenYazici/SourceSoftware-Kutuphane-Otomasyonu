@@ -85,7 +85,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             button3.Visible = true;
             button4.Visible = false;
             button5.Visible = false;
-            button6.Visible = false;
             button7.Visible = false;
             button8.Visible = false;
             button9.Visible = false;
@@ -97,7 +96,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             button3.Visible = false;
             button4.Visible = true;
             button5.Visible = true;
-            button6.Visible = true;
             button7.Visible = false;
             button8.Visible = false;
             button9.Visible = false;
@@ -110,7 +108,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             button3.Visible = false;
             button4.Visible = false;
             button5.Visible = false;
-            button6.Visible = false;
             button7.Visible = true;
             button8.Visible = true;
             button9.Visible = true;
@@ -140,13 +137,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             form.Show();
             this.Close();
         }
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Form form = new DuzenleOgrenci();
-            form.Show();
-            this.Close();
-
-        }
         private void button9_Click(object sender, EventArgs e)
         {
             Form form = new EkleKitap();
@@ -171,7 +161,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            GorOgrenci c = new GorOgrenci();
+            Gor_DuzenleOgrenci c = new Gor_DuzenleOgrenci();
             c.Show();
             this.Close();
         }

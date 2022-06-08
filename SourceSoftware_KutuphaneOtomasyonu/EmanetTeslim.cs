@@ -818,7 +818,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void ogrenciBtn_Click(object sender, EventArgs e)
         {
-            GorOgrenci ogrenci = new GorOgrenci();
+            Gor_DuzenleOgrenci ogrenci = new Gor_DuzenleOgrenci();
             ogrenci.Show();
             this.Hide();
         }

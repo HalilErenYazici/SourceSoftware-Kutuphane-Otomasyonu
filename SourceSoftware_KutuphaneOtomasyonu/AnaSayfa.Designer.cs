@@ -55,7 +55,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.button8 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -95,7 +94,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label1);
@@ -263,9 +261,9 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.button4.Location = new System.Drawing.Point(560, 422);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 34);
+            this.button4.Size = new System.Drawing.Size(157, 51);
             this.button4.TabIndex = 47;
-            this.button4.Text = "Öğrenci Görüntüle";
+            this.button4.Text = "Öğrenci Görüntüle/Düzenle";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -465,24 +463,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.label3.TabIndex = 12;
             this.label3.Text = "ÖĞRENCİ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(560, 554);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 34);
-            this.button6.TabIndex = 42;
-            this.button6.Text = "Öğrenci Düzenle";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button7_Click);
             // 
             // label2
             // 
@@ -716,7 +696,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private System.Windows.Forms.Button cikisButon;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
