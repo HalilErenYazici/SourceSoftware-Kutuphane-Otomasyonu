@@ -3,6 +3,8 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
 
 namespace SourceSoftware_KutuphaneOtomasyonu
 {
@@ -40,7 +42,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
         private void kaplaButon_Click(object sender, EventArgs e)
         {
@@ -159,7 +161,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             if (cmbaramatip.Text == "Kart Id")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where kartId like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -169,7 +171,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Id")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrId like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -179,7 +181,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci No")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -189,7 +191,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Ad")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrAd like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -199,7 +201,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Soyad")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrSoyad like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -209,7 +211,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Cinsiyet")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where cinsiyet like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -219,7 +221,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Tel")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrTel like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -229,7 +231,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Eposta")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrEposta like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -239,7 +241,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Fakülte")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrFakulte like '" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
@@ -249,14 +251,14 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ögrenci Bölüm")
             {
                 MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrBolum like '" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
             }
 
             /*MySqlDataAdapter da = new MySqlDataAdapter("select * from Ogrenci where ogrNo like'" + searchBox.Text + "%'",connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             da.Fill(dt);*/
 
             // dataGridView1.DataSource = dt;
@@ -282,9 +284,9 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
             foreach (Control item in this.Controls)
             {
-                if (item is TextBox)
+                if (item is System.Windows.Forms.TextBox)
                 {
-                    TextBox txt = item as TextBox;
+                    System.Windows.Forms.TextBox txt = item as System.Windows.Forms.TextBox;
                     txt.Clear();
                 }
             }
@@ -330,7 +332,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                         listele();
                         foreach (Control item in Controls)
                         {
-                            if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                            if (item is System.Windows.Forms.TextBox & item is MaskedTextBox & item is ComboBox)
                             {
                                 item.Text = null;
                             }
@@ -353,7 +355,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             connection.Open();
 
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Ogrenci", connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             connection.Close();
@@ -510,6 +512,32 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             Form form = new EkleOgrenci();
             form.Show();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true;
+            object Missing = Type.Missing;
+            Workbook workbook = excel.Workbooks.Add(Missing);
+            Worksheet sheet1 = (Worksheet)workbook.Sheets[1];
+            int StartCol = 1;
+            int StartRow = 1;
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            {
+                Range myRange = (Range)sheet1.Cells[StartRow, StartCol + j];
+                myRange.Value2 = dataGridView1.Columns[j].HeaderText;
+            }
+            StartRow++;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    Range myRange = (Range)sheet1.Cells[StartRow + i, StartCol + j];
+                    myRange.Value2 = dataGridView1[j, i].Value == null ? "" : dataGridView1[j, i].Value;
+                    myRange.Select();
+                }
+            }
         }
     }
 }

@@ -33,6 +33,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GorEmanet));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tumEmanetler = new System.Windows.Forms.RadioButton();
             this.gecmis = new System.Windows.Forms.RadioButton();
@@ -75,6 +76,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.BackgroundImage = global::SourceSoftware_KutuphaneOtomasyonu.Properties.Resources.Koyu_Otomasyon_BackgroundK1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.tumEmanetler);
             this.panel1.Controls.Add(this.gecmis);
@@ -97,6 +99,23 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(1136, 604);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(130, 45);
+            this.button3.TabIndex = 236;
+            this.button3.Text = "Excel\'e Aktar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label20
             // 
@@ -611,5 +630,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private System.Windows.Forms.RadioButton mevcut;
         private System.Windows.Forms.RadioButton tumEmanetler;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button3;
     }
 }

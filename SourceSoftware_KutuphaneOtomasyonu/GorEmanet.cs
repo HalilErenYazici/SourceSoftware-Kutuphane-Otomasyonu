@@ -2,6 +2,9 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
+
 
 namespace SourceSoftware_KutuphaneOtomasyonu
 {
@@ -16,7 +19,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         MySqlConnection connection = new MySqlConnection(connection_strg);
         private void cikisButon_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
         private void kaplaButon_Click(object sender, EventArgs e)
         {
@@ -109,7 +112,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
            connection.Open();
 
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM Emanet", connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             da.Fill(dt);
             dataGridViewemanet.DataSource = dt;
             connection.Close();
@@ -127,7 +130,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
             for (int i = 0; i < dataGridViewemanet.Rows.Count - 1; i++)
             {
-                Application.DoEvents();
+                System.Windows.Forms.Application.DoEvents();
                 // Math.DivRem(i, 2, out sayi);
                 DataGridViewCellStyle renk = new DataGridViewCellStyle();
                 if (dataGridViewemanet.Rows[i].Cells[16].Value.ToString() == "Teslim Alindi")
@@ -233,8 +236,9 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
             if (cmbaramatip.Text == "Ogrenci Id")
             {
+
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrId like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -252,7 +256,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ogrenci No")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrNo like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -270,7 +274,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ogrenci Ad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrAd like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -288,7 +292,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ogrenci Soyad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrSoyad like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -306,7 +310,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ogrenci Eposta")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrEposta like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -324,7 +328,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Ogrenci Telefon")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where ogrTel like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -342,7 +346,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Kitap Id")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapId like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -360,7 +364,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Demirbaş No")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where demirbasNo like'" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -379,7 +383,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Kitap Ad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where kitapAd like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -397,7 +401,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Yazar Ad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yzrAd like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -415,7 +419,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Yazar Soyad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yzrSoyad like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -433,7 +437,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Yayınevi Ad")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yynevAd like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -451,7 +455,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Veriş Tarihi")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where veristarihi like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -469,7 +473,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Alış Tarihi")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where yynevAd like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -487,7 +491,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else if (cmbaramatip.Text == "Durum")
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -505,7 +509,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             else
             {
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where EmanetalinanKitapSayisi like'%" + searchBox.Text + "%'", connection);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 adtr.Fill(dt);
                 dataGridViewemanet.DataSource = dt;
                 connection.Close();
@@ -515,9 +519,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                 {
                     listelemanet();
                     renk();
-
-
-
                 }
             }
 
@@ -553,7 +554,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             tarih = dateTime.ToString("dd.MM.yyyy");
             searchBoxEmanet.Text = tarih;
             MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where alistarihi like'%" + searchBoxEmanet.Text + "%'", connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             adtr.Fill(dt);
             dataGridViewemanet.DataSource = dt;
             connection.Close();
@@ -581,7 +582,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             string durum = "Emanette";
             searchBoxEmanet.Text = durum;
             MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBoxEmanet.Text + "%'", connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             adtr.Fill(dt);
             dataGridViewemanet.DataSource = dt;
             renk();
@@ -595,7 +596,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             string durum = "Teslim Alindi";
             searchBoxEmanet.Text = durum;
             MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Emanet where Durum like'%" + searchBoxEmanet.Text + "%'", connection);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             adtr.Fill(dt);
             dataGridViewemanet.DataSource = dt;
             renk();
@@ -611,6 +612,31 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private void searchBox_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true;
+            object Missing = Type.Missing;
+            Workbook workbook = excel.Workbooks.Add(Missing);
+            Worksheet sheet1 = (Worksheet)workbook.Sheets[1];
+            int StartCol = 1;
+            int StartRow = 1;
+            for (int j = 0; j < dataGridViewemanet.Columns.Count; j++)
+            {
+                Range myRange = (Range)sheet1.Cells[StartRow, StartCol + j];
+                myRange.Value2 = dataGridViewemanet.Columns[j].HeaderText;
+            }
+            StartRow++;
+            for (int i = 0; i < dataGridViewemanet.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridViewemanet.Columns.Count; j++)
+                {
+                    Range myRange = (Range)sheet1.Cells[StartRow + i, StartCol + j];
+                    myRange.Value2 = dataGridViewemanet[j, i].Value == null ? "" : dataGridViewemanet[j, i].Value;
+                    myRange.Select();
+                }
+            }
         }
     }
 }

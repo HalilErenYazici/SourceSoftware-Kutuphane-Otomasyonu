@@ -78,6 +78,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.searchBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,10 +95,10 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmbaramatip);
             this.panel1.Controls.Add(this.btnIptal);
-            this.panel1.Controls.Add(this.btnGuncelle);
-            this.panel1.Controls.Add(this.btnSil);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.btnGuncelle);
+            this.panel1.Controls.Add(this.btnSil);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.searchBox);
@@ -142,7 +143,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.btnIptal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIptal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIptal.ForeColor = System.Drawing.Color.Black;
-            this.btnIptal.Location = new System.Drawing.Point(783, 356);
+            this.btnIptal.Location = new System.Drawing.Point(783, 354);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(131, 46);
@@ -160,7 +161,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuncelle.Location = new System.Drawing.Point(1137, 357);
+            this.btnGuncelle.Location = new System.Drawing.Point(1137, 355);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 45);
@@ -178,7 +179,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSil.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSil.Location = new System.Drawing.Point(1001, 357);
+            this.btnSil.Location = new System.Drawing.Point(1001, 355);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(130, 45);
@@ -193,6 +194,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel5.BackColor = System.Drawing.Color.SlateGray;
             this.panel5.BackgroundImage = global::SourceSoftware_KutuphaneOtomasyonu.Properties.Resources.Koyu_Otomasyon_BackgroundK2;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.duzenleButon);
             this.panel5.Controls.Add(this.button1);
@@ -239,10 +241,10 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.duzenleButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.duzenleButon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.duzenleButon.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.duzenleButon.Location = new System.Drawing.Point(1169, 123);
+            this.duzenleButon.Location = new System.Drawing.Point(1117, 70);
             this.duzenleButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.duzenleButon.Name = "duzenleButon";
-            this.duzenleButon.Size = new System.Drawing.Size(98, 98);
+            this.duzenleButon.Size = new System.Drawing.Size(150, 45);
             this.duzenleButon.TabIndex = 3;
             this.duzenleButon.Text = "Öğrenci Düzenle";
             this.duzenleButon.UseVisualStyleBackColor = false;
@@ -255,10 +257,10 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1169, 21);
+            this.button1.Location = new System.Drawing.Point(1117, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 98);
+            this.button1.Size = new System.Drawing.Size(150, 45);
             this.button1.TabIndex = 2;
             this.button1.Text = "Öğrenci Ekle";
             this.button1.UseVisualStyleBackColor = false;
@@ -853,6 +855,23 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(1117, 121);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 45);
+            this.button3.TabIndex = 238;
+            this.button3.Text = "Excel\'e Aktar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Gor_DuzenleOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -930,5 +949,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         private System.Windows.Forms.Button duzenleButon;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbaramatip;
+        private System.Windows.Forms.Button button3;
     }
 }
