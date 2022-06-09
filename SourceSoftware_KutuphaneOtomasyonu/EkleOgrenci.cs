@@ -128,11 +128,8 @@ namespace SourceSoftware_KutuphaneOtomasyonu
                 cmbisletme.Items.Add("İşletme");
 
 
-
                 cmbisletme.Visible = true;
                 label4.Visible = true;
-
-
             }
 
             else

@@ -131,7 +131,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
         {
             connection.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.*,Tur.*,Yazar.*,YayinEvi.*,Cevirmen.* FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where kitapId", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.*,Kategori.ktgrAd,Tur.turAd,Yazar.yzrAd,Yazar.yzrSoyad,YayinEvi.yynevAd,YayinEvi.yynevTel,Cevirmen.cvrAd,Cevirmen.cvrSoyad FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where kitapId", connection);
 
             System.Data.DataTable dt = new System.Data.DataTable();
             da.Fill(dt);
