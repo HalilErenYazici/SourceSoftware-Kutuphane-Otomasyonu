@@ -33,6 +33,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GorKitap));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.istBtn = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.button1 = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.kitaplarıListele = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,6 +87,23 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.panel1.Size = new System.Drawing.Size(1280, 720);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(853, 75);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(130, 45);
+            this.button3.TabIndex = 237;
+            this.button3.Text = "Excel\'e Aktar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label20
             // 
@@ -285,11 +302,11 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.pncrTxt.BackColor = System.Drawing.Color.Transparent;
             this.pncrTxt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.pncrTxt.ForeColor = System.Drawing.SystemColors.Control;
-            this.pncrTxt.Location = new System.Drawing.Point(580, 1);
+            this.pncrTxt.Location = new System.Drawing.Point(568, 1);
             this.pncrTxt.Name = "pncrTxt";
-            this.pncrTxt.Size = new System.Drawing.Size(118, 21);
+            this.pncrTxt.Size = new System.Drawing.Size(143, 21);
             this.pncrTxt.TabIndex = 23;
-            this.pncrTxt.Text = "KİTAP DÜZENLE";
+            this.pncrTxt.Text = "KİTAP GÖRÜNTÜLE";
             // 
             // button8
             // 
@@ -462,23 +479,6 @@ namespace SourceSoftware_KutuphaneOtomasyonu
             this.kitaplarıListele.Name = "kitaplarıListele";
             this.kitaplarıListele.Size = new System.Drawing.Size(1256, 580);
             this.kitaplarıListele.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(853, 75);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 45);
-            this.button3.TabIndex = 237;
-            this.button3.Text = "Excel\'e Aktar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // GorKitap
             // 

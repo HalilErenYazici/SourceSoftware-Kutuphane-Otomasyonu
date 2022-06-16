@@ -1201,7 +1201,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label25.Visible = true;
+            label26.Visible = true;
             txtyayinevi.Visible = true;
             yayinevibtn.Visible = true;
             label29.Visible = true;
@@ -1227,7 +1227,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button4_Click(object sender, EventArgs e)
         {
-            label25.Visible = false;
+            label26.Visible = false;
             txtyayinevi.Visible = false;
             yayinevibtn.Visible = false;
             label29.Visible = false;
@@ -1253,7 +1253,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            label25.Visible = false;
+            label26.Visible = false;
             txtyayinevi.Visible = false;
             yayinevibtn.Visible = false;
             label29.Visible = false;
@@ -1279,7 +1279,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button7_Click(object sender, EventArgs e)
         {
-            label25.Visible = false;
+            label26.Visible = false;
             txtyayinevi.Visible = false;
             yayinevibtn.Visible = false;
             label29.Visible = false;
@@ -1305,7 +1305,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button9_Click(object sender, EventArgs e)
         {
-            label25.Visible = false;
+            label26.Visible = false;
             txtyayinevi.Visible = false;
             yayinevibtn.Visible = false;
             label29.Visible = false;
@@ -1331,7 +1331,7 @@ namespace SourceSoftware_KutuphaneOtomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label25.Visible = false;
+            label26.Visible = false;
             txtyayinevi.Visible = false;
             yayinevibtn.Visible = false;
             label29.Visible = false;
